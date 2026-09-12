@@ -7,7 +7,7 @@ from langcodes import Language
 def get_var_l10n(index,key:str|int,format:str,l10n_lang:Language)->str:
     # e.g. get_var_l10n(data["jrco_beta/1"]["location"],"series","text",lang)
 
-    for o in str(l10n_lang),str(l10n_lang.language),"mul","zxx","e":
+    for o in str(l10n_lang),l10n_lang.language,"mul","zxx","e":
         if o=="e":
             return ''
 
