@@ -11,6 +11,7 @@ from pathlib import Path
 
 from attr_string import attribute_string
 from get_var_l10n import get_var_l10n
+from text_to_htm import text_to_html
 #from id_split import id_parent,id_base
 from say_date import say_date
 
@@ -274,7 +275,7 @@ if __name__=="__main__":
                 F.append(f'<article id=log_{entry["date"]}><details>')
                 F.append(f'<summary><h3>{say_date(date.fromisoformat(entry["date"]),lang,data)}</h3></summary>')
                 for line in entry["content"]:
-                    if get_var_l10n(line,"d","text",lang)==get_var_l10n(line,"d","html",lang):
+                    if text_to_html(get_var_l10n(line,"d","text",lang))==get_var_l10n(line,"d","html",lang):
                         F.append("<p>")
                         F.append(get_var_l10n(line,"d","html",lang))
                     else:

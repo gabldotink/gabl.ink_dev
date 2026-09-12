@@ -1,5 +1,7 @@
 # SPDX-License-Identifier: CC0-1.0
 
+from text_to_htm import text_to_html
+
 from langcodes import Language
 
 def get_var_l10n(index,key:str|int,format:str,l10n_lang:Language)->str:
@@ -31,6 +33,6 @@ def get_var_l10n(index,key:str|int,format:str,l10n_lang:Language)->str:
             if "html" in index.get(key,{}).get(o,{}):
                 return index[key][o]["html"]
             elif "text" in index.get(key,{}).get(o,{}):
-                return index[key][o]["text"]
+                return text_to_html(index[key][o]["text"])
             elif "equal" in index.get(key,{}).get(o,{}):
                 return get_var_l10n(index,key,format,Language.get(index[key][o]["equal"]))
