@@ -9,11 +9,9 @@ import sys
 from datetime import date
 from pathlib import Path
 
-from attr_string import attribute_string
-from get_var_l10n import get_var_l10n
-from text_to_htm import text_to_html
+from interlang import get_var_l10n,say_date
+from text_to_htm import text_to_html,attribute_string
 #from id_split import id_parent,id_base
-from say_date import say_date
 
 # Arch: python-langcodes
 from langcodes import Language
