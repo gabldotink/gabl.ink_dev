@@ -39,9 +39,12 @@ def get_var_l10n(index,key:str|int,format:str,l10n_lang:Language)->str:
             elif "equal" in index.get(key,{}).get(o,{}):
                 return get_var_l10n(index,key,format,Language.get(index[key][o]["equal"]))
 
+def print_date(d:date)->str:
+    return f"{d.year:04}-{d.month:02}-{d.day:02}"
+
 # The shell script supports negative years, but `datetime` does not.
 def say_date(d:date,lang:Language,data:dict)->str:
-    r:list=[f"<time datetime={d.year:04}-{d.month:02}-{d.day:02}>"]
+    r:list=[f"<time datetime={print_date(d)}>"]
 
     ad:bool
 

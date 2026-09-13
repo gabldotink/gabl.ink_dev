@@ -43,8 +43,8 @@
       "html": "La première série de webcomics <cite class=i>JoeRunner et cie</cite>, qui a compté onze pages de <time>2022</time> à <time>2023</time> en anglais."
     }
   },
-  "start_date": "2022-04-01",
-  "end_date": "2023-07-28",
+  "start_date": "20220401",
+  "end_date": "20230728",
   "copyright": {
     "year": {
       "first": 2022,

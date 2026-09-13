@@ -9,7 +9,7 @@ import sys
 from datetime import date
 from pathlib import Path
 
-from interlang import get_var_l10n,say_date
+from interlang import get_var_l10n,print_date,say_date
 from text_to_htm import text_to_html,attribute_string
 #from id_split import id_parent,id_base
 
@@ -270,7 +270,7 @@ if __name__=="__main__":
             F.append(f'<h2>{msg_l10n(lang=lang,string="log")}</h2>')
 
             for entry in data[i_id]["log"]:
-                F.append(f'<article id=log_{entry["date"]}><details>')
+                F.append(f'<article id=log_{print_date(date.fromisoformat(entry["date"]))}><details>')
                 F.append(f'<summary><h3>{say_date(date.fromisoformat(entry["date"]),lang,data)}</h3></summary>')
                 for line in entry["content"]:
                     if text_to_html(get_var_l10n(line,"d","text",lang))==get_var_l10n(line,"d","html",lang):
