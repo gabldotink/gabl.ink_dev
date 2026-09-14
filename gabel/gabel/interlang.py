@@ -72,7 +72,7 @@ def say_date(d:date,lang:Language,data:dict)->str:
         r.append("\xa0")
         r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","html",lang))
         if ad:
-            r.append(f'{d.year}\xa0<abbr title="après Jésus‐Christ">ap.\xa0J.‐C.</abbr>')
+            r.append(f'{d.year}\xa0<abbr title="après Jésus‐Christ">ap.\xa0J.‑C.</abbr>')
         r.append(f" {d.year}")
     elif lang.language=="es":
         r.append(f"{d.day}\xa0de\xa0")
