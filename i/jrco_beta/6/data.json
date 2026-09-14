@@ -146,54 +146,73 @@
       "date": "20220722",
       "content": [
         {
-          "en": {
-            "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
-          },
-          "fr": {
-            "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+          "p": {
+            "en": {
+              "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+            },
+            "fr": {
+              "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+            }
           }
         },
         {
-          "en": {
-            "text": "Alright, lotta stuff to say on this one."
+          "p": {
+            "en": {
+              "text": "Alright, lotta stuff to say on this one."
+            }
           }
         },
         {
-          "en": {
-            "html": "<p>First off, this comic has a mobile‐friendly version! Similarly to the format that <cite>Webtoon</cite> uses, the mobile version is comprised of several narrower images that are easier to read on a vertical screen. If you’re using a fullscreen desktop browser window, the “desktop” version should show up by default; if you’re on mobile, the mobile version should appear instead. I’m testing it out with this one, and I’ll see how well it turns out. (You can view the mobile comic on desktop by resizing your browser window to be narrower; however, I’m still trying to figure out a way to view the desktop comic on mobile. Your best bet for now is probably to just view the original image source here<ins>\u00a0<small>[<i>link removed</i>]</small></ins>.)"
+          "p": {
+            "en": {
+              "html": "<p>First off, this comic has a mobile‐friendly version! Similarly to the format that <cite>Webtoon</cite> uses, the mobile version is comprised of several narrower images that are easier to read on a vertical screen. If you’re using a fullscreen desktop browser window, the “desktop” version should show up by default; if you’re on mobile, the mobile version should appear instead. I’m testing it out with this one, and I’ll see how well it turns out. (You can view the mobile comic on desktop by resizing your browser window to be narrower; however, I’m still trying to figure out a way to view the desktop comic on mobile. Your best bet for now is probably to just view the original image source here<ins>\u00a0<small>[<i>link removed</i>]</small></ins>.)"
+            }
           }
         },
         {
-          "en": {
-            "html": "<p>Second, I’m renaming “episodes” to “seasons.” I know, I know, calm down. I know how attached people have gotten to episodes over the last five pages, but believe me, it’s for the greater good. I want you to know that I don’t make this dramatic change lightly, and that it has a purpose. I’m calling them seasons now because webcomic “episodes” have a different meaning in <cite class=\"i nw\">JoeRunner and Co.</cite> than on <cite>Webtoon</cite>, the most popular webcomic publisher (that’s right, I mentioned <cite>Webtoon</cite> <em>twice</em>), in addition to the fact that having both “episodes” and “chapters” at once is a bit confusing. I hope your anger has more or less subsided; I understand, however, that it will likely take a long time for you to truly forgive me."
+          "p": {
+            "en": {
+              "html": "<p>Second, I’m renaming “episodes” to “seasons.” I know, I know, calm down. I know how attached people have gotten to episodes over the last five pages, but believe me, it’s for the greater good. I want you to know that I don’t make this dramatic change lightly, and that it has a purpose. I’m calling them seasons now because webcomic “episodes” have a different meaning in <cite class=\"i nw\">JoeRunner and Co.</cite> than on <cite>Webtoon</cite>, the most popular webcomic publisher (that’s right, I mentioned <cite>Webtoon</cite> <em>twice</em>), in addition to the fact that having both “episodes” and “chapters” at once is a bit confusing. I hope your anger has more or less subsided; I understand, however, that it will likely take a long time for you to truly forgive me."
+            }
           }
         },
         {
-          "en": {
-            "text": "And finally, I’ve realized that probably a lot of people are reading the comic pages that have been posted, having some fun (hopefully), then leaving. Due to this, I’m going to be leaving a couple ways to stay updated with the comic in these footers from now on."
+          "p": {
+            "en": {
+              "text": "And finally, I’ve realized that probably a lot of people are reading the comic pages that have been posted, having some fun (hopefully), then leaving. Due to this, I’m going to be leaving a couple ways to stay updated with the comic in these footers from now on."
+            }
           }
         },
         {
-          "en": {
-            "html": "<p>First, you can follow my <cite>Twitter</cite>, <a rel=\"external me\" href=https://x.com/i/user/1352061598836264960 type=text/html>@gabldotink</a>. I don’t tweet too often, so it shouldn’t flood your timeline, and I’ll keep the latest comic pinned to my profile so you can easily get to the most recent one."
+          "p": {
+            "en": {
+              "html": "<p>First, you can follow my <cite>Twitter</cite>, <a rel=\"external me\" href=https://x.com/i/user/1352061598836264960 type=text/html>@gabldotink</a>. I don’t tweet too often, so it shouldn’t flood your timeline, and I’ll keep the latest comic pinned to my profile so you can easily get to the most recent one."
+            }
           }
         },
         {
-          "en": {
-            "html": "<p>Alternatively, I have an <abbr>RSS</abbr> (Really Simple Syndication) feed! It’s located here<ins>\u00a0<small>[<i>link removed</i>]</small></ins>. If you click on the link, you’ll just see a bunch of code\u2060—it’s your job to get it to do its magic through an <abbr>RSS</abbr> reader, which will keep you posted whenever I update. You can learn how to do this at my handy‐dandy <abbr>RSS</abbr> info page<ins>\u00a0<small>[<i>link removed</i>]</small></ins>. Aren’t I so helpful?<ins>\u00a0<small>[<i>not anymore</i>]</small></ins>"
+          "p": {
+            "en": {
+              "html": "<p>Alternatively, I have an <abbr>RSS</abbr> (Really Simple Syndication) feed! It’s located here<ins>\u00a0<small>[<i>link removed</i>]</small></ins>. If you click on the link, you’ll just see a bunch of code\u2060—it’s your job to get it to do its magic through an <abbr>RSS</abbr> reader, which will keep you posted whenever I update. You can learn how to do this at my handy‐dandy <abbr>RSS</abbr> info page<ins>\u00a0<small>[<i>link removed</i>]</small></ins>. Aren’t I so helpful?<ins>\u00a0<small>[<i>not anymore</i>]</small></ins>"
+            }
           }
         },
         {
-          "en": {
-            "html": "<p>Thank you so much for reading <cite class=i>JoeRunner and Co.</cite> This is personally my favorite page I’ve made so far, and as I continue to draw this comic, they’ll continue to get better. And I’m so glad I’m finally sharing these with such a potentially wide group of people\u2060—even if I only end up updating, like, once a month."
+          "p": {
+            "en": {
+              "html": "<p>Thank you so much for reading <cite class=i>JoeRunner and Co.</cite> This is personally my favorite page I’ve made so far, and as I continue to draw this comic, they’ll continue to get better. And I’m so glad I’m finally sharing these with such a potentially wide group of people\u2060—even if I only end up updating, like, once a month."
+            }
           }
         },
         {
-          "en": {
-            "html": "<p><b>—\u2060<span translate=no>gabl</span></b>"
-          },
-          "mul": {
-            "equal": "en"
+          "p": {
+            "en": {
+              "html": "<p><b>—\u2060<span translate=no>gabl</span></b>",
+              "text": "—\u2060gabl"
+            },
+            "mul": {
+              "equal": "en"
+            }
           }
         }
       ]

@@ -101,35 +101,43 @@
       "date": "20220522",
       "content": [
         {
-          "en": {
-            "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
-          },
-          "fr": {
-            "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+          "p": {
+            "en": {
+              "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+            },
+            "fr": {
+              "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+            }
           }
         },
         {
-          "en": {
-            "text": "If only it were really this easy."
-          },
-          "fr": {
-            "text": "Si seulement il était si facile."
+          "p": {
+            "en": {
+              "text": "If only it were really this easy."
+            },
+            "fr": {
+              "text": "Si seulement il était si facile."
+            }
           }
         },
         {
-          "en": {
-            "text": "“But Gabe!” you might be thinking, “JoeRunner doesn’t have a nose! How does he put on his glasses?” And you’re right. And I promise that the other characters have noses."
-          },
-          "fr": {
-            "text": "«\u202fMais Gabe\u202f!\u202f» peut‐être que vous pensez, «\u202fJoeRunner n’a pas un nez\u202f! Comment il mette ses lunettes\u202f?\u202f» Et vous avez raison. Et je promets que les autres personnages avent les nez."
+          "p": {
+            "en": {
+              "text": "“But Gabe!” you might be thinking, “JoeRunner doesn’t have a nose! How does he put on his glasses?” And you’re right. And I promise that the other characters have noses."
+            },
+            "fr": {
+              "text": "«\u202fMais Gabe\u202f!\u202f» peut‐être que vous pensez, «\u202fJoeRunner n’a pas un nez\u202f! Comment il mette ses lunettes\u202f?\u202f» Et vous avez raison. Et je promets que les autres personnages avent les nez."
+            }
           }
         },
         {
-          "en": {
-            "text": "Some of them. Some of the other characters have noses."
-          },
-          "fr": {
-            "text": "Eh bien, quelques des autres personnages ont les nez."
+          "p": {
+            "en": {
+              "text": "Some of them. Some of the other characters have noses."
+            },
+            "fr": {
+              "text": "Eh bien, quelques des autres personnages ont les nez."
+            }
           }
         }
       ]

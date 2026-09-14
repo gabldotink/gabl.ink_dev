@@ -159,46 +159,62 @@
       "date": "20230728",
       "content": [
         {
-          "en": {
-            "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
-          },
-          "fr": {
-            "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+          "p": {
+            "en": {
+              "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+            },
+            "fr": {
+              "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+            }
           }
         },
         {
-          "en": {
-            "text": "Lucky number\u00a011! People\u00a0.\u00a0.\u00a0. people probably say that."
+          "p": {
+            "en": {
+              "text": "Lucky number\u00a011! People\u00a0.\u00a0.\u00a0. people probably say that."
+            }
           }
         },
         {
-          "en": {
-            "html": "<p>This page includes the full‐size image, while previously they’ve been half‐size. The <abbr title=\"Hypertext Markup Language\">HTML</abbr> <code>&lt;picture></code> element should either automatically choose one to display, or simply skip it and use the full image, depending on your browser\u00a0/ user agent."
+          "p": {
+            "en": {
+              "html": "<p>This page includes the full‐size image, while previously they’ve been half‐size. The <abbr title=\"Hypertext Markup Language\">HTML</abbr> <code>&lt;picture></code> element should either automatically choose one to display, or simply skip it and use the full image, depending on your browser\u00a0/ user agent."
+            }
           }
         },
         {
-          "en": {
-            "html": "<p>I was initially meaning to upload the full‐size versions to <cite>Patreon</cite>, but I’ll probably just save that for the <code><abbr title=\"Clip Studio Paint\">.clip</abbr></code> work files. I don’t know when I’ll get the images out, but I will."
+          "p": {
+            "en": {
+              "html": "<p>I was initially meaning to upload the full‐size versions to <cite>Patreon</cite>, but I’ll probably just save that for the <code><abbr title=\"Clip Studio Paint\">.clip</abbr></code> work files. I don’t know when I’ll get the images out, but I will."
+            }
           }
         },
         {
-          "en": {
-            "html": "<p>Of course, you can safely expect Patreon to be a pretty long ways away at this rate. If I can be real for a sec, one of the main reasons I started this comic was to feel like I was doing something with my life, and now it’s ended up as a huge source of anxiety for me because progress is so slow. I’m so excited to continue this, especially since I have a lot of other ideas to work on aside from <cite class=i>JoeRunner and co.</cite>\u2060—both apart from and on top of it. I’m so sorry that I’m not getting that out sooner."
+          "p": {
+            "en": {
+              "html": "<p>Of course, you can safely expect Patreon to be a pretty long ways away at this rate. If I can be real for a sec, one of the main reasons I started this comic was to feel like I was doing something with my life, and now it’s ended up as a huge source of anxiety for me because progress is so slow. I’m so excited to continue this, especially since I have a lot of other ideas to work on aside from <cite class=i>JoeRunner and co.</cite>\u2060—both apart from and on top of it. I’m so sorry that I’m not getting that out sooner."
+            }
           }
         },
         {
-          "en": {
-            "text": "Um\u00a0.\u00a0.\u00a0. on an unrelated note, color! I haven’t been using color so far because I had the notion that it would take too long, but I wanted that panel to be better‐drawn anyway, so I went ahead and did it. And now I’m thinking maybe I should do that more often."
+          "p": {
+            "en": {
+              "text": "Um\u00a0.\u00a0.\u00a0. on an unrelated note, color! I haven’t been using color so far because I had the notion that it would take too long, but I wanted that panel to be better‐drawn anyway, so I went ahead and did it. And now I’m thinking maybe I should do that more often."
+            }
           }
         },
         {
-          "en": {
-            "html": "<p>On a dumb, overthinking‐related note (feel free to skip this), I’m trying to decide if I want to stick with <cite><abbr title=\"Creative Commons Attribution‐ShareAlike\u00a04.0\">CC\u00a0BY‑SA\u00a04.0</abbr></cite>, or if I want to move it to <cite><abbr title=\"Creative Commons Attribution\">CC\u00a0BY</abbr></cite>. At the start it was <cite><abbr title=Attribution‐NonCommercial‐ShareAlike>BY‑NC‑SA</abbr></cite>. Both times the <abbr title=ShareAlike>SA</abbr> was because I wanted to keep derivatives of actual, general utility free, like books and translations. I know that <a rel=external href=https://peppercarrot.com/ type=text/html><cite class=i>Pepper&amp;Carrot</cite></a> is thriving in those regards under <abbr>CC\u00a0BY</abbr>, but that may or may not be different, considering that <cite class=i>Pepper&amp;Carrot</cite> isn’t one of the most egregious abominations known to man."
+          "p": {
+            "en": {
+              "html": "<p>On a dumb, overthinking‐related note (feel free to skip this), I’m trying to decide if I want to stick with <cite><abbr title=\"Creative Commons Attribution‐ShareAlike\u00a04.0\">CC\u00a0BY‑SA\u00a04.0</abbr></cite>, or if I want to move it to <cite><abbr title=\"Creative Commons Attribution\">CC\u00a0BY</abbr></cite>. At the start it was <cite><abbr title=Attribution‐NonCommercial‐ShareAlike>BY‑NC‑SA</abbr></cite>. Both times the <abbr title=ShareAlike>SA</abbr> was because I wanted to keep derivatives of actual, general utility free, like books and translations. I know that <a rel=external href=https://peppercarrot.com/ type=text/html><cite class=i>Pepper&amp;Carrot</cite></a> is thriving in those regards under <abbr>CC\u00a0BY</abbr>, but that may or may not be different, considering that <cite class=i>Pepper&amp;Carrot</cite> isn’t one of the most egregious abominations known to man."
+            }
           }
         },
         {
-          "en": {
-            "html": "<p>And about those multiple image size problems, I want to make a <cite>Git</cite> repository to hold all of those (and the other stuff, of course) in order to have a sort of structured, static <abbr title=\"application programming interface\">API</abbr>, while also just having the files available in a human‐browsable and easily downloadable manner. I already tried that with <cite>files.gabl.ink</cite>\u00a0<small>[<i>link removed</i>]</small>, but I ended up not liking how it turned out."
+          "p": {
+            "en": {
+              "html": "<p>And about those multiple image size problems, I want to make a <cite>Git</cite> repository to hold all of those (and the other stuff, of course) in order to have a sort of structured, static <abbr title=\"application programming interface\">API</abbr>, while also just having the files available in a human‐browsable and easily downloadable manner. I already tried that with <cite>files.gabl.ink</cite>\u00a0<small>[<i>link removed</i>]</small>, but I ended up not liking how it turned out."
+            }
           }
         }
       ]

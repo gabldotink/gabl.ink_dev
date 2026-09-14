@@ -131,27 +131,33 @@
       "date": "20220621",
       "content": [
         {
-          "en": {
-            "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
-          },
-          "fr": {
-            "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+          "p": {
+            "en": {
+              "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+            },
+            "fr": {
+              "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+            }
           }
         },
         {
-          "en": {
-            "text": "I was going to not have isometric again, but the perspective tools were being weird, so congrats, you’re getting isometric again."
-          },
-          "fr": {
-            "text": "Je n’allais avoir encore des dessins isométriques, mais les outils de perspective ont être nul, alors félicitations, vous avez encore des dessins isométriques."
+          "p": {
+            "en": {
+              "text": "I was going to not have isometric again, but the perspective tools were being weird, so congrats, you’re getting isometric again."
+            },
+            "fr": {
+              "text": "Je n’allais avoir encore des dessins isométriques, mais les outils de perspective ont être nul, alors félicitations, vous avez encore des dessins isométriques."
+            }
           }
         },
         {
-          "en": {
-            "text": "Also, just be aware that this has no plot relevance whatsoever. This is because I have no idea what I’m doing."
-          },
-          "fr": {
-            "text": "Aussi, sachez seulement que cela n’a aucune pertinence pour l’intrigue. C’est parce que je n’ai aucune idée de ce que je fais."
+          "p": {
+            "en": {
+              "text": "Also, just be aware that this has no plot relevance whatsoever. This is because I have no idea what I’m doing."
+            },
+            "fr": {
+              "text": "Aussi, sachez seulement que cela n’a aucune pertinence pour l’intrigue. C’est parce que je n’ai aucune idée de ce que je fais."
+            }
           }
         }
       ]

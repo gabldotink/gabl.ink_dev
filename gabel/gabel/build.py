@@ -273,11 +273,12 @@ if __name__=="__main__":
                 F.append(f'<article id=log_{print_date(date.fromisoformat(entry["date"]))}><details>')
                 F.append(f'<summary><h3>{say_date(date.fromisoformat(entry["date"]),lang,data)}</h3></summary>')
                 for line in entry["content"]:
-                    if text_to_html(get_var_l10n(line,"d","text",lang))==get_var_l10n(line,"d","html",lang):
+                    if text_to_html(get_var_l10n(line,"p","text",lang))==get_var_l10n(line,"p","html",lang):
                         F.append("<p>")
-                        F.append(get_var_l10n(line,"d","html",lang))
+                        F.append(get_var_l10n(line,"p","html",lang))
                     else:
-                        F.append(get_var_l10n(line,"d","html",lang))
+                        F.append(get_var_l10n(line,"p","html",lang))
+                    
 
             with open(Path(index)/i_id/str(lang).lower()/"index_py.html","w+",encoding="utf-8",newline='') as output_file:
                 # Only write if there is a change

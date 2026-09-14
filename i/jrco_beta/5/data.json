@@ -126,16 +126,20 @@
       "date": "20220627",
       "content": [
         {
-          "en": {
-            "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
-          },
-          "fr": {
-            "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+          "p": {
+            "en": {
+              "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+            },
+            "fr": {
+              "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+            }
           }
         },
         {
-          "en": {
-            "text": "Not much of a background because I still don’t really know what the Runners’ house looks like. Not much of a footer comment because I don’t really have anything to say."
+          "p": {
+            "en": {
+              "text": "Not much of a background because I still don’t really know what the Runners’ house looks like. Not much of a footer comment because I don’t really have anything to say."
+            }
           }
         }
       ]

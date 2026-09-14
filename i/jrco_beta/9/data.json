@@ -246,47 +246,62 @@
       "date": "20230330",
       "content": [
         {
-          "en": {
-            "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
-          },
-          "fr": {
-            "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+          "p": {
+            "en": {
+              "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+            },
+            "fr": {
+              "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+            }
           }
         },
         {
-          "en": {
-            "html": "<p>Alas, poor <span class=m>tomatotoe07</span>."
-          },
-          "fr": {
-            "html": "<p>Hélas\u202f! pauvre <span class=m>tomate_taxidermiste_07</span>."
+          "p": {
+            "en": {
+              "html": "<p>Alas, poor <span class=m>tomatotoe07</span>."
+            },
+            "fr": {
+              "html": "<p>Hélas\u202f! pauvre <span class=m>tomate_taxidermiste_07</span>."
+            }
           }
         },
         {
-          "en": {
-            "html": "<p>This page only took a month to come out instead of, like, five. There’s so much that I want to get to, and it’s a bit upsetting to me that I’ve only gotten this far, with <i><cite>JoeRunner and Co.</cite></i>’s first anniversary being in two days (<time datetime=2023-04-01>April\u00a01</time>). This page especially took a lot of effort\u2060—the most yet\u2060—due to its length."
+          "p": {
+            "en": {
+              "html": "<p>This page only took a month to come out instead of, like, five. There’s so much that I want to get to, and it’s a bit upsetting to me that I’ve only gotten this far, with <i><cite>JoeRunner and Co.</cite></i>’s first anniversary being in two days (<time datetime=2023-04-01>April\u00a01</time>). This page especially took a lot of effort\u2060—the most yet\u2060—due to its length."
+            }
           }
         },
         {
-          "en": {
-            "html": "<p>Only about 60% of the draft I wrote back on\u00a0.\u00a0.\u00a0. <i>checks</i> <em class=nw><time datetime=2021-05-25>May\u00a025, 2021</time>?</em> I really <em>am</em> behind. <i>ahem</i> Only about 60% of the original draft is in this final version. None of these pages so far are super faithful to that draft\u2060—I wrote them when I was around 14\u00a0years old, and of course my dialogue has changed a lot in two years of my teenage life. It means the same thing, but it’s expanded and, dare I say, funnier. Assuming it’s funny at all."
+          "p": {
+            "en": {
+              "html": "<p>Only about 60% of the draft I wrote back on\u00a0.\u00a0.\u00a0. <i>checks</i> <em class=nw><time datetime=2021-05-25>May\u00a025, 2021</time>?</em> I really <em>am</em> behind. <i>ahem</i> Only about 60% of the original draft is in this final version. None of these pages so far are super faithful to that draft\u2060—I wrote them when I was around 14\u00a0years old, and of course my dialogue has changed a lot in two years of my teenage life. It means the same thing, but it’s expanded and, dare I say, funnier. Assuming it’s funny at all."
+            }
           }
         },
         {
-          "en": {
-            "html": "<p>I have 30\u00a0more pages drafted out, and while undoubtedly not all of it will stay, I’m excited to get through them. I’ve decided that I can get a comic done every week, posted on Thursday, while still doing school. So I’ll try it, and we’ll see how it goes."
+          "p": {
+            "en": {
+              "html": "<p>I have 30\u00a0more pages drafted out, and while undoubtedly not all of it will stay, I’m excited to get through them. I’ve decided that I can get a comic done every week, posted on Thursday, while still doing school. So I’ll try it, and we’ll see how it goes."
+            }
           }
         },
         {
-          "en": {
-            "html": "<p>Once again, I so sincerely appreciate everyone who reads my silly, medium–low quality webcomic. I hope that you’ve enjoyed them regardless."
+          "p": {
+            "en": {
+              "html": "<p>Once again, I so sincerely appreciate everyone who reads my silly, medium–low quality webcomic. I hope that you’ve enjoyed them regardless."
+            }
           }
         },
         {
-          "en": {
-            "html": "<p><b>—\u2060Gabriel\u00a0/ <span translate=no>gabl</span></b>"
-          },
-          "mul": {
-            "equal": "en"
+          "p": {
+            "en": {
+              "html": "<p><b>—\u2060Gabriel\u00a0/ <span translate=no>gabl</span></b>",
+              "text": "—\u2060Gabriel\u00a0/ gabl"
+            },
+            "mul": {
+              "equal": "en"
+            }
           }
         }
       ]

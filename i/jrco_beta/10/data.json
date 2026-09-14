@@ -99,26 +99,34 @@
       "date": "20230504",
       "content": [
         {
-          "en": {
-            "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
-          },
-          "fr": {
-            "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+          "p": {
+            "en": {
+              "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+            },
+            "fr": {
+              "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+            }
           }
         },
         {
-          "en": {
-            "text": "JoeRunner gets to be in the thumbnail for his own comic again."
+          "p": {
+            "en": {
+              "text": "JoeRunner gets to be in the thumbnail for his own comic again."
+            }
           }
         },
         {
-          "en": {
-            "text": "When I first wrote this, T.T. said that he didn’t know what a girl was; I changed it later, because I decided that that wasn’t very T.T.‐like. Also, this is probably funnier anyway. I’ll have to post the original draft at some point, I guess. The drawing in this page is probably some of my worst. I hate my art so much, but I’m posting it on the internet forever anyway."
+          "p": {
+            "en": {
+              "text": "When I first wrote this, T.T. said that he didn’t know what a girl was; I changed it later, because I decided that that wasn’t very T.T.‐like. Also, this is probably funnier anyway. I’ll have to post the original draft at some point, I guess. The drawing in this page is probably some of my worst. I hate my art so much, but I’m posting it on the internet forever anyway."
+            }
           }
         },
         {
-          "en": {
-            "text": "Remember when I said I was going to get a page a week done? Yeah. I’m a riot."
+          "p": {
+            "en": {
+              "text": "Remember when I said I was going to get a page a week done? Yeah. I’m a riot."
+            }
           }
         }
       ]
