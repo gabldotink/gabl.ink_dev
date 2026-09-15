@@ -278,8 +278,19 @@ if __name__=="__main__":
                         F.append(get_var_l10n(line,"p","html",lang))
                     else:
                         F.append(get_var_l10n(line,"p","html",lang))
-                    
+                F.append("</details></article>")
 
+            F.append("<hr>")
+            F.append("<p id=canonical_url>")
+            F.append(msg_l10n(canonical,lang=lang,string="canonical_url"))
+            F.append(f"<a href={canonical} hreflang={lang} type=text/html>")
+            F.append(canonical)
+            F.append("</a>")
+
+            F.append("<details id=share_links>")
+            F.append(f'<summary>{msg_l10n(lang=lang,string="share_this_page")}</summary>')
+            F.append("<ul>")
+            
             with open(Path(index)/i_id/str(lang).lower()/"index_py.html","w+",encoding="utf-8",newline='') as output_file:
                 # Only write if there is a change
                 if F!=output_file.read():
