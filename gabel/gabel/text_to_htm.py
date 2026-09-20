@@ -16,7 +16,7 @@ def attribute_string(string:str)->str:
 
     quoted:bool
 
-    if any(sub in string for sub in ["\t","\n","\v","\f","\r"," ",'"',"'","<","=",">","`"]):
+    if any(c in string for c in " \"'=<>`\n\r\t\v\f"):
         quoted=True
     else:
         quoted=False
