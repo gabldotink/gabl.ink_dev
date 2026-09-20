@@ -11,9 +11,13 @@
         "text": "courriel"
       }
     },
-    "base": "mailto:",
-    "title": "subject",
-    "text": "body"
+    "base": "mailto:?",
+    "title": {
+      "key": "subject"
+    },
+    "text": {
+      "key": "body"
+    }
   },
   "sms": {
     "name": {
@@ -24,8 +28,10 @@
         "text": "messagerie texto"
       }
     },
-    "base": "sms:",
-    "text": "body"
+    "base": "sms:?",
+    "text": {
+      "key": "body"
+    }
   },
   "x": {
     "name": {
@@ -37,10 +43,16 @@
         "equal": "en"
       }
     },
-    "base": "https://x.com/intent/tweet",
-    "text": "text",
-    "url": "url",
-    "hashtag": "hashtags"
+    "base": "https://x.com/intent/tweet?",
+    "text": {
+      "key": "text"
+    },
+    "url": {
+      "key": "url"
+    },
+    "hashtag": {
+      "key": "hashtags"
+    }
   },
   "reddit": {
     "name": {
@@ -52,9 +64,13 @@
         "equal": "en"
       }
     },
-    "base": "https://www.reddit.com/submit?type=LINK",
-    "title": "title",
-    "url": "url"
+    "base": "https://www.reddit.com/submit?type=LINK&",
+    "title": {
+      "key": "title"
+    },
+    "url": {
+      "key": "url"
+    }
   },
   "facebook": {
     "name": {
@@ -66,8 +82,10 @@
         "equal": "en"
       }
     },
-    "base": "https://www.facebook.com/sharer/sharer.php",
-    "url": "u"
+    "base": "https://www.facebook.com/sharer/sharer.php?",
+    "url": {
+      "key": "u"
+    }
   },
   "telegram": {
     "name": {
@@ -79,9 +97,13 @@
         "equal": "en"
       }
     },
-    "base": "https://t.me/share",
-    "text": "text",
-    "url": "url"
+    "base": "https://t.me/share?",
+    "text": {
+      "key": "text"
+    },
+    "url": {
+      "key": "url"
+    }
   },
   "bluesky": {
     "name": {
@@ -93,8 +115,10 @@
         "equal": "en"
       }
     },
-    "base": "https://bsky.app/intent/compose",
-    "text": "text"
+    "base": "https://bsky.app/intent/compose?",
+    "text": {
+      "key": "text"
+    }
   },
   "whatsapp": {
     "name": {
@@ -106,8 +130,10 @@
         "equal": "en"
       }
     },
-    "base": "https://wa.me/",
-    "text": "text"
+    "base": "https://wa.me/?",
+    "text": {
+      "key": "text"
+    }
   },
   "mastodon": {
     "name": {
@@ -119,9 +145,13 @@
         "equal": "en"
       }
     },
-    "base": "https://mastodonshare.com/",
-    "text": "text",
-    "url": "url"
+    "base": "https://mastodonshare.com/?",
+    "text": {
+      "key": "text"
+    },
+    "url": {
+      "key": "url"
+    }
   },
   "threads": {
     "name": {
@@ -133,9 +163,13 @@
         "equal": "en"
       }
     },
-    "base": "https://www.threads.com/intent/post",
-    "text": "text",
-    "url": "url"
+    "base": "https://www.threads.com/intent/post?",
+    "text": {
+      "key": "text"
+    },
+    "url": {
+      "key": "url"
+    }
   },
   "truth_social": {
     "name": {
@@ -147,9 +181,13 @@
         "equal": "en"
       }
     },
-    "base": "https://truthsocial.com/share",
-    "text": "text",
-    "url": "url"
+    "base": "https://truthsocial.com/share?",
+    "text": {
+      "key": "text"
+    },
+    "url": {
+      "key": "url"
+    }
   },
   "gab": {
     "name": {
@@ -161,9 +199,13 @@
         "equal": "en"
       }
     },
-    "base": "https://gab.com/compose",
-    "text": "text",
-    "url": "url"
+    "base": "https://gab.com/compose?",
+    "text": {
+      "key": "text"
+    },
+    "url": {
+      "key": "url"
+    }
   },
   "vk": {
     "name": {
@@ -176,9 +218,15 @@
         "html": "<cite>VK</cite>"
       }
     },
-    "base": "https://vk.ru/share.php",
-    "title": "title",
-    "text": "comment",
-    "url": "url"
+    "base": "https://vk.ru/share.php?",
+    "title": {
+      "key": "title"
+    },
+    "text": {
+      "key": "comment"
+    },
+    "url": {
+      "key": "url"
+    }
   }
 }
