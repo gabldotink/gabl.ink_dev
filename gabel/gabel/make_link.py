@@ -5,7 +5,7 @@ def make_share_link(name:str,data:dict)->str:
     r.append('<a href')
 
     query:dict={}
-    for key in ["title","url","text","hashtag"]:
+    for key in "title","url","text","hashtag":
         if data["dictionaries/share_link"][name].get(key,{}).get("key"):
             pass
 
