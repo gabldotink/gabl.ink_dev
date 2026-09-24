@@ -159,9 +159,7 @@ if __name__=="__main__":
 
             # TODO: `if type != comic_page` (sh:349)
 
-            F.append(f"<link rel=preload href={styles}/{lang.language}.css as=style hreflang=zxx type=text/css>")
             F.append(f"<link rel=stylesheet href={styles}/{lang.language}.css hreflang=zxx type=text/css>")
-            F.append(f"<link rel=preload href={styles}/comic_page.css as=style hreflang=zxx type=text/css>")
             F.append(f"<link rel=stylesheet href={styles}/comic_page.css hreflang=zxx type=text/css>")
 
             F.append(f'<link rel="external license" href{attribute_string(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]],"url","id",lang))}>')
