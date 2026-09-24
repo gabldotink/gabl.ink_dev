@@ -175,20 +175,26 @@
       "print": "Valider ce page"
     }
   },
-  "copyright": {
-    "en": {
-      "print": "Copyright"
-    },
-    "fr": {
-      "print": "Droit d’auteur"
-    }
-  },
   "license": {
     "en-US": {
-      "print": "<span lang=en-US>License</span><span lang=en-GB>Licence</span>: "
+      "print": "License: "
+    },
+    "en-GB": {
+      "print": "Licence: "
     },
     "fr": {
       "print": "Licence\u202f: "
+    }
+  },
+  "license_plural": {
+    "en-US": {
+      "print": "Licenses: "
+    },
+    "en-GB": {
+      "print": "Licences: "
+    },
+    "fr": {
+      "print": "Licences\u202f: "
     }
   },
   "disclaimer": {
@@ -197,6 +203,14 @@
     },
     "fr": {
       "print": "Disclaimer\u202f: "
+    }
+  },
+  "disclaimer_plural": {
+    "en": {
+      "print": "Disclaimers: "
+    },
+    "fr": {
+      "print": "Disclaimers\u202f: "
     }
   },
   "share_with": {
@@ -317,6 +331,30 @@
   "cc": {
     "en": {
       "print": "\u00a0(CC)"
+    },
+    "fr": {
+      "equal": "en"
+    }
+  },
+  "copyright_notice": {
+    "en": {
+      "print": "<abbr title=Copyright>©</abbr>\u00a0"
+    },
+    "fr": {
+      "print": "<abbr title=Droit d’auteur>©</abbr>\u00a0"
+    }
+  },
+  "copyright_year_separator": {
+    "en": {
+      "print": "–"
+    },
+    "fr": {
+      "equal": "en"
+    }
+  },
+  "copyright_license_abbr": {
+    "en": {
+      "print": " (<cite><abbr>{}</abbr></cite>)"
     },
     "fr": {
       "equal": "en"

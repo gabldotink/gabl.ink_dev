@@ -52,7 +52,7 @@ def make_nav_button(button:str,lang:Language)->str:
 
     r:list=["<div class=nav_button title"]
 
-    if data[i_id]["location"]["page"]==data[data[i_id]["location"]["series"]].get(button_fl,{}):
+    if data[i_id]["location"]["page"]==data[data[i_id]["location"]["series"]].get(button_fl):
         r.append(attribute_string(msg_l10n(msg_l10n(lang=lang,string=f"nav_button_{button_id}_inline"),lang=lang,string="this_is_x_page")))
         r.append(">")
     else:
@@ -113,6 +113,10 @@ if __name__=="__main__":
         data[f"dictionaries/{dictionary}"]["dictionary_name"]=dictionary
         with open(Path(dicts)/f"{dictionary}.json","r",encoding="utf-8") as f:
             data[f"dictionaries/{dictionary}"]["dictionary"]=json.load(f)
+        user_dictionary=Path(index)/"dictionaries"/dictionary/"data.json"
+        if user_dictionary.is_file():
+            with open(user_dictionary,"r",encoding="utf-8") as f:
+                data[f"dictionaries/{dictionary}"].update(json.load(f))
 
     for i in item_files:
         with open(i,"r",encoding="utf-8") as f:
@@ -290,7 +294,45 @@ if __name__=="__main__":
 
             F.append("<details id=share_links>")
             F.append(f'<summary>{msg_l10n(lang=lang,string="share_this_page")}</summary>')
-            F.append("<ul>")
+            F.append("<ul></ul></details>")
+
+            F.append("<details id=validate_links>")
+            F.append(f'<summary>{msg_l10n(lang=lang,string="validate_this_page")}</summary>')
+            F.append("<ul></ul></details>")
+
+            F.append("<footer><p><span class=nw>")
+            F.append(msg_l10n(lang=lang,string="copyright_notice"))
+            F.append(str(data[i_id]["copyright"]["year"]["first"]))
+            if data[i_id]["copyright"]["year"].get("last"):
+                F.append(msg_l10n(lang=lang,string="copyright_year_separator"))
+                F.append(str(data[i_id]["copyright"]["year"]["last"]))
+            F.append("</span>")
+            F.append("<span translate=no>gabl.ink</span>")
+
+            F.append(f'<p>{msg_l10n(lang=lang,string="license")}')
+            F.append('<a rel="external license" href')
+            F.append(attribute_string(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]],"url","id",lang)))
+            F.append(">")
+            F.append(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]],"title","html",lang))
+            if data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]].get("abbr"):
+                F.append(msg_l10n(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]],"abbr","html",lang),lang=lang,string="copyright_license_abbr"))
+            F.append("</a>")
+
+            if data[i_id].get("disclaimer"):
+                if len(data[i_id].get("disclaimer"))==1:
+                    F.append("<p>")
+                    F.append(msg_l10n(lang=lang,string="disclaimer"))
+                    F.append(get_var_l10n(data["dictionaries/disclaimer"]["dictionary"][data[i_id]["disclaimer"][0]],"text","html",lang))
+                else:
+                    F.append("<p>")
+                    F.append(msg_l10n(lang=lang,string="disclaimer_plural"))
+                    F.append("<ul class=horizontal_list>")
+                    for d in data[i_id]["disclaimer"]["dictionary"]:
+                        F.append("<li><p>")
+                        F.append(get_var_l10n(d,"text","html",lang))
+                    F.append("</ul>")
+
+            F.append("</footer>")
             
             with open(Path(index)/i_id/str(lang).lower()/"index_py.html","w+",encoding="utf-8",newline='') as output_file:
                 # Only write if there is a change

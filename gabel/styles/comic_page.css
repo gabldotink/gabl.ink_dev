@@ -169,3 +169,12 @@ summary h3 {
     margin: 0%
   }
 }
+
+.horizontal_list {
+  display: inline;
+  list-style-type: bullet;
+}
+
+.horizontal_list li:first-child {
+  list-style-type: none;
+}

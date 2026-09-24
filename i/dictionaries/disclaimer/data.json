@@ -4,13 +4,15 @@
   "dictionary_name": "disclaimer",
   "dictionary": {
     "olympic": {
-      "en-US": {
-        "text": "gabl.ink is not affiliated with, endorsed by, or sponsored by the International Olympic Committee or any other Olympic organization. “OLYMPIAD” and related marks are trademarks of their respective owners.",
-        "html": "<cite>gabl.ink</cite> is not affiliated with, endorsed by, or sponsored by the International Olympic Committee or any other Olympic organization. <i translate=no>OLYMPIAD</i> and related marks are trademarks of their respective owners."
-      },
-      "fr": {
-        "text": "gabl.ink n’est ni affilié à, ni approuvé par, ni parrainé par le Comité international olympique, ni par aucune autre organisation olympique. «\u202fOLYMPIADE\u202f» et les marques associées sont des marques déposées de leurs propriétaires respectifs.",
-        "html": "<cite>gabl.ink</cite> n’est ni affilié à, ni approuvé par, ni parrainé par le Comité international olympique, ni par aucune autre organisation olympique. <i translate=no>OLYMPIADE</i> et les marques associées sont des marques déposées de leurs propriétaires respectifs."
+      "text": {
+        "en-US": {
+          "text": "gabl.ink is not affiliated with, endorsed by, or sponsored by the International Olympic Committee or any other Olympic organization. “OLYMPIAD” and related marks are trademarks of their respective owners.",
+          "html": "<cite>gabl.ink</cite> is not affiliated with, endorsed by, or sponsored by the International Olympic Committee or any other Olympic organization. <i translate=no>OLYMPIAD</i> and related marks are trademarks of their respective owners."
+        },
+        "fr": {
+          "text": "gabl.ink n’est ni affilié à, ni approuvé par, ni parrainé par le Comité international olympique, ni par aucune autre organisation olympique. «\u202fOLYMPIADE\u202f» et les marques associées sont des marques déposées de leurs propriétaires respectifs.",
+          "html": "<cite>gabl.ink</cite> n’est ni affilié à, ni approuvé par, ni parrainé par le Comité international olympique, ni par aucune autre organisation olympique. <i translate=no>OLYMPIADE</i> et les marques associées sont des marques déposées de leurs propriétaires respectifs."
+        }
       }
     }
   }
