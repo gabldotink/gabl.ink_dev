@@ -99,6 +99,12 @@
       "ja": {
         "text": "日本語"
       },
+      "ja-Hira": {
+        "text": "にほんご"
+      },
+      "ja-Latn": {
+        "text": "Nihongo"
+      },
       "zh": {
         "text": "日文"
       },
@@ -124,6 +130,12 @@
       "ja": {
         "text": "中国語"
       },
+      "ja-Hira": {
+        "text": "ちゅうごくご"
+      },
+      "ja-Latn-hepburn": {
+        "text": "Chūgokugo"
+      },
       "en": {
         "text": "Chinese"
       },
@@ -133,6 +145,9 @@
       "eo": {
         "text": "la ĉina"
       }
+    },
+    "implicit": {
+      "script": "hani"
     }
   },
   "ko": {
