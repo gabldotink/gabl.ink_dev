@@ -28,6 +28,12 @@
       },
       "eo": {
         "text": "Francio"
+      },
+      "ja": {
+        "text": "フランス"
+      },
+      "ja-Latn": {
+        "text": "Furansu"
       }
     }
   },
@@ -60,6 +66,34 @@
       },
       "eo": {
         "text": "Kanado"
+      },
+      "ja": {
+        "text": "カナダ"
+      },
+      "ja-Latn": {
+        "text": "Kanada"
+      }
+    }
+  },
+  "pt": {
+    "name": {
+      "pt": {
+        "text": "Portugal"
+      },
+      "en": {
+        "equal": "pt"
+      },
+      "fr": {
+        "equal": "pt"
+      },
+      "es": {
+        "equal": "pt"
+      },
+      "ja": {
+        "text": "ポルトガル"
+      },
+      "ja-Latn": {
+        "text": "Porutogaru"
       }
     }
   },
@@ -145,6 +179,28 @@
       },
       "eo": {
         "text": "Japanio"
+      }
+    }
+  },
+  "br": {
+    "name": {
+      "pt": {
+        "text": "Brasil"
+      },
+      "en": {
+        "text": "Brazil"
+      },
+      "fr": {
+        "text": "Brésil"
+      },
+      "es": {
+        "equal": "pt"
+      },
+      "ja": {
+        "text": "ブラジル"
+      },
+      "ja-Latn-hepburn": {
+        "text": "Burajiru"
       }
     }
   }

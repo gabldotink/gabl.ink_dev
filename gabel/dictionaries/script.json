@@ -52,7 +52,16 @@
     ],
     "name": {
       "ja": {
+        "text": "漢字、ひらがな、カタカナ"
+      },
+      "ja-Hani": {
         "text": "漢字、平仮名、片仮名"
+      },
+      "ja-Hira": {
+        "text": "かんじ、ひらがな、かたかな"
+      },
+      "ja-Hrkt": {
+        "text": "かんじ、ひらがな、カタカナ"
       },
       "en": {
         "text": "kanji, hiragana, and katakana"

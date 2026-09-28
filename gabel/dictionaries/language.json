@@ -12,6 +12,15 @@
       },
       "eo": {
         "text": "la angla"
+      },
+      "ja": {
+        "text": "英語"
+      },
+      "ja-Hira": {
+        "text": "えいご"
+      },
+      "ja-Latn": {
+        "text": "Eigo"
       }
     },
     "implicit": {
@@ -31,6 +40,15 @@
       },
       "eo": {
         "text": "la franco"
+      },
+      "ja": {
+        "text": "フランス語"
+      },
+      "ja-Hrkt": {
+        "text": "フランスご"
+      },
+      "ja-Latn": {
+        "text": "Furansugo"
       }
     },
     "implicit": {
@@ -50,6 +68,43 @@
       },
       "eo": {
         "text": "la hispana"
+      },
+      "ja": {
+        "text": "スペイン語"
+      },
+      "ja-Hrkt": {
+        "text": "スペインご"
+      },
+      "ja-Latn": {
+        "text": "Supeingo"
+      }
+    },
+    "implicit": {
+      "script": "latn"
+    }
+  },
+  "pt": {
+    "name": {
+      "pt": {
+        "text": "português"
+      },
+      "en": {
+        "text": "Portuguese"
+      },
+      "fr": {
+        "text": "portugais"
+      },
+      "es": {
+        "text": "portugués"
+      },
+      "ja": {
+        "text": "ポルトガル語"
+      },
+      "ja-Hrkt": {
+        "text": "ポルトガルご"
+      },
+      "ja-Latn": {
+        "text": "Porutogarugo"
       }
     },
     "implicit": {
@@ -64,11 +119,17 @@
       "en": {
         "text": "Toki Pona"
       },
-      "mul": {
+      "fr": {
         "equal": "tok"
       },
       "eo": {
         "text": "Tokipono"
+      },
+      "ja": {
+        "text": "トキポナ"
+      },
+      "ja-Latn": {
+        "text": "Tokipona"
       }
     },
     "implicit": {
@@ -179,6 +240,12 @@
       },
       "fr": {
         "text": "espéranto"
+      },
+      "ja": {
+        "text": "エスペラント"
+      },
+      "ja-Latn": {
+        "text": "Esuperanto"
       }
     },
     "implicit": {
