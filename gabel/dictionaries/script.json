@@ -24,6 +24,9 @@
           },
           "ja-Hrkt": {
             "text": "ローマじ"
+          },
+          "ja-Latn-hepburn": {
+            "text": "rōmaji"
           }
         }
       }
@@ -33,7 +36,7 @@
     "dir": "ltr",
     "name": {
       "ru": {
-        "text": "кири́ллица"
+        "text": "кириллица"
       },
       "en": {
         "text": "Cyrillic script"
@@ -63,6 +66,9 @@
       "ja-Hrkt": {
         "text": "かんじ、ひらがな、カタカナ"
       },
+      "ja-Latn-hepburn": {
+        "text": "kanji, hiragana, katakana"
+      },
       "en": {
         "text": "kanji, hiragana, and katakana"
       },
@@ -80,11 +86,14 @@
       "ja-Hani": {
         "text": "平仮名"
       },
-      "en": {
+      "ja-Latn": {
         "text": "hiragana"
       },
+      "en": {
+        "equal": "ja-Latn"
+      },
       "fr": {
-        "equal": "en"
+        "equal": "ja-Latn"
       }
     }
   },
@@ -100,11 +109,14 @@
       "ja-Hira": {
         "text": "かたかな"
       },
-      "en": {
+      "ja-Latn": {
         "text": "katakana"
       },
+      "en": {
+        "equal": "ja-Latn"
+      },
       "fr": {
-        "equal": "en"
+        "equal": "ja-Latn"
       }
     }
   },
@@ -136,6 +148,9 @@
       },
       "ko-Hani": {
         "text": "韓㐎"
+      },
+      "ko-Latn": {
+        "text": "hangeul"
       },
       "en": {
         "text": "hangul"
@@ -215,22 +230,31 @@
       "ja-Hira": {
         "text": "かんじ"
       },
+      "ja-Latn-hepburn": {
+        "text": "kanji"
+      },
       "ko": {
         "text": "한자"
       },
       "ko-Hani": {
         "equal": "zh-Hant"
+      },
+      "ko-Latn": {
+        "text": "hanja"
       }
     },
     "alt": [
       {
         "lang": "ja",
         "name": {
-          "en": {
+          "ja-Latn-hepburn": {
             "text": "kanji"
           },
+          "en": {
+            "equal": "ja-Latn-hepburn"
+          },
           "fr": {
-            "equal": "en"
+            "equal": "ja-Latn-hepburn"
           }
         }
       },
@@ -261,11 +285,14 @@
       "ja-Hira": {
         "text": "かな"
       },
-      "en": {
+      "ja-Latn": {
         "text": "kana"
       },
+      "en": {
+        "equal": "ja-Latn"
+      },
       "fr": {
-        "equal": "en"
+        "equal": "ja-Latn"
       }
     }
   }
