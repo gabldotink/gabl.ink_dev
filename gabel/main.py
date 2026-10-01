@@ -90,13 +90,13 @@ def attribute_string(string:str)->str:
         else:
             quote_char='"'
 
-    string:str=re.sub(r"&(?=[#A-Za-z])","&amp;",string) # &#38;
+    string=re.sub(r"&(?=[#A-Za-z])","&amp;",string) # &#38;
 
     if quoted:
         if quote_char=='"':
-            string:str=string.replace('"',"&#34;") # &quot;
+            string=string.replace('"',"&#34;") # &quot;
         elif quote_char=="'":
-            string:str=string.replace("'","&#39;") # &apos;
+            string=string.replace("'","&#39;") # &apos;
         return f"={quote_char}{string}{quote_char}"
     else:
         return f"={string}"
@@ -160,7 +160,7 @@ def get_var_l10n(index,key:str|int,format:str,l10n_lang:Language)->str:
             elif "equal" in index.get(key,{}).get(o,{}):
                 return get_var_l10n(index,key,format,Language.get(index[key][o]["equal"]))
 
-def id_base(i_id:str)->str:
+def id_base(i:str)->str:
     """Returns the base part of an ID.
 
     >>> id_base("foo")
@@ -170,12 +170,12 @@ def id_base(i_id:str)->str:
     >>> id_base("foo/bar/baz")
     'baz'
     """
-    if "/" in i_id:
-        return i_id.rpartition("/")[2]
+    if "/" in i:
+        return i.rpartition("/")[2]
     else:
-        return i_id
+        return i
 
-def id_parent(i_id:str)->str:
+def id_parent(i:str)->str|None:
     """Returns the non‐base part of an ID.
 
     >>> id_parent("foo")
@@ -185,8 +185,8 @@ def id_parent(i_id:str)->str:
     >>> id_parent("foo/bar/baz")
     'foo/bar'
     """
-    if "/" in i_id:
-        return i_id.rpartition("/")[0]
+    if "/" in i:
+        return i.rpartition("/")[0]
     else:
         return None
 
@@ -227,7 +227,7 @@ def make_nav_button(button:str,lang:Language)->str:
     return "".join(r)
 
 def make_share_link(name:str)->str:
-    r:dict=[f"<li id=share_link_{name}>"]
+    r:list=[f"<li id=share_link_{name}>"]
     r.append('<a href')
 
     query:dict={}
@@ -249,10 +249,10 @@ def print_date(d:date)->str:
     return f"{d.year:04}-{d.month:02}-{d.day:02}"
 
 def text_to_html(string:str)->str:
-    string:str=re.sub(r"&(?=[#A-Za-z])","&amp;",string) # &#38;
-    string:str=string.replace("<","&lt;") # &#60;
-    string:str=string.replace("\u200b","<wbr>")
-    string:str=string.replace("\n","<br>")
+    string=re.sub(r"&(?=[#A-Za-z])","&amp;",string) # &#38;
+    string=string.replace("<","&lt;") # &#60;
+    string=string.replace("\u200b","<wbr>")
+    string=string.replace("\n","<br>")
     return string
 
 def to_regional_indicators(string:str)->str:
@@ -354,7 +354,7 @@ if __name__=="__main__":
             continue
 
         for lang in data[i_id]["langs"]:
-            lang:Language=Language.get(lang)
+            lang=Language.get(lang)
 
             canonical:str=f'https://gabl.ink/i/{data[i_id]["id"]}/{str(lang).lower()}/'
 
@@ -401,7 +401,7 @@ if __name__=="__main__":
 
             F.append("<ul id=lang_select>")
             for l in sorted(data[i_id]["langs"]):
-                l:Language=Language.get(l)
+                l=Language.get(l)
 
                 F.append(f"<li data-lang_select_flag={to_regional_indicators(l.region)}>")
 
@@ -552,8 +552,16 @@ if __name__=="__main__":
                     F.append("</ul>")
 
             F.append("</footer>")
+
+            output_file=Path(index)/i_id/str(lang).lower()/"index.html"
+            output_file.parent.mkdir(parents=True,exist_ok=True)
+            output_file.touch(exist_ok=True)
+
+            output="".join(F)
             
-            with open(Path(index)/i_id/str(lang).lower()/"index_py.html","w+",encoding="utf-8",newline="") as output_file:
+            with open(output_file,"r+",encoding="utf-8",newline="") as output_file:
                 # Only write if there is a change
-                if F!=output_file.read():
-                    output_file.write("".join(F))
+                if output!=output_file.read():
+                    output_file.seek(0)
+                    output_file.truncate()
+                    output_file.write(output)
