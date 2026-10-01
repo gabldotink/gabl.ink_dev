@@ -4,42 +4,191 @@
 # I’ve been meaning to learn Python anyway
 
 import json
-import os
+import re
 import sys
 from datetime import date
 from pathlib import Path
 
-from interlang import get_var_l10n,print_date,say_date
-#from make_link import make_share_link
-from text_to_htm import text_to_html,attribute_string
-#from id_split import id_parent,id_base
-
 # Arch: python-langcodes
 from langcodes import Language
+
+script:Path=Path(__file__).resolve()
+gabel:Path=script.parent
+dicts:Path=Path(gabel)/"dictionaries"
+index:Path=Path(gabel)/".."/"i"
+encyclopedia:Path=Path(index)/"encyclopedia"
+
+data:dict={}
+
+item_files:list=[
+    path
+    for path in Path(index).rglob("data.json")
+    if path.is_file()
+]
+
+for dictionary in ["copyright_license","disclaimer","language","month","region","script","share_link","string","validate_link","weekday"]:
+    data[f"dictionaries/{dictionary}"]={}
+    data[f"dictionaries/{dictionary}"]["id"]=f"dictionaries/{dictionary}"
+    data[f"dictionaries/{dictionary}"]["type"]="dictionary"
+    data[f"dictionaries/{dictionary}"]["dictionary_name"]=dictionary
+    with open(Path(dicts)/f"{dictionary}.json","r",encoding="utf-8") as f:
+        data[f"dictionaries/{dictionary}"]["dictionary"]=json.load(f)
+    user_dictionary=Path(index)/"dictionaries"/dictionary/"data.json"
+    if user_dictionary.is_file():
+        with open(user_dictionary,"r",encoding="utf-8") as f:
+            data[f"dictionaries/{dictionary}"].update(json.load(f))
+
+for i in item_files:
+    with open(i,"r",encoding="utf-8") as f:
+        obj=json.load(f)
+        obj_id=obj.get("id")
+        data[obj_id]=obj
+
+def attribute_string(string:str)->str:
+    """Takes a plain text string as input and returns the HTML
+    component that comes right after the attribute name. Returns an
+    empty string if the input is empty. Returns the equals sign,
+    quotation marks as appropriate, and the string with characters
+    escapes as necessary if the input is not empty.
+
+    >>> attribute_string("")
+    ''
+    >>> attribute_string("hello, world")
+    '="hello, world"'
+    >>> attribute_string("&")
+    '=&'
+    >>> attribute_string("&amp;")
+    '=&amp;amp;'
+    >>> attribute_string("'")
+    '="\\'"'
+    >>> attribute_string('"')
+    '=\\'"\\''
+    """
+    # In HTML5, `attribute` is equivalent to `attribute=""`
+    if not string:
+        return ""
+
+    quoted:bool
+
+    if any(c in string for c in " \"'=<>`\n\r\t\v\f"):
+        quoted=True
+    else:
+        quoted=False
+
+    quote_char:str
+
+    if quoted:
+        if '"' in string and "'" not in string:
+            quote_char="'"
+        elif "'" in string and '"' not in string:
+            quote_char='"'
+        elif '"' in string and "'" in string:
+            if string.count('"')>string.count("'"):
+                quote_char="'"
+            else:
+                quote_char='"'
+        else:
+            quote_char='"'
+
+    string:str=re.sub(r"&(?=[#A-Za-z])","&amp;",string) # &#38;
+
+    if quoted:
+        if quote_char=='"':
+            string:str=string.replace('"',"&#34;") # &quot;
+        elif quote_char=="'":
+            string:str=string.replace("'","&#39;") # &apos;
+        return f"={quote_char}{string}{quote_char}"
+    else:
+        return f"={string}"
+
+def expand_parts(parts:list)->list:
+    """Returns a list of integers from a `parts` list.
+
+    >>> expand_parts([1,2,3])
+    [1, 2, 3]
+    >>> expand_parts(["1-3"])
+    [1, 2, 3]
+    >>> expand_parts([4, 7, "1-5"])
+    [1, 2, 3, 4, 5, 7]
+    """
+    result=set()
+
+    for part in parts:
+        if isinstance(part,int):
+            result.add(part)
+        else:
+            start,end=map(int,part.split("-"))
+            result.update(range(start,end+1))
+
+    return sorted(result)
 
 def get_i_id(i:Path)->str:
     with open(i,"r",encoding="utf-8") as f:
         obj=json.load(f)
         return obj["id"]
 
-def to_sentence_case(string:str,lang:Language)->str:
-    if lang.language=="tok":
-        return string
+def get_var_l10n(index,key:str|int,format:str,l10n_lang:Language)->str:
+    # e.g. get_var_l10n(data["jrco_beta/1"]["location"],"series","text",lang)
+
+    for o in str(l10n_lang),l10n_lang.language,"mul","zxx","e":
+        if o=="e":
+            return ""
+
+        if format=="id":
+            if "id" in index.get(key,{}).get(o,{}):
+                return index[key][o]["id"]
+            elif "equal" in index.get(key,{}).get(o,{}):
+                return get_var_l10n(index,key,format,Language.get(index[key][o]["equal"]))
+
+        if format=="print":
+            if "print" in index.get(key,{}).get(o,{}):
+                return index[key][o]["print"]
+            elif "equal" in index.get(key,{}).get(o,{}):
+                return get_var_l10n(index,key,format,Language.get(index[key][o]["equal"]))
+
+        if format=="text":
+            if "text" in index.get(key,{}).get(o,{}):
+                return index[key][o]["text"]
+            elif "equal" in index.get(key,{}).get(o,{}):
+                return get_var_l10n(index,key,format,Language.get(index[key][o]["equal"]))
+
+        if format=="html":
+            if "html" in index.get(key,{}).get(o,{}):
+                return index[key][o]["html"]
+            elif "text" in index.get(key,{}).get(o,{}):
+                return text_to_html(index[key][o]["text"])
+            elif "equal" in index.get(key,{}).get(o,{}):
+                return get_var_l10n(index,key,format,Language.get(index[key][o]["equal"]))
+
+def id_base(i_id:str)->str:
+    """Returns the base part of an ID.
+
+    >>> id_base("foo")
+    'foo'
+    >>> id_base("foo/bar")
+    'bar'
+    >>> id_base("foo/bar/baz")
+    'baz'
+    """
+    if "/" in i_id:
+        return i_id.rpartition("/")[2]
     else:
-        return f"{string[:1].upper()}{string[1:]}"
+        return i_id
 
-def to_regional_indicators(string:str)->str:
-    out_chars=[]
-    for ch in string:
-        out_chars.append(chr(0x1F1E6+(ord(ch)-ord("A"))))
-    return ''.join(out_chars)
+def id_parent(i_id:str)->str:
+    """Returns the non‐base part of an ID.
 
-def say_lang(lang:Language,format:str)->str:
-    if lang.language in ("en","fr"):
-        return f'{to_sentence_case(get_var_l10n(data["dictionaries/language"]["dictionary"][lang.language],"name",format,lang),lang)} ({get_var_l10n(data["dictionaries/region"]["dictionary"][str(lang.region).lower()],"name",format,lang)})'
+    >>> id_parent("foo")
 
-def msg_l10n(*args,lang:Language,string:str)->str:
-    return get_var_l10n(data["dictionaries/string"]["dictionary"],string,"print",lang).format(*args)
+    >>> id_parent("foo/bar")
+    'foo'
+    >>> id_parent("foo/bar/baz")
+    'foo/bar'
+    """
+    if "/" in i_id:
+        return i_id.rpartition("/")[0]
+    else:
+        return None
 
 # TODO: remove global variable (`data`) reference
 def make_nav_button(button:str,lang:Language)->str:
@@ -75,55 +224,127 @@ def make_nav_button(button:str,lang:Language)->str:
 
     r.append("</div>")
 
-    return ''.join(r)
+    return "".join(r)
 
-def expand_parts(parts:list)->list:
-    result=set()
+def make_share_link(name:str)->str:
+    r:dict=[f"<li id=share_link_{name}>"]
+    r.append('<a href')
 
-    for part in parts:
-        if isinstance(part,int):
-            result.add(part)
+    query:dict={}
+    for key in "title","url","text","hashtag":
+        if data["dictionaries/share_link"][name].get(key,{}).get("key"):
+            pass
+
+    r.append(data["dictionaries/share_link"][name]["base"])
+
+def msg_l10n(*args,lang:Language,string:str)->str:
+    return get_var_l10n(data["dictionaries/string"]["dictionary"],string,"print",lang).format(*args)
+
+def print_date(d:date)->str:
+    """Returns a date string suitable for an HTML `datetime` attribute.
+
+    >>> print_date(date.fromisoformat("20260407"))
+    '2026-04-07'
+    """
+    return f"{d.year:04}-{d.month:02}-{d.day:02}"
+
+def text_to_html(string:str)->str:
+    string:str=re.sub(r"&(?=[#A-Za-z])","&amp;",string) # &#38;
+    string:str=string.replace("<","&lt;") # &#60;
+    string:str=string.replace("\u200b","<wbr>")
+    string:str=string.replace("\n","<br>")
+    return string
+
+def to_regional_indicators(string:str)->str:
+    """Returns a set of regional indicators from an uppercase string.
+
+    >>> to_regional_indicators("US")
+    '🇺🇸'
+    """
+    out_chars=[]
+    for ch in string:
+        out_chars.append(chr(0x1F1E6+(ord(ch)-ord("A"))))
+    return "".join(out_chars)
+
+def to_sentence_case(string:str,lang:Language)->str:
+    """Capitalizes the first character of a string as appropriate for
+    the language.
+
+    >>> to_sentence_case("toki pona",Language.get("tok"))
+    'toki pona'
+    >>> to_sentence_case("français",Language.get("fr"))
+    'Français'
+    """
+    if lang.language=="tok":
+        return string
+    else:
+        return f"{string[:1].upper()}{string[1:]}"
+
+# The shell script supports negative years, but `datetime` does not.
+def say_date(d:date,lang:Language)->str:
+    """Returns word form of date in HTML format.
+
+    >>> say_date(date.fromisoformat("20220401"),Language.get("fr"))
+    '<time datetime=2022-04-01>1er\xa0avril 2022</time>'
+    """
+    r:list=[f"<time datetime={print_date(d)}>"]
+
+    ad:bool
+
+    if d.year>0 and d.year<1000:
+        ad=True
+    else:
+        ad=False
+
+    if lang.language=="en":
+        if lang.region=="US":
+            r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","html",lang))
+            r.append(f"\xa0{d.day}, ")
+        elif lang.region=="GB":
+            r.append(f"{d.day}\xa0")
+            r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","html",lang))
+            r.append(" ")
+        if ad:
+            r.append('<abbr title="anno Domini">AD</abbr>\xa0')
+        r.append(str(d.year))
+    elif lang.language=="fr":
+        if d.day==1:
+            r.append("1er")
         else:
-            start,end=map(int,part.split("-"))
-            result.update(range(start,end+1))
+            r.append(str(d.day))
+        r.append("\xa0")
+        r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","html",lang))
+        if ad:
+            r.append(f'{d.year}\xa0<abbr title="après Jésus‐Christ">ap.\xa0J.‑C.</abbr>')
+        r.append(f" {d.year}")
+    elif lang.language=="es":
+        r.append(f"{d.day}\xa0de\xa0")
+        r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","html",lang))
+        r.append(" de ")
+        if ad:
+            r.append(f'{d.year}\xa0<abbr title="después de Cristo">d.\xa0C.</abbr>')
+        r.append(str(d.year))
+    elif lang.language in ("ja","ko","zh"):
+        r.append(f'{d.year}{msg_l10n(lang=lang,string="say_date_cjk_year")}')
+        r.append(f'{d.month}{msg_l10n(lang=lang,string="say_date_cjk_month")}')
+        r.append(f'{d.day}{msg_l10n(lang=lang,string="say_date_cjk_day")}')
 
-    return sorted(result)
+    r.append("</time>")
+
+    return "".join(r)
+
+def say_lang(lang:Language,format:str)->str:
+    """Returns a formatted language name and region.
+
+    >>> say_lang(Language.get("en-US"),"text")
+    'English (United States)'
+    >>> say_lang(Language.get("fr-FR"),"text")
+    'Français (France)'
+    """
+    if lang.language in ("en","fr"):
+        return f'{to_sentence_case(get_var_l10n(data["dictionaries/language"]["dictionary"][lang.language],"name",format,lang),lang)} ({get_var_l10n(data["dictionaries/region"]["dictionary"][str(lang.region).lower()],"name",format,lang)})'
 
 if __name__=="__main__":
-    script:Path=Path(os.path.abspath(sys.argv[0]))
-    scripts:Path=Path(os.path.dirname(script))
-    gabel:Path=Path(scripts)/".."
-    lib:Path=Path(scripts)/"lib"
-    dicts:Path=Path(gabel)/"dictionaries"
-    index:Path=Path(gabel)/".."/"i"
-    encyclopedia:Path=Path(index)/"encyclopedia"
-
-    data:dict={}
-
-    item_files:list=[
-        path
-        for path in Path(index).rglob("data.json")
-        if path.is_file()
-    ]
-
-    for dictionary in ["copyright_license","disclaimer","language","month","region","script","share_link","string","validate_link","weekday"]:
-        data[f"dictionaries/{dictionary}"]={}
-        data[f"dictionaries/{dictionary}"]["id"]=f"dictionaries/{dictionary}"
-        data[f"dictionaries/{dictionary}"]["type"]="dictionary"
-        data[f"dictionaries/{dictionary}"]["dictionary_name"]=dictionary
-        with open(Path(dicts)/f"{dictionary}.json","r",encoding="utf-8") as f:
-            data[f"dictionaries/{dictionary}"]["dictionary"]=json.load(f)
-        user_dictionary=Path(index)/"dictionaries"/dictionary/"data.json"
-        if user_dictionary.is_file():
-            with open(user_dictionary,"r",encoding="utf-8") as f:
-                data[f"dictionaries/{dictionary}"].update(json.load(f))
-
-    for i in item_files:
-        with open(i,"r",encoding="utf-8") as f:
-            obj=json.load(f)
-            obj_id=obj.get("id")
-            data[obj_id]=obj
-
     sys.stderr.write("section start: items\n")
 
     for i in item_files:
@@ -274,7 +495,7 @@ if __name__=="__main__":
 
             for entry in data[i_id]["log"]:
                 F.append(f'<article id=log_{print_date(date.fromisoformat(entry["date"]))}><details>')
-                F.append(f'<summary><h3>{say_date(date.fromisoformat(entry["date"]),lang,data)}</h3></summary>')
+                F.append(f'<summary><h3>{say_date(date.fromisoformat(entry["date"]),lang)}</h3></summary>')
                 for line in entry["content"]:
                     if text_to_html(get_var_l10n(line,"p","text",lang))==get_var_l10n(line,"p","html",lang):
                         F.append("<p>")
@@ -332,7 +553,7 @@ if __name__=="__main__":
 
             F.append("</footer>")
             
-            with open(Path(index)/i_id/str(lang).lower()/"index_py.html","w+",encoding="utf-8",newline='') as output_file:
+            with open(Path(index)/i_id/str(lang).lower()/"index_py.html","w+",encoding="utf-8",newline="") as output_file:
                 # Only write if there is a change
                 if F!=output_file.read():
-                    output_file.write(''.join(F))
+                    output_file.write("".join(F))
