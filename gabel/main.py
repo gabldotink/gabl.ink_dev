@@ -355,7 +355,7 @@ if __name__=="__main__":
         for lang in data[i_id]["langs"]:
             lang=Language.get(lang)
 
-            canonical:str=f'https://gabl.ink/i/{data[i_id]["id"]}/{str(lang).lower()}/'
+            canonical:str=f'https://gabl.ink/i/{i_id}/{str(lang).lower()}/'
 
             F:list=["<!DOCTYPE html>\n"]
 
