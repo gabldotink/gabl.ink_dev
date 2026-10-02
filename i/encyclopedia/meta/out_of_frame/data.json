@@ -4,19 +4,19 @@
   "name": {
     "label": {
       "en": {
-        "text": "out of frame"
+        "t": "out of frame"
       },
       "fr": {
-        "text": "hors de cadre"
+        "t": "hors de cadre"
       }
     }
   },
   "description": {
     "en": {
-      "text": "Words whose speakers are not visible in the frame."
+      "t": "Words whose speakers are not visible in the frame."
     },
     "fr": {
-      "text": "Mots dont les locuteurs ne sont pas visibles dans le cadre."
+      "t": "Mots dont les locuteurs ne sont pas visibles dans le cadre."
     }
   },
   "copyright": {

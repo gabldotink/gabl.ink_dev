@@ -14,21 +14,21 @@
   ],
   "title": {
     "en": {
-      "text": "alarm clock"
+      "t": "alarm clock"
     },
     "fr": {
-      "text": "réveil"
+      "t": "réveil"
     },
     "eo": {
-      "text": "vekhorloĝo"
+      "t": "vekhorloĝo"
     }
   },
   "description": {
     "en": {
-      "text": "JoeRunner wakes up."
+      "t": "JoeRunner wakes up."
     },
     "fr": {
-      "text": "JoeRunner se reveille."
+      "t": "JoeRunner se reveille."
     }
   },
   "transcript": [
@@ -36,10 +36,10 @@
       "h": "meta/none",
       "d": {
         "en": {
-          "text": "There’s a view of the bed next to the desk now. As the alarm clock audibly beeps, a hand reaches out from a lump under the covers and smacks the alarm clock on the snooze button on its side, which causes it to slide off the desk. After it clatters, there are sounds of a car crash, a man screaming in pain (the Wilhelm scream), and a cat shrieking. An exasperated young male voice speaks."
+          "t": "There’s a view of the bed next to the desk now. As the alarm clock audibly beeps, a hand reaches out from a lump under the covers and smacks the alarm clock on the snooze button on its side, which causes it to slide off the desk. After it clatters, there are sounds of a car crash, a man screaming in pain (the Wilhelm scream), and a cat shrieking. An exasperated young male voice speaks."
         },
         "fr": {
-          "text": "Il y a maintenant un vue de le lit à côté de la bureau. Pendant que le réveil bipe audiblement, un main atteint d’une bosse sous le linge de lit et frappé le reveil sur le bouton de répétition sur le côté, cause le réveil se glisse hors-bureau. Aprés il claque, il y a des bruits d’un accident de voiture, un homme qui crie en mal (le cri Wilhelm), et un chat qui crie. Un voix de garçon exaspéré parle."
+          "t": "Il y a maintenant un vue de le lit à côté de la bureau. Pendant que le réveil bipe audiblement, un main atteint d’une bosse sous le linge de lit et frappé le reveil sur le bouton de répétition sur le côté, cause le réveil se glisse hors-bureau. Aprés il claque, il y a des bruits d’un accident de voiture, un homme qui crie en mal (le cri Wilhelm), et un chat qui crie. Un voix de garçon exaspéré parle."
         }
       }
     },
@@ -47,10 +47,10 @@
       "h": "meta/boy",
       "d": {
         "en": {
-          "text": "I really need to get a new snooze button."
+          "t": "I really need to get a new snooze button."
         },
         "fr": {
-          "text": "J’ai vraiment besoin d’un nouveau bouton snooze."
+          "t": "J’ai vraiment besoin d’un nouveau bouton snooze."
         }
       }
     }
@@ -62,40 +62,40 @@
         {
           "p": {
             "en": {
-              "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "h": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "h": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },
         {
           "p": {
             "en": {
-              "html": "<p>This one is laminated.\u00a0[<i>sic</i>]"
+              "h": "<p>This one is laminated.\u00a0[<i>sic</i>]"
             },
             "fr": {
-              "html": "<p>Cette vidéo est aimée.\u00a0[<i>sic</i>]"
+              "h": "<p>Cette vidéo est aimée.\u00a0[<i>sic</i>]"
             }
           }
         },
         {
           "p": {
             "en": {
-              "text": "Obviously, I’m not much of an animator. Oh well. At least it gets the point across."
+              "t": "Obviously, I’m not much of an animator. Oh well. At least it gets the point across."
             },
             "fr": {
-              "text": "Clairement, je ne suis pas vraiment un animateur. Tant pis. Du moins, il fais passer le message."
+              "t": "Clairement, je ne suis pas vraiment un animateur. Tant pis. Du moins, il fais passer le message."
             }
           }
         },
         {
           "p": {
             "en": {
-              "html": "<p>Aside from page\u00a04, I don’t have another animated page written for at least the next thirty‐or‐so pages, and there probably won’t be many (or any) more until the end of <cite class=i>Edulympiad</cite>. This one and page\u00a04 are animated mostly to better get the jokes across, and since I am incredibly lazy, if I don’t need to animate them for that purpose I probably won’t."
+              "h": "<p>Aside from page\u00a04, I don’t have another animated page written for at least the next thirty‐or‐so pages, and there probably won’t be many (or any) more until the end of <cite class=i>Edulympiad</cite>. This one and page\u00a04 are animated mostly to better get the jokes across, and since I am incredibly lazy, if I don’t need to animate them for that purpose I probably won’t."
             },
             "fr": {
-              "html": "<p>Excepter page\u00a04, je n’ai pas une autre page animée écrit depuis au moins de les troixante pages prochaines, et il n’y a pas principalement beaucoup (ou du tout) des plus avant la fin d’<cite class=i>Edulympiade</cite>. Celui‐ci et page\u00a04 sont animées primarement passer les gags mieux, et parce que je suis incroyablement paresseux, si je ne dois pas les animate pour ce objectif, je ne fais pas probalement."
+              "h": "<p>Excepter page\u00a04, je n’ai pas une autre page animée écrit depuis au moins de les troixante pages prochaines, et il n’y a pas principalement beaucoup (ou du tout) des plus avant la fin d’<cite class=i>Edulympiade</cite>. Celui‐ci et page\u00a04 sont animées primarement passer les gags mieux, et parce que je suis incroyablement paresseux, si je ne dois pas les animate pour ce objectif, je ne fais pas probalement."
             }
           }
         }

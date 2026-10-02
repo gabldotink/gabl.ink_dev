@@ -7,42 +7,42 @@
   "name": {
     "label": {
       "en": {
-        "text": "JoeRunner"
+        "t": "JoeRunner"
       },
       "mul": {
-        "equal": "en"
+        "e": "en"
       }
     },
     "given": {
       "en": {
-        "text": "Joseph"
+        "t": "Joseph"
       },
       "mul": {
-        "equal": "en"
+        "e": "en"
       }
     },
     "sur": {
       "en": {
-        "text": "Runner"
+        "t": "Runner"
       },
       "mul": {
-        "equal": "en"
+        "e": "en"
       }
     },
     "nick": {
       "en": {
-        "text": "JoeRunner"
+        "t": "JoeRunner"
       },
       "mul": {
-        "equal": "en"
+        "e": "en"
       }
     },
     "format": {
       "en": {
-        "text": "%given %sur (%nick)"
+        "t": "%given %sur (%nick)"
       },
       "mul": {
-        "equal": "en"
+        "e": "en"
       }
     }
   },
@@ -53,10 +53,10 @@
     "parent": "eden_runner"
   },
   "description": {
-    "html": "A fifth grader who likes his friends."
+    "t": "A fifth grader who likes his friends."
   },
   "bio": {
-    "html": "During the last few weeks of school, JoeRunner and his friend T.T. met Margo."
+    "t": "During the last few weeks of school, JoeRunner and his friend T.T. met Margo."
   },
   "copyright": {
     "year": {

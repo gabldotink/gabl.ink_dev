@@ -13,15 +13,15 @@
   ],
   "title": {
     "en": {
-      "text": "T.T."
+      "t": "T.T."
     },
     "mul": {
-      "equal": "en"
+      "e": "en"
     }
   },
   "description": {
     "en": {
-      "text": "JoeRunner meets his friend T.T. outside the school."
+      "t": "JoeRunner meets his friend T.T. outside the school."
     }
   },
   "transcript": [
@@ -29,7 +29,7 @@
       "h": "meta/none",
       "d": {
         "en": {
-          "html": "<p>The boy with black hair watches as JoeRunner walks out of a minivan with a canoe strapped to the top. The boy wears a T‐shirt reading <i>77</i> and shorts, has constant dropped eyebrows, and speaks in an all‐lowercase sans‐serif font."
+          "h": "<p>The boy with black hair watches as JoeRunner walks out of a minivan with a canoe strapped to the top. The boy wears a T‐shirt reading <i>77</i> and shorts, has constant dropped eyebrows, and speaks in an all‐lowercase sans‐serif font."
         }
       }
     },
@@ -37,10 +37,10 @@
       "h": "meta/boy",
       "d": {
         "en": {
-          "text": "Oh, finally."
+          "t": "Oh, finally."
         },
         "fr": {
-          "text": "Oh, enfin."
+          "t": "Oh, enfin."
         }
       }
     },
@@ -48,10 +48,10 @@
       "h": "meta/none",
       "d": {
         "en": {
-          "text": "JoeRunner walks up to the boy."
+          "t": "JoeRunner walks up to the boy."
         },
         "fr": {
-          "text": "JoeRunner marche jusqu’au garçon."
+          "t": "JoeRunner marche jusqu’au garçon."
         }
       }
     },
@@ -59,10 +59,10 @@
       "h": "meta/boy",
       "d": {
         "en": {
-          "text": "Hey, JoeRunner, you made it! And it only took, like, two decades!"
+          "t": "Hey, JoeRunner, you made it! And it only took, like, two decades!"
         },
         "fr": {
-          "text": "Hé, JoeRunner, tu es arrivé\u00a0! Et ça n’a pris que, genre, deux décennies\u00a0!"
+          "t": "Hé, JoeRunner, tu es arrivé\u00a0! Et ça n’a pris que, genre, deux décennies\u00a0!"
         }
       }
     },
@@ -70,10 +70,10 @@
       "h": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "text": "Yeah, there was lots of traffic on North\u00a01 today."
+          "t": "Yeah, there was lots of traffic on North\u00a01 today."
         },
         "fr": {
-          "text": "Ouais, il y avait beaucoup de trafic sur Nord\u00a01 aujourd’hui."
+          "t": "Ouais, il y avait beaucoup de trafic sur Nord\u00a01 aujourd’hui."
         }
       }
     },
@@ -81,7 +81,7 @@
       "h": "meta/none",
       "d": {
         "en": {
-          "text": "The boy starts walking to the door."
+          "t": "The boy starts walking to the door."
         }
       }
     },
@@ -89,10 +89,10 @@
       "h": "meta/bio",
       "d": {
         "en": {
-          "text": "T.T.\u00a0/ one heck of a guy"
+          "t": "T.T.\u00a0/ one heck of a guy"
         },
         "fr": {
-          "text": "T.T.\u00a0/ un sacré mec"
+          "t": "T.T.\u00a0/ un sacré mec"
         }
       }
     },
@@ -100,10 +100,10 @@
       "h": "jrco_beta/t_t",
       "d": {
         "en": {
-          "html": "<p>Yeah, yeah, excuses, excuses.<p>Come on! We’re only gonna have time for six games of <cite class=i>Hyper Galactic Battle Ducks\u00a0III</cite>! <em>Six!</em>"
+          "h": "<p>Yeah, yeah, excuses, excuses.<p>Come on! We’re only gonna have time for six games of <cite class=i>Hyper Galactic Battle Ducks\u00a0III</cite>! <em>Six!</em>"
         },
         "fr": {
-          "html": "<p>Ouais, ouais, je veux pas tes excuses.<p>Allez\u00a0! Nous aurons seulement de temps pour six parties de <cite class=i>Hyper Galactic Battle Ducks\u00a0III</cite>\u00a0! Seulement six\u00a0!"
+          "h": "<p>Ouais, ouais, je veux pas tes excuses.<p>Allez\u00a0! Nous aurons seulement de temps pour six parties de <cite class=i>Hyper Galactic Battle Ducks\u00a0III</cite>\u00a0! Seulement six\u00a0!"
         }
       }
     }
@@ -115,17 +115,17 @@
         {
           "p": {
             "en": {
-              "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "h": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "h": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },
         {
           "p": {
             "en": {
-              "text": "I’m posting this technically before I’m ready. I’ll be reorganizing some parts of the site shortly, but I’ve been waiting too long to post this as it is."
+              "t": "I’m posting this technically before I’m ready. I’ll be reorganizing some parts of the site shortly, but I’ve been waiting too long to post this as it is."
             }
           }
         }

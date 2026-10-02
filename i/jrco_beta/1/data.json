@@ -13,42 +13,42 @@
   },
   "title": {
     "en-US": {
-      "text": "‘Thursday’ title page",
-      "html": "‘<cite>Thursday</cite>’ title page"
+      "t": "‘Thursday’ title page",
+      "h": "‘<cite>Thursday</cite>’ title page"
     },
     "fr": {
-      "text": "page de titre de “jeudi”",
-      "html": "page de titre de <cite class=\"r\">jeudi</cite>"
+      "t": "page de titre de “jeudi”",
+      "h": "page de titre de <cite class=\"r\">jeudi</cite>"
     }
   },
   "title_unnested": {
     "en-US": {
-      "text": "“Thursday” title page",
-      "html": "“<cite>Thursday</cite>” title page"
+      "t": "“Thursday” title page",
+      "h": "“<cite>Thursday</cite>” title page"
     },
     "fr": {
-      "text": "page de titre de «\u202fjeudi\u202f»",
-      "html": "page de titre de <cite class=i>jeudi</cite>"
+      "t": "page de titre de «\u202fjeudi\u202f»",
+      "h": "page de titre de <cite class=i>jeudi</cite>"
     }
   },
   "description": {
     "en-US": {
-      "text": "The title page for “JoeRunner and Co. Beta,” originally “JoeRunner and Co.”",
-      "html": "The title page for <cite class=i>JoeRunner and Co. Beta</cite>, originally <cite class=i>JoeRunner and Co.</cite>"
+      "t": "The title page for “JoeRunner and Co. Beta,” originally “JoeRunner and Co.”",
+      "h": "The title page for <cite class=i>JoeRunner and Co. Beta</cite>, originally <cite class=i>JoeRunner and Co.</cite>"
     },
     "fr": {
-      "text": "La page de titre de «\u202fJoeRunner et cie Bêta\u202f», intitulée originalement «\u202fJoeRunner et cie\u202f».",
-      "html": "La page de titre de <cite class=i>JoeRunner et cie Bêta</cite>, intitulée originalement <cite class=i>JoeRunner et cie</cite>."
+      "t": "La page de titre de «\u202fJoeRunner et cie Bêta\u202f», intitulée originalement «\u202fJoeRunner et cie\u202f».",
+      "h": "La page de titre de <cite class=i>JoeRunner et cie Bêta</cite>, intitulée originalement <cite class=i>JoeRunner et cie</cite>."
     }
   },
   "tooltip": {
     "en": {
-      "text": "pro tip for 5th graders: DO NOT wake up at 6:30\u00a0a.m.",
-      "html": "pro tip for 5th graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0<abbr title=\"ante meridiem\">a.m.</abbr></time>"
+      "t": "pro tip for 5th graders: DO NOT wake up at 6:30\u00a0a.m.",
+      "h": "pro tip for 5th graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0<abbr title=\"ante meridiem\">a.m.</abbr></time>"
     },
     "fr": {
-      "text": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à 6h30",
-      "html": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime=06:30>6h30</time>"
+      "t": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à 6h30",
+      "h": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime=06:30>6h30</time>"
     }
   },
   "transcript": [
@@ -56,10 +56,10 @@
       "h": "meta/logo",
       "d": {
         "en-US": {
-          "html": "<p><cite class=i>JoeRunner and Co.</cite><p>by <span translate=no>gabl</span><p>episode\u00a01 <cite class=i>Edulympiad</cite><p>chapter\u00a01 “<cite>Thursday</cite>”"
+          "h": "<p><cite class=i>JoeRunner and Co.</cite><p>by <span translate=no>gabl</span><p>episode\u00a01 <cite class=i>Edulympiad</cite><p>chapter\u00a01 “<cite>Thursday</cite>”"
         },
         "fr": {
-          "html": "<p><cite class=i>JoeRunner et cie</cite><p>par <span translate=no>gabl</span><p>épisode\u00a01 <cite class=i>Edulympiade</cite><p>chapitre\u00a01 <cite class=i>jeudi</cite>"
+          "h": "<p><cite class=i>JoeRunner et cie</cite><p>par <span translate=no>gabl</span><p>épisode\u00a01 <cite class=i>Edulympiade</cite><p>chapitre\u00a01 <cite class=i>jeudi</cite>"
         }
       }
     },
@@ -67,10 +67,10 @@
       "h": "meta/none",
       "d": {
         "en": {
-          "html": "<p>The setting is a bedroom. On the desk next to the bed are some notebooks and an alarm clock. It’s <time datetime=2021-05-27T06:30-0600>6:30\u00a0<abbr title=\"ante meridiem\">a.m.</abbr> on May\u00a027</time>, a Thursday. There is a button labeled “snooze” on the side of the alarm clock. The alarm is going off."
+          "h": "<p>The setting is a bedroom. On the desk next to the bed are some notebooks and an alarm clock. It’s <time datetime=2021-05-27T06:30-0600>6:30\u00a0<abbr title=\"ante meridiem\">a.m.</abbr> on May\u00a027</time>, a Thursday. There is a button labeled “snooze” on the side of the alarm clock. The alarm is going off."
         },
         "fr": {
-          "html": "<p>La scène se passe dans une chambre. Sur le bureau à côté du lit, il y a des cahiers et un réveil. Il est <time datetime=2021-05-27T06:30-0600>6h30 le 27\u00a0mai</time>, un jeudi. Il y a un bouton étiqueté «\u202fsnooze\u202f» sur le côté du réveil. L’alarme sonne."
+          "h": "<p>La scène se passe dans une chambre. Sur le bureau à côté du lit, il y a des cahiers et un réveil. Il est <time datetime=2021-05-27T06:30-0600>6h30 le 27\u00a0mai</time>, un jeudi. Il y a un bouton étiqueté «\u202fsnooze\u202f» sur le côté du réveil. L’alarme sonne."
         }
       }
     },
@@ -78,10 +78,10 @@
       "h": "meta/sound_effect",
       "d": {
         "en": {
-          "text": "Beep, beep, beep"
+          "t": "Beep, beep, beep"
         },
         "fr": {
-          "text": "Bip, bip, bip"
+          "t": "Bip, bip, bip"
         }
       }
     },
@@ -89,10 +89,10 @@
       "h": "meta/tooltip",
       "d": {
         "en": {
-          "html": "<p>pro tip for 5th graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0<abbr title=\"ante meridiem\">a.m.</abbr></time>"
+          "h": "<p>pro tip for 5th graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0<abbr title=\"ante meridiem\">a.m.</abbr></time>"
         },
         "fr": {
-          "html": "<p>Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime=06:30>6h30</time>"
+          "h": "<p>Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime=06:30>6h30</time>"
         }
       }
     }
@@ -104,61 +104,61 @@
         {
           "p": {
             "en": {
-              "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "h": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "h": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },
         {
           "p": {
             "en": {
-              "html": "<p>Hey there! Welcome to <cite class=\"i nw\">JoeRunner and Co.</cite>!"
+              "h": "<p>Hey there! Welcome to <cite class=\"i nw\">JoeRunner and Co.</cite>!"
             },
             "fr": {
-              "html": "<p>Salut\u202f! Bienvenue dans <cite class=\"i nw\">JoeRunner et cie</cite>\u202f!"
+              "h": "<p>Salut\u202f! Bienvenue dans <cite class=\"i nw\">JoeRunner et cie</cite>\u202f!"
             }
           }
         },
         {
           "p": {
             "en": {
-              "html": "<p>My name’s Gabriel, <abbr title=\"also known as\">a.k.a.</abbr> <span translate=no>gabl</span>, and I can’t wait to share my passion‐project comics with you. I’ve been drawing these characters for several years, and I’ve wanted to do a webcomic for\u00a0.\u00a0.\u00a0. less years, but still multiple. Years."
+              "h": "<p>My name’s Gabriel, <abbr title=\"also known as\">a.k.a.</abbr> <span translate=no>gabl</span>, and I can’t wait to share my passion‐project comics with you. I’ve been drawing these characters for several years, and I’ve wanted to do a webcomic for\u00a0.\u00a0.\u00a0. less years, but still multiple. Years."
             },
             "fr": {
-              "html": "<p>Je m’appelle Gabriel, alias <span translate=no>gabl</span>, et j’ai hâte de partager mes bandes dessinées, mes projets de passion, avec vous. Je dessine ces personnages depuis plusieurs années, et je veux faire un webcomic depuis… moins longtemps, mais encore plusieurs années."
+              "h": "<p>Je m’appelle Gabriel, alias <span translate=no>gabl</span>, et j’ai hâte de partager mes bandes dessinées, mes projets de passion, avec vous. Je dessine ces personnages depuis plusieurs années, et je veux faire un webcomic depuis… moins longtemps, mais encore plusieurs années."
             }
           }
         },
         {
           "p": {
             "en": {
-              "text": "They’re\u00a0.\u00a0.\u00a0. still a bit rough around the edges. I’ve been drawing cartoons for half of my life, but I haven’t been good about challenging myself. Hopefully, this comic will help improve my cartooning skills. Hopefully, I’ll be able to make people laugh. Maybe I’ll even be able to get a girlfriend. I dunno. It’s possible."
+              "t": "They’re\u00a0.\u00a0.\u00a0. still a bit rough around the edges. I’ve been drawing cartoons for half of my life, but I haven’t been good about challenging myself. Hopefully, this comic will help improve my cartooning skills. Hopefully, I’ll be able to make people laugh. Maybe I’ll even be able to get a girlfriend. I dunno. It’s possible."
             },
             "fr": {
-              "html": "<p>Ils sont encore… un peu bruts. Je dessine les cartoons pour la moitié de ma vie, mais je n’ai pas été bon en défier moi‐même. Avec un peu de chance, cette <abbr title=\"bande dessinée\">BD</abbr> m’aidera à améliorer mes compétences en dessin. Avec un peu de chance, je peux faire rire les gens. Peut‐être que je peux trouver une copine. J’sais pas. C’est possible."
+              "h": "<p>Ils sont encore… un peu bruts. Je dessine les cartoons pour la moitié de ma vie, mais je n’ai pas été bon en défier moi‐même. Avec un peu de chance, cette <abbr title=\"bande dessinée\">BD</abbr> m’aidera à améliorer mes compétences en dessin. Avec un peu de chance, je peux faire rire les gens. Peut‐être que je peux trouver une copine. J’sais pas. C’est possible."
             }
           }
         },
         {
           "p": {
             "en": {
-              "text": ".\u00a0.\u00a0.\u00a0I look forward to taking this journey with you!"
+              "t": ".\u00a0.\u00a0.\u00a0I look forward to taking this journey with you!"
             },
             "fr": {
-              "text": "…\u00a0J’ai hâte de faire ce voyage avec vous\u202f!"
+              "t": "…\u00a0J’ai hâte de faire ce voyage avec vous\u202f!"
             }
           }
         },
         {
           "p": {
             "en": {
-              "html": "<p>—\u2060<span translate=no>gabl</span>",
-              "text": "—\u2060gabl"
+              "h": "<p>—\u2060<span translate=no>gabl</span>",
+              "t": "—\u2060gabl"
             },
             "mul": {
-              "equal": "en"
+              "e": "en"
             }
           }
         }

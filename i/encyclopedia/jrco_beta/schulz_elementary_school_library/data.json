@@ -7,10 +7,10 @@
   "name": {
     "label": {
       "en": {
-        "text": "Schulz Elementary School Library"
+        "t": "Schulz Elementary School Library"
       },
       "fr": {
-        "text": "Bibliotheque de l’école primaire Schulz"
+        "t": "Bibliotheque de l’école primaire Schulz"
       }
     },
     "official": "Schulz Elementary School Library"

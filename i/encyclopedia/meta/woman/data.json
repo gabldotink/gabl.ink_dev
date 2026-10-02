@@ -4,25 +4,25 @@
   "name": {
     "label": {
       "en": {
-        "text": "woman"
+        "t": "woman"
       },
       "fr": {
-        "text": "femme"
+        "t": "femme"
       },
       "eo": {
-        "text": "virino"
+        "t": "virino"
       },
       "tok": {
-        "text": "meli"
+        "t": "meli"
       }
     }
   },
   "description": {
     "en": {
-      "text": "Words from a woman."
+      "t": "Words from a woman."
     },
     "fr": {
-      "text": "Mots d’une femme."
+      "t": "Mots d’une femme."
     }
   },
   "copyright": {

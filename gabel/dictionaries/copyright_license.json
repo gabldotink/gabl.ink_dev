@@ -3,26 +3,26 @@
     "spdx": "CC-BY-4.0",
     "title": {
       "en-US": {
-        "text": "Creative Commons Attribution\u00a04.0 International Public License"
+        "t": "Creative Commons Attribution\u00a04.0 International Public License"
       },
       "fr": {
-        "text": "Publique licence Creative Commons Attribution\u00a04.0 International"
+        "t": "Publique licence Creative Commons Attribution\u00a04.0 International"
       }
     },
     "abbr": {
       "mul": {
-        "text": "CC\u00a0BY\u00a04.0"
+        "t": "CC\u00a0BY\u00a04.0"
       }
     },
     "url": {
       "en": {
-        "id": "https://creativecommons.org/licenses/by/4.0/deed.en"
+        "i": "https://creativecommons.org/licenses/by/4.0/deed.en"
       },
       "fr": {
-        "id": "https://creativecommons.org/licenses/by/4.0/deed.fr"
+        "i": "https://creativecommons.org/licenses/by/4.0/deed.fr"
       },
       "mul": {
-        "id": "https://creativecommons.org/licenses/by/4.0/deed"
+        "i": "https://creativecommons.org/licenses/by/4.0/deed"
       }
     },
     "redundant": [
@@ -34,26 +34,26 @@
     "spdx": "CC-BY-SA-4.0",
     "title": {
       "en-US": {
-        "text": "Creative Commons Attribution‐ShareAlike\u00a04.0 International Public License"
+        "t": "Creative Commons Attribution‐ShareAlike\u00a04.0 International Public License"
       },
       "fr": {
-        "text": "Publique licence Creative Commons Attribution\u00a0‐ Partage dans les mêmes conditions\u00a04.0 International"
+        "t": "Publique licence Creative Commons Attribution\u00a0‐ Partage dans les mêmes conditions\u00a04.0 International"
       }
     },
     "abbr": {
       "mul": {
-        "text": "CC\u00a0BY‐SA\u00a04.0"
+        "t": "CC\u00a0BY‐SA\u00a04.0"
       }
     },
     "url": {
       "en": {
-        "id": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+        "i": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
       },
       "fr": {
-        "id": "https://creativecommons.org/licenses/by-sa/4.0/deed.fr"
+        "i": "https://creativecommons.org/licenses/by-sa/4.0/deed.fr"
       },
       "mul": {
-        "id": "https://creativecommons.org/licenses/by-sa/4.0/deed"
+        "i": "https://creativecommons.org/licenses/by-sa/4.0/deed"
       }
     },
     "redundant": [
@@ -64,26 +64,26 @@
     "spdx": "CC-BY-NC-SA-4.0",
     "title": {
       "en-US": {
-        "text": "Creative Commons Attribution‐NonCommercial‐ShareAlike\u00a04.0 International Public License"
+        "t": "Creative Commons Attribution‐NonCommercial‐ShareAlike\u00a04.0 International Public License"
       },
       "fr": {
-        "text": "Publique licence Creative Commons Attribution\u00a0‐ Utilisation non commerciale\u00a0‐ Partage dans les mêmes conditions\u00a04.0 International"
+        "t": "Publique licence Creative Commons Attribution\u00a0‐ Utilisation non commerciale\u00a0‐ Partage dans les mêmes conditions\u00a04.0 International"
       }
     },
     "abbr": {
       "mul": {
-        "text": "CC\u00a0BY‑NC‑SA\u00a04.0"
+        "t": "CC\u00a0BY‑NC‑SA\u00a04.0"
       }
     },
     "url": {
       "en": {
-        "id": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"
+        "i": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"
       },
       "fr": {
-        "id": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr"
+        "i": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr"
       },
       "mul": {
-        "id": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed"
+        "i": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed"
       }
     }
   },
@@ -91,26 +91,26 @@
     "spdx": "CC0-1.0",
     "title": {
       "en-US": {
-        "text": "CC0\u00a01.0 Universal"
+        "t": "CC0\u00a01.0 Universal"
       },
       "fr": {
-        "text": "CC0\u00a01.0 Universal"
+        "t": "CC0\u00a01.0 Universal"
       }
     },
     "abbr": {
       "mul": {
-        "text": "CC0\u00a01.0"
+        "t": "CC0\u00a01.0"
       }
     },
     "url": {
       "en": {
-        "id": "https://creativecommons.org/publicdomain/zero/1.0/deed.en"
+        "i": "https://creativecommons.org/publicdomain/zero/1.0/deed.en"
       },
       "fr": {
-        "id": "https://creativecommons.org/publicdomain/zero/1.0/deed.fr"
+        "i": "https://creativecommons.org/publicdomain/zero/1.0/deed.fr"
       },
       "mul": {
-        "id": "https://creativecommons.org/publicdomain/zero/1.0/deed"
+        "i": "https://creativecommons.org/publicdomain/zero/1.0/deed"
       }
     },
     "redundant": [

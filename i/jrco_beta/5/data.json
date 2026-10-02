@@ -13,26 +13,26 @@
   ],
   "title": {
     "en-US": {
-      "text": "Joseph’s mom"
+      "t": "Joseph’s mom"
     },
     "fr": {
-      "text": "la mère de Joseph"
+      "t": "la mère de Joseph"
     },
     "eo": {
-      "text": "la patrino de Joseph"
+      "t": "la patrino de Joseph"
     }
   },
   "description": {
     "en-US": {
-      "text": "Enter Eden, JoeRunner’s mom."
+      "t": "Enter Eden, JoeRunner’s mom."
     },
     "fr": {
-      "text": "Entre Eden, la mère de JoeRunner."
+      "t": "Entre Eden, la mère de JoeRunner."
     }
   },
   "tooltip": {
     "en": {
-      "text": "JoeRunner inherited having no nose from his dad"
+      "t": "JoeRunner inherited having no nose from his dad"
     }
   },
   "transcript": [
@@ -40,10 +40,10 @@
       "h": "meta/out_of_frame",
       "d": {
         "en": {
-          "text": "Joseph?"
+          "t": "Joseph?"
         },
         "fr": {
-          "text": "Joseph\u202f?"
+          "t": "Joseph\u202f?"
         }
       }
     },
@@ -51,7 +51,7 @@
       "h": "meta/none",
       "d": {
         "en": {
-          "text": "JoeRunner looks over the back of the chair."
+          "t": "JoeRunner looks over the back of the chair."
         }
       }
     },
@@ -59,10 +59,10 @@
       "h": "meta/sound_effect",
       "d": {
         "en": {
-          "text": "?"
+          "t": "?"
         },
         "mul": {
-          "equal": "en"
+          "e": "en"
         }
       }
     },
@@ -70,7 +70,7 @@
       "h": "meta/none",
       "d": {
         "en": {
-          "text": "A tired‐looking woman with long hair and glasses is there. She speaks in the same font as JoeRunner."
+          "t": "A tired‐looking woman with long hair and glasses is there. She speaks in the same font as JoeRunner."
         }
       }
     },
@@ -78,10 +78,10 @@
       "h": "meta/woman",
       "d": {
         "en": {
-          "text": "What are you doing up so early?"
+          "t": "What are you doing up so early?"
         },
         "fr": {
-          "text": "Que fais-tu debout si tôt\u202f?"
+          "t": "Que fais-tu debout si tôt\u202f?"
         }
       }
     },
@@ -89,7 +89,7 @@
       "h": "meta/bio",
       "d": {
         "en": {
-          "text": "Eden Runner\u00a0/ heavy sleeper and mom"
+          "t": "Eden Runner\u00a0/ heavy sleeper and mom"
         }
       }
     },
@@ -97,7 +97,7 @@
       "h": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "text": "No, I’m pretty sure you just take a while to wake up."
+          "t": "No, I’m pretty sure you just take a while to wake up."
         }
       }
     },
@@ -105,10 +105,10 @@
       "h": "jrco_beta/eden_runner",
       "d": {
         "en": {
-          "html": "<p>(<i>smiling</i>) <i>Heh.</i> Yeah, I know."
+          "h": "<p>(<i>smiling</i>) <i>Heh.</i> Yeah, I know."
         },
         "fr": {
-          "html": "<p>(<i>souriant</i>) <i>Heh.</i> Ouais, je sais."
+          "h": "<p>(<i>souriant</i>) <i>Heh.</i> Ouais, je sais."
         }
       }
     },
@@ -116,7 +116,7 @@
       "h": "meta/tooltip",
       "d": {
         "en": {
-          "text": "JoeRunner inherited having no nose from his dad"
+          "t": "JoeRunner inherited having no nose from his dad"
         }
       }
     }
@@ -128,17 +128,17 @@
         {
           "p": {
             "en": {
-              "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "h": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "h": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },
         {
           "p": {
             "en": {
-              "text": "Not much of a background because I still don’t really know what the Runners’ house looks like. Not much of a footer comment because I don’t really have anything to say."
+              "t": "Not much of a background because I still don’t really know what the Runners’ house looks like. Not much of a footer comment because I don’t really have anything to say."
             }
           }
         }

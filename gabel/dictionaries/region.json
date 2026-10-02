@@ -2,205 +2,205 @@
   "us": {
     "name": {
       "en": {
-        "text": "United States"
+        "t": "United States"
       },
       "fr": {
-        "text": "États‐Unis"
+        "t": "États‐Unis"
       },
       "es": {
-        "text": "Estados Unidos"
+        "t": "Estados Unidos"
       },
       "eo": {
-        "text": "Usono"
+        "t": "Usono"
       }
     }
   },
   "fr": {
     "name": {
       "fr": {
-        "text": "France"
+        "t": "France"
       },
       "en": {
-        "equal": "fr"
+        "e": "fr"
       },
       "es": {
-        "text": "Francia"
+        "t": "Francia"
       },
       "eo": {
-        "text": "Francio"
+        "t": "Francio"
       },
       "ja": {
-        "text": "フランス"
+        "t": "フランス"
       },
       "ja-Latn": {
-        "text": "Furansu"
+        "t": "Furansu"
       }
     }
   },
   "gb": {
     "name": {
       "en": {
-        "text": "United Kingdom"
+        "t": "United Kingdom"
       },
       "fr": {
-        "text": "Royaume‐Uni"
+        "t": "Royaume‐Uni"
       },
       "es": {
-        "text": "Reino Unido"
+        "t": "Reino Unido"
       },
       "eo": {
-        "text": "Unuiĝinta Reĝlando"
+        "t": "Unuiĝinta Reĝlando"
       }
     }
   },
   "ca": {
     "name": {
       "fr": {
-        "text": "Canada"
+        "t": "Canada"
       },
       "en": {
-        "equal": "fr"
+        "e": "fr"
       },
       "es": {
-        "text": "Canadá"
+        "t": "Canadá"
       },
       "eo": {
-        "text": "Kanado"
+        "t": "Kanado"
       },
       "ja": {
-        "text": "カナダ"
+        "t": "カナダ"
       },
       "ja-Latn": {
-        "text": "Kanada"
+        "t": "Kanada"
       }
     }
   },
   "pt": {
     "name": {
       "pt": {
-        "text": "Portugal"
+        "t": "Portugal"
       },
       "en": {
-        "equal": "pt"
+        "e": "pt"
       },
       "fr": {
-        "equal": "pt"
+        "e": "pt"
       },
       "es": {
-        "equal": "pt"
+        "e": "pt"
       },
       "ja": {
-        "text": "ポルトガル"
+        "t": "ポルトガル"
       },
       "ja-Latn": {
-        "text": "Porutogaru"
+        "t": "Porutogaru"
       }
     }
   },
   "419": {
     "name": {
       "es": {
-        "text": "América Latina"
+        "t": "América Latina"
       },
       "en": {
-        "text": "Latin America"
+        "t": "Latin America"
       },
       "fr": {
-        "text": "Amérique latine"
+        "t": "Amérique latine"
       },
       "eo": {
-        "text": "Latinameriko"
+        "t": "Latinameriko"
       }
     }
   },
   "ru": {
     "name": {
       "ru": {
-        "text": "Росси́я"
+        "t": "Росси́я"
       },
       "en": {
-        "text": "Russia"
+        "t": "Russia"
       },
       "fr": {
-        "text": "Russie"
+        "t": "Russie"
       },
       "eo": {
-        "text": "Rusio"
+        "t": "Rusio"
       }
     }
   },
   "cn": {
     "name": {
       "zh-Hans": {
-        "text": "中国"
+        "t": "中国"
       },
       "zh-Hant": {
-        "text": "中國"
+        "t": "中國"
       },
       "ja": {
-        "equal": "zh-Hans"
+        "e": "zh-Hans"
       },
       "ja-Hira": {
-        "text": "ちゅ​うごく"
+        "t": "ちゅ​うごく"
       },
       "ja-Latn-hepburn": {
-        "text": "Chūgoku"
+        "t": "Chūgoku"
       },
       "en": {
-        "text": "China"
+        "t": "China"
       },
       "fr": {
-        "text": "Chine"
+        "t": "Chine"
       },
       "eo": {
-        "text": "Ĉinio"
+        "t": "Ĉinio"
       }
     }
   },
   "jp": {
     "name": {
       "zh": {
-        "text": "日本"
+        "t": "日本"
       },
       "ja": {
-        "equal": "zh"
+        "e": "zh"
       },
       "ja-Hira": {
-        "text": "にほん"
+        "t": "にほん"
       },
       "ja-Latn": {
-        "text": "Nihon"
+        "t": "Nihon"
       },
       "en": {
-        "text": "Japan"
+        "t": "Japan"
       },
       "fr": {
-        "text": "Japon"
+        "t": "Japon"
       },
       "eo": {
-        "text": "Japanio"
+        "t": "Japanio"
       }
     }
   },
   "br": {
     "name": {
       "pt": {
-        "text": "Brasil"
+        "t": "Brasil"
       },
       "en": {
-        "text": "Brazil"
+        "t": "Brazil"
       },
       "fr": {
-        "text": "Brésil"
+        "t": "Brésil"
       },
       "es": {
-        "equal": "pt"
+        "e": "pt"
       },
       "ja": {
-        "text": "ブラジル"
+        "t": "ブラジル"
       },
       "ja-Latn-hepburn": {
-        "text": "Burajiru"
+        "t": "Burajiru"
       }
     }
   }

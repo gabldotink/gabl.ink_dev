@@ -4,192 +4,192 @@
     {
       "name": {
         "en": {
-          "text": "January"
+          "t": "January"
         },
         "fr": {
-          "text": "janvier"
+          "t": "janvier"
         },
         "es": {
-          "text": "enero"
+          "t": "enero"
         },
         "eo": {
-          "text": "januaro"
+          "t": "januaro"
         }
       }
     },
     {
       "name": {
         "en": {
-          "text": "February"
+          "t": "February"
         },
         "fr": {
-          "text": "février"
+          "t": "février"
         },
         "es": {
-          "text": "febrero"
+          "t": "febrero"
         },
         "eo": {
-          "text": "februaro"
+          "t": "februaro"
         }
       }
     },
     {
       "name": {
         "en": {
-          "text": "March"
+          "t": "March"
         },
         "fr": {
-          "text": "mars"
+          "t": "mars"
         },
         "es": {
-          "text": "marzo"
+          "t": "marzo"
         },
         "eo": {
-          "text": "marto"
+          "t": "marto"
         }
       }
     },
     {
       "name": {
         "en": {
-          "text": "April"
+          "t": "April"
         },
         "fr": {
-          "text": "avril"
+          "t": "avril"
         },
         "es": {
-          "text": "abril"
+          "t": "abril"
         },
         "eo": {
-          "text": "aprilo"
+          "t": "aprilo"
         }
       }
     },
     {
       "name": {
         "en": {
-          "text": "May"
+          "t": "May"
         },
         "fr": {
-          "text": "mai"
+          "t": "mai"
         },
         "es": {
-          "text": "mayo"
+          "t": "mayo"
         },
         "eo": {
-          "text": "majo"
+          "t": "majo"
         }
       }
     },
     {
       "name": {
         "en": {
-          "text": "June"
+          "t": "June"
         },
         "fr": {
-          "text": "juin"
+          "t": "juin"
         },
         "es": {
-          "text": "junio"
+          "t": "junio"
         },
         "eo": {
-          "equal": "es"
+          "e": "es"
         }
       }
     },
     {
       "name": {
         "en": {
-          "text": "July"
+          "t": "July"
         },
         "fr": {
-          "text": "juillet"
+          "t": "juillet"
         },
         "es": {
-          "text": "julio"
+          "t": "julio"
         },
         "eo": {
-          "equal": "es"
+          "e": "es"
         }
       }
     },
     {
       "name": {
         "en": {
-          "text": "August"
+          "t": "August"
         },
         "fr": {
-          "text": "août"
+          "t": "août"
         },
         "es": {
-          "text": "agosto"
+          "t": "agosto"
         },
         "eo": {
-          "text": "aŭgusto"
+          "t": "aŭgusto"
         }
       }
     },
     {
       "name": {
         "en": {
-          "text": "September"
+          "t": "September"
         },
         "fr": {
-          "text": "septembre"
+          "t": "septembre"
         },
         "es": {
-          "text": "septiembre"
+          "t": "septiembre"
         },
         "eo": {
-          "text": "septembro"
+          "t": "septembro"
         }
       }
     },
     {
       "name": {
         "en": {
-          "text": "October"
+          "t": "October"
         },
         "fr": {
-          "text": "octobre"
+          "t": "octobre"
         },
         "es": {
-          "text": "octubre"
+          "t": "octubre"
         },
         "eo": {
-          "text": "oktobro"
+          "t": "oktobro"
         }
       }
     },
     {
       "name": {
         "en": {
-          "text": "November"
+          "t": "November"
         },
         "fr": {
-          "text": "novembre"
+          "t": "novembre"
         },
         "es": {
-          "text": "noviembre"
+          "t": "noviembre"
         },
         "eo": {
-          "text": "novembro"
+          "t": "novembro"
         }
       }
     },
     {
       "name": {
         "en": {
-          "text": "December"
+          "t": "December"
         },
         "fr": {
-          "text": "décembre"
+          "t": "décembre"
         },
         "es": {
-          "text": "diciembre"
+          "t": "diciembre"
         },
         "eo": {
-          "text": "decembro"
+          "t": "decembro"
         }
       }
     }

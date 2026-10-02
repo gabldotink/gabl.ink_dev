@@ -4,19 +4,19 @@
   "name": {
     "label": {
       "en": {
-        "text": "letter"
+        "t": "letter"
       },
       "fr": {
-        "text": "lettre"
+        "t": "lettre"
       }
     }
   },
   "description": {
     "en": {
-      "text": "Words in a written letter."
+      "t": "Words in a written letter."
     },
     "fr": {
-      "text": "Mots d’un lettre écrite."
+      "t": "Mots d’un lettre écrite."
     }
   },
   "copyright": {

@@ -1,115 +1,115 @@
 {
-  "comment": "Monday is the first day of the week per ISO 8601",
+  "comment": "Monday–Sunday per ISO 8601",
   "weekdays": [
     {
       "name": {
         "en": {
-          "text": "Monday"
+          "t": "Monday"
         },
         "fr": {
-          "text": "lundi"
+          "t": "lundi"
         },
         "eo": {
-          "text": "lundo"
+          "t": "lundo"
         },
         "es": {
-          "text": "lunes"
+          "t": "lunes"
         }
       }
     },
     {
       "name": {
         "en": {
-          "text": "Tuesday"
+          "t": "Tuesday"
         },
         "fr": {
-          "text": "mardi"
+          "t": "mardi"
         },
         "eo": {
-          "text": "mardo"
+          "t": "mardo"
         },
         "es": {
-          "text": "martes"
+          "t": "martes"
         }
       }
     },
     {
       "name": {
         "en": {
-          "text": "Wednesday"
+          "t": "Wednesday"
         },
         "fr": {
-          "text": "mercredi"
+          "t": "mercredi"
         },
         "eo": {
-          "text": "merkredo"
+          "t": "merkredo"
         },
         "es": {
-          "text": "miércoles"
+          "t": "miércoles"
         }
       }
     },
     {
       "name": {
         "en": {
-          "text": "Thursday"
+          "t": "Thursday"
         },
         "fr": {
-          "text": "jeudi"
+          "t": "jeudi"
         },
         "eo": {
-          "text": "ĵaŭdo"
+          "t": "ĵaŭdo"
         },
         "es": {
-          "text": "jueves"
+          "t": "jueves"
         }
       }
     },
     {
       "name": {
         "en": {
-          "text": "Friday"
+          "t": "Friday"
         },
         "fr": {
-          "text": "vendredi"
+          "t": "vendredi"
         },
         "eo": {
-          "text": "vendredo"
+          "t": "vendredo"
         },
         "es": {
-          "text": "viernes"
+          "t": "viernes"
         }
       }
     },
     {
       "name": {
         "en": {
-          "text": "Saturday"
+          "t": "Saturday"
         },
         "fr": {
-          "text": "samedi"
+          "t": "samedi"
         },
         "eo": {
-          "text": "sabato"
+          "t": "sabato"
         },
         "es": {
-          "text": "sábado"
+          "t": "sábado"
         }
       }
     },
     {
       "name": {
         "en": {
-          "text": "Sunday"
+          "t": "Sunday"
         },
         "fr": {
-          "text": "dimanche"
+          "t": "dimanche"
         },
         "eo": {
-          "text": "dimanĉo"
+          "t": "dimanĉo"
         },
         "es": {
-          "text": "domingo"
+          "t": "domingo"
         }
       }
     }

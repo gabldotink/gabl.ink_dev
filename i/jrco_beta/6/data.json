@@ -13,24 +13,24 @@
   ],
   "title": {
     "en": {
-      "text": "next year"
+      "t": "next year"
     },
     "fr": {
-      "text": "l’année prochaine"
+      "t": "l’année prochaine"
     }
   },
   "description": {
     "en": {
-      "text": "JoeRunner isn’t ecstatic about starting middle school next year."
+      "t": "JoeRunner isn’t ecstatic about starting middle school next year."
     }
   },
   "tooltip": {
     "en": {
-      "text": "you can really hear that semicolon"
+      "t": "you can really hear that semicolon"
     },
     "fr": {
       "comment": "I think I’ll use _vous_ for posts and _tu_ for stuff like this",
-      "text": "tu peux vraiment entendre ce point‐virgule"
+      "t": "tu peux vraiment entendre ce point‐virgule"
     }
   },
   "transcript": [
@@ -38,7 +38,7 @@
       "h": "meta/none",
       "d": {
         "en": {
-          "text": "JoeRunner and Eden are in the kitchen now."
+          "t": "JoeRunner and Eden are in the kitchen now."
         }
       }
     },
@@ -46,7 +46,7 @@
       "h": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "text": "I was just finishing up the last essay of the year."
+          "t": "I was just finishing up the last essay of the year."
         }
       }
     },
@@ -54,10 +54,10 @@
       "h": "jrco_beta/eden_runner",
       "d": {
         "en": {
-          "text": "Oh, hey, the last one?"
+          "t": "Oh, hey, the last one?"
         },
         "fr": {
-          "text": "Oh, hé, le dernier\u202f?"
+          "t": "Oh, hé, le dernier\u202f?"
         }
       }
     },
@@ -65,7 +65,7 @@
       "h": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "html": "<p>(<i>shrugging</i>) I mean\u00a0.\u00a0.\u00a0. until next year, anyway."
+          "h": "<p>(<i>shrugging</i>) I mean\u00a0.\u00a0.\u00a0. until next year, anyway."
         }
       }
     },
@@ -73,10 +73,10 @@
       "h": "jrco_beta/eden_runner",
       "d": {
         "en": {
-          "text": "Ooooh, next year! Middle school!"
+          "t": "Ooooh, next year! Middle school!"
         },
         "fr": {
-          "text": "Ooooh, l’année prochaine\u202f! Le collège\u202f!"
+          "t": "Ooooh, l’année prochaine\u202f! Le collège\u202f!"
         }
       }
     },
@@ -84,10 +84,10 @@
       "h": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "html": "<p>(<i>sulking</i>) Yeah; it’s kinda gonna stink, though."
+          "h": "<p>(<i>sulking</i>) Yeah; it’s kinda gonna stink, though."
         },
         "fr": {
-          "html": "<p>(<i>boudant</i>) Ouais… mais ça va être un peu nul."
+          "h": "<p>(<i>boudant</i>) Ouais… mais ça va être un peu nul."
         }
       }
     },
@@ -95,10 +95,10 @@
       "h": "jrco_beta/eden_runner",
       "d": {
         "en": {
-          "html": "<p>Well, I <em class=\"r u\">loved</em> middle school."
+          "h": "<p>Well, I <em class=\"r u\">loved</em> middle school."
         },
         "fr": {
-          "text": "Eh bien, j’ai adorée le collège."
+          "t": "Eh bien, j’ai adorée le collège."
         }
       }
     },
@@ -106,10 +106,10 @@
       "h": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "text": "Well, yeah, but T.T.’s brother totally hated it, so\u00a0.\u00a0.\u00a0."
+          "t": "Well, yeah, but T.T.’s brother totally hated it, so\u00a0.\u00a0.\u00a0."
         },
         "fr": {
-          "text": "Eh bien, ouais, mais le frère de T.T. a carrément detesté, alors…"
+          "t": "Eh bien, ouais, mais le frère de T.T. a carrément detesté, alors…"
         }
       }
     },
@@ -117,7 +117,7 @@
       "h": "jrco_beta/eden_runner",
       "d": {
         "en": {
-          "html": "<p><i>Sigh.</i> Come get some cereal, Joseph."
+          "h": "<p><i>Sigh.</i> Come get some cereal, Joseph."
         }
       }
     },
@@ -125,7 +125,7 @@
       "h": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "text": "Hey, you’re not objecting! I totally got you! It’s totally gonna stink!"
+          "t": "Hey, you’re not objecting! I totally got you! It’s totally gonna stink!"
         }
       }
     },
@@ -133,10 +133,10 @@
       "h": "meta/tooltip",
       "d": {
         "en": {
-          "text": "you can really hear that semicolon"
+          "t": "you can really hear that semicolon"
         },
         "fr": {
-          "text": "tu peux vraiment entendre ce point‐virgule"
+          "t": "tu peux vraiment entendre ce point‐virgule"
         }
       }
     }
@@ -148,70 +148,70 @@
         {
           "p": {
             "en": {
-              "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "h": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "h": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },
         {
           "p": {
             "en": {
-              "text": "Alright, lotta stuff to say on this one."
+              "t": "Alright, lotta stuff to say on this one."
             }
           }
         },
         {
           "p": {
             "en": {
-              "html": "<p>First off, this comic has a mobile‐friendly version! Similarly to the format that <cite>Webtoon</cite> uses, the mobile version is comprised of several narrower images that are easier to read on a vertical screen. If you’re using a fullscreen desktop browser window, the “desktop” version should show up by default; if you’re on mobile, the mobile version should appear instead. I’m testing it out with this one, and I’ll see how well it turns out. (You can view the mobile comic on desktop by resizing your browser window to be narrower; however, I’m still trying to figure out a way to view the desktop comic on mobile. Your best bet for now is probably to just view the original image source here<ins>\u00a0<small>[<i>link removed</i>]</small></ins>.)"
+              "h": "<p>First off, this comic has a mobile‐friendly version! Similarly to the format that <cite>Webtoon</cite> uses, the mobile version is comprised of several narrower images that are easier to read on a vertical screen. If you’re using a fullscreen desktop browser window, the “desktop” version should show up by default; if you’re on mobile, the mobile version should appear instead. I’m testing it out with this one, and I’ll see how well it turns out. (You can view the mobile comic on desktop by resizing your browser window to be narrower; however, I’m still trying to figure out a way to view the desktop comic on mobile. Your best bet for now is probably to just view the original image source here<ins>\u00a0<small>[<i>link removed</i>]</small></ins>.)"
             }
           }
         },
         {
           "p": {
             "en": {
-              "html": "<p>Second, I’m renaming “episodes” to “seasons.” I know, I know, calm down. I know how attached people have gotten to episodes over the last five pages, but believe me, it’s for the greater good. I want you to know that I don’t make this dramatic change lightly, and that it has a purpose. I’m calling them seasons now because webcomic “episodes” have a different meaning in <cite class=\"i nw\">JoeRunner and Co.</cite> than on <cite>Webtoon</cite>, the most popular webcomic publisher (that’s right, I mentioned <cite>Webtoon</cite> <em>twice</em>), in addition to the fact that having both “episodes” and “chapters” at once is a bit confusing. I hope your anger has more or less subsided; I understand, however, that it will likely take a long time for you to truly forgive me."
+              "h": "<p>Second, I’m renaming “episodes” to “seasons.” I know, I know, calm down. I know how attached people have gotten to episodes over the last five pages, but believe me, it’s for the greater good. I want you to know that I don’t make this dramatic change lightly, and that it has a purpose. I’m calling them seasons now because webcomic “episodes” have a different meaning in <cite class=\"i nw\">JoeRunner and Co.</cite> than on <cite>Webtoon</cite>, the most popular webcomic publisher (that’s right, I mentioned <cite>Webtoon</cite> <em>twice</em>), in addition to the fact that having both “episodes” and “chapters” at once is a bit confusing. I hope your anger has more or less subsided; I understand, however, that it will likely take a long time for you to truly forgive me."
             }
           }
         },
         {
           "p": {
             "en": {
-              "text": "And finally, I’ve realized that probably a lot of people are reading the comic pages that have been posted, having some fun (hopefully), then leaving. Due to this, I’m going to be leaving a couple ways to stay updated with the comic in these footers from now on."
+              "t": "And finally, I’ve realized that probably a lot of people are reading the comic pages that have been posted, having some fun (hopefully), then leaving. Due to this, I’m going to be leaving a couple ways to stay updated with the comic in these footers from now on."
             }
           }
         },
         {
           "p": {
             "en": {
-              "html": "<p>First, you can follow my <cite>Twitter</cite>, <a rel=\"external me\" href=https://x.com/i/user/1352061598836264960 type=text/html>@gabldotink</a>. I don’t tweet too often, so it shouldn’t flood your timeline, and I’ll keep the latest comic pinned to my profile so you can easily get to the most recent one."
+              "h": "<p>First, you can follow my <cite>Twitter</cite>, <a rel=\"external me\" href=https://x.com/i/user/1352061598836264960 type=text/html>@gabldotink</a>. I don’t tweet too often, so it shouldn’t flood your timeline, and I’ll keep the latest comic pinned to my profile so you can easily get to the most recent one."
             }
           }
         },
         {
           "p": {
             "en": {
-              "html": "<p>Alternatively, I have an <abbr>RSS</abbr> (Really Simple Syndication) feed! It’s located here<ins>\u00a0<small>[<i>link removed</i>]</small></ins>. If you click on the link, you’ll just see a bunch of code\u2060—it’s your job to get it to do its magic through an <abbr>RSS</abbr> reader, which will keep you posted whenever I update. You can learn how to do this at my handy‐dandy <abbr>RSS</abbr> info page<ins>\u00a0<small>[<i>link removed</i>]</small></ins>. Aren’t I so helpful?<ins>\u00a0<small>[<i>not anymore</i>]</small></ins>"
+              "h": "<p>Alternatively, I have an <abbr>RSS</abbr> (Really Simple Syndication) feed! It’s located here<ins>\u00a0<small>[<i>link removed</i>]</small></ins>. If you click on the link, you’ll just see a bunch of code\u2060—it’s your job to get it to do its magic through an <abbr>RSS</abbr> reader, which will keep you posted whenever I update. You can learn how to do this at my handy‐dandy <abbr>RSS</abbr> info page<ins>\u00a0<small>[<i>link removed</i>]</small></ins>. Aren’t I so helpful?<ins>\u00a0<small>[<i>not anymore</i>]</small></ins>"
             }
           }
         },
         {
           "p": {
             "en": {
-              "html": "<p>Thank you so much for reading <cite class=i>JoeRunner and Co.</cite> This is personally my favorite page I’ve made so far, and as I continue to draw this comic, they’ll continue to get better. And I’m so glad I’m finally sharing these with such a potentially wide group of people\u2060—even if I only end up updating, like, once a month."
+              "h": "<p>Thank you so much for reading <cite class=i>JoeRunner and Co.</cite> This is personally my favorite page I’ve made so far, and as I continue to draw this comic, they’ll continue to get better. And I’m so glad I’m finally sharing these with such a potentially wide group of people\u2060—even if I only end up updating, like, once a month."
             }
           }
         },
         {
           "p": {
             "en": {
-              "html": "<p><b>—\u2060<span translate=no>gabl</span></b>",
-              "text": "—\u2060gabl"
+              "h": "<p><b>—\u2060<span translate=no>gabl</span></b>",
+              "t": "—\u2060gabl"
             },
             "mul": {
-              "equal": "en"
+              "e": "en"
             }
           }
         }

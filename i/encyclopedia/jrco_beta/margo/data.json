@@ -7,10 +7,10 @@
   "name": {
     "given": {
       "fr": {
-        "text": "Margo"
+        "t": "Margo"
       },
       "mul": {
-        "equal": "fr"
+        "e": "fr"
       }
     }
   },
@@ -18,10 +18,10 @@
   "birthdate": {},
   "relationships": {},
   "description": {
-    "html": "A fifth grader from France."
+    "t": "A fifth grader from France."
   },
   "bio": {
-    "html": "Margo moved to the United States from France."
+    "t": "Margo moved to the United States from France."
   },
   "copyright": {
     "year": {

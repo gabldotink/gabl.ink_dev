@@ -7,26 +7,26 @@
   "name": {
     "label": {
       "en": {
-        "text": "Harry"
+        "t": "Harry"
       },
       "mul":{
-        "equal": "en"
+        "e": "en"
       }
     },
     "given": {
       "en": {
-        "text": "Harry"
+        "t": "Harry"
       },
       "mul":{
-        "equal": "en"
+        "e": "en"
       }
     },
     "sur": {
       "en": {
-        "text": "Mahan"
+        "t": "Mahan"
       },
       "mul":{
-        "equal": "en"
+        "e": "en"
       }
     }
   },
@@ -36,10 +36,10 @@
     "parent": "mr_mahan"
   },
   "description": {
-    "html": "A fourth grader who plays video games a lot."
+    "t": "A fourth grader who plays video games a lot."
   },
   "bio": {
-    "html": "Harry is friends with JoeRunner and T.T. They play video games together."
+    "t": "Harry is friends with JoeRunner and T.T. They play video games together."
   },
   "copyright": {
     "year": {

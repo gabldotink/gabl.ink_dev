@@ -4,19 +4,19 @@
   "name": {
     "label": {
       "en": {
-        "text": "screen"
+        "t": "screen"
       },
       "fr": {
-        "text": "écran"
+        "t": "écran"
       }
     }
   },
   "description": {
     "en": {
-      "text": "Text emitted on a screen."
+      "t": "Text emitted on a screen."
     },
     "fr": {
-      "text": "Texte émis sur un écran."
+      "t": "Texte émis sur un écran."
     }
   },
   "copyright": {

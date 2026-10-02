@@ -4,22 +4,22 @@
   "name": {
     "label": {
       "en": {
-        "text": "boy"
+        "t": "boy"
       },
       "fr": {
-        "text": "garçon"
+        "t": "garçon"
       },
       "eo": {
-        "text": "knabo"
+        "t": "knabo"
       }
     }
   },
   "description": {
     "en": {
-      "text": "Words from a boy."
+      "t": "Words from a boy."
     },
     "fr": {
-      "text": "Mots d’un garçon."
+      "t": "Mots d’un garçon."
     }
   },
   "copyright": {

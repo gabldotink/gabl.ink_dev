@@ -7,32 +7,32 @@
   "name": {
     "label": {
       "en": {
-        "text": "Eden"
+        "t": "Eden"
       },
       "mul": {
-        "equal": "en"
+        "e": "en"
       },
       "tok": {
-        "text": "Iten"
+        "t": "Iten"
       }
     },
     "given": {
       "en": {
-        "text": "Eden"
+        "t": "Eden"
       },
       "mul": {
-        "equal": "en"
+        "e": "en"
       },
       "tok": {
-        "text": "Iten"
+        "t": "Iten"
       }
     },
     "sur": {
       "en": {
-        "text": "Runner"
+        "t": "Runner"
       },
       "mul": {
-        "equal": "en"
+        "e": "en"
       }
     }
   },
@@ -43,10 +43,10 @@
     "child": "joerunner"
   },
   "description": {
-    "text": "A mother."
+    "t": "A mother."
   },
   "bio": {
-    "text": "Eden is JoeRunner’s mother."
+    "t": "Eden is JoeRunner’s mother."
   },
   "copyright": {
     "year": {

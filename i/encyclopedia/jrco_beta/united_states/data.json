@@ -7,24 +7,24 @@
   "name": {
     "label": {
       "en": {
-        "text": "United States"
+        "t": "United States"
       },
       "fr": {
-        "text": "États‐Unis"
+        "t": "États‐Unis"
       },
       "eo": {
-        "text": "Usono"
+        "t": "Usono"
       }
     },
     "official": {
       "en": {
-        "text": "United States of America"
+        "t": "United States of America"
       },
       "fr": {
-        "text": "États‐Unis d’Amérique"
+        "t": "États‐Unis d’Amérique"
       },
       "eo": {
-        "text": "Unuiĝintaj Ŝtatoj de Ameriko"
+        "t": "Unuiĝintaj Ŝtatoj de Ameriko"
       }
     }
   },

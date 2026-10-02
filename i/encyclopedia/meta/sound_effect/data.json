@@ -4,19 +4,19 @@
   "name": {
     "label": {
       "en": {
-        "text": "sound effect"
+        "t": "sound effect"
       },
       "fr": {
-        "text": "effet sonore"
+        "t": "effet sonore"
       }
     }
   },
   "description": {
     "en": {
-      "text": "Text that represents a sound."
+      "t": "Text that represents a sound."
     },
     "fr": {
-      "text": "Texte qui représente un son."
+      "t": "Texte qui représente un son."
     }
   },
   "copyright": {

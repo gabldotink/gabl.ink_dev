@@ -4,22 +4,22 @@
   "name": {
     "label": {
       "en": {
-        "text": "girl"
+        "t": "girl"
       },
       "fr": {
-        "text": "fille"
+        "t": "fille"
       },
       "eo": {
-        "text": "knabino"
+        "t": "knabino"
       }
     }
   },
   "description": {
     "en": {
-      "text": "Words from a girl."
+      "t": "Words from a girl."
     },
     "fr": {
-      "text": "Mots d’une fille."
+      "t": "Mots d’une fille."
     }
   },
   "copyright": {

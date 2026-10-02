@@ -13,15 +13,15 @@
   ],
   "title": {
     "en": {
-      "text": "new kid"
+      "t": "new kid"
     },
     "fr": {
-      "text": "petite nouvelle"
+      "t": "petite nouvelle"
     }
   },
   "description": {
     "en": {
-      "text": "Harry says a new kid is coming to JoeRunner and T.T.’s class."
+      "t": "Harry says a new kid is coming to JoeRunner and T.T.’s class."
     }
   },
   "transcript": [
@@ -29,7 +29,7 @@
       "h": "meta/none",
       "d": {
         "en": {
-          "text": "JoeRunner, T.T., and Harry are sitting at a table. JoeRunner looks up from a book as Harry speaks, pointing at JoeRunner and T.T."
+          "t": "JoeRunner, T.T., and Harry are sitting at a table. JoeRunner looks up from a book as Harry speaks, pointing at JoeRunner and T.T."
         }
       }
     },
@@ -37,10 +37,10 @@
       "h": "jrco_beta/harry_mahan",
       "d": {
         "en": {
-          "text": "Oh, hey, I heard from my father that your class is getting a new kid."
+          "t": "Oh, hey, I heard from my father that your class is getting a new kid."
         },
         "fr": {
-          "text": "Oh, hé, j’ai entendu de mon père que votre classe obté une petite nouvelle."
+          "t": "Oh, hé, j’ai entendu de mon père que votre classe obté une petite nouvelle."
         }
       }
     },
@@ -48,10 +48,10 @@
       "h": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "text": "From Mr.\u00a0Mahan?"
+          "t": "From Mr.\u00a0Mahan?"
         },
         "fr": {
-          "text": "De M.\u00a0Mahan\u202f?"
+          "t": "De M.\u00a0Mahan\u202f?"
         }
       }
     },
@@ -59,10 +59,10 @@
       "h": "jrco_beta/t_t",
       "d": {
         "en": {
-          "text": "What’s his name?"
+          "t": "What’s his name?"
         },
         "fr": {
-          "text": "Comment il s’appelle\u202f?"
+          "t": "Comment il s’appelle\u202f?"
         }
       }
     },
@@ -70,10 +70,10 @@
       "h": "jrco_beta/harry_mahan",
       "d": {
         "en": {
-          "text": "She’s a girl, actually. She just moved from France."
+          "t": "She’s a girl, actually. She just moved from France."
         },
         "fr": {
-          "text": "J’ai utilisé le féminin, non\u202f? Elle vient d’arriver de la France."
+          "t": "J’ai utilisé le féminin, non\u202f? Elle vient d’arriver de la France."
         }
       }
     },
@@ -81,7 +81,7 @@
       "h": "jrco_beta/t_t",
       "d": {
         "en": {
-          "html": "<p>(<i>raising eyebrows</i>) Wait\u00a0.\u00a0.\u00a0. They have <em class=\"r u\">girls</em> in <em class=\"r u\">France</em>?"
+          "h": "<p>(<i>raising eyebrows</i>) Wait\u00a0.\u00a0.\u00a0. They have <em class=\"r u\">girls</em> in <em class=\"r u\">France</em>?"
         }
       }
     },
@@ -89,7 +89,7 @@
       "h": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "html": "<p>(<i>weirded out</i>) Yeah, they\u2060—<em>what</em>?"
+          "h": "<p>(<i>weirded out</i>) Yeah, they\u2060—<em>what</em>?"
         }
       }
     }
@@ -101,31 +101,31 @@
         {
           "p": {
             "en": {
-              "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "h": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "h": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },
         {
           "p": {
             "en": {
-              "text": "JoeRunner gets to be in the thumbnail for his own comic again."
+              "t": "JoeRunner gets to be in the thumbnail for his own comic again."
             }
           }
         },
         {
           "p": {
             "en": {
-              "text": "When I first wrote this, T.T. said that he didn’t know what a girl was; I changed it later, because I decided that that wasn’t very T.T.‐like. Also, this is probably funnier anyway. I’ll have to post the original draft at some point, I guess. The drawing in this page is probably some of my worst. I hate my art so much, but I’m posting it on the internet forever anyway."
+              "t": "When I first wrote this, T.T. said that he didn’t know what a girl was; I changed it later, because I decided that that wasn’t very T.T.‐like. Also, this is probably funnier anyway. I’ll have to post the original draft at some point, I guess. The drawing in this page is probably some of my worst. I hate my art so much, but I’m posting it on the internet forever anyway."
             }
           }
         },
         {
           "p": {
             "en": {
-              "text": "Remember when I said I was going to get a page a week done? Yeah. I’m a riot."
+              "t": "Remember when I said I was going to get a page a week done? Yeah. I’m a riot."
             }
           }
         }

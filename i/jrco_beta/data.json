@@ -13,34 +13,34 @@
   ],
   "title": {
     "en": {
-      "text": "JoeRunner and Co. Beta"
+      "t": "JoeRunner and Co. Beta"
     },
     "fr": {
-      "text": "JoeRunner et cie Bêta"
+      "t": "JoeRunner et cie Bêta"
     },
     "eo": {
-      "text": "JoeRunner kaj Kunularo Beta"
+      "t": "JoeRunner kaj Kunularo Beta"
     }
   },
   "hashtag": {
     "en": {
-      "id": "JoeRunnerAndCoBeta"
+      "i": "JoeRunnerAndCoBeta"
     },
     "fr": {
-      "id": "JoeRunnerEtCieBêta"
+      "i": "JoeRunnerEtCieBêta"
     },
     "eo": {
-      "id": "JoeRunnerKajKunularoBeta"
+      "i": "JoeRunnerKajKunularoBeta"
     }
   },
   "description": {
     "en": {
-      "text": "The first “JoeRunner and Co.” webcomic series, which ran for eleven pages from 2022 to 2023.",
-      "html": "The first <cite class=i>JoeRunner and Co.</cite> webcomic series, which ran for eleven pages from <time>2022</time> to <time>2023</time>."
+      "t": "The first “JoeRunner and Co.” webcomic series, which ran for eleven pages from 2022 to 2023.",
+      "h": "The first <cite class=i>JoeRunner and Co.</cite> webcomic series, which ran for eleven pages from <time>2022</time> to <time>2023</time>."
     },
     "fr": {
-      "text": "La première série de webcomics «\u202fJoeRunner et cie\u202f», qui a compté onze pages de 2022 à 2023 en anglais.",
-      "html": "La première série de webcomics <cite class=i>JoeRunner et cie</cite>, qui a compté onze pages de <time>2022</time> à <time>2023</time> en anglais."
+      "t": "La première série de webcomics «\u202fJoeRunner et cie\u202f», qui a compté onze pages de 2022 à 2023 en anglais.",
+      "h": "La première série de webcomics <cite class=i>JoeRunner et cie</cite>, qui a compté onze pages de <time>2022</time> à <time>2023</time> en anglais."
     }
   },
   "start_date": "20220401",

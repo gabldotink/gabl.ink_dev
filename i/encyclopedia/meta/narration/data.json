@@ -4,19 +4,19 @@
   "name": {
     "label": {
       "en": {
-        "text": "narration"
+        "t": "narration"
       },
       "fr": {
-        "text": "narration"
+        "t": "narration"
       }
     }
   },
   "description": {
     "en": {
-      "text": "Miscellaneous text that appears as a message to the reader."
+      "t": "Miscellaneous text that appears as a message to the reader."
     },
     "fr": {
-      "text": "Texte diverse qui apparaît comme un message au lecteur."
+      "t": "Texte diverse qui apparaît comme un message au lecteur."
     }
   },
   "copyright": {

@@ -7,18 +7,18 @@
   "name": {
     "label": {
       "en": {
-        "text": "T.T."
+        "t": "T.T."
       },
       "mul": {
-        "equal": "en"
+        "e": "en"
       }
     },
     "given": {
       "en": {
-        "text": "T.T."
+        "t": "T.T."
       },
       "mul": {
-        "equal": "en"
+        "e": "en"
       }
     }
   },
@@ -26,10 +26,10 @@
   "birthdate": {},
   "relationships": {},
   "description": {
-    "text": "A fifth grader with a laid-back attitude."
+    "t": "A fifth grader with a laid-back attitude."
   },
   "bio": {
-    "html": "T.T. is JoeRunner’s best friend. They hang out and play video games together."
+    "t": "T.T. is JoeRunner’s best friend. They hang out and play video games together."
   },
   "copyright": {
     "year": {

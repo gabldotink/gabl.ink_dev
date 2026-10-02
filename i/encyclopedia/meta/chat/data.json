@@ -4,19 +4,19 @@
   "name": {
     "label": {
       "en": {
-        "text": "chat"
+        "t": "chat"
       },
       "fr": {
-        "equal": "en"
+        "e": "en"
       }
     }
   },
   "description": {
     "en": {
-      "text": "Words in an online chat."
+      "t": "Words in an online chat."
     },
     "fr": {
-      "text": "Mots d’un chat en ligne."
+      "t": "Mots d’un chat en ligne."
     }
   },
   "copyright": {

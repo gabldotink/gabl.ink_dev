@@ -2,25 +2,25 @@
   "en": {
     "name": {
       "en": {
-        "text": "English"
+        "t": "English"
       },
       "fr": {
-        "text": "anglais"
+        "t": "anglais"
       },
       "es": {
-        "text": "inglés"
+        "t": "inglés"
       },
       "eo": {
-        "text": "la angla"
+        "t": "la angla"
       },
       "ja": {
-        "text": "英語"
+        "t": "英語"
       },
       "ja-Hira": {
-        "text": "えいご"
+        "t": "えいご"
       },
       "ja-Latn": {
-        "text": "Eigo"
+        "t": "Eigo"
       }
     },
     "implicit": {
@@ -30,25 +30,25 @@
   "fr": {
     "name": {
       "en": {
-        "text": "French"
+        "t": "French"
       },
       "fr": {
-        "text": "français"
+        "t": "français"
       },
       "es": {
-        "text": "francés"
+        "t": "francés"
       },
       "eo": {
-        "text": "la franco"
+        "t": "la franco"
       },
       "ja": {
-        "text": "フランス語"
+        "t": "フランス語"
       },
       "ja-Hrkt": {
-        "text": "フランスご"
+        "t": "フランスご"
       },
       "ja-Latn": {
-        "text": "Furansugo"
+        "t": "Furansugo"
       }
     },
     "implicit": {
@@ -58,25 +58,25 @@
   "es": {
     "name": {
       "es": {
-        "text": "español"
+        "t": "español"
       },
       "en": {
-        "text": "Spanish"
+        "t": "Spanish"
       },
       "fr": {
-        "text": "espagnol"
+        "t": "espagnol"
       },
       "eo": {
-        "text": "la hispana"
+        "t": "la hispana"
       },
       "ja": {
-        "text": "スペイン語"
+        "t": "スペイン語"
       },
       "ja-Hrkt": {
-        "text": "スペインご"
+        "t": "スペインご"
       },
       "ja-Latn": {
-        "text": "Supeingo"
+        "t": "Supeingo"
       }
     },
     "implicit": {
@@ -86,25 +86,25 @@
   "pt": {
     "name": {
       "pt": {
-        "text": "português"
+        "t": "português"
       },
       "en": {
-        "text": "Portuguese"
+        "t": "Portuguese"
       },
       "fr": {
-        "text": "portugais"
+        "t": "portugais"
       },
       "es": {
-        "text": "portugués"
+        "t": "portugués"
       },
       "ja": {
-        "text": "ポルトガル語"
+        "t": "ポルトガル語"
       },
       "ja-Hrkt": {
-        "text": "ポルトガルご"
+        "t": "ポルトガルご"
       },
       "ja-Latn": {
-        "text": "Porutogarugo"
+        "t": "Porutogarugo"
       }
     },
     "implicit": {
@@ -114,22 +114,22 @@
   "tok": {
     "name": {
       "tok": {
-        "text": "toki pona"
+        "t": "toki pona"
       },
       "en": {
-        "text": "Toki Pona"
+        "t": "Toki Pona"
       },
       "fr": {
-        "equal": "tok"
+        "e": "tok"
       },
       "eo": {
-        "text": "Tokipono"
+        "t": "Tokipono"
       },
       "ja": {
-        "text": "トキポナ"
+        "t": "トキポナ"
       },
       "ja-Latn": {
-        "text": "Tokipona"
+        "t": "Tokipona"
       }
     },
     "implicit": {
@@ -139,16 +139,16 @@
   "ru": {
     "name": {
       "ru": {
-        "text": "русский"
+        "t": "русский"
       },
       "en": {
-        "text": "Russian"
+        "t": "Russian"
       },
       "fr": {
-        "text": "russe"
+        "t": "russe"
       },
       "eo": {
-        "text": "la rusa"
+        "t": "la rusa"
       }
     },
     "implicit": {
@@ -158,25 +158,25 @@
   "ja": {
     "name": {
       "ja": {
-        "text": "日本語"
+        "t": "日本語"
       },
       "ja-Hira": {
-        "text": "にほんご"
+        "t": "にほんご"
       },
       "ja-Latn": {
-        "text": "Nihongo"
+        "t": "Nihongo"
       },
       "zh": {
-        "text": "日文"
+        "t": "日文"
       },
       "en": {
-        "text": "Japanese"
+        "t": "Japanese"
       },
       "fr": {
-        "text": "japonais"
+        "t": "japonais"
       },
       "eo": {
-        "text": "la japana"
+        "t": "la japana"
       }
     },
     "implicit": {
@@ -186,28 +186,28 @@
   "zh": {
     "name": {
       "zh": {
-        "text": "中文"
+        "t": "中文"
       },
       "zh-Latn-pinyin": {
-        "text": "Zhōngwén"
+        "t": "Zhōngwén"
       },
       "ja": {
-        "text": "中国語"
+        "t": "中国語"
       },
       "ja-Hira": {
-        "text": "ちゅうごくご"
+        "t": "ちゅうごくご"
       },
       "ja-Latn-hepburn": {
-        "text": "Chūgokugo"
+        "t": "Chūgokugo"
       },
       "en": {
-        "text": "Chinese"
+        "t": "Chinese"
       },
       "fr": {
-        "text": "chinois"
+        "t": "chinois"
       },
       "eo": {
-        "text": "la ĉina"
+        "t": "la ĉina"
       }
     },
     "implicit": {
@@ -217,16 +217,16 @@
   "ko": {
     "name": {
       "ko": {
-        "text": "한국어"
+        "t": "한국어"
       },
       "en": {
-        "text": "Korean"
+        "t": "Korean"
       },
       "fr": {
-        "text": "coréen"
+        "t": "coréen"
       },
       "eo": {
-        "text": "la korea"
+        "t": "la korea"
       }
     },
     "implicit": {
@@ -236,19 +236,19 @@
   "eo": {
     "name": {
       "eo": {
-        "text": "Esperanto"
+        "t": "Esperanto"
       },
       "en": {
-        "equal": "eo"
+        "e": "eo"
       },
       "fr": {
-        "text": "espéranto"
+        "t": "espéranto"
       },
       "ja": {
-        "text": "エスペラント"
+        "t": "エスペラント"
       },
       "ja-Latn": {
-        "text": "Esuperanto"
+        "t": "Esuperanto"
       }
     },
     "implicit": {
@@ -258,10 +258,10 @@
   "mul": {
     "name": {
       "en": {
-        "text": "Multiple languages"
+        "t": "Multiple languages"
       },
       "fr": {
-        "text": "Plusieurs langues"
+        "t": "Plusieurs langues"
       }
     },
     "implicit": {
@@ -271,7 +271,7 @@
   "zxx": {
     "name": {
       "en": {
-        "text": "No linguistic content"
+        "t": "No linguistic content"
       }
     }
   }

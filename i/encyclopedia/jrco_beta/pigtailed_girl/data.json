@@ -7,20 +7,20 @@
   "name": {
     "label": {
       "en": {
-        "text": "pigtailed girl"
+        "t": "pigtailed girl"
       },
       "fr": {
-        "text": "fille avec des couettes"
+        "t": "fille avec des couettes"
       }
     }
   },
   "sex": "f",
   "birthdate": {},
   "description": {
-    "html": "A student."
+    "t": "A student."
   },
   "bio": {
-    "html": "The pigtailed girl is friends with the short‐haired girl."
+    "t": "The pigtailed girl is friends with the short‐haired girl."
   },
   "copyright": {
     "year": {

@@ -7,18 +7,18 @@
   "name": {
     "label": {
       "en": {
-        "text": "Runner family"
+        "t": "Runner family"
       },
       "fr": {
-        "text": "famille Runner"
+        "t": "famille Runner"
       }
     }
   },
   "description": {
-    "text": "A family."
+    "t": "A family."
   },
   "bio": {
-    "html": "The Runner family includes JoeRunner and Eden."
+    "t": "The Runner family includes JoeRunner and Eden."
   },
   "copyright": {
     "year": {

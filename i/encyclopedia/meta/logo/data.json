@@ -4,19 +4,19 @@
   "name": {
     "label": {
       "en": {
-        "text": "logo"
+        "t": "logo"
       },
       "fr": {
-        "equal": "en"
+        "e": "en"
       }
     }
   },
   "description": {
     "en-US": {
-      "text": "Text in an image which presents a work’s title(s) to the reader."
+      "t": "Text in an image which presents a work’s title(s) to the reader."
     },
     "fr": {
-      "text": "Texte dans une image qui présent le(s) titre(s) d’une œuvre au lecteur."
+      "t": "Texte dans une image qui présent le(s) titre(s) d’une œuvre au lecteur."
     }
   },
   "copyright": {

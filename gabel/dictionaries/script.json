@@ -3,13 +3,13 @@
     "dir": "ltr",
     "name": {
       "en": {
-        "text": "Latin script"
+        "t": "Latin script"
       },
       "fr": {
-        "text": "écriture latine"
+        "t": "écriture latine"
       },
       "es": {
-        "text": "escritura latina"
+        "t": "escritura latina"
       }
     },
     "alt": [
@@ -17,16 +17,16 @@
         "lang": "ja",
         "name": {
           "en": {
-            "text": "Romaji"
+            "t": "Romaji"
           },
           "ja": {
-            "text": "ローマ字"
+            "t": "ローマ字"
           },
           "ja-Hrkt": {
-            "text": "ローマじ"
+            "t": "ローマじ"
           },
           "ja-Latn-hepburn": {
-            "text": "rōmaji"
+            "t": "rōmaji"
           }
         }
       }
@@ -36,13 +36,13 @@
     "dir": "ltr",
     "name": {
       "ru": {
-        "text": "кириллица"
+        "t": "кириллица"
       },
       "en": {
-        "text": "Cyrillic script"
+        "t": "Cyrillic script"
       },
       "fr": {
-        "text": "écriture cyrillique"
+        "t": "écriture cyrillique"
       }
     }
   },
@@ -55,25 +55,25 @@
     ],
     "name": {
       "ja": {
-        "text": "漢字、ひらがな、カタカナ"
+        "t": "漢字、ひらがな、カタカナ"
       },
       "ja-Hani": {
-        "text": "漢字、平仮名、片仮名"
+        "t": "漢字、平仮名、片仮名"
       },
       "ja-Hira": {
-        "text": "かんじ、ひらがな、かたかな"
+        "t": "かんじ、ひらがな、かたかな"
       },
       "ja-Hrkt": {
-        "text": "かんじ、ひらがな、カタカナ"
+        "t": "かんじ、ひらがな、カタカナ"
       },
       "ja-Latn-hepburn": {
-        "text": "kanji, hiragana, katakana"
+        "t": "kanji, hiragana, katakana"
       },
       "en": {
-        "text": "kanji, hiragana, and katakana"
+        "t": "kanji, hiragana, and katakana"
       },
       "fr": {
-        "text": "kanji, hiragana et katakana"
+        "t": "kanji, hiragana et katakana"
       }
     }
   },
@@ -81,19 +81,19 @@
     "dir": "ltr",
     "name": {
       "ja": {
-        "text": "ひらがな"
+        "t": "ひらがな"
       },
       "ja-Hani": {
-        "text": "平仮名"
+        "t": "平仮名"
       },
       "ja-Latn": {
-        "text": "hiragana"
+        "t": "hiragana"
       },
       "en": {
-        "equal": "ja-Latn"
+        "e": "ja-Latn"
       },
       "fr": {
-        "equal": "ja-Latn"
+        "e": "ja-Latn"
       }
     }
   },
@@ -101,22 +101,22 @@
     "dir": "ltr",
     "name": {
       "ja": {
-        "text": "カタカナ"
+        "t": "カタカナ"
       },
       "ja-Hani": {
-        "text": "片仮名"
+        "t": "片仮名"
       },
       "ja-Hira": {
-        "text": "かたかな"
+        "t": "かたかな"
       },
       "ja-Latn": {
-        "text": "katakana"
+        "t": "katakana"
       },
       "en": {
-        "equal": "ja-Latn"
+        "e": "ja-Latn"
       },
       "fr": {
-        "equal": "ja-Latn"
+        "e": "ja-Latn"
       }
     }
   },
@@ -128,15 +128,15 @@
     ],
     "name": {
       "ko": {
-        "text": "한글과 한자"
+        "t": "한글과 한자"
       },
       "en": {
-        "text": "hangul and hanja",
-        "html": "hangul and <i lang=ko-Latn>hanja</i>"
+        "t": "hangul and hanja",
+        "h": "hangul and <i lang=ko-Latn>hanja</i>"
       },
       "fr": {
-        "text": "hangeul et hanja",
-        "html": "<i lang=ko-Latn>hangeul</i> et <i lang=ko-Latn>hanja</i>"
+        "t": "hangeul et hanja",
+        "h": "<i lang=ko-Latn>hangeul</i> et <i lang=ko-Latn>hanja</i>"
       }
     }
   },
@@ -144,20 +144,20 @@
     "dir": "ltr",
     "name": {
       "ko": {
-        "text": "한글"
+        "t": "한글"
       },
       "ko-Hani": {
-        "text": "韓㐎"
+        "t": "韓㐎"
       },
       "ko-Latn": {
-        "text": "hangeul"
+        "t": "hangeul"
       },
       "en": {
-        "text": "hangul"
+        "t": "hangul"
       },
       "fr": {
-        "text": "hangeul",
-        "html": "<i lang=ko-Latn>hangeul</i>"
+        "t": "hangeul",
+        "h": "<i lang=ko-Latn>hangeul</i>"
       }
     }
   },
@@ -165,10 +165,10 @@
     "dir": "ltr",
     "name": {
       "en": {
-        "text": "Traditional Han script"
+        "t": "Traditional Han script"
       },
       "fr": {
-        "text": "sinogrammes traditionnels"
+        "t": "sinogrammes traditionnels"
       }
     },
     "alt": [
@@ -176,10 +176,10 @@
         "lang": "zh",
         "name": {
           "en": {
-            "text": "Traditional"
+            "t": "Traditional"
           },
           "fr": {
-            "text": "traditionnel"
+            "t": "traditionnel"
           }
         }
       }
@@ -189,10 +189,10 @@
     "dir": "ltr",
     "name": {
       "en": {
-        "text": "Simplified Han script"
+        "t": "Simplified Han script"
       },
       "fr": {
-        "text": "sinogrammes simplifiés"
+        "t": "sinogrammes simplifiés"
       }
     },
     "alt": [
@@ -200,10 +200,10 @@
         "lang": "zh",
         "name": {
           "en": {
-            "text": "Simplified"
+            "t": "Simplified"
           },
           "fr": {
-            "text": "simplifié"
+            "t": "simplifié"
           }
         }
       }
@@ -213,34 +213,34 @@
     "dir": "ltr",
     "name": {
       "en": {
-        "text": "Han script"
+        "t": "Han script"
       },
       "fr": {
-        "text": "sinogrammes"
+        "t": "sinogrammes"
       },
       "zh-Hant": {
-        "text": "漢字"
+        "t": "漢字"
       },
       "zh-Hans": {
-        "text": "汉字"
+        "t": "汉字"
       },
       "ja": {
-        "equal": "zh-Hant"
+        "e": "zh-Hant"
       },
       "ja-Hira": {
-        "text": "かんじ"
+        "t": "かんじ"
       },
       "ja-Latn-hepburn": {
-        "text": "kanji"
+        "t": "kanji"
       },
       "ko": {
-        "text": "한자"
+        "t": "한자"
       },
       "ko-Hani": {
-        "equal": "zh-Hant"
+        "e": "zh-Hant"
       },
       "ko-Latn": {
-        "text": "hanja"
+        "t": "hanja"
       }
     },
     "alt": [
@@ -248,13 +248,13 @@
         "lang": "ja",
         "name": {
           "ja-Latn-hepburn": {
-            "text": "kanji"
+            "t": "kanji"
           },
           "en": {
-            "equal": "ja-Latn-hepburn"
+            "e": "ja-Latn-hepburn"
           },
           "fr": {
-            "equal": "ja-Latn-hepburn"
+            "e": "ja-Latn-hepburn"
           }
         }
       },
@@ -262,11 +262,11 @@
         "lang": "ko",
         "name": {
           "en": {
-            "text": "hanja",
-            "html": "<i lang=ko-Latn>hanja</i>"
+            "t": "hanja",
+            "h": "<i lang=ko-Latn>hanja</i>"
           },
           "fr": {
-            "equal": "en"
+            "e": "en"
           }
         }
       }
@@ -280,19 +280,19 @@
     ],
     "name": {
       "ja": {
-        "text": "仮名"
+        "t": "仮名"
       },
       "ja-Hira": {
-        "text": "かな"
+        "t": "かな"
       },
       "ja-Latn": {
-        "text": "kana"
+        "t": "kana"
       },
       "en": {
-        "equal": "ja-Latn"
+        "e": "ja-Latn"
       },
       "fr": {
-        "equal": "ja-Latn"
+        "e": "ja-Latn"
       }
     }
   }

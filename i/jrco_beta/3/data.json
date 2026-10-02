@@ -14,29 +14,29 @@
   ],
   "title": {
     "en": {
-      "text": "mirror"
+      "t": "mirror"
     },
     "fr": {
-      "text": "miroir"
+      "t": "miroir"
     },
     "eo": {
-      "text": "spegulo"
+      "t": "spegulo"
     }
   },
   "description": {
     "en": {
-      "text": "JoeRunner brushes his hair with his hand and puts on his glasses."
+      "t": "JoeRunner brushes his hair with his hand and puts on his glasses."
     },
     "fr": {
-      "text": "JoeRunner se brosse les cheveux avec son main et mette ses lunettes."
+      "t": "JoeRunner se brosse les cheveux avec son main et mette ses lunettes."
     }
   },
   "tooltip": {
     "en": {
-      "text": "first panel is based on the experience of looking at my drawings"
+      "t": "first panel is based on the experience of looking at my drawings"
     },
     "fr": {
-      "text": "la première case est adapté en l’expérience de regarder mes dessins"
+      "t": "la première case est adapté en l’expérience de regarder mes dessins"
     }
   },
   "transcript": [
@@ -44,10 +44,10 @@
       "h": "meta/none",
       "d": {
         "en": {
-          "text": "The boy looks in the bathroom mirror in his pajamas, with unkempt hair and a pair of glasses on the counter. He looks kinda gross."
+          "t": "The boy looks in the bathroom mirror in his pajamas, with unkempt hair and a pair of glasses on the counter. He looks kinda gross."
         },
         "fr": {
-          "text": "Le garçon regarde le miroir de salle de bain dans son pyjama, avec des cheveux ébouriffé et ses lunettes sur la comptoir. Il semble un peu dégoûtant."
+          "t": "Le garçon regarde le miroir de salle de bain dans son pyjama, avec des cheveux ébouriffé et ses lunettes sur la comptoir. Il semble un peu dégoûtant."
         }
       }
     },
@@ -55,10 +55,10 @@
       "h": "meta/boy",
       "d": {
         "en": {
-          "html": "<p>(<i>thinking</i>) Ugh."
+          "h": "<p>(<i>thinking</i>) Ugh."
         },
         "fr": {
-          "html": "<p>(<i>pensant</i>) Euh."
+          "h": "<p>(<i>pensant</i>) Euh."
         }
       }
     },
@@ -66,10 +66,10 @@
       "h": "meta/none",
       "d": {
         "en": {
-          "text": "He runs his hand through his hair, causing it to become smooth almost magically. He confidently sets his glasses on his face."
+          "t": "He runs his hand through his hair, causing it to become smooth almost magically. He confidently sets his glasses on his face."
         },
         "fr": {
-          "text": "Il passe ses mains dans ses cheveux, cause les cheveux deviennent lisse presque magiquement. Il mette avec confiance ses lunettes sur son visage."
+          "t": "Il passe ses mains dans ses cheveux, cause les cheveux deviennent lisse presque magiquement. Il mette avec confiance ses lunettes sur son visage."
         }
       }
     },
@@ -77,10 +77,10 @@
       "h": "meta/bio",
       "d": {
         "en": {
-          "text": "JoeRunner\u00a0/ master of mornings"
+          "t": "JoeRunner\u00a0/ master of mornings"
         },
         "fr": {
-          "text": "JoeRunner\u00a0/ maître des matins"
+          "t": "JoeRunner\u00a0/ maître des matins"
         }
       }
     },
@@ -88,10 +88,10 @@
       "h": "meta/tooltip",
       "d": {
         "en": {
-          "text": "first panel is based on the experience of looking at my drawings"
+          "t": "first panel is based on the experience of looking at my drawings"
         },
         "fr": {
-          "text": "la première case est adapté en l’expérience de regarder mes dessins"
+          "t": "la première case est adapté en l’expérience de regarder mes dessins"
         }
       }
     }
@@ -103,40 +103,40 @@
         {
           "p": {
             "en": {
-              "html": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "h": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "html": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "h": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },
         {
           "p": {
             "en": {
-              "text": "If only it were really this easy."
+              "t": "If only it were really this easy."
             },
             "fr": {
-              "text": "Si seulement il était si facile."
+              "t": "Si seulement il était si facile."
             }
           }
         },
         {
           "p": {
             "en": {
-              "text": "“But Gabe!” you might be thinking, “JoeRunner doesn’t have a nose! How does he put on his glasses?” And you’re right. And I promise that the other characters have noses."
+              "t": "“But Gabe!” you might be thinking, “JoeRunner doesn’t have a nose! How does he put on his glasses?” And you’re right. And I promise that the other characters have noses."
             },
             "fr": {
-              "text": "«\u202fMais Gabe\u202f!\u202f» peut‐être que vous pensez, «\u202fJoeRunner n’a pas un nez\u202f! Comment il mette ses lunettes\u202f?\u202f» Et vous avez raison. Et je promets que les autres personnages avent les nez."
+              "t": "«\u202fMais Gabe\u202f!\u202f» peut‐être que vous pensez, «\u202fJoeRunner n’a pas un nez\u202f! Comment il mette ses lunettes\u202f?\u202f» Et vous avez raison. Et je promets que les autres personnages avent les nez."
             }
           }
         },
         {
           "p": {
             "en": {
-              "text": "Some of them. Some of the other characters have noses."
+              "t": "Some of them. Some of the other characters have noses."
             },
             "fr": {
-              "text": "Eh bien, quelques des autres personnages ont les nez."
+              "t": "Eh bien, quelques des autres personnages ont les nez."
             }
           }
         }

@@ -4,25 +4,25 @@
   "name": {
     "label": {
       "en": {
-        "text": "man"
+        "t": "man"
       },
       "fr": {
-        "text": "homme"
+        "t": "homme"
       },
       "eo": {
-        "text": "viro"
+        "t": "viro"
       },
       "tok": {
-        "text": "mije"
+        "t": "mije"
       }
     }
   },
   "description": {
     "en": {
-      "text": "Words from a man."
+      "t": "Words from a man."
     },
     "fr": {
-      "text": "Mots d’un homme."
+      "t": "Mots d’un homme."
     }
   },
   "copyright": {

@@ -96,37 +96,37 @@ def get_i_id(i:Path)->str:
         return obj["id"]
 
 def get_var_l10n(index,key:str|int,format:str,l10n_lang:Language)->str:
-    # e.g. get_var_l10n(data["jrco_beta/1"]["location"],"series","text",lang)
+    # e.g. get_var_l10n(data["jrco_beta/1"]["location"],"series","t",lang)
 
     for o in str(l10n_lang),l10n_lang.language,"mul","zxx","e":
         if o=="e":
             return ""
 
-        if format=="id":
-            if "id" in index.get(key,{}).get(o,{}):
-                return index[key][o]["id"]
-            elif "equal" in index.get(key,{}).get(o,{}):
-                return get_var_l10n(index,key,format,Language.get(index[key][o]["equal"]))
+        if format=="i":
+            if "i" in index.get(key,{}).get(o,{}):
+                return index[key][o]["i"]
+            elif "e" in index.get(key,{}).get(o,{}):
+                return get_var_l10n(index,key,format,Language.get(index[key][o]["e"]))
 
-        if format=="print":
-            if "print" in index.get(key,{}).get(o,{}):
-                return index[key][o]["print"]
-            elif "equal" in index.get(key,{}).get(o,{}):
-                return get_var_l10n(index,key,format,Language.get(index[key][o]["equal"]))
+        if format=="p":
+            if "p" in index.get(key,{}).get(o,{}):
+                return index[key][o]["p"]
+            elif "e" in index.get(key,{}).get(o,{}):
+                return get_var_l10n(index,key,format,Language.get(index[key][o]["e"]))
 
-        if format=="text":
-            if "text" in index.get(key,{}).get(o,{}):
-                return index[key][o]["text"]
-            elif "equal" in index.get(key,{}).get(o,{}):
-                return get_var_l10n(index,key,format,Language.get(index[key][o]["equal"]))
+        if format=="t":
+            if "t" in index.get(key,{}).get(o,{}):
+                return index[key][o]["t"]
+            elif "e" in index.get(key,{}).get(o,{}):
+                return get_var_l10n(index,key,format,Language.get(index[key][o]["e"]))
 
-        if format=="html":
-            if "html" in index.get(key,{}).get(o,{}):
-                return index[key][o]["html"]
-            elif "text" in index.get(key,{}).get(o,{}):
-                return text_to_html(index[key][o]["text"])
-            elif "equal" in index.get(key,{}).get(o,{}):
-                return get_var_l10n(index,key,format,Language.get(index[key][o]["equal"]))
+        if format=="h":
+            if "h" in index.get(key,{}).get(o,{}):
+                return index[key][o]["h"]
+            elif "t" in index.get(key,{}).get(o,{}):
+                return text_to_html(index[key][o]["t"])
+            elif "e" in index.get(key,{}).get(o,{}):
+                return get_var_l10n(index,key,format,Language.get(index[key][o]["e"]))
 
 def id_base(i:str)->str:
     """Returns the base part of an ID.
@@ -174,9 +174,9 @@ def make_nav_button(button:str,lang:Language)->str:
         r.append(">")
     else:
         if button in ("f","l"):
-            r.append(attribute_string(msg_l10n(get_var_l10n(data[f'{data[i_id]["location"]["series"]}/{data[data[i_id]["location"]["series"]][button_id]}'],"title","text",lang),lang=lang,string="nav_button_page_title")))
+            r.append(attribute_string(msg_l10n(get_var_l10n(data[f'{data[i_id]["location"]["series"]}/{data[data[i_id]["location"]["series"]][button_id]}'],"title","t",lang),lang=lang,string="nav_button_page_title")))
         elif button in ("p","n"):
-            r.append(attribute_string(msg_l10n(get_var_l10n(data[f'{data[i_id]["location"]["series"]}/{data[i_id]["location"][button_id]}'],"title","text",lang),lang=lang,string="nav_button_page_title")))
+            r.append(attribute_string(msg_l10n(get_var_l10n(data[f'{data[i_id]["location"]["series"]}/{data[i_id]["location"][button_id]}'],"title","t",lang),lang=lang,string="nav_button_page_title")))
         r.append(">")
         r.append("<a href=../../")
         if button in ("f","l"):
@@ -206,7 +206,7 @@ def make_share_link(name:str)->str:
     r.append(data["dictionaries/share_link"][name]["base"])
 
 def msg_l10n(*args,lang:Language,string:str)->str:
-    return get_var_l10n(data["dictionaries/string"]["dictionary"],string,"print",lang).format(*args)
+    return get_var_l10n(data["dictionaries/string"]["dictionary"],string,"p",lang).format(*args)
 
 def print_date(d:date)->str:
     """Returns a date string suitable for an HTML `datetime` attribute.
@@ -266,11 +266,11 @@ def say_date(d:date,lang:Language)->str:
 
     if lang.language=="en":
         if lang.region=="US":
-            r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","html",lang))
+            r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","h",lang))
             r.append(f"\xa0{d.day}, ")
         elif lang.region=="GB":
             r.append(f"{d.day}\xa0")
-            r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","html",lang))
+            r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","h",lang))
             r.append(" ")
         if ad:
             r.append('<abbr title="anno Domini">AD</abbr>\xa0')
@@ -281,13 +281,13 @@ def say_date(d:date,lang:Language)->str:
         else:
             r.append(str(d.day))
         r.append("\xa0")
-        r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","html",lang))
+        r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","h",lang))
         if ad:
             r.append(f'{d.year}\xa0<abbr title="après Jésus‐Christ">ap.\xa0J.‑C.</abbr>')
         r.append(f" {d.year}")
     elif lang.language=="es":
         r.append(f"{d.day}\xa0de\xa0")
-        r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","html",lang))
+        r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","h",lang))
         r.append(" de ")
         if ad:
             r.append(f'{d.year}\xa0<abbr title="después de Cristo">d.\xa0C.</abbr>')
@@ -304,9 +304,9 @@ def say_date(d:date,lang:Language)->str:
 def say_lang(lang:Language,format:str)->str:
     """Returns a formatted language name and region.
 
-    >>> say_lang(Language.get("en-US"),"text")
+    >>> say_lang(Language.get("en-US"),"t")
     'English (United States)'
-    >>> say_lang(Language.get("fr-FR"),"text")
+    >>> say_lang(Language.get("fr-FR"),"t")
     'Français (France)'
     """
     if lang.language in ("en","fr"):
@@ -366,9 +366,9 @@ if __name__=="__main__":
 
             F.append('<meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">')
 
-            F.append(f'<title>{msg_l10n(get_var_l10n(data[i_id],"title","text",lang),lang=lang,string="html_title")}</title>')
+            F.append(f'<title>{msg_l10n(get_var_l10n(data[i_id],"title","t",lang),lang=lang,string="html_title")}</title>')
 
-            F.append(f'<meta name=description content{attribute_string(get_var_l10n(data[i_id],"description","text",lang))}>')
+            F.append(f'<meta name=description content{attribute_string(get_var_l10n(data[i_id],"description","t",lang))}>')
 
             F.append("<meta name=robots content=index,follow>")
 
@@ -382,13 +382,13 @@ if __name__=="__main__":
             F.append(f"<link rel=stylesheet href={styles}/{lang.language}.css hreflang=zxx type=text/css>")
             F.append(f"<link rel=stylesheet href={styles}/comic_page.css hreflang=zxx type=text/css>")
 
-            F.append(f'<link rel="external license" href{attribute_string(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]],"url","id",lang))}>')
+            F.append(f'<link rel="external license" href{attribute_string(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]],"url","i",lang))}>')
 
             # TODO: Prefetches (starting at sh:420)
 
             F.append("<meta property=og:type content=article>")
-            F.append(f'<meta property=og:title content{attribute_string(get_var_l10n(data[i_id],"title","text",lang))}>')
-            F.append(f'<meta property=og:description content{attribute_string(get_var_l10n(data[i_id],"description","text",lang))}>')
+            F.append(f'<meta property=og:title content{attribute_string(get_var_l10n(data[i_id],"title","t",lang))}>')
+            F.append(f'<meta property=og:description content{attribute_string(get_var_l10n(data[i_id],"description","t",lang))}>')
             F.append("<meta property=og:site_name content=gabl.ink>")
             F.append(f"<meta property=og:url content={canonical}>")
             F.append(f"<meta property=og:image content={canonical}image.png>")
@@ -409,7 +409,7 @@ if __name__=="__main__":
                 else:
                     F.append(f"<a lang={l} href=../{str(l).lower()}/ hreflang={l}>")
 
-                F.append(say_lang(l,"html"))
+                F.append(say_lang(l,"h"))
 
                 if l==lang:
                     F.append("</b>")
@@ -417,7 +417,7 @@ if __name__=="__main__":
                     F.append("</a>")
             F.append("</ul></header>")
 
-            F.append(f'<h1>{msg_l10n(get_var_l10n(data[i_id],"title","html",lang),lang=lang,string="page_title_html")}</h1>')
+            F.append(f'<h1>{msg_l10n(get_var_l10n(data[i_id],"title","h",lang),lang=lang,string="page_title_html")}</h1>')
 
             F.append("<nav class=nav_buttons>")
 
@@ -433,17 +433,17 @@ if __name__=="__main__":
                 F.append("<source src=video.webm type=video/webm>")
                 if Path(INDEX/i_id/str(lang).lower()/"subs.vtt").is_file():
                     F.append(f"<track default src=subs.vtt srclang={lang} kind=subtitles ")
-                    F.append(f'label{attribute_string(say_lang(lang,"text"))}>')
+                    F.append(f'label{attribute_string(say_lang(lang,"t"))}>')
                 if Path(INDEX/i_id/str(lang).lower()/"cc.vtt").is_file():
                     F.append(f"<track src=cc.vtt srclang={lang} kind=captions ")
-                    F.append(f'''label{attribute_string(f'{say_lang(lang,"text")}{msg_l10n(lang=lang,string="cc")}')}>''')
+                    F.append(f'''label{attribute_string(f'{say_lang(lang,"t")}{msg_l10n(lang=lang,string="cc")}')}>''')
                 F.append("<p>")
-                F.append(msg_l10n(lang,get_var_l10n(data[data[i_id]["location"]["series"]],"title","text",lang),get_var_l10n(data[i_id],"title","text",lang),get_var_l10n(data[i_id],"title","text",lang),lang=lang,string="video_not_supported"))
+                F.append(msg_l10n(lang,get_var_l10n(data[data[i_id]["location"]["series"]],"title","t",lang),get_var_l10n(data[i_id],"title","t",lang),get_var_l10n(data[i_id],"title","t",lang),lang=lang,string="video_not_supported"))
                 F.append("</p></video>")
             elif Path(INDEX/i_id/str(lang).lower()/"image.png").is_file():
                 F.append("<picture")
-                if get_var_l10n(data[i_id],"tooltip","html",lang) is not None:
-                    F.append(f' title{attribute_string(get_var_l10n(data[i_id],"tooltip","text",lang))}')
+                if get_var_l10n(data[i_id],"tooltip","h",lang) is not None:
+                    F.append(f' title{attribute_string(get_var_l10n(data[i_id],"tooltip","t",lang))}')
                 F.append(">")
                 F.append(f'<img src=image.png fetchpriority=high alt{attribute_string(msg_l10n(lang=lang,string="see_transcript"))}>')
                 F.append("</picture>")
@@ -459,9 +459,9 @@ if __name__=="__main__":
 
             # TODO: Support multiple container depths
 
-            F.append(msg_l10n(get_var_l10n(data[data[i_id]["location"]["series"]],"title","html",lang),lang=lang,string="series_title_html"))
+            F.append(msg_l10n(get_var_l10n(data[data[i_id]["location"]["series"]],"title","h",lang),lang=lang,string="series_title_html"))
             F.append(msg_l10n(data[i_id]["location"]["page"],lang=lang,string="comma_page"))
-            F.append(msg_l10n(get_var_l10n(data[i_id],"title","html",lang),lang=lang,string="page_title_html"))
+            F.append(msg_l10n(get_var_l10n(data[i_id],"title","h",lang),lang=lang,string="page_title_html"))
             F.append("</summary></details></nav>")
 
             # TODO: Page list
@@ -477,17 +477,17 @@ if __name__=="__main__":
                 F.append("<th scope=row>")
                 line_h_label:str
                 if data[f'encyclopedia/{line["h"]}'].get("name",{}).get("label"):
-                    line_h_label=get_var_l10n(data[f'encyclopedia/{line["h"]}'].get("name",{}),"label","html",lang)
+                    line_h_label=get_var_l10n(data[f'encyclopedia/{line["h"]}'].get("name",{}),"label","h",lang)
                 else:
-                    line_h_label=get_var_l10n(data[f'encyclopedia/{line["h"]}'].get("name",{}),"label","html",lang)
+                    line_h_label=get_var_l10n(data[f'encyclopedia/{line["h"]}'].get("name",{}),"label","h",lang)
                 F.append(line_h_label)
 
                 F.append("<td>")
-                if get_var_l10n(line,"d","text",lang)==get_var_l10n(line,"d","html",lang):
+                if get_var_l10n(line,"d","t",lang)==get_var_l10n(line,"d","h",lang):
                     F.append("<p>")
-                    F.append(get_var_l10n(line,"d","html",lang))
+                    F.append(get_var_l10n(line,"d","h",lang))
                 else:
-                    F.append(get_var_l10n(line,"d","html",lang))
+                    F.append(get_var_l10n(line,"d","h",lang))
             F.append("</table></details><hr>")
 
             F.append(f'<h2>{msg_l10n(lang=lang,string="log")}</h2>')
@@ -496,11 +496,11 @@ if __name__=="__main__":
                 F.append(f'<article id=log_{print_date(date.fromisoformat(entry["date"]))}><details>')
                 F.append(f'<summary><h3>{say_date(date.fromisoformat(entry["date"]),lang)}</h3></summary>')
                 for line in entry["content"]:
-                    if text_to_html(get_var_l10n(line,"p","text",lang))==get_var_l10n(line,"p","html",lang):
+                    if text_to_html(get_var_l10n(line,"p","t",lang))==get_var_l10n(line,"p","h",lang):
                         F.append("<p>")
-                        F.append(get_var_l10n(line,"p","html",lang))
+                        F.append(get_var_l10n(line,"p","h",lang))
                     else:
-                        F.append(get_var_l10n(line,"p","html",lang))
+                        F.append(get_var_l10n(line,"p","h",lang))
                 F.append("</details></article>")
 
             F.append("<hr>")
@@ -529,25 +529,25 @@ if __name__=="__main__":
 
             F.append(f'<p>{msg_l10n(lang=lang,string="license")}')
             F.append('<a rel="external license" href')
-            F.append(attribute_string(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]],"url","id",lang)))
+            F.append(attribute_string(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]],"url","i",lang)))
             F.append(">")
-            F.append(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]],"title","html",lang))
+            F.append(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]],"title","h",lang))
             if data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]].get("abbr"):
-                F.append(msg_l10n(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]],"abbr","html",lang),lang=lang,string="copyright_license_abbr"))
+                F.append(msg_l10n(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]],"abbr","h",lang),lang=lang,string="copyright_license_abbr"))
             F.append("</a>")
 
             if data[i_id].get("disclaimer"):
                 if len(data[i_id].get("disclaimer"))==1:
                     F.append("<p>")
                     F.append(msg_l10n(lang=lang,string="disclaimer"))
-                    F.append(get_var_l10n(data["dictionaries/disclaimer"]["dictionary"][data[i_id]["disclaimer"][0]],"text","html",lang))
+                    F.append(get_var_l10n(data["dictionaries/disclaimer"]["dictionary"][data[i_id]["disclaimer"][0]],"text","h",lang))
                 else:
                     F.append("<p>")
                     F.append(msg_l10n(lang=lang,string="disclaimer_plural"))
                     F.append("<ul class=horizontal_list>")
                     for d in data[i_id]["disclaimer"]["dictionary"]:
                         F.append("<li><p>")
-                        F.append(get_var_l10n(d,"text","html",lang))
+                        F.append(get_var_l10n(d,"text","h",lang))
                     F.append("</ul>")
 
             F.append("</footer>")

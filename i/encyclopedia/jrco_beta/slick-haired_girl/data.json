@@ -7,21 +7,21 @@
   "name": {
     "label": {
       "en": {
-        "text": "slick‐haired girl"
+        "t": "slick‐haired girl"
       },
       "fr": {
-        "text": "fille avec des cheveux gominés"
+        "t": "fille avec des cheveux gominés"
       }
     }
   },
   "sex": "f",
   "birthdate": {},
   "description": {
-    "text": "A student."
+    "t": "A student."
   },
   "relationships": {},
   "bio": {
-    "html": "The slick‐haired girl plays video games on a handheld console."
+    "t": "The slick‐haired girl plays video games on a handheld console."
   },
   "copyright": {
     "year": {

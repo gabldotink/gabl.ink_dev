@@ -7,18 +7,18 @@
   "name": {
     "label": {
       "en": {
-        "text": "Mr.\u00a0Mahan"
+        "t": "Mr.\u00a0Mahan"
       },
       "fr": {
-        "text": "M.\u00a0Mahan"
+        "t": "M.\u00a0Mahan"
       }
     },
     "sur": {
       "en": {
-        "text": "Mahan"
+        "t": "Mahan"
       },
       "mul": {
-        "equal": "en"
+        "e": "en"
       }
     }
   },
@@ -28,10 +28,10 @@
     "child": "harry_mahan"
   },
   "description": {
-    "html": "A fifth grade teacher."
+    "t": "A fifth grade teacher."
   },
   "bio": {
-    "html": "Mr.\u00a0Mahan is Harry Mahan’s father."
+    "t": "Mr.\u00a0Mahan is Harry Mahan’s father."
   },
   "copyright": {
     "year": {

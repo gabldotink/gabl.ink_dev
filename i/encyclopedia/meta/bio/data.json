@@ -4,19 +4,19 @@
   "name": {
     "label": {
       "en": {
-        "text": "bio"
+        "t": "bio"
       },
       "fr": {
-        "text": "bio"
+        "t": "bio"
       }
     }
   },
   "description": {
     "en": {
-      "text": "Text that introduces a subject to the reader."
+      "t": "Text that introduces a subject to the reader."
     },
     "fr": {
-      "text": "Texte qui présente un sujet au lecteur."
+      "t": "Texte qui présente un sujet au lecteur."
     }
   },
   "copyright": {

@@ -7,21 +7,21 @@
   "name": {
     "label": {
       "en": {
-        "text": "short‐haired girl"
+        "t": "short‐haired girl"
       },
       "fr": {
-        "text": "fille avec des cheveux courts"
+        "t": "fille avec des cheveux courts"
       }
     }
   },
   "sex": "f",
   "birthdate": {},
   "description": {
-    "html": "A student."
+    "t": "A student."
   },
   "relationships": {},
   "bio": {
-    "html": "The short‐haired girl is friends with the pigtailed girl."
+    "t": "The short‐haired girl is friends with the pigtailed girl."
   },
   "copyright": {
     "year": {

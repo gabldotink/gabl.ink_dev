@@ -1,363 +1,363 @@
 {
   "html_title": {
     "en": {
-      "print": "gabl.ink: “{}”"
+      "p": "gabl.ink: “{}”"
     },
     "fr": {
-      "print": "gabl.ink\u202f: «\u202f{}\u202f»"
+      "p": "gabl.ink\u202f: «\u202f{}\u202f»"
     }
   },
   "gabldotink_logo": {
     "en": {
-      "print": "gabl.ink"
+      "p": "gabl.ink"
     },
     "mul": {
-      "equal": "en"
+      "e": "en"
     }
   },
   "video_not_supported": {
     "en": {
-      "print": "It looks like your web browser doesn’t support the <code>video</code> element. You can <a href=video.webm hreflang={0} type=video/webm download=\"{1} - {2}.webm\">download the video</a> to watch with your preferred media player. You can also view the transcript for the video at “Transcript” below."
+      "p": "It looks like your web browser doesn’t support the <code>video</code> element. You can <a href=video.webm hreflang={0} type=video/webm download=\"{1} - {2}.webm\">download the video</a> to watch with your preferred media player. You can also view the transcript for the video at “Transcript” below."
     },
     "fr": {
-      "print": "On dirait que votre navigateur Web ne prenne pas en charge l’élément <code>video</code>. Vous pouvez <a href=video.webm hreflang={0} type=video/webm download=\"{1} - {2}.webm\">télécharger le vidéo</a> pour regarder avec votre lecteur multimédia préferé. Vous pouvez aussi voir le transcription pour le vidéo à «\u202fTranscription\u202f» au‐dessous."
+      "p": "On dirait que votre navigateur Web ne prenne pas en charge l’élément <code>video</code>. Vous pouvez <a href=video.webm hreflang={0} type=video/webm download=\"{1} - {2}.webm\">télécharger le vidéo</a> pour regarder avec votre lecteur multimédia préferé. Vous pouvez aussi voir le transcription pour le vidéo à «\u202fTranscription\u202f» au‐dessous."
     }
   },
   "see_transcript": {
     "en": {
-      "print": "See “Transcript” below"
+      "p": "See “Transcript” below"
     },
     "fr": {
-      "print": "Voir «\u202fTranscription\u202f» au‐dessous"
+      "p": "Voir «\u202fTranscription\u202f» au‐dessous"
     }
   },
   "series_title_html": {
     "en": {
-      "print": "<cite class=i>{}</cite>"
+      "p": "<cite class=i>{}</cite>"
     },
     "fr": {
-      "equal": "en"
+      "e": "en"
     }
   },
   "comma_page": {
     "fr": {
-      "print": ", page\u00a0{} "
+      "p": ", page\u00a0{} "
     },
     "en": {
-      "equal": "fr"
+      "e": "fr"
     }
   },
   "page_title_html": {
     "en": {
-      "print": "“<cite>{}</cite>”"
+      "p": "“<cite>{}</cite>”"
     },
     "fr": {
-      "print": "<cite class=i>{}</cite>"
+      "p": "<cite class=i>{}</cite>"
     }
   },
   "no_title": {
     "en": {
-      "print": "<i>No title</i>"
+      "p": "<i>No title</i>"
     },
     "fr": {
-      "print": "<i>Sans titre</i>"
+      "p": "<i>Sans titre</i>"
     }
   },
   "transcript_name": {
     "en": {
-      "print": "Transcript"
+      "p": "Transcript"
     },
     "fr": {
-      "print": "Transcription"
+      "p": "Transcription"
     }
   },
   "first_published": {
     "en": {
-      "print": "First published "
+      "p": "First published "
     },
     "fr": {
-      "print": "Première publication\u202f: "
+      "p": "Première publication\u202f: "
     }
   },
   "nav_button_first": {
     "en": {
-      "print": "First"
+      "p": "First"
     },
     "fr": {
-      "print": "Première"
+      "p": "Première"
     }
   },
   "nav_button_prev": {
     "en": {
-      "print": "Previous"
+      "p": "Previous"
     },
     "fr": {
-      "print": "Précédente"
+      "p": "Précédente"
     }
   },
   "nav_button_next": {
     "en": {
-      "print": "Next"
+      "p": "Next"
     },
     "fr": {
-      "print": "Prochaine"
+      "p": "Prochaine"
     }
   },
   "nav_button_last": {
     "en": {
-      "print": "Last"
+      "p": "Last"
     },
     "fr": {
-      "print": "Dernière"
+      "p": "Dernière"
     }
   },
   "nav_button_first_inline": {
     "en": {
-      "print": "first"
+      "p": "first"
     },
     "fr": {
-      "print": "première"
+      "p": "première"
     }
   },
   "nav_button_next_inline": {
     "en": {
-      "print": "next"
+      "p": "next"
     },
     "fr": {
-      "print": "prochaine"
+      "p": "prochaine"
     }
   },
   "nav_button_prev_inline": {
     "en": {
-      "print": "previous"
+      "p": "previous"
     },
     "fr": {
-      "print": "précédente"
+      "p": "précédente"
     }
   },
   "nav_button_last_inline": {
     "en": {
-      "print": "last"
+      "p": "last"
     },
     "fr": {
-      "print": "dernière"
+      "p": "dernière"
     }
   },
   "this_is_x_page": {
     "en": {
-      "print": "This is the {} page!"
+      "p": "This is the {} page!"
     },
     "fr": {
-      "print": "C’est la {} page\u202f!"
+      "p": "C’est la {} page\u202f!"
     }
   },
   "nav_button_page_title": {
     "en": {
-      "print": "“{}”"
+      "p": "“{}”"
     },
     "fr": {
-      "print": "«\u202f{}\u202f»"
+      "p": "«\u202f{}\u202f»"
     }
   },
   "share_this_page": {
     "en": {
-      "print": "Share this page"
+      "p": "Share this page"
     },
     "fr": {
-      "print": "Partager ce page"
+      "p": "Partager ce page"
     }
   },
   "validate_this_page": {
     "en": {
-      "print": "Validate this page"
+      "p": "Validate this page"
     },
     "fr": {
-      "print": "Valider ce page"
+      "p": "Valider ce page"
     }
   },
   "license": {
     "en-US": {
-      "print": "License: "
+      "p": "License: "
     },
     "en-GB": {
-      "print": "Licence: "
+      "p": "Licence: "
     },
     "fr": {
-      "print": "Licence\u202f: "
+      "p": "Licence\u202f: "
     }
   },
   "license_plural": {
     "en-US": {
-      "print": "Licenses: "
+      "p": "Licenses: "
     },
     "en-GB": {
-      "print": "Licences: "
+      "p": "Licences: "
     },
     "fr": {
-      "print": "Licences\u202f: "
+      "p": "Licences\u202f: "
     }
   },
   "disclaimer": {
     "en": {
-      "print": "Disclaimer: "
+      "p": "Disclaimer: "
     },
     "fr": {
-      "print": "Disclaimer\u202f: "
+      "p": "Disclaimer\u202f: "
     }
   },
   "disclaimer_plural": {
     "en": {
-      "print": "Disclaimers: "
+      "p": "Disclaimers: "
     },
     "fr": {
-      "print": "Disclaimers\u202f: "
+      "p": "Disclaimers\u202f: "
     }
   },
   "share_with": {
     "en": {
-      "print": "Share with "
+      "p": "Share with "
     },
     "fr": {
-      "print": "Partagez avec "
+      "p": "Partagez avec "
     }
   },
   "validate_with": {
     "en": {
-      "print": "Validate with "
+      "p": "Validate with "
     },
     "fr": {
-      "print": "Validez avec "
+      "p": "Validez avec "
     }
   },
   "validate_as": {
     "en": {
-      "print": " as "
+      "p": " as "
     },
     "fr": {
-      "print": " en tant que "
+      "p": " en tant que "
     }
   },
   "say_date_cjk_year": {
     "zh": {
-      "print": "年"
+      "p": "年"
     },
     "ja": {
-      "equal": "zh"
+      "e": "zh"
     },
     "ko": {
-      "print": "년\u00a0"
+      "p": "년\u00a0"
     },
     "ko-Hani": {
-      "print": "年\u00a0"
+      "p": "年\u00a0"
     }
   },
   "say_date_cjk_month": {
     "zh": {
-      "print": "月"
+      "p": "月"
     },
     "ja": {
-      "equal": "zh"
+      "e": "zh"
     },
     "ko": {
-      "print": "월\u00a0"
+      "p": "월\u00a0"
     },
     "ko-Hani": {
-      "print": "月\u00a0"
+      "p": "月\u00a0"
     }
   },
   "say_date_cjk_day": {
     "zh": {
-      "print": "日"
+      "p": "日"
     },
     "ja": {
-      "equal": "zh"
+      "e": "zh"
     },
     "ko": {
-      "print": "일"
+      "p": "일"
     },
     "ko-Hani": {
-      "equal": "zh"
+      "e": "zh"
     }
   },
   "say_date_cjk_bc": {
     "zh-Hant": {
-      "print": "紀元前"
+      "p": "紀元前"
     },
     "zh-Hans": {
-      "print": "纪元前"
+      "p": "纪元前"
     },
     "ja": {
-      "equal": "zh-Hant"
+      "e": "zh-Hant"
     },
     "ko": {
-      "print": "기원전\u00a0"
+      "p": "기원전\u00a0"
     },
     "ko-Hani": {
-      "print": "紀元前\u00a0"
+      "p": "紀元前\u00a0"
     }
   },
   "canonical_url": {
     "en": {
-      "print": "Canonical <abbr title=\"Uniform Resource Locator\">URL</abbr>: "
+      "p": "Canonical <abbr title=\"Uniform Resource Locator\">URL</abbr>: "
     },
     "fr": {
-      "print": "<abbr title=\"Uniform Resource Locator\">URL</abbr> canonique\u202f: "
+      "p": "<abbr title=\"Uniform Resource Locator\">URL</abbr> canonique\u202f: "
     }
   },
   "log": {
     "en": {
-      "print": "Log"
+      "p": "Log"
     },
     "fr": {
-      "print": "Journal"
+      "p": "Journal"
     }
   },
   "gabldotink_series_page": {
     "en": {
-      "print": "gabl.ink{0}: “{1}”: “{2}”"
+      "p": "gabl.ink{0}: “{1}”: “{2}”"
     },
     "fr": {
-      "print": "gabl.ink{0}\u202f: «\u202f{1}\u202f»\u202f: «\u202f{2}}\u202f»"
+      "p": "gabl.ink{0}\u202f: «\u202f{1}\u202f»\u202f: «\u202f{2}}\u202f»"
     }
   },
   "from_gabldotink": {
     "en": {
-      "print": "From https://gabl.ink/ : "
+      "p": "From https://gabl.ink/ : "
     },
     "fr": {
-      "print": "De https://gabl.ink/ : "
+      "p": "De https://gabl.ink/ : "
     }
   },
   "cc": {
     "en": {
-      "print": "\u00a0(CC)"
+      "p": "\u00a0(CC)"
     },
     "fr": {
-      "equal": "en"
+      "e": "en"
     }
   },
   "copyright_notice": {
     "en": {
-      "print": "<abbr title=Copyright>©</abbr>\u00a0"
+      "p": "<abbr title=Copyright>©</abbr>\u00a0"
     },
     "fr": {
-      "print": "<abbr title=Droit d’auteur>©</abbr>\u00a0"
+      "p": "<abbr title=Droit d’auteur>©</abbr>\u00a0"
     }
   },
   "copyright_year_separator": {
     "en": {
-      "print": "–"
+      "p": "–"
     },
     "fr": {
-      "equal": "en"
+      "e": "en"
     }
   },
   "copyright_license_abbr": {
     "en": {
-      "print": " (<cite><abbr>{}</abbr></cite>)"
+      "p": " (<cite><abbr>{}</abbr></cite>)"
     },
     "fr": {
-      "equal": "en"
+      "e": "en"
     }
   }
 }
