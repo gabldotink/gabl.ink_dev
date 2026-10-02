@@ -12,17 +12,16 @@ from pathlib import Path
 # Arch: python-langcodes
 from langcodes import Language
 
-script:Path=Path(__file__).resolve()
-gabel:Path=script.parent
-dicts:Path=Path(gabel)/"dictionaries"
-index:Path=Path(gabel)/".."/"i"
-encyclopedia:Path=Path(index)/"encyclopedia"
+SCRIPT:Path=Path(__file__).resolve()
+GABEL:Path=SCRIPT.parent
+DICTS:Path=Path(GABEL)/"dictionaries"
+INDEX:Path=Path(GABEL)/".."/"i"
 
 data:dict={}
 
 item_files:list=[
     path
-    for path in Path(index).rglob("data.json")
+    for path in Path(INDEX).rglob("data.json")
     if path.is_file()
 ]
 
@@ -31,9 +30,9 @@ for dictionary in ["copyright_license","disclaimer","language","month","region",
     data[f"dictionaries/{dictionary}"]["id"]=f"dictionaries/{dictionary}"
     data[f"dictionaries/{dictionary}"]["type"]="dictionary"
     data[f"dictionaries/{dictionary}"]["dictionary_name"]=dictionary
-    with open(Path(dicts)/f"{dictionary}.json","r",encoding="utf-8") as f:
+    with open(Path(DICTS)/f"{dictionary}.json","r",encoding="utf-8") as f:
         data[f"dictionaries/{dictionary}"]["dictionary"]=json.load(f)
-    user_dictionary=Path(index)/"dictionaries"/dictionary/"data.json"
+    user_dictionary=Path(INDEX)/"dictionaries"/dictionary/"data.json"
     if user_dictionary.is_file():
         with open(user_dictionary,"r",encoding="utf-8") as f:
             data[f"dictionaries/{dictionary}"].update(json.load(f))
@@ -429,19 +428,19 @@ if __name__=="__main__":
 
             F.append("</nav>")
 
-            if Path(index/i_id/str(lang).lower()/"video.webm").is_file():
+            if Path(INDEX/i_id/str(lang).lower()/"video.webm").is_file():
                 F.append("<video controls poster=image.png preload=auto>")
                 F.append("<source src=video.webm type=video/webm>")
-                if Path(index/i_id/str(lang).lower()/"subs.vtt").is_file():
+                if Path(INDEX/i_id/str(lang).lower()/"subs.vtt").is_file():
                     F.append(f"<track default src=subs.vtt srclang={lang} kind=subtitles ")
                     F.append(f'label{attribute_string(say_lang(lang,"text"))}>')
-                if Path(index/i_id/str(lang).lower()/"cc.vtt").is_file():
+                if Path(INDEX/i_id/str(lang).lower()/"cc.vtt").is_file():
                     F.append(f"<track src=cc.vtt srclang={lang} kind=captions ")
                     F.append(f'''label{attribute_string(f'{say_lang(lang,"text")}{msg_l10n(lang=lang,string="cc")}')}>''')
                 F.append("<p>")
                 F.append(msg_l10n(lang,get_var_l10n(data[data[i_id]["location"]["series"]],"title","text",lang),get_var_l10n(data[i_id],"title","text",lang),get_var_l10n(data[i_id],"title","text",lang),lang=lang,string="video_not_supported"))
                 F.append("</p></video>")
-            elif Path(index/i_id/str(lang).lower()/"image.png").is_file():
+            elif Path(INDEX/i_id/str(lang).lower()/"image.png").is_file():
                 F.append("<picture")
                 if get_var_l10n(data[i_id],"tooltip","html",lang) is not None:
                     F.append(f' title{attribute_string(get_var_l10n(data[i_id],"tooltip","text",lang))}')
@@ -553,7 +552,7 @@ if __name__=="__main__":
 
             F.append("</footer>")
 
-            output_file=Path(index)/i_id/str(lang).lower()/"index.html"
+            output_file=Path(INDEX)/i_id/str(lang).lower()/"index.html"
             output_file.parent.mkdir(parents=True,exist_ok=True)
             output_file.touch(exist_ok=True)
 
