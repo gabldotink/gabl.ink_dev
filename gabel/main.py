@@ -12,37 +12,6 @@ from pathlib import Path
 # Arch: python-langcodes
 from langcodes import Language
 
-SCRIPT:Path=Path(__file__).resolve()
-GABEL:Path=SCRIPT.parent
-DICTS:Path=Path(GABEL)/"dictionaries"
-INDEX:Path=Path(GABEL)/".."/"i"
-
-data:dict={}
-
-item_files:list=[
-    path
-    for path in Path(INDEX).rglob("data.json")
-    if path.is_file()
-]
-
-for dictionary in ["copyright_license","disclaimer","language","month","region","script","share_link","string","validate_link","weekday"]:
-    data[f"dictionaries/{dictionary}"]={}
-    data[f"dictionaries/{dictionary}"]["id"]=f"dictionaries/{dictionary}"
-    data[f"dictionaries/{dictionary}"]["type"]="dictionary"
-    data[f"dictionaries/{dictionary}"]["dictionary_name"]=dictionary
-    with open(Path(DICTS)/f"{dictionary}.json","r",encoding="utf-8") as f:
-        data[f"dictionaries/{dictionary}"]["dictionary"]=json.load(f)
-    user_dictionary=Path(INDEX)/"dictionaries"/dictionary/"data.json"
-    if user_dictionary.is_file():
-        with open(user_dictionary,"r",encoding="utf-8") as f:
-            data[f"dictionaries/{dictionary}"].update(json.load(f))
-
-for i in item_files:
-    with open(i,"r",encoding="utf-8") as f:
-        obj=json.load(f)
-        obj_id=obj.get("id")
-        data[obj_id]=obj
-
 def attribute_string(string:str)->str:
     """Takes a plain text string as input and returns the HTML
     component that comes right after the attribute name. Returns an
@@ -342,6 +311,37 @@ def say_lang(lang:Language,format:str)->str:
     """
     if lang.language in ("en","fr"):
         return f'{to_sentence_case(get_var_l10n(data["dictionaries/language"]["dictionary"][lang.language],"name",format,lang),lang)} ({get_var_l10n(data["dictionaries/region"]["dictionary"][str(lang.region).lower()],"name",format,lang)})'
+
+SCRIPT:Path=Path(__file__).resolve()
+GABEL:Path=SCRIPT.parent
+DICTS:Path=Path(GABEL)/"dictionaries"
+INDEX:Path=Path(GABEL)/".."/"i"
+
+data:dict={}
+
+item_files:list=[
+    path
+    for path in Path(INDEX).rglob("data.json")
+    if path.is_file()
+]
+
+for dictionary in ["copyright_license","disclaimer","language","month","region","script","share_link","string","validate_link","weekday"]:
+    data[f"dictionaries/{dictionary}"]={}
+    data[f"dictionaries/{dictionary}"]["id"]=f"dictionaries/{dictionary}"
+    data[f"dictionaries/{dictionary}"]["type"]="dictionary"
+    data[f"dictionaries/{dictionary}"]["dictionary_name"]=dictionary
+    with open(Path(DICTS)/f"{dictionary}.json","r",encoding="utf-8") as f:
+        data[f"dictionaries/{dictionary}"]["dictionary"]=json.load(f)
+    user_dictionary=Path(INDEX)/"dictionaries"/dictionary/"data.json"
+    if user_dictionary.is_file():
+        with open(user_dictionary,"r",encoding="utf-8") as f:
+            data[f"dictionaries/{dictionary}"].update(json.load(f))
+
+for i in item_files:
+    with open(i,"r",encoding="utf-8") as f:
+        obj=json.load(f)
+        obj_id=obj.get("id")
+        data[obj_id]=obj
 
 if __name__=="__main__":
     sys.stderr.write("section start: items\n")
