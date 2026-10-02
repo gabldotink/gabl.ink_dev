@@ -359,7 +359,16 @@ if __name__=="__main__":
 
             F:list=["<!DOCTYPE html>\n"]
 
-            F.append(f'<!-- SPDX-License-Identifier: {data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]]["spdx"]} -->\n')
+            if data[i_id].get("copyright",{}).get("license"):
+                F.append("<!-- SPDX-License-Identifier: ")
+                spdx_license_count=len(data[i_id]["copyright"]["license"])
+                spdx_license_num=1
+                for L in data[i_id]["copyright"]["license"]:
+                    F.append(data["dictionaries/copyright_license"]["dictionary"][L]["spdx"])
+                    if spdx_license_num<spdx_license_count:
+                        F.append(" OR ")
+                        spdx_license_num+=1
+                F.append(" -->\n")
 
             # TODO: Skipping the dir attribute for now, but it should be implemented later (sh:338)
             F.append(f"<html lang={lang}>")
