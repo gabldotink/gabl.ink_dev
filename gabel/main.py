@@ -107,20 +107,17 @@ def get_var_l10n(index,key:str|int,format:str,l10n_lang:Language)->str:
                 return index[key][o]["i"]
             elif "e" in index.get(key,{}).get(o,{}):
                 return get_var_l10n(index,key,format,Language.get(index[key][o]["e"]))
-
-        if format=="p":
+        elif format=="p":
             if "p" in index.get(key,{}).get(o,{}):
                 return index[key][o]["p"]
             elif "e" in index.get(key,{}).get(o,{}):
                 return get_var_l10n(index,key,format,Language.get(index[key][o]["e"]))
-
-        if format=="t":
+        elif format=="t":
             if "t" in index.get(key,{}).get(o,{}):
                 return index[key][o]["t"]
             elif "e" in index.get(key,{}).get(o,{}):
                 return get_var_l10n(index,key,format,Language.get(index[key][o]["e"]))
-
-        if format=="h":
+        elif format=="h":
             if "h" in index.get(key,{}).get(o,{}):
                 return index[key][o]["h"]
             elif "t" in index.get(key,{}).get(o,{}):
