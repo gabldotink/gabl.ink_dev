@@ -14,13 +14,13 @@
   width: 20%;
 }
 
-#lang_select {
+#L {
   float: right;
   list-style-type: none;
 }
 
-#lang_select li::before {
-  content: attr(data-lang_select_flag) "\a0";
+#L li::before {
+  content: attr(data-F) "\a0";
 }
 
 .nav_buttons_off {

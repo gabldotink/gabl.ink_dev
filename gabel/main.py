@@ -407,11 +407,11 @@ if __name__=="__main__":
             F.append("<header>")
             F.append("<a href=https://gabl.ink/ id=gabldotink_logo>gabl.ink</a>")
 
-            F.append("<ul id=lang_select>")
+            F.append("<ul id=L>")
             for l in sorted(data[i_id]["langs"]):
                 l=Language.get(l)
 
-                F.append(f"<li data-lang_select_flag={to_regional_indicators(l.region)}>")
+                F.append(f"<li data-F={to_regional_indicators(l.region)}>")
 
                 if l==lang:
                     F.append("<b>")
