@@ -507,9 +507,7 @@ if __name__=="__main__":
                 for line in entry["content"]:
                     if text_to_html(get_var_l10n(line,"p","t",lang))==get_var_l10n(line,"p","h",lang):
                         F.append("<p>")
-                        F.append(get_var_l10n(line,"p","h",lang))
-                    else:
-                        F.append(get_var_l10n(line,"p","h",lang))
+                    F.append(get_var_l10n(line,"p","h",lang))
                 F.append("</details></article>")
 
             F.append("<hr>")
