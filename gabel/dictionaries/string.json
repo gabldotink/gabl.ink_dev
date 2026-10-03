@@ -9,7 +9,7 @@
   },
   "gabldotink_logo": {
     "en": {
-      "p": "gabl.ink"
+      "t": "gabl.ink"
     },
     "mul": {
       "e": "en"
@@ -25,10 +25,10 @@
   },
   "see_transcript": {
     "en": {
-      "p": "See “Transcript” below"
+      "t": "See “Transcript” below"
     },
     "fr": {
-      "p": "Voir «\u202fTranscription\u202f» au‐dessous"
+      "t": "Voir «\u202fTranscription\u202f» au‐dessous"
     }
   },
   "series_title_html": {
@@ -65,82 +65,82 @@
   },
   "transcript_name": {
     "en": {
-      "p": "Transcript"
+      "t": "Transcript"
     },
     "fr": {
-      "p": "Transcription"
+      "t": "Transcription"
     }
   },
   "first_published": {
     "en": {
-      "p": "First published "
+      "t": "First published "
     },
     "fr": {
-      "p": "Première publication\u202f: "
+      "t": "Première publication\u202f: "
     }
   },
   "nav_button_first": {
     "en": {
-      "p": "First"
+      "t": "First"
     },
     "fr": {
-      "p": "Première"
+      "t": "Première"
     }
   },
   "nav_button_prev": {
     "en": {
-      "p": "Previous"
+      "t": "Previous"
     },
     "fr": {
-      "p": "Précédente"
+      "t": "Précédente"
     }
   },
   "nav_button_next": {
     "en": {
-      "p": "Next"
+      "t": "Next"
     },
     "fr": {
-      "p": "Prochaine"
+      "t": "Prochaine"
     }
   },
   "nav_button_last": {
     "en": {
-      "p": "Last"
+      "t": "Last"
     },
     "fr": {
-      "p": "Dernière"
+      "t": "Dernière"
     }
   },
   "nav_button_first_inline": {
     "en": {
-      "p": "first"
+      "t": "first"
     },
     "fr": {
-      "p": "première"
+      "t": "première"
     }
   },
   "nav_button_next_inline": {
     "en": {
-      "p": "next"
+      "t": "next"
     },
     "fr": {
-      "p": "prochaine"
+      "t": "prochaine"
     }
   },
   "nav_button_prev_inline": {
     "en": {
-      "p": "previous"
+      "t": "previous"
     },
     "fr": {
-      "p": "précédente"
+      "t": "précédente"
     }
   },
   "nav_button_last_inline": {
     "en": {
-      "p": "last"
+      "t": "last"
     },
     "fr": {
-      "p": "dernière"
+      "t": "dernière"
     }
   },
   "this_is_x_page": {
@@ -161,139 +161,163 @@
   },
   "share_this_page": {
     "en": {
-      "p": "Share this page"
+      "t": "Share this page"
     },
     "fr": {
-      "p": "Partager ce page"
+      "t": "Partager ce page"
     }
   },
   "validate_this_page": {
     "en": {
-      "p": "Validate this page"
+      "t": "Validate this page"
     },
     "fr": {
-      "p": "Valider ce page"
+      "t": "Valider ce page"
     }
   },
   "license": {
     "en-US": {
-      "p": "License: "
+      "t": "License: "
     },
     "en-GB": {
-      "p": "Licence: "
+      "t": "Licence: "
     },
     "fr": {
-      "p": "Licence\u202f: "
+      "t": "Licence\u202f: "
     }
   },
   "license_plural": {
     "en-US": {
-      "p": "Licenses: "
+      "t": "Licenses: "
     },
     "en-GB": {
-      "p": "Licences: "
+      "t": "Licences: "
     },
     "fr": {
-      "p": "Licences\u202f: "
+      "t": "Licences\u202f: "
     }
   },
   "disclaimer": {
     "en": {
-      "p": "Disclaimer: "
+      "t": "Disclaimer: "
     },
     "fr": {
-      "p": "Disclaimer\u202f: "
+      "t": "Disclaimer\u202f: "
     }
   },
   "disclaimer_plural": {
     "en": {
-      "p": "Disclaimers: "
+      "t": "Disclaimers: "
     },
     "fr": {
-      "p": "Disclaimers\u202f: "
+      "t": "Disclaimers\u202f: "
     }
   },
   "share_with": {
     "en": {
-      "p": "Share with "
+      "t": "Share with "
     },
     "fr": {
-      "p": "Partagez avec "
+      "t": "Partagez avec "
     }
   },
   "validate_with": {
     "en": {
-      "p": "Validate with "
+      "t": "Validate with "
     },
     "fr": {
-      "p": "Validez avec "
+      "t": "Validez avec "
     }
   },
   "validate_as": {
     "en": {
-      "p": " as "
+      "t": " as "
     },
     "fr": {
-      "p": " en tant que "
+      "t": " en tant que "
     }
   },
   "say_date_cjk_year": {
     "zh": {
-      "p": "年"
+      "t": "年"
     },
     "ja": {
       "e": "zh"
     },
+    "ja-Hira": {
+      "t": "ねん"
+    },
+    "ja-Latn-hepburn": {
+      "t": "‐nen"
+    },
     "ko": {
-      "p": "년\u00a0"
+      "t": "년\u00a0"
     },
     "ko-Hani": {
-      "p": "年\u00a0"
+      "t": "年\u00a0"
     }
   },
   "say_date_cjk_month": {
     "zh": {
-      "p": "月"
+      "t": "月"
     },
     "ja": {
       "e": "zh"
     },
+    "ja-Hira": {
+      "t": "がつ"
+    },
+    "ja-Latn-hepburn": {
+      "t": "‐gatsu"
+    },
     "ko": {
-      "p": "월\u00a0"
+      "t": "월\u00a0"
     },
     "ko-Hani": {
-      "p": "月\u00a0"
+      "t": "月\u00a0"
     }
   },
   "say_date_cjk_day": {
     "zh": {
-      "p": "日"
+      "t": "日"
     },
     "ja": {
       "e": "zh"
     },
+    "ja-Hira": {
+      "t": "にち"
+    },
+    "ja-Latn-hepburn": {
+      "t": "‐nichi"
+    },
     "ko": {
-      "p": "일"
+      "t": "일"
     },
     "ko-Hani": {
-      "e": "zh"
+      "t": "zh"
     }
   },
   "say_date_cjk_bc": {
     "zh-Hant": {
-      "p": "紀元前"
+      "t": "紀元前"
     },
     "zh-Hans": {
-      "p": "纪元前"
+      "t": "纪元前"
     },
     "ja": {
       "e": "zh-Hant"
     },
+    "ja-Hira": {
+      "t": "きげんぜん"
+    },
+    "ja-Latn-hepburn": {
+      "t": "kigenzen"
+    },
     "ko": {
-      "p": "기원전\u00a0"
+      "t": "기원전\u00a0"
     },
     "ko-Hani": {
-      "p": "紀元前\u00a0"
+      "t": "紀元前\u00a0"
     }
   },
   "canonical_url": {
@@ -306,10 +330,10 @@
   },
   "log": {
     "en": {
-      "p": "Log"
+      "t": "Log"
     },
     "fr": {
-      "p": "Journal"
+      "t": "Journal"
     }
   },
   "gabldotink_series_page": {
@@ -322,15 +346,15 @@
   },
   "from_gabldotink": {
     "en": {
-      "p": "From https://gabl.ink/ : "
+      "t": "From https://gabl.ink/ : "
     },
     "fr": {
-      "p": "De https://gabl.ink/ : "
+      "t": "De https://gabl.ink/ : "
     }
   },
   "cc": {
     "en": {
-      "p": "\u00a0(CC)"
+      "t": "\u00a0(CC)"
     },
     "fr": {
       "e": "en"
@@ -338,15 +362,15 @@
   },
   "copyright_notice": {
     "en": {
-      "p": "<abbr title=Copyright>©</abbr>\u00a0"
+      "t": "<abbr title=Copyright>©</abbr>\u00a0"
     },
     "fr": {
-      "p": "<abbr title=Droit d’auteur>©</abbr>\u00a0"
+      "t": "<abbr title=Droit d’auteur>©</abbr>\u00a0"
     }
   },
   "copyright_year_separator": {
     "en": {
-      "p": "–"
+      "t": "–"
     },
     "fr": {
       "e": "en"

@@ -110,6 +110,8 @@ def get_var_l10n(index,key:str|int,format:str,l10n_lang:Language)->str:
         elif format=="p":
             if "p" in index.get(key,{}).get(o,{}):
                 return index[key][o]["p"]
+            elif "t" in index.get(key,{}).get(o,{}):
+                return index[key][o]["t"]
             elif "e" in index.get(key,{}).get(o,{}):
                 return get_var_l10n(index,key,format,Language.get(index[key][o]["e"]))
         elif format=="t":
