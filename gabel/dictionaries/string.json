@@ -71,14 +71,6 @@
       "t": "Transcription"
     }
   },
-  "first_published": {
-    "en": {
-      "t": "First published "
-    },
-    "fr": {
-      "t": "Première publication\u202f: "
-    }
-  },
   "nav_button_first": {
     "en": {
       "t": "First"
@@ -341,7 +333,7 @@
       "p": "gabl.ink{0}: “{1}”: “{2}”"
     },
     "fr": {
-      "p": "gabl.ink{0}\u202f: «\u202f{1}\u202f»\u202f: «\u202f{2}}\u202f»"
+      "p": "gabl.ink{0}\u202f: «\u202f{1}\u202f»\u202f: «\u202f{2}\u202f»"
     }
   },
   "from_gabldotink": {
@@ -365,7 +357,7 @@
       "t": "<abbr title=Copyright>©</abbr>\u00a0"
     },
     "fr": {
-      "t": "<abbr title=Droit d’auteur>©</abbr>\u00a0"
+      "t": "<abbr title=\"Droit d’auteur\">©</abbr>\u00a0"
     }
   },
   "copyright_year_separator": {
