@@ -9,6 +9,7 @@
 *.html text eol=lf linguist-language=HTML
 *.json text eol=lf linguist-language=JSON
 *.md text eol=lf linguist-language=Markdown
+*.pxd text eol=lf linguist-language=Cython
 *.py text eol=lf linguist-language=Python
 *.sh text eol=lf linguist-language=Shell
 .shellcheckrc text eol=lf linguist-language=ShellCheck-Config

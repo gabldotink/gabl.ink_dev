@@ -92,10 +92,10 @@ def expand_parts(parts:list)->list:
 
 def get_i_id(i:Path)->str:
     with open(i,"r",encoding="utf-8") as f:
-        obj=json.load(f)
-        return obj["id"]
+        item_obj=json.load(f)
+        return item_obj["id"]
 
-def get_var_l10n(index,key:str|int,format:str,l10n_lang:Language)->str:
+def get_var_l10n(index,key:str,format:str,l10n_lang:Language)->str:
     # e.g. get_var_l10n(data["jrco_beta/1"]["location"],"series","t",lang)
 
     for o in str(l10n_lang),l10n_lang.language,"mul","zxx","e":
@@ -166,7 +166,7 @@ def make_nav_button(button:str,lang:Language)->str:
         "l":("⇨","last","last"),
     }[button]
 
-    r:list=["<div class=nav_button title"]
+    r=["<div class=nav_button title"]
 
     if data[i_id]["location"]["page"]==data[data[i_id]["location"]["series"]].get(button_fl):
         r.append(attribute_string(msg_l10n(msg_l10n(lang=lang,string=f"nav_button_{button_id}_inline"),lang=lang,string="this_is_x_page")))
@@ -193,16 +193,16 @@ def make_nav_button(button:str,lang:Language)->str:
 
     return "".join(r)
 
-def make_share_link(name:str)->str:
-    r:list=[f"<li id=share_link_{name}>"]
-    r.append('<a href')
-
-    query:dict={}
-    for key in "title","url","text","hashtag":
-        if data["dictionaries/share_link"][name].get(key,{}).get("key"):
-            pass
-
-    r.append(data["dictionaries/share_link"][name]["base"])
+#def make_share_link(name:str)->str:
+#    r=[f"<li id=share_link_{name}>"]
+#    r.append('<a href')
+#
+#    query:dict={}
+#    for key in "title","url","text","hashtag":
+#        if data["dictionaries/share_link"][name].get(key,{}).get("key"):
+#            pass
+#
+#    r.append(data["dictionaries/share_link"][name]["base"])
 
 def msg_l10n(*args,lang:Language,string:str)->str:
     return get_var_l10n(data["dictionaries/string"]["dictionary"],string,"p",lang).format(*args)
@@ -230,7 +230,7 @@ def to_regional_indicators(string:str)->str:
     """
     out_chars=[]
     for ch in string:
-        out_chars.append(chr(0x1F1E6+(ord(ch)-ord("A"))))
+        out_chars.append(chr(0x1f1e6+(ord(ch)-65)))
     return "".join(out_chars)
 
 def to_sentence_case(string:str,lang:Language)->str:
@@ -254,7 +254,7 @@ def say_date(d:date,lang:Language)->str:
     >>> say_date(date.fromisoformat("20220401"),Language.get("fr"))
     '<time datetime=2022-04-01>1er\xa0avril 2022</time>'
     """
-    r:list=[f"<time datetime={print_date(d)}>"]
+    r=[f"<time datetime={print_date(d)}>"]
 
     ad:bool
 
@@ -345,6 +345,7 @@ for i in item_files:
 if __name__=="__main__":
     sys.stderr.write("section start: items\n")
 
+    # TODO: Make this a function(s); these variables are global.
     for i in item_files:
         i_id:str=get_i_id(i)
 

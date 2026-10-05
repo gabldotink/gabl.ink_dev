@@ -2,21 +2,21 @@
 
 root=true
 
-[*.{css,html,json,md,py,s{h,vg},t{oml,xt},v{cf,tt},yml},.{{editor,git}config,git{attributes,ignore},htaccess,shellcheckrc},COMMIT_EDITMSG]
+[*.{css,html,json,md,pxd,py,s{h,vg},t{oml,xt},v{cf,tt},yml},.{{editor,git}config,git{attributes,ignore},htaccess,shellcheckrc},COMMIT_EDITMSG]
 insert_final_newline=true
 indent_style=space
 charset=utf-8
 
-[*.{css,html,json,md,py,s{h,vg},t{oml,xt},vtt,yml},.{{editor,git}config,git{attributes,ignore},htaccess,shellcheckrc},COMMIT_EDITMSG]
+[*.{css,html,json,md,pxd,py,s{h,vg},t{oml,xt},vtt,yml},.{{editor,git}config,git{attributes,ignore},htaccess,shellcheckrc},COMMIT_EDITMSG]
 end_of_line=lf
 
-[*.{css,html,json,md,py,s{h,vg},t{oml,xt},yml},.{{editor,git}config,git{attributes,ignore},htaccess,shellcheckrc},COMMIT_EDITMSG]
+[*.{css,html,json,md,s{h,vg},t{oml,xt},yml},.{{editor,git}config,git{attributes,ignore},htaccess,shellcheckrc},COMMIT_EDITMSG]
 indent_size=2
 
 [*.v{cf,tt},]
 indent_size=0
 
-[*.py]
+[*.p{xd,y}]
 indent_size=4
 
 [*.vcf]
