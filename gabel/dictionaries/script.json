@@ -280,19 +280,19 @@
     ],
     "name": {
       "ja": {
-        "t": "仮名"
+        "t": "ひらがなとカタカナ"
       },
       "ja-Hira": {
-        "t": "かな"
+        "t": "ひらがなとかたかな"
       },
       "ja-Latn": {
-        "t": "kana"
+        "t": "hiragana to katakana"
       },
       "en": {
-        "e": "ja-Latn"
+        "t": "hiragana and katakana"
       },
       "fr": {
-        "e": "ja-Latn"
+        "t": "hiragana et katakana"
       }
     }
   }
