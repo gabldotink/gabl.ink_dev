@@ -58,7 +58,7 @@ cdef list F
 
 cdef int spdx_license_count
 cdef int spdx_license_num
-cdef str L
+cdef str license
 
 cdef str styles
 

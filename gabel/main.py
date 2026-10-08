@@ -9,9 +9,6 @@ import sys
 from datetime import date
 from pathlib import Path
 
-# Arch: python-langcodes
-from langcodes import Language
-
 def attribute_string(string:str)->str:
     """Takes a plain text string as input and returns the HTML
     component that comes right after the attribute name. Returns an
@@ -95,10 +92,10 @@ def get_i_id(i:Path)->str:
         item_obj=json.load(f)
         return item_obj["id"]
 
-def get_var_l10n(index,key:str,format:str,l10n_lang:Language)->str:
+def get_var_l10n(index,key:str,format:str,l10n_lang:L)->str:
     # e.g. get_var_l10n(data["jrco_beta/1"]["location"],"series","t",lang)
 
-    for o in str(l10n_lang),l10n_lang.language,"mul","zxx","e":
+    for o in str(l10n_lang),l10n_lang.l,"mul","zxx","e":
         if o=="e":
             return ""
 
@@ -106,26 +103,26 @@ def get_var_l10n(index,key:str,format:str,l10n_lang:Language)->str:
             if "i" in index.get(key,{}).get(o,{}):
                 return index[key][o]["i"]
             elif "e" in index.get(key,{}).get(o,{}):
-                return get_var_l10n(index,key,format,Language.get(index[key][o]["e"]))
+                return get_var_l10n(index,key,format,L.get(index[key][o]["e"]))
         elif format=="p":
             if "p" in index.get(key,{}).get(o,{}):
                 return index[key][o]["p"]
             elif "t" in index.get(key,{}).get(o,{}):
                 return index[key][o]["t"]
             elif "e" in index.get(key,{}).get(o,{}):
-                return get_var_l10n(index,key,format,Language.get(index[key][o]["e"]))
+                return get_var_l10n(index,key,format,L.get(index[key][o]["e"]))
         elif format=="t":
             if "t" in index.get(key,{}).get(o,{}):
                 return index[key][o]["t"]
             elif "e" in index.get(key,{}).get(o,{}):
-                return get_var_l10n(index,key,format,Language.get(index[key][o]["e"]))
+                return get_var_l10n(index,key,format,L.get(index[key][o]["e"]))
         elif format=="h":
             if "h" in index.get(key,{}).get(o,{}):
                 return index[key][o]["h"]
             elif "t" in index.get(key,{}).get(o,{}):
                 return text_to_html(index[key][o]["t"])
             elif "e" in index.get(key,{}).get(o,{}):
-                return get_var_l10n(index,key,format,Language.get(index[key][o]["e"]))
+                return get_var_l10n(index,key,format,L.get(index[key][o]["e"]))
 
 def id_base(i:str)->str:
     """Returns the base part of an ID.
@@ -158,7 +155,7 @@ def id_parent(i:str)->str|None:
         return None
 
 # TODO: remove global variable (`data`) reference
-def make_nav_button(button:str,lang:Language)->str:
+def make_nav_button(button:str,lang:L)->str:
     button_arrow,button_id,button_fl={
         "f":("⇦","first","first"),
         "p":("←","prev","first"),
@@ -204,7 +201,7 @@ def make_nav_button(button:str,lang:Language)->str:
 #
 #    r.append(data["dictionaries/share_link"][name]["base"])
 
-def msg_l10n(*args,lang:Language,string:str)->str:
+def msg_l10n(*args,lang:L,string:str)->str:
     return get_var_l10n(data["dictionaries/string"]["dictionary"],string,"p",lang).format(*args)
 
 def print_date(d:date)->str:
@@ -233,25 +230,25 @@ def to_regional_indicators(string:str)->str:
         out_chars.append(chr(0x1f1e6+(ord(ch)-65)))
     return "".join(out_chars)
 
-def to_sentence_case(string:str,lang:Language)->str:
+def to_sentence_case(string:str,lang:L)->str:
     """Capitalizes the first character of a string as appropriate for
     the language.
 
-    >>> to_sentence_case("toki pona",Language.get("tok"))
+    >>> to_sentence_case("toki pona",L.get("tok"))
     'toki pona'
-    >>> to_sentence_case("français",Language.get("fr"))
+    >>> to_sentence_case("français",L.get("fr"))
     'Français'
     """
-    if lang.language=="tok":
+    if lang.l=="tok":
         return string
     else:
         return f"{string[:1].upper()}{string[1:]}"
 
 # The shell script supports negative years, but `datetime` does not.
-def say_date(d:date,lang:Language)->str:
+def say_date(d:date,lang:L)->str:
     """Returns word form of date in HTML format.
 
-    >>> say_date(date.fromisoformat("20220401"),Language.get("fr"))
+    >>> say_date(date.fromisoformat("20220401"),L.get("fr"))
     '<time datetime=2022-04-01>1er\xa0avril 2022</time>'
     """
     r=[f"<time datetime={print_date(d)}>"]
@@ -263,18 +260,18 @@ def say_date(d:date,lang:Language)->str:
     else:
         ad=False
 
-    if lang.language=="en":
-        if lang.region=="US":
+    if lang.l=="en":
+        if lang.t=="US":
             r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","h",lang))
             r.append(f"\xa0{d.day}, ")
-        elif lang.region=="GB":
+        elif lang.t=="GB":
             r.append(f"{d.day}\xa0")
             r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","h",lang))
             r.append(" ")
         if ad:
             r.append('<abbr title="anno Domini">AD</abbr>\xa0')
         r.append(str(d.year))
-    elif lang.language=="fr":
+    elif lang.l=="fr":
         if d.day==1:
             r.append("1er")
         else:
@@ -284,14 +281,14 @@ def say_date(d:date,lang:Language)->str:
         if ad:
             r.append(f'{d.year}\xa0<abbr title="après Jésus‐Christ">ap.\xa0J.‑C.</abbr>')
         r.append(f" {d.year}")
-    elif lang.language=="es":
+    elif lang.l=="es":
         r.append(f"{d.day}\xa0de\xa0")
         r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","h",lang))
         r.append(" de ")
         if ad:
             r.append(f'{d.year}\xa0<abbr title="después de Cristo">d.\xa0C.</abbr>')
         r.append(str(d.year))
-    elif lang.language in ("ja","ko","zh"):
+    elif lang.l in ("ja","ko","zh"):
         r.append(f'{d.year}{msg_l10n(lang=lang,string="say_date_cjk_year")}')
         r.append(f'{d.month}{msg_l10n(lang=lang,string="say_date_cjk_month")}')
         r.append(f'{d.day}{msg_l10n(lang=lang,string="say_date_cjk_day")}')
@@ -300,16 +297,91 @@ def say_date(d:date,lang:Language)->str:
 
     return "".join(r)
 
-def say_lang(lang:Language,format:str)->str:
+def say_lang(lang:L,format:str)->str:
     """Returns a formatted language name and region.
 
-    >>> say_lang(Language.get("en-US"),"t")
+    >>> say_lang(L.get("en-US"),"t")
     'English (United States)'
-    >>> say_lang(Language.get("fr-FR"),"t")
+    >>> say_lang(L.get("fr-FR"),"t")
     'Français (France)'
     """
-    if lang.language in ("en","fr"):
-        return f'{to_sentence_case(get_var_l10n(data["dictionaries/language"]["dictionary"][lang.language],"name",format,lang),lang)} ({get_var_l10n(data["dictionaries/region"]["dictionary"][str(lang.region).lower()],"name",format,lang)})'
+    if lang.l in ("en","fr"):
+        return f'{to_sentence_case(get_var_l10n(data["dictionaries/language"]["dictionary"][lang.l],"name",format,lang),lang)} ({get_var_l10n(data["dictionaries/region"]["dictionary"][str(lang.t).lower()],"name",format,lang)})'
+
+class L:
+    """Simpler replacement for the `Language` class from `langcodes`.
+    """
+    def __init__(self,l:str,s:str|None=None,t:str|None=None,v:list|None=None,x:str|None=None):
+        self.l:str=l
+        self.s:str|None=s
+        self.t:str|None=t
+        self.v:list|None=v
+        self.x:str|None=x
+
+    @classmethod
+    def make(cls,l:str,s:str|None=None,t:str|None=None,v:list|None=None,x:str|None=None)->"L":
+        return cls(l,s,t,v,x)
+
+    @staticmethod
+    def get(tag:str|"L")->"L":
+        if isinstance(tag,L):
+            return tag
+
+        if not isinstance(tag,str) or not tag:
+            raise ValueError("Invalid language code")
+
+        langdata:dict={}
+        subtags:list[str]=tag.split("-")
+        it:int=0
+
+        for subtag in subtags:
+            if it==0:
+                if re.fullmatch(r"^[a-z]{2,3}$",subtag):
+                    langdata["l"]=subtag
+                    it+=1
+                else:
+                    raise ValueError("Invalid language code")
+            elif it<=2:
+                if re.fullmatch(r"^[A-Z][a-z]{3}$",subtag):
+                    if not langdata.get("t"):
+                        langdata["s"]=subtag
+                    else:
+                        raise ValueError("Invalid language code")
+                elif re.fullmatch(r"^[A-Z]{2}$|^[0-9]{3}$",subtag):
+                    langdata["t"]=subtag
+                elif re.fullmatch(r"^[a-z]{5,8}$|^[0-9][a-z0-9]{3}$",subtag):
+                    if not langdata.get("v"):
+                        langdata["v"]=[subtag]
+                    else:
+                        langdata["v"].append(subtag)
+                elif subtag=="x":
+                    langdata["x"]="-".join(subtags[it+1:])
+                    break
+                else:
+                    raise ValueError("Invalid or unsupported language code")
+
+        return L.make(**langdata)
+
+    def __str__(self)->str:
+        if not isinstance(self.l,str) or not self.l:
+            raise ValueError("Invalid language code")
+
+        r:list=[self.l]
+
+        if self.s:
+            r.append(f"-{self.s}")
+
+        if self.t:
+            r.append(f"-{self.t}")
+
+        if self.v:
+            for v in self.v:
+                r.append(f"-{v}")
+
+        if self.x:
+            r.append(f"-x-{self.x}")
+
+        return "".join(r)
 
 SCRIPT:Path=Path(__file__).resolve()
 GABEL:Path=SCRIPT.parent
@@ -353,7 +425,7 @@ if __name__=="__main__":
             continue
 
         for lang in data[i_id]["langs"]:
-            lang=Language.get(lang)
+            lang=L.get(lang)
 
             canonical:str=f'https://gabl.ink/i/{i_id}/{str(lang).lower()}/'
 
@@ -363,8 +435,8 @@ if __name__=="__main__":
                 F.append("<!-- SPDX-License-Identifier: ")
                 spdx_license_count=len(data[i_id]["copyright"]["license"])
                 spdx_license_num=1
-                for L in data[i_id]["copyright"]["license"]:
-                    F.append(data["dictionaries/copyright_license"]["dictionary"][L]["spdx"])
+                for license in data[i_id]["copyright"]["license"]:
+                    F.append(data["dictionaries/copyright_license"]["dictionary"][license]["spdx"])
                     if spdx_license_num<spdx_license_count:
                         F.append(" OR ")
                         spdx_license_num+=1
@@ -388,7 +460,7 @@ if __name__=="__main__":
 
             # TODO: `if type != comic_page` (sh:349)
 
-            F.append(f"<link rel=stylesheet href={styles}/{lang.language}.css hreflang=zxx type=text/css>")
+            F.append(f"<link rel=stylesheet href={styles}/{lang.l}.css hreflang=zxx type=text/css>")
             F.append(f"<link rel=stylesheet href={styles}/comic_page.css hreflang=zxx type=text/css>")
 
             F.append(f'<link rel="external license" href{attribute_string(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]],"url","i",lang))}>')
@@ -402,25 +474,25 @@ if __name__=="__main__":
             F.append(f"<meta property=og:url content={canonical}>")
             F.append(f"<meta property=og:image content={canonical}image.png>")
             # TODO: video_exists (sh:322–332, sh:454)
-            F.append(f"<meta property=og:locale content={lang.language}_{lang.territory}>")
+            F.append(f"<meta property=og:locale content={lang.l}_{lang.t}>")
 
             F.append("<header>")
             F.append("<a href=https://gabl.ink/ id=gabldotink_logo>gabl.ink</a>")
 
             F.append("<ul id=L>")
             for l in sorted(data[i_id]["langs"]):
-                l=Language.get(l)
+                l=L.get(l)
 
-                F.append(f"<li data-F={to_regional_indicators(l.region)}>")
+                F.append(f"<li data-F={to_regional_indicators(l.t)}>")
 
-                if l==lang:
+                if str(l)==str(lang):
                     F.append("<b>")
                 else:
                     F.append(f"<a lang={l} href=../{str(l).lower()}/ hreflang={l}>")
 
                 F.append(say_lang(l,"h"))
 
-                if l==lang:
+                if str(l)==str(lang):
                     F.append("</b>")
                 else:
                     F.append("</a>")
