@@ -30,6 +30,9 @@ def attribute_string(string:str)->str:
     '=\\'"\\''
     """
     # In HTML5, `attribute` is equivalent to `attribute=""`
+    if not isinstance(string,str):
+        raise TypeError("Not a string")
+
     if not string:
         return ""
 
@@ -429,7 +432,7 @@ if __name__=="__main__":
 
             canonical:str=f'https://gabl.ink/i/{i_id}/{str(lang).lower()}/'
 
-            F:list=["<!DOCTYPE html>\n"]
+            F:list[str]=["<!DOCTYPE html>\n"]
 
             if data[i_id].get("copyright",{}).get("license"):
                 F.append("<!-- SPDX-License-Identifier: ")
