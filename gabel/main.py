@@ -225,6 +225,8 @@ def text_to_html(string:str)->str:
 def to_regional_indicators(string:str)->str:
     """Returns a set of regional indicators from an uppercase string.
 
+    >>> to_regional_indicators("HELLOWORLD")
+    '🇭🇪🇱🇱🇴🇼🇴🇷🇱🇩'
     >>> to_regional_indicators("US")
     '🇺🇸'
     """
@@ -251,6 +253,10 @@ def to_sentence_case(string:str,lang:L)->str:
 def say_date(d:date,lang:L)->str:
     """Returns word form of date in HTML format.
 
+    >>> say_date(date.fromisoformat("19971225"),L.get("en-US"))
+    '<time datetime=1997-12-25>December\xa025, 1997</time>'
+    >>> say_date(date.fromisoformat("19971225"),L.get("en-GB"))
+    '<time datetime=1997-12-25>25\xa0December 1997</time>'
     >>> say_date(date.fromisoformat("20220401"),L.get("fr"))
     '<time datetime=2022-04-01>1er\xa0avril 2022</time>'
     """
@@ -418,6 +424,14 @@ for i in item_files:
         data[obj_id]=obj
 
 if __name__=="__main__":
+    sys.stderr.write("section start: validate\n")
+
+    for key in data:
+        if not key.isascii() or not key.isprintable():
+            raise ValueError("Key names must be printable ASCII")
+
+    sys.stderr.write("section done: validate\n")
+
     sys.stderr.write("section start: items\n")
 
     # TODO: Make this a function(s); these variables are global.
@@ -430,7 +444,7 @@ if __name__=="__main__":
         for lang in data[i_id]["langs"]:
             lang=L.get(lang)
 
-            canonical:str=f'https://gabl.ink/i/{i_id}/{str(lang).lower()}/'
+            canonical:str=f"https://gabl.ink/i/{i_id}/{str(lang).lower()}/"
 
             F:list[str]=["<!DOCTYPE html>\n"]
 
@@ -648,3 +662,4 @@ if __name__=="__main__":
                     output_file.seek(0)
                     output_file.truncate()
                     output_file.write(output)
+    sys.stderr.write("section done: items\n")
