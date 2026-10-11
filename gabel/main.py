@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: CC0-1.0
+"""Gabel, the static site generator for gabl.ink."""
 
-# I’ve been meaning to learn Python anyway
+__author__="gabl.ink"
+__version__="0"
 
 import json
 import re
