@@ -634,11 +634,13 @@ if __name__=="__main__":
 
             F.append("</footer>")
 
+            F.append("\n")
+
+            output="".join(F)
+
             output_file=Path(INDEX)/i_id/str(lang).lower()/"index.html"
             output_file.parent.mkdir(parents=True,exist_ok=True)
             output_file.touch(exist_ok=True)
-
-            output="".join(F)
             
             with open(output_file,"r+",encoding="utf-8",newline="") as output_file:
                 # Only write if there is a change
