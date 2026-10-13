@@ -462,7 +462,7 @@ if __name__=="__main__":
                 F.append(" -->\n")
 
             # TODO: Skipping the dir attribute for now, but it should be implemented later (sh:338)
-            F.append(f"<html lang={lang}>")
+            F.append(f"<html lang={lang} itemscope itemtype=https://schema.org/WebPage>")
 
             F.append('<meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">')
 
@@ -479,8 +479,8 @@ if __name__=="__main__":
 
             # TODO: `if type != comic_page` (sh:349)
 
-            F.append(f"<link rel=stylesheet href={styles}/{lang.l}.css hreflang=zxx type=text/css>")
-            F.append(f"<link rel=stylesheet href={styles}/comic_page.css hreflang=zxx type=text/css>")
+            F.append(f"<link rel=stylesheet href={styles}/{lang.l}.css hreflang=zxx>")
+            F.append(f"<link rel=stylesheet href={styles}/comic_page.css hreflang=zxx>")
 
             F.append(f'<link rel="external license" href{attribute_string(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]],"url","i",lang))}>')
 
@@ -494,6 +494,12 @@ if __name__=="__main__":
             F.append(f"<meta property=og:image content={canonical}image.png>")
             # TODO: video_exists (sh:322–332, sh:454)
             F.append(f"<meta property=og:locale content={lang.l}_{lang.t}>")
+
+            F.append("<script type=application/ld+json>{")
+            F.append('"@context":"https://schema.org",')
+            F.append('"@type":"WebPage"')
+            F.append("}</script>")
+
 
             F.append("<header>")
             F.append("<a href=https://gabl.ink/ id=gabldotink_logo>gabl.ink</a>")
