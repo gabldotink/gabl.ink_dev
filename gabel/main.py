@@ -461,8 +461,15 @@ if __name__=="__main__":
                         spdx_license_num+=1
                 F.append(" -->\n")
 
-            # TODO: Skipping the dir attribute for now, but it should be implemented later (sh:338)
-            F.append(f"<html lang={lang} itemscope itemtype=https://schema.org/WebPage>")
+            lang_dir:str
+            if lang.s:
+                lang_dir=data["dictionaries/script"]["dictionary"][lang.s]["dir"]
+            elif data["dictionaries/language"]["dictionary"][lang.l].get("script"):
+                lang_dir=data["dictionaries/script"]["dictionary"][data["dictionaries/language"]["dictionary"][lang.l]["script"]]["dir"]
+            else:
+                lang_dir="auto"
+
+            F.append(f"<html lang={lang} dir={lang_dir} itemscope itemtype=https://schema.org/WebPage>")
 
             F.append('<meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">')
 

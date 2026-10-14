@@ -23,9 +23,7 @@
         "t": "Eigo"
       }
     },
-    "implicit": {
-      "script": "latn"
-    }
+    "script": "latn"
   },
   "fr": {
     "name": {
@@ -51,9 +49,7 @@
         "t": "Furansugo"
       }
     },
-    "implicit": {
-      "script": "latn"
-    }
+    "script": "latn"
   },
   "es": {
     "name": {
@@ -79,9 +75,7 @@
         "t": "Supeingo"
       }
     },
-    "implicit": {
-      "script": "latn"
-    }
+    "script": "latn"
   },
   "pt": {
     "name": {
@@ -107,9 +101,7 @@
         "t": "Porutogarugo"
       }
     },
-    "implicit": {
-      "script": "latn"
-    }
+    "script": "latn"
   },
   "tok": {
     "name": {
@@ -132,9 +124,7 @@
         "t": "Tokipona"
       }
     },
-    "implicit": {
-      "script": "latn"
-    }
+    "script": "latn"
   },
   "ru": {
     "name": {
@@ -151,9 +141,7 @@
         "t": "la rusa"
       }
     },
-    "implicit": {
-      "script": "cyrl"
-    }
+    "script": "cyrl"
   },
   "ja": {
     "name": {
@@ -179,9 +167,7 @@
         "t": "la japana"
       }
     },
-    "implicit": {
-      "script": "jpan"
-    }
+    "script": "jpan"
   },
   "zh": {
     "name": {
@@ -210,9 +196,7 @@
         "t": "la ĉina"
       }
     },
-    "implicit": {
-      "script": "hani"
-    }
+    "script": "hani"
   },
   "ko": {
     "name": {
@@ -229,9 +213,7 @@
         "t": "la korea"
       }
     },
-    "implicit": {
-      "script": "kore"
-    }
+    "script": "kore"
   },
   "eo": {
     "name": {
@@ -251,9 +233,7 @@
         "t": "Esuperanto"
       }
     },
-    "implicit": {
-      "script": "latn"
-    }
+    "script": "latn"
   },
   "mul": {
     "name": {
@@ -264,9 +244,7 @@
         "t": "Plusieurs langues"
       }
     },
-    "implicit": {
-      "script": "latn"
-    }
+    "script": "latn"
   },
   "zxx": {
     "name": {
