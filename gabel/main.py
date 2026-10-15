@@ -327,7 +327,7 @@ def validate_data()->None:
         if not key.isascii() or not key.isprintable():
             raise SystemExit("Key names must be printable ASCII")
     end_time=time.perf_counter()
-    sys.stderr.write(f"\rValidated data in {end_time-start_time:.2f}\xa0s\n")
+    sys.stderr.write(f"\rValidated data in {end_time-start_time:.3f}\xa0s\n")
 
 class L:
     """Simpler replacement for the ``Language`` class from
@@ -446,7 +446,7 @@ for item_file in item_files:
 
 if __name__=="__main__":
     data_end_time=time.perf_counter()
-    sys.stderr.write(f"\rLoaded data in {data_end_time-data_start_time:.2f}\xa0s\n")
+    sys.stderr.write(f"\rLoaded data in {data_end_time-data_start_time:.3f}\xa0s\n")
 
     validate_data()
 
@@ -695,4 +695,4 @@ if __name__=="__main__":
                     output_file.truncate()
                     output_file.write(output)
     end_time=time.perf_counter()
-    sys.stderr.write(f"\rGenerated HTML pages in {end_time-start_time:.2f}\xa0s\n")
+    sys.stderr.write(f"\rGenerated HTML pages in {end_time-start_time:.3f}\xa0s\n")
