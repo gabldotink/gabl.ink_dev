@@ -160,7 +160,6 @@ def id_parent(i:str)->str|None:
     else:
         return None
 
-# TODO: remove global variable (`data`) reference
 def make_nav_button(button:str,lang:L)->str:
     button_arrow,button_id,button_fl={
         "f":("⇦","first","first"),
@@ -211,7 +210,8 @@ def msg_l10n(*args,lang:L,string:str)->str:
     return get_var_l10n(data["dictionaries/string"]["dictionary"],string,"p",lang).format(*args)
 
 def print_date(d:date)->str:
-    """Returns a date string suitable for an HTML `datetime` attribute.
+    """Returns a date string suitable for an HTML ``datetime``
+    attribute.
 
     >>> print_date(date.fromisoformat("20260407"))
     '2026-04-07'
@@ -330,7 +330,12 @@ def validate_data()->None:
     sys.stderr.write(f"\rValidated data in {end_time-start_time:.2f}\xa0s\n")
 
 class L:
-    """Simpler replacement for the `Language` class from `langcodes`.
+    """Simpler replacement for the ``Language`` class from
+    ``langcodes``.
+
+    Supports all subtags except for extensions (``t`` and ``u``).
+    
+    Works perfectly! If the tag is already well‐formed.
     """
     def __init__(self,l:str,s:str|None=None,t:str|None=None,v:list|None=None,x:str|None=None):
         self.l:str=l
