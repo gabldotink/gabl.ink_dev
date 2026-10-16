@@ -416,7 +416,7 @@ class L:
 
 SCRIPT:Path=Path(__file__).resolve()
 GABEL:Path=SCRIPT.parent
-DICTS:Path=Path(GABEL)/"dictionaries"
+DICTS:Path=Path(GABEL)/"dicts"
 INDEX:Path=Path(GABEL)/".."/"i"
 
 data:dict={}
