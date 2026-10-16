@@ -11,6 +11,7 @@ import sys
 import time
 from datetime import date
 from pathlib import Path
+import unicodedata
 
 def attribute_string(string:str)->str:
     """Takes a plain text string as input and returns the HTML
@@ -320,14 +321,18 @@ def say_lang(lang:L,format:str)->str:
     if lang.l in ("en","fr"):
         return f'{to_sentence_case(get_var_l10n(data["dictionaries/language"]["dictionary"][lang.l],"name",format,lang),lang)} ({get_var_l10n(data["dictionaries/region"]["dictionary"][str(lang.t).lower()],"name",format,lang)})'
 
-def validate_data()->None:
-    sys.stderr.write("Validating data…")
-    start_time=time.perf_counter()
-    for key in data:
-        if not key.isascii() or not key.isprintable():
-            raise SystemExit("Key names must be printable ASCII")
-    end_time=time.perf_counter()
-    sys.stderr.write(f"\rValidated data in {end_time-start_time:.3f}\xa0s\n")
+#def validate_data()->None:
+#    sys.stderr.write("Validating data…")
+#    start_time=time.perf_counter()
+#    for key in data:
+#        if not unicodedata.is_normalized("NFC",key):
+#            raise SystemExit("Key name not normalized in NFC")
+#    for value in data.values():
+#        if isinstance(value,str):
+#            if not unicodedata.is_normalized("NFC",value):
+#                raise SystemExit("String not normalized in NFC")
+#    end_time=time.perf_counter()
+#    sys.stderr.write(f"\rValidated data in {end_time-start_time:.3f}\xa0s\n")
 
 class L:
     """Simpler replacement for the ``Language`` class from
@@ -447,8 +452,6 @@ for item_file in item_files:
 if __name__=="__main__":
     data_end_time=time.perf_counter()
     sys.stderr.write(f"\rLoaded data in {data_end_time-data_start_time:.3f}\xa0s\n")
-
-    validate_data()
 
     sys.stderr.write("Generating HTML pages…")
     start_time=time.perf_counter()
