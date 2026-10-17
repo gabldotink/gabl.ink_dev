@@ -178,14 +178,14 @@
         {
           "p": {
             "en": {
-              "h": "<p>This page includes the full‐size image, while previously they’ve been half‐size. The <abbr title=\"Hypertext Markup Language\">HTML</abbr> <code>&lt;picture></code> element should either automatically choose one to display, or simply skip it and use the full image, depending on your browser\u00a0/ user agent."
+              "h": "<p>This page includes the full‐size image, while previously they’ve been half‐size. The HTML <code>&lt;picture></code> element should either automatically choose one to display, or simply skip it and use the full image, depending on your browser\u00a0/ user agent."
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p>I was initially meaning to upload the full‐size versions to <cite>Patreon</cite>, but I’ll probably just save that for the <code><abbr title=\"Clip Studio Paint\">.clip</abbr></code> work files. I don’t know when I’ll get the images out, but I will."
+              "h": "<p>I was initially meaning to upload the full‐size versions to <cite>Patreon</cite>, but I’ll probably just save that for the <code>.clip</code> work files. I don’t know when I’ll get the images out, but I will."
             }
           }
         },
@@ -206,14 +206,14 @@
         {
           "p": {
             "en": {
-              "h": "<p>On a dumb, overthinking‐related note (feel free to skip this), I’m trying to decide if I want to stick with <cite><abbr title=\"Creative Commons Attribution‐ShareAlike\u00a04.0\">CC\u00a0BY‑SA\u00a04.0</abbr></cite>, or if I want to move it to <cite><abbr title=\"Creative Commons Attribution\">CC\u00a0BY</abbr></cite>. At the start it was <cite><abbr title=Attribution‐NonCommercial‐ShareAlike>BY‑NC‑SA</abbr></cite>. Both times the <abbr title=ShareAlike>SA</abbr> was because I wanted to keep derivatives of actual, general utility free, like books and translations. I know that <a rel=external href=https://peppercarrot.com/ type=text/html><cite class=i>Pepper&amp;Carrot</cite></a> is thriving in those regards under <abbr>CC\u00a0BY</abbr>, but that may or may not be different, considering that <cite class=i>Pepper&amp;Carrot</cite> isn’t one of the most egregious abominations known to man."
+              "h": "<p>On a dumb, overthinking‐related note (feel free to skip this), I’m trying to decide if I want to stick with <cite><abbr title=\"Creative Commons Attribution‐ShareAlike\u00a04.0\">CC\u00a0BY‑SA\u00a04.0</abbr></cite>, or if I want to move it to <cite><abbr title=\"Creative Commons Attribution\">CC\u00a0BY</abbr></cite>. At the start it was <cite><abbr title=Attribution‐NonCommercial‐ShareAlike>BY‑NC‑SA</abbr></cite>. Both times the <abbr title=ShareAlike>SA</abbr> was because I wanted to keep derivatives of actual, general utility free, like books and translations. I know that <a rel=external href=https://peppercarrot.com/ type=text/html><cite class=i>Pepper&amp;Carrot</cite></a> is thriving in those regards under CC\u00a0BY, but that may or may not be different, considering that <cite class=i>Pepper&amp;Carrot</cite> isn’t one of the most egregious abominations known to man."
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p>And about those multiple image size problems, I want to make a <cite>Git</cite> repository to hold all of those (and the other stuff, of course) in order to have a sort of structured, static <abbr title=\"application programming interface\">API</abbr>, while also just having the files available in a human‐browsable and easily downloadable manner. I already tried that with <cite>files.gabl.ink</cite>\u00a0<small>[<i>link removed</i>]</small>, but I ended up not liking how it turned out."
+              "h": "<p>And about those multiple image size problems, I want to make a <cite>Git</cite> repository to hold all of those (and the other stuff, of course) in order to have a sort of structured, static API, while also just having the files available in a human‐browsable and easily downloadable manner. I already tried that with <cite>files.gabl.ink</cite>\u00a0<small>[<i>link removed</i>]</small>, but I ended up not liking how it turned out."
             }
           }
         }

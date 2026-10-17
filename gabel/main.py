@@ -282,7 +282,7 @@ def say_date(d:date,lang:L)->str:
             r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","h",lang))
             r.append(" ")
         if ad:
-            r.append('<abbr title="anno Domini">AD</abbr>\xa0')
+            r.append('AD\xa0')
         r.append(str(d.year))
     elif lang.l=="fr":
         if d.day==1:
@@ -292,14 +292,14 @@ def say_date(d:date,lang:L)->str:
         r.append("\xa0")
         r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","h",lang))
         if ad:
-            r.append(f'{d.year}\xa0<abbr title="après Jésus‐Christ">ap.\xa0J.‑C.</abbr>')
+            r.append(f'{d.year}\xa0ap.\xa0J.‑C.')
         r.append(f" {d.year}")
     elif lang.l=="es":
         r.append(f"{d.day}\xa0de\xa0")
         r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1],"name","h",lang))
         r.append(" de ")
         if ad:
-            r.append(f'{d.year}\xa0<abbr title="después de Cristo">d.\xa0C.</abbr>')
+            r.append(f'{d.year}\xa0d.\xa0C.')
         r.append(str(d.year))
     elif lang.l in ("ja","ko","zh"):
         r.append(f'{d.year}{msg_l10n(lang=lang,string="say_date_cjk_year")}')

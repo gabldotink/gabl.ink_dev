@@ -314,10 +314,10 @@
   },
   "canonical_url": {
     "en": {
-      "p": "Canonical <abbr title=\"Uniform Resource Locator\">URL</abbr>: "
+      "p": "Canonical URL: "
     },
     "fr": {
-      "p": "<abbr title=\"Uniform Resource Locator\">URL</abbr> canonique\u202f: "
+      "p": "URL canonique\u202f: "
     }
   },
   "log": {
@@ -370,7 +370,7 @@
   },
   "copyright_license_abbr": {
     "en": {
-      "p": " (<cite><abbr>{}</abbr></cite>)"
+      "p": " (<cite>{}</cite>)"
     },
     "fr": {
       "e": "en"

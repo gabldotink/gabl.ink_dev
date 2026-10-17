@@ -44,7 +44,7 @@
   "tooltip": {
     "en": {
       "t": "pro tip for 5th graders: DO NOT wake up at 6:30\u00a0a.m.",
-      "h": "pro tip for 5th graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0<abbr title=\"ante meridiem\">a.m.</abbr></time>"
+      "h": "pro tip for 5th graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0a.m.</time>"
     },
     "fr": {
       "t": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à 6h30",
@@ -67,7 +67,7 @@
       "h": "meta/none",
       "d": {
         "en": {
-          "h": "<p>The setting is a bedroom. On the desk next to the bed are some notebooks and an alarm clock. It’s <time datetime=2021-05-27T06:30-0600>6:30\u00a0<abbr title=\"ante meridiem\">a.m.</abbr> on May\u00a027</time>, a Thursday. There is a button labeled “snooze” on the side of the alarm clock. The alarm is going off."
+          "h": "<p>The setting is a bedroom. On the desk next to the bed are some notebooks and an alarm clock. It’s <time datetime=2021-05-27T06:30-0600>6:30\u00a0a.m. on May\u00a027</time>, a Thursday. There is a button labeled “snooze” on the side of the alarm clock. The alarm is going off."
         },
         "fr": {
           "h": "<p>La scène se passe dans une chambre. Sur le bureau à côté du lit, il y a des cahiers et un réveil. Il est <time datetime=2021-05-27T06:30-0600>6h30 le 27\u00a0mai</time>, un jeudi. Il y a un bouton étiqueté «\u202fsnooze\u202f» sur le côté du réveil. L’alarme sonne."
@@ -89,7 +89,7 @@
       "h": "meta/tooltip",
       "d": {
         "en": {
-          "h": "<p>pro tip for 5th graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0<abbr title=\"ante meridiem\">a.m.</abbr></time>"
+          "h": "<p>pro tip for 5th graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0a.m.</time>"
         },
         "fr": {
           "h": "<p>Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime=06:30>6h30</time>"
@@ -124,7 +124,7 @@
         {
           "p": {
             "en": {
-              "h": "<p>My name’s Gabriel, <abbr title=\"also known as\">a.k.a.</abbr> <span translate=no>gabl</span>, and I can’t wait to share my passion‐project comics with you. I’ve been drawing these characters for several years, and I’ve wanted to do a webcomic for\u00a0.\u00a0.\u00a0. less years, but still multiple. Years."
+              "h": "<p>My name’s Gabriel, a.k.a. <span translate=no>gabl</span>, and I can’t wait to share my passion‐project comics with you. I’ve been drawing these characters for several years, and I’ve wanted to do a webcomic for\u00a0.\u00a0.\u00a0. less years, but still multiple. Years."
             },
             "fr": {
               "h": "<p>Je m’appelle Gabriel, alias <span translate=no>gabl</span>, et j’ai hâte de partager mes bandes dessinées, mes projets de passion, avec vous. Je dessine ces personnages depuis plusieurs années, et je veux faire un webcomic depuis… moins longtemps, mais encore plusieurs années."
@@ -137,7 +137,7 @@
               "t": "They’re\u00a0.\u00a0.\u00a0. still a bit rough around the edges. I’ve been drawing cartoons for half of my life, but I haven’t been good about challenging myself. Hopefully, this comic will help improve my cartooning skills. Hopefully, I’ll be able to make people laugh. Maybe I’ll even be able to get a girlfriend. I dunno. It’s possible."
             },
             "fr": {
-              "h": "<p>Ils sont encore… un peu bruts. Je dessine les cartoons pour la moitié de ma vie, mais je n’ai pas été bon en défier moi‐même. Avec un peu de chance, cette <abbr title=\"bande dessinée\">BD</abbr> m’aidera à améliorer mes compétences en dessin. Avec un peu de chance, je peux faire rire les gens. Peut‐être que je peux trouver une copine. J’sais pas. C’est possible."
+              "h": "<p>Ils sont encore… un peu bruts. Je dessine les cartoons pour la moitié de ma vie, mais je n’ai pas été bon en défier moi‐même. Avec un peu de chance, cette BD m’aidera à améliorer mes compétences en dessin. Avec un peu de chance, je peux faire rire les gens. Peut‐être que je peux trouver une copine. J’sais pas. C’est possible."
             }
           }
         },
