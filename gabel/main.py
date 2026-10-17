@@ -438,10 +438,6 @@ for dictionary in ["copyright_license","disclaimer","language","month","region",
     data[f"dictionaries/{dictionary}"]["dictionary_name"]=dictionary
     with open(Path(DICTS)/f"{dictionary}.json","r",encoding="utf-8") as f:
         data[f"dictionaries/{dictionary}"]["dictionary"]=json.load(f)
-    user_dictionary=Path(INDEX)/"dictionaries"/dictionary/"data.json"
-    if user_dictionary.is_file():
-        with open(user_dictionary,"r",encoding="utf-8") as f:
-            data[f"dictionaries/{dictionary}"].update(json.load(f))
 
 for item_file in item_files:
     with open(item_file,"r",encoding="utf-8") as f:
