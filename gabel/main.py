@@ -668,17 +668,16 @@ if __name__=="__main__":
             F.append("</a>")
 
             if data[i_id].get("disclaimer"):
-                if len(data[i_id].get("disclaimer"))==1:
-                    F.append("<p>")
+                F.append("<p>")
+                if len(data[i_id]["disclaimer"])==1:
                     F.append(msg_l10n(lang=lang,string="disclaimer"))
                     F.append(get_var_l10n(data["dictionaries/disclaimer"]["dictionary"][data[i_id]["disclaimer"][0]],"text","h",lang))
                 else:
-                    F.append("<p>")
                     F.append(msg_l10n(lang=lang,string="disclaimer_plural"))
                     F.append("<ul class=horizontal_list>")
-                    for d in data[i_id]["disclaimer"]["dictionary"]:
+                    for d in data[i_id]["disclaimer"]:
                         F.append("<li><p>")
-                        F.append(get_var_l10n(d,"text","h",lang))
+                        F.append(get_var_l10n(data["dictionaries/disclaimer"]["dictionary"][d],"text","h",lang))
                     F.append("</ul>")
 
             F.append("</footer>")
