@@ -16,11 +16,7 @@
 
 #L {
   float: right;
-  list-style-type: none;
-}
-
-#L li::before {
-  content: attr(data-F) "\a0";
+  list-style-type: "🌐 ";
 }
 
 .nav_buttons_off {

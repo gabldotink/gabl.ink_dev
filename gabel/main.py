@@ -161,6 +161,27 @@ def id_parent(i:str)->str|None:
     else:
         return None
 
+def language_list_entry(l:L)->str:
+    r:list=["<li"]
+
+    if l.t is not None:
+        r.append(f''' style="list-style-type:'{to_regional_indicators(l.t)} '"''')
+    r.append(">")
+
+    if str(l)==str(lang):
+        r.append("<b>")
+    else:
+        r.append(f"<a lang={l} href=../{str(l).lower()}/ hreflang={l}>")
+
+    r.append(say_lang(l,"h"))
+
+    if str(l)==str(lang):
+        r.append("</b>")
+    else:
+        r.append("</a>")
+
+    return "".join(r)
+
 def make_nav_button(button:str,lang:L)->str:
     button_arrow,button_id,button_fl={
         "f":("⇦","first","first"),
@@ -523,27 +544,13 @@ if __name__=="__main__":
             F.append('"@type":"WebPage"')
             F.append("}</script>")
 
-
             F.append("<header>")
             F.append("<a href=https://gabl.ink/ id=gabldotink_logo>gabl.ink</a>")
 
             F.append("<ul id=L>")
             for l in sorted(data[i_id]["langs"]):
                 l=L.get(l)
-
-                F.append(f"<li data-F={to_regional_indicators(l.t)}>")
-
-                if str(l)==str(lang):
-                    F.append("<b>")
-                else:
-                    F.append(f"<a lang={l} href=../{str(l).lower()}/ hreflang={l}>")
-
-                F.append(say_lang(l,"h"))
-
-                if str(l)==str(lang):
-                    F.append("</b>")
-                else:
-                    F.append("</a>")
+                F.append(language_list_entry(l))
             F.append("</ul></header>")
 
             F.append(f'<h1>{msg_l10n(get_var_l10n(data[i_id],"title","h",lang),lang=lang,string="page_title_html")}</h1>')
@@ -651,7 +658,7 @@ if __name__=="__main__":
             if data[i_id]["copyright"]["year"].get("last"):
                 F.append(msg_l10n(lang=lang,string="copyright_year_separator"))
                 F.append(str(data[i_id]["copyright"]["year"]["last"]))
-            F.append("</span>")
+            F.append("</span> ")
             F.append("<span translate=no>gabl.ink</span>")
 
             F.append(f'<p>{msg_l10n(lang=lang,string="license")}')
