@@ -2,8 +2,6 @@
 # SPDX-License-Identifier: CC0-1.0
 """Gabel, the static site generator for gabl.ink."""
 
-from __future__ import annotations
-
 __author__="gabl.ink"
 __version__="0"
 
@@ -14,6 +12,86 @@ import time
 from datetime import date
 from pathlib import Path
 
+
+class L:
+    """Simpler replacement for the ``Language`` class from
+    ``langcodes``.
+
+    Supports all subtags except for extensions (``t`` and ``u``).
+    
+    Works perfectly! If the tag is already well‐formed.
+    """
+    def __init__(self,l:str,s:str|None=None,t:str|None=None,v:list|None=None,x:str|None=None):
+        self.l:str=l
+        self.s:str|None=s
+        self.t:str|None=t
+        self.v:list|None=v
+        self.x:str|None=x
+
+    @classmethod
+    def make(cls,l:str,s:str|None=None,t:str|None=None,v:list|None=None,x:str|None=None)->"L":
+        return cls(l,s,t,v,x)
+
+    @staticmethod
+    def get(tag:"str|L")->"L":
+        if isinstance(tag,L):
+            return tag
+
+        if not isinstance(tag,str) or not tag:
+            raise ValueError("Invalid language code")
+
+        langdata:dict={}
+        subtags:list[str]=tag.split("-")
+        it:int=0
+
+        for subtag in subtags:
+            if it==0:
+                if re.fullmatch(r"^[a-z]{2,3}$",subtag):
+                    langdata["l"]=subtag
+                    it+=1
+                else:
+                    raise ValueError("Invalid language code")
+            elif it<=2:
+                if re.fullmatch(r"^[A-Z][a-z]{3}$",subtag):
+                    if not langdata.get("t"):
+                        langdata["s"]=subtag
+                    else:
+                        raise ValueError("Invalid language code")
+                elif re.fullmatch(r"^[A-Z]{2}$|^[0-9]{3}$",subtag):
+                    langdata["t"]=subtag
+                elif re.fullmatch(r"^[a-z]{5,8}$|^[0-9][a-z0-9]{3}$",subtag):
+                    if not langdata.get("v"):
+                        langdata["v"]=[subtag]
+                    else:
+                        langdata["v"].append(subtag)
+                elif subtag=="x":
+                    langdata["x"]="-".join(subtags[it+1:])
+                    break
+                else:
+                    raise ValueError("Invalid or unsupported language code")
+
+        return L.make(**langdata)
+
+    def __str__(self)->str:
+        if not isinstance(self.l,str) or not self.l:
+            raise ValueError("Invalid language code")
+
+        r:list=[self.l]
+
+        if self.s:
+            r.append(f"-{self.s}")
+
+        if self.t:
+            r.append(f"-{self.t}")
+
+        if self.v:
+            for v in self.v:
+                r.append(f"-{v}")
+
+        if self.x:
+            r.append(f"-x-{self.x}")
+
+        return "".join(r)
 
 def attribute_string(string:str)->str:
     """Takes a plain text string as input and returns the HTML
@@ -356,86 +434,6 @@ def say_lang(lang:L,format:str)->str:
 #                raise SystemExit("String not normalized in NFC")
 #    end_time=time.perf_counter()
 #    sys.stderr.write(f"\rValidated data in {end_time-start_time:.3f}\xa0s\n")
-
-class L:
-    """Simpler replacement for the ``Language`` class from
-    ``langcodes``.
-
-    Supports all subtags except for extensions (``t`` and ``u``).
-    
-    Works perfectly! If the tag is already well‐formed.
-    """
-    def __init__(self,l:str,s:str|None=None,t:str|None=None,v:list|None=None,x:str|None=None):
-        self.l:str=l
-        self.s:str|None=s
-        self.t:str|None=t
-        self.v:list|None=v
-        self.x:str|None=x
-
-    @classmethod
-    def make(cls,l:str,s:str|None=None,t:str|None=None,v:list|None=None,x:str|None=None)->L:
-        return cls(l,s,t,v,x)
-
-    @staticmethod
-    def get(tag:str|L)->L:
-        if isinstance(tag,L):
-            return tag
-
-        if not isinstance(tag,str) or not tag:
-            raise ValueError("Invalid language code")
-
-        langdata:dict={}
-        subtags:list[str]=tag.split("-")
-        it:int=0
-
-        for subtag in subtags:
-            if it==0:
-                if re.fullmatch(r"^[a-z]{2,3}$",subtag):
-                    langdata["l"]=subtag
-                    it+=1
-                else:
-                    raise ValueError("Invalid language code")
-            elif it<=2:
-                if re.fullmatch(r"^[A-Z][a-z]{3}$",subtag):
-                    if not langdata.get("t"):
-                        langdata["s"]=subtag
-                    else:
-                        raise ValueError("Invalid language code")
-                elif re.fullmatch(r"^[A-Z]{2}$|^[0-9]{3}$",subtag):
-                    langdata["t"]=subtag
-                elif re.fullmatch(r"^[a-z]{5,8}$|^[0-9][a-z0-9]{3}$",subtag):
-                    if not langdata.get("v"):
-                        langdata["v"]=[subtag]
-                    else:
-                        langdata["v"].append(subtag)
-                elif subtag=="x":
-                    langdata["x"]="-".join(subtags[it+1:])
-                    break
-                else:
-                    raise ValueError("Invalid or unsupported language code")
-
-        return L.make(**langdata)
-
-    def __str__(self)->str:
-        if not isinstance(self.l,str) or not self.l:
-            raise ValueError("Invalid language code")
-
-        r:list=[self.l]
-
-        if self.s:
-            r.append(f"-{self.s}")
-
-        if self.t:
-            r.append(f"-{self.t}")
-
-        if self.v:
-            for v in self.v:
-                r.append(f"-{v}")
-
-        if self.x:
-            r.append(f"-x-{self.x}")
-
-        return "".join(r)
 
 SCRIPT:Path=Path(__file__).resolve()
 GABEL:Path=SCRIPT.parent
