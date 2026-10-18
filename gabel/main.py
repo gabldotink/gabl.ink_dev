@@ -13,7 +13,7 @@ import sys
 import time
 from datetime import date
 from pathlib import Path
-import unicodedata
+
 
 def attribute_string(string:str)->str:
     """Takes a plain text string as input and returns the HTML
