@@ -2,6 +2,8 @@
 # SPDX-License-Identifier: CC0-1.0
 """Gabel, the static site generator for gabl.ink."""
 
+from __future__ import annotations
+
 __author__="gabl.ink"
 __version__="0"
 
@@ -371,11 +373,11 @@ class L:
         self.x:str|None=x
 
     @classmethod
-    def make(cls,l:str,s:str|None=None,t:str|None=None,v:list|None=None,x:str|None=None)->"L":
+    def make(cls,l:str,s:str|None=None,t:str|None=None,v:list|None=None,x:str|None=None)->L:
         return cls(l,s,t,v,x)
 
     @staticmethod
-    def get(tag:str|"L")->"L":
+    def get(tag:str|L)->L:
         if isinstance(tag,L):
             return tag
 
