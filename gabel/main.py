@@ -691,11 +691,11 @@ if __name__=="__main__":
 
             output="".join(F)
 
-            output_file=Path(INDEX)/i_id/str(lang).lower()/"index.html"
-            output_file.parent.mkdir(parents=True,exist_ok=True)
-            output_file.touch(exist_ok=True)
+            output_file_path:Path=Path(INDEX)/i_id/str(lang).lower()/"index.html"
+            output_file_path.parent.mkdir(parents=True,exist_ok=True)
+            output_file_path.touch(exist_ok=True)
             
-            with open(output_file,"r+",encoding="utf-8",newline="") as output_file:
+            with open(output_file_path,"r+",encoding="utf-8",newline="") as output_file:
                 # Only write if there is a change
                 if output!=output_file.read():
                     output_file.seek(0)
