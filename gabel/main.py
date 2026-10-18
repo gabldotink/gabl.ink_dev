@@ -182,29 +182,39 @@ def get_i_id(i:Path)->str:
 def get_var_l10n(index,key:str,format:str,l10n_lang:L)->str:
     # e.g. get_var_l10n(data["jrco_beta/1"]["location"],"series","t",lang)
 
-    for o in str(l10n_lang),l10n_lang.l,"mul","zxx","e":
-        if o=="e":
-            return ""
+    options:list[str]=[str(l10n_lang),l10n_lang.l,"mul","zxx","x"]
 
-        if format=="i":
-            if "i" in index.get(key,{}).get(o,{}):
+    if format=="i":
+        for o in options:
+            if o=="x":
+                return ""
+            elif "i" in index.get(key,{}).get(o,{}):
                 return index[key][o]["i"]
             elif "e" in index.get(key,{}).get(o,{}):
                 return get_var_l10n(index,key,format,L.get(index[key][o]["e"]))
-        elif format=="p":
-            if "p" in index.get(key,{}).get(o,{}):
+    elif format=="p":
+        for o in options:
+            if o=="x":
+                return ""
+            elif "p" in index.get(key,{}).get(o,{}):
                 return index[key][o]["p"]
             elif "t" in index.get(key,{}).get(o,{}):
                 return index[key][o]["t"]
             elif "e" in index.get(key,{}).get(o,{}):
                 return get_var_l10n(index,key,format,L.get(index[key][o]["e"]))
-        elif format=="t":
-            if "t" in index.get(key,{}).get(o,{}):
+    elif format=="t":
+        for o in options:
+            if o=="x":
+                return ""
+            elif "t" in index.get(key,{}).get(o,{}):
                 return index[key][o]["t"]
             elif "e" in index.get(key,{}).get(o,{}):
                 return get_var_l10n(index,key,format,L.get(index[key][o]["e"]))
-        elif format=="h":
-            if "h" in index.get(key,{}).get(o,{}):
+    elif format=="h":
+        for o in options:
+            if o=="x":
+                return ""
+            elif "h" in index.get(key,{}).get(o,{}):
                 return index[key][o]["h"]
             elif "t" in index.get(key,{}).get(o,{}):
                 return text_to_html(index[key][o]["t"])
