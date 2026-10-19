@@ -420,7 +420,7 @@ def say_date(d: date, lang: L) -> str:
         elif lang.t == "GB":
             r.append(f"{d.day}\xa0")
             r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]
-                                ["months"][d.month-1], "name", "h", lang))
+                                  ["months"][d.month-1], "name", "h", lang))
             r.append(" ")
         if ad:
             r.append("AD\xa0")
@@ -484,7 +484,7 @@ GABEL: Path = SCRIPT.parent
 DICTS: Path = Path(GABEL)/"dicts"
 INDEX: Path = Path(GABEL)/".."/"i"
 
-data: dict={}
+data: dict = {}
 
 if __name__ == "__main__":
     sys.stderr.write("Loading data…")
@@ -651,7 +651,7 @@ if __name__ == "__main__":
                 "</nav><nav><details><summary>"
             )
 
-                # TODO: Support multiple container depths
+            # TODO: Support multiple container depths
 
             F.append(msg_l10n(get_var_l10n(data[data[i_id]["location"]["series"]], "title", "h", lang), lang=lang, string="series_title_html"))
             F.append(msg_l10n(data[i_id]["location"]["page"], lang=lang, string="comma_page"))
@@ -714,7 +714,8 @@ if __name__ == "__main__":
             F.append(msg_l10n(lang=lang, string="copyright_notice"))
             F.append(f'{data[i_id]["copyright"]["year"]["first"]}')
             if data[i_id]["copyright"]["year"].get("last"):
-                F.append(msg_l10n(lang=lang, string="copyright_year_separator"))
+                F.append(msg_l10n(lang=lang, 
+                                  string="copyright_year_separator"))
                 F.append(f'{data[i_id]["copyright"]["year"]["last"]}')
             F.append("</span> ")
             F.append("<span translate=no>gabl.ink</span>")
@@ -732,13 +733,15 @@ if __name__ == "__main__":
                 F.append("<p>")
                 if len(data[i_id]["disclaimer"]) == 1:
                     F.append(msg_l10n(lang=lang, string="disclaimer"))
-                    F.append(get_var_l10n(data["dictionaries/disclaimer"]["dictionary"][data[i_id]["disclaimer"][0]], "text", "h", lang))
+                    F.append(get_var_l10n(data["dictionaries/disclaimer"]
+                                          ["dictionary"][data[i_id]["disclaimer"][0]], "text", "h", lang))
                 else:
                     F.append(msg_l10n(lang=lang, string="disclaimer_plural"))
                     F.append("<ul class=horizontal_list>")
                     for d in data[i_id]["disclaimer"]:
                         F.append("<li><p>")
-                        F.append(get_var_l10n(data["dictionaries/disclaimer"]["dictionary"][d], "text", "h", lang))
+                        F.append(get_var_l10n(data["dictionaries/disclaimer"]
+                                              ["dictionary"][d], "text", "h", lang))
                     F.append("</ul>")
 
             F.append("</footer>")
@@ -749,7 +752,7 @@ if __name__ == "__main__":
 
             output_file_path: Path = Path(INDEX)/i_id/f"{lang}".lower()/"index.html"
             output_file_path.parent.mkdir(parents=True, exist_ok=True)
-            output_file_path.touch(exist_ok=True)
+            output_file_path.touch()
 
             with open(output_file_path, "r+", encoding="utf-8", newline="") as output_file:
                 # Only write if there is a change
