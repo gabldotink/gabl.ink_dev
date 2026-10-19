@@ -188,7 +188,7 @@ def get_i_id(i: Path) -> str:
 def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
     # e.g. get_var_l10n(data["jrco_beta/1"]["location"], "series", "t", lang)
 
-    options: list[str] = [str(l10n_lang), l10n_lang.l, "mul", "zxx", "x"]
+    options: list[str] = [f"{l10n_lang}", l10n_lang.l, "mul", "zxx", "x"]
 
     if format == "i":
         for o in options:
@@ -272,14 +272,14 @@ def language_list_entry(l: L) -> str:
             f''' style="list-style-type:'{to_regional_indicators(l.t)} '"''')
     r.append(">")
 
-    if str(l) == str(lang):
+    if f"{l}" == f"{lang}":
         r.append("<b>")
     else:
-        r.append(f"<a lang={l} href=../{str(l).lower()}/ hreflang={l}>")
+        r.append(f'<a lang={l} href=../{f"{l}".lower()}/ hreflang={l}>')
 
     r.append(say_lang(l, "h"))
 
-    if str(l) == str(lang):
+    if f"{l}" == f"{lang}":
         r.append("</b>")
     else:
         r.append("</a>")
@@ -310,10 +310,10 @@ def make_nav_button(button: str, lang: L) -> str:
             r.append(attribute_string(msg_l10n(get_var_l10n(data[f'{data[i_id]["location"]["series"]}/{data[i_id]["location"][button_id]}'], "title", "t", lang), lang=lang, string="nav_button_page_title")))
         r.append("><a href=../../")
         if button in ("f", "l"):
-            r.append(str(data[data[i_id]["location"]["series"]][button_id]))
+            r.append(f"{data[data[i_id]["location"]["series"]][button_id]}")
         elif button in ("p", "n"):
-            r.append(str(data[i_id]["location"][button_id]))
-        r.append(f"/{str(lang).lower()}/ hreflang={lang}>")
+            r.append(f"{data[i_id]["location"][button_id]}")
+        r.append(f'/{f"{lang}".lower()}/ hreflang={lang}>')
 
     r.append(f'<span class=nav_button_arrow aria-hidden=true>{button_arrow}</span><br>{msg_l10n(lang=lang, string=f"nav_button_{button_id}")}')
 
@@ -424,12 +424,12 @@ def say_date(d: date, lang: L) -> str:
             r.append(" ")
         if ad:
             r.append("AD\xa0")
-        r.append(str(d.year))
+        r.append(f"{d.year}")
     elif lang.l == "fr":
         if d.day == 1:
             r.append("1er")
         else:
-            r.append(str(d.day))
+            r.append(f"{d.day}")
         r.append("\xa0")
         r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1], "name", "h", lang))
         if ad:
@@ -442,7 +442,7 @@ def say_date(d: date, lang: L) -> str:
         r.append(" de ")
         if ad:
             r.append(f'{d.year}\xa0d.\xa0C.')
-        r.append(str(d.year))
+        r.append(f"{d.year}")
     elif lang.l in ("ja", "ko", "zh"):
         r.append(f'{d.year}{msg_l10n(lang=lang, string="say_date_cjk_year")}')
         r.append(f'{d.month}{msg_l10n(lang=lang, string="say_date_cjk_month")}')
@@ -462,7 +462,7 @@ def say_lang(lang: L, format: str) -> str:
     'Français (France)'
     """
     if lang.l in ("en", "fr"):
-        return f'{to_sentence_case(get_var_l10n(data["dictionaries/language"]["dictionary"][lang.l], "name", format, lang), lang)} ({get_var_l10n(data["dictionaries/region"]["dictionary"][str(lang.t).lower()], "name", format, lang)})'
+        return f'{to_sentence_case(get_var_l10n(data["dictionaries/language"]["dictionary"][lang.l], "name", format, lang), lang)} ({get_var_l10n(data["dictionaries/region"]["dictionary"][f"{lang.t}".lower()], "name", format, lang)})'
 
 
 #def validate_data()->None:
@@ -529,7 +529,7 @@ if __name__ == "__main__":
         for lang in data[i_id]["langs"]:
             lang: L = L.get(lang)
 
-            canonical: str = f"https://gabl.ink/i/{i_id}/{str(lang).lower()}/"
+            canonical: str = f'https://gabl.ink/i/{i_id}/{f"{lang}".lower()}/'
 
             F: list[str] = ["<!DOCTYPE html>\n"]
 
@@ -614,17 +614,17 @@ if __name__ == "__main__":
                 "</nav>"
             )
 
-            if Path(INDEX/i_id/str(lang).lower()/"video.webm").is_file():
+            if Path(INDEX/i_id/f"{lang}".lower()/"video.webm").is_file():
                 F.append(
                     "<video controls poster=image.png preload=auto>"
                     "<source src=video.webm type=video/webm>"
                 )
-                if Path(INDEX/i_id/str(lang).lower()/"subs.vtt").is_file():
+                if Path(INDEX/i_id/f"{lang}".lower()/"subs.vtt").is_file():
                     F.append(
                         f"<track default src=subs.vtt srclang={lang} kind=subtitles "
                         f'label{attribute_string(say_lang(lang, "t"))}>'
                     )
-                if Path(INDEX/i_id/str(lang).lower()/"cc.vtt").is_file():
+                if Path(INDEX/i_id/f"{lang}".lower()/"cc.vtt").is_file():
                     F.append(
                         f"<track src=cc.vtt srclang={lang} kind=captions "
                         f'''label{attribute_string(f'{say_lang(lang, "t")}{msg_l10n(lang=lang, string="cc")}')}>'''
@@ -632,7 +632,7 @@ if __name__ == "__main__":
                 F.append("<p>")
                 F.append(msg_l10n(lang, get_var_l10n(data[data[i_id]["location"]["series"]], "title", "t", lang), get_var_l10n(data[i_id], "title", "t", lang), get_var_l10n(data[i_id], "title", "t", lang), lang=lang, string="video_not_supported"))
                 F.append("</p></video>")
-            elif Path(INDEX/i_id/str(lang).lower()/"image.png").is_file():
+            elif Path(INDEX/i_id/f"{lang}".lower()/"image.png").is_file():
                 F.append("<picture")
                 if get_var_l10n(data[i_id], "tooltip", "h", lang) is not None:
                     F.append(f' title{attribute_string(get_var_l10n(data[i_id], "tooltip", "t", lang))}')
@@ -712,10 +712,10 @@ if __name__ == "__main__":
 
             F.append("<footer><p><span class=nw>")
             F.append(msg_l10n(lang=lang, string="copyright_notice"))
-            F.append(str(data[i_id]["copyright"]["year"]["first"]))
+            F.append(f'{data[i_id]["copyright"]["year"]["first"]}')
             if data[i_id]["copyright"]["year"].get("last"):
                 F.append(msg_l10n(lang=lang, string="copyright_year_separator"))
-                F.append(str(data[i_id]["copyright"]["year"]["last"]))
+                F.append(f'{data[i_id]["copyright"]["year"]["last"]}')
             F.append("</span> ")
             F.append("<span translate=no>gabl.ink</span>")
 
@@ -747,7 +747,7 @@ if __name__ == "__main__":
 
             output: str = "".join(F)
 
-            output_file_path: Path = Path(INDEX)/i_id/str(lang).lower()/"index.html"
+            output_file_path: Path = Path(INDEX)/i_id/f"{lang}".lower()/"index.html"
             output_file_path.parent.mkdir(parents=True, exist_ok=True)
             output_file_path.touch(exist_ok=True)
 
