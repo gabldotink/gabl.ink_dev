@@ -116,10 +116,10 @@ def attribute_string(string: str) -> str:
     >>> attribute_string('"')
     '=\\'"\\''
     """
-    # In HTML5, `attribute` is equivalent to `attribute=""`
     if not isinstance(string, str):
         raise TypeError("Not a string")
 
+    # In HTML5, `attribute` is equivalent to `attribute=""`
     if not string:
         return ""
 
