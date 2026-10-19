@@ -308,8 +308,7 @@ def make_nav_button(button: str, lang: L) -> str:
             r.append(attribute_string(msg_l10n(get_var_l10n(data[f'{data[i_id]["location"]["series"]}/{data[data[i_id]["location"]["series"]][button_id]}'], "title", "t", lang), lang=lang, string="nav_button_page_title")))
         elif button in ("p", "n"):
             r.append(attribute_string(msg_l10n(get_var_l10n(data[f'{data[i_id]["location"]["series"]}/{data[i_id]["location"][button_id]}'], "title", "t", lang), lang=lang, string="nav_button_page_title")))
-        r.append(">")
-        r.append("<a href=../../")
+        r.append("><a href=../../")
         if button in ("f", "l"):
             r.append(str(data[data[i_id]["location"]["series"]][button_id]))
         elif button in ("p", "n"):
@@ -553,73 +552,83 @@ if __name__ == "__main__":
             else:
                 lang_dir = "auto"
 
-            F.append(f"<html lang={lang} dir={lang_dir} itemscope itemtype=https://schema.org/WebPage>")
-
-            F.append('<meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">')
-
-            F.append(f'<title>{msg_l10n(get_var_l10n(data[i_id], "title", "t", lang), lang=lang, string="html_title")}</title>')
-
-            F.append(f'<meta name=description content{attribute_string(get_var_l10n(data[i_id], "description", "t", lang))}>')
-
-            F.append("<meta name=robots content=index,follow>")
-
-            F.append(f"<link rel=canonical href={canonical} hreflang={lang} type=text/html>")
-
             # TODO: Only works for one type of depth, but I want to redesign that whole system anyway (sh:349–385)
             styles: str = "../../../../gabel/styles"
 
-            # TODO: `if type != comic_page` (sh:349)
+            F.append(
+                f"<html lang={lang} dir={lang_dir} itemscope itemtype=https://schema.org/WebPage>"
 
-            F.append(f"<link rel=stylesheet href={styles}/{lang.l}.css hreflang=zxx>")
-            F.append(f"<link rel=stylesheet href={styles}/comic_page.css hreflang=zxx>")
+                '<meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">'
 
-            F.append(f'<link rel="external license" href{attribute_string(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]], "url", "i", lang))}>')
+                f'<title>{msg_l10n(get_var_l10n(data[i_id], "title", "t", lang), lang=lang, string="html_title")}</title>'
 
-            # TODO: Prefetches (starting at sh:420)
+                f'<meta name=description content{attribute_string(get_var_l10n(data[i_id], "description", "t", lang))}>'
 
-            F.append("<meta property=og:type content=article>")
-            F.append(f'<meta property=og:title content{attribute_string(get_var_l10n(data[i_id], "title", "t", lang))}>')
-            F.append(f'<meta property=og:description content{attribute_string(get_var_l10n(data[i_id], "description", "t", lang))}>')
-            F.append("<meta property=og:site_name content=gabl.ink>")
-            F.append(f"<meta property=og:url content={canonical}>")
-            F.append(f"<meta property=og:image content={canonical}image.png>")
-            # TODO: video_exists (sh:322–332, sh:454)
-            F.append(f"<meta property=og:locale content={lang.l}_{lang.t}>")
+                "<meta name=robots content=index,follow>"
 
-            F.append("<script type=application/ld+json>{")
-            F.append('"@context":"https://schema.org",')
-            F.append('"@type":"WebPage"')
-            F.append("}</script>")
+                f"<link rel=canonical href={canonical} hreflang={lang} type=text/html>"
 
-            F.append("<header>")
-            F.append("<a href=https://gabl.ink/ id=gabldotink_logo>gabl.ink</a>")
+                # TODO: `if type != comic_page` (sh:349)
 
-            F.append("<ul id=L>")
+                f"<link rel=stylesheet href={styles}/{lang.l}.css hreflang=zxx>"
+                f"<link rel=stylesheet href={styles}/comic_page.css hreflang=zxx>"
+
+                f'<link rel="external license" href{attribute_string(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]], "url", "i", lang))}>'
+
+                # TODO: Prefetches (starting at sh:420)
+
+                "<meta property=og:type content=article>"
+                f'<meta property=og:title content{attribute_string(get_var_l10n(data[i_id], "title", "t", lang))}>'
+                f'<meta property=og:description content{attribute_string(get_var_l10n(data[i_id], "description", "t", lang))}>'
+                "<meta property=og:site_name content=gabl.ink>"
+                f"<meta property=og:url content={canonical}>"
+                f"<meta property=og:image content={canonical}image.png>"
+                # TODO: video_exists (sh:322–332, sh:454)
+                f"<meta property=og:locale content={lang.l}_{lang.t}>"
+
+                "<script type=application/ld+json>{"
+                '"@context":"https://schema.org",'
+                '"@type":"WebPage"'
+                "}</script>"
+
+                "<header>"
+                "<a href=https://gabl.ink/ id=gabldotink_logo>gabl.ink</a>"
+
+                "<ul id=L>"
+            )
             for l in sorted(data[i_id]["langs"]):
                 l: L = L.get(l)
                 F.append(language_list_entry(l))
-            F.append("</ul></header>")
+            F.append(
+                "</ul></header>"
 
-            F.append(f'<h1>{msg_l10n(get_var_l10n(data[i_id], "title", "h", lang), lang=lang, string="page_title_html")}</h1>')
+                f'<h1>{msg_l10n(get_var_l10n(data[i_id], "title", "h", lang), lang=lang, string="page_title_html")}</h1>'
 
-            F.append("<nav class=nav_buttons>")
+                "<nav class=nav_buttons>"
 
-            F.append(make_nav_button("f", lang))
-            F.append(make_nav_button("p", lang))
-            F.append(make_nav_button("n", lang))
-            F.append(make_nav_button("l", lang))
+                f'{make_nav_button("f", lang)}'
+                f'{make_nav_button("p", lang)}'
+                f'{make_nav_button("n", lang)}'
+                f'{make_nav_button("l", lang)}'
 
-            F.append("</nav>")
+                "</nav>"
+            )
 
             if Path(INDEX/i_id/str(lang).lower()/"video.webm").is_file():
-                F.append("<video controls poster=image.png preload=auto>")
-                F.append("<source src=video.webm type=video/webm>")
+                F.append(
+                    "<video controls poster=image.png preload=auto>"
+                    "<source src=video.webm type=video/webm>"
+                )
                 if Path(INDEX/i_id/str(lang).lower()/"subs.vtt").is_file():
-                    F.append(f"<track default src=subs.vtt srclang={lang} kind=subtitles ")
-                    F.append(f'label{attribute_string(say_lang(lang, "t"))}>')
+                    F.append(
+                        f"<track default src=subs.vtt srclang={lang} kind=subtitles "
+                        f'label{attribute_string(say_lang(lang, "t"))}>'
+                    )
                 if Path(INDEX/i_id/str(lang).lower()/"cc.vtt").is_file():
-                    F.append(f"<track src=cc.vtt srclang={lang} kind=captions ")
-                    F.append(f'''label{attribute_string(f'{say_lang(lang, "t")}{msg_l10n(lang=lang, string="cc")}')}>''')
+                    F.append(
+                        f"<track src=cc.vtt srclang={lang} kind=captions "
+                        f'''label{attribute_string(f'{say_lang(lang, "t")}{msg_l10n(lang=lang, string="cc")}')}>'''
+                    )
                 F.append("<p>")
                 F.append(msg_l10n(lang, get_var_l10n(data[data[i_id]["location"]["series"]], "title", "t", lang), get_var_l10n(data[i_id], "title", "t", lang), get_var_l10n(data[i_id], "title", "t", lang), lang=lang, string="video_not_supported"))
                 F.append("</p></video>")
@@ -633,14 +642,16 @@ if __name__ == "__main__":
 
                 F.append("<nav class=nav_buttons>")
 
-            F.append(make_nav_button("f", lang))
-            F.append(make_nav_button("p", lang))
-            F.append(make_nav_button("n", lang))
-            F.append(make_nav_button("l", lang))
+            F.append(
+                f'{make_nav_button("f", lang)}'
+                f'{make_nav_button("p", lang)}'
+                f'{make_nav_button("n", lang)}'
+                f'{make_nav_button("l", lang)}'
 
-            F.append("</nav><nav><details><summary>")
+                "</nav><nav><details><summary>"
+            )
 
-            # TODO: Support multiple container depths
+                # TODO: Support multiple container depths
 
             F.append(msg_l10n(get_var_l10n(data[data[i_id]["location"]["series"]], "title", "h", lang), lang=lang, string="series_title_html"))
             F.append(msg_l10n(data[i_id]["location"]["page"], lang=lang, string="comma_page"))
