@@ -310,9 +310,9 @@ def make_nav_button(button: str, lang: L) -> str:
             r.append(attribute_string(msg_l10n(get_var_l10n(data[f'{data[i_id]["location"]["series"]}/{data[i_id]["location"][button_id]}'], "title", "t", lang), lang=lang, string="nav_button_page_title")))
         r.append("><a href=../../")
         if button in ("f", "l"):
-            r.append(f"{data[data[i_id]["location"]["series"]][button_id]}")
+            r.append(f'{data[data[i_id]["location"]["series"]][button_id]}')
         elif button in ("p", "n"):
-            r.append(f"{data[i_id]["location"][button_id]}")
+            r.append(f'{data[i_id]["location"][button_id]}')
         r.append(f'/{f"{lang}".lower()}/ hreflang={lang}>')
 
     r.append(f'<span class=nav_button_arrow aria-hidden=true>{button_arrow}</span><br>{msg_l10n(lang=lang, string=f"nav_button_{button_id}")}')
