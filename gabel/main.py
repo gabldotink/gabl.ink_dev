@@ -48,26 +48,27 @@ class L:
 
         for subtag in subtags:
             if it == 0:
-                if re.fullmatch(r"^[a-z]{2,3}$", subtag):
-                    langdata["l"] = subtag
+                if re.fullmatch(r"^[A-Za-z]{2,3}$", subtag):
+                    langdata["l"] = subtag.lower()
                     it += 1
                 else:
                     raise ValueError("Invalid language code")
-            elif it <= 2:
-                if re.fullmatch(r"^[A-Z][a-z]{3}$", subtag):
+            # TODO: do this kind of normalization everywhere
+            else:
+                if re.fullmatch(r"^[A-Za-z]{4}$", subtag):
                     if not langdata.get("t"):
-                        langdata["s"] = subtag
+                        langdata["s"] = subtag.capitalize()
                     else:
                         raise ValueError("Invalid language code")
-                elif re.fullmatch(r"^[A-Z]{2}$|^[0-9]{3}$", subtag):
-                    langdata["t"] = subtag
-                elif re.fullmatch(r"^[a-z]{5,8}$|^[0-9][a-z0-9]{3}$", subtag):
+                elif re.fullmatch(r"^[A-Za-z]{2}$|^[0-9]{3}$", subtag):
+                    langdata["t"] = subtag.upper()
+                elif re.fullmatch(r"^[A-Za-z]{5,8}$|^[0-9][A-Za-z0-9]{3}$", subtag):
                     if not langdata.get("v"):
-                        langdata["v"] = [subtag]
+                        langdata["v"] = [subtag.lower()]
                     else:
-                        langdata["v"].append(subtag)
+                        langdata["v"].append(subtag.lower())
                 elif subtag == "x":
-                    langdata["x"] = "-".join(subtags[it+1:])
+                    langdata["x"] = "-".join(subtags[it+1:].lower())
                     break
                 else:
                     raise ValueError("Invalid or unsupported language code")
