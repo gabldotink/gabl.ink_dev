@@ -14,37 +14,57 @@
   "title": {
     "en-US": {
       "t": "‘Thursday’ title page",
-      "H": "‘<cite>Thursday</cite>’ title page"
+      "H": "‘<cite>Thursday</cite>’ title page",
+      "x": "`Thursday' title page",
+      "Le": "x"
+    },
+    "en-GB": {
+      "t": "“Thursday” title page",
+      "H": "“<cite>Thursday</cite> title page",
+      "x": "``Thursday'' title page",
+      "Le": "x"
     },
     "fr": {
       "t": "page de titre de “jeudi”",
-      "H": "page de titre de <cite class=\"r\">jeudi</cite>"
+      "H": "page de titre de <cite class=\"r\">jeudi</cite>",
+      "x": "page de titre de {\\rm jeudi}",
+      "L": "page de titre de \\textup{jeudi}"
     }
   },
   "title_unnested": {
     "en-US": {
       "t": "“Thursday” title page",
-      "H": "“<cite>Thursday</cite>” title page"
+      "H": "“<cite>Thursday</cite>” title page",
+      "x": "``Thursday'' title page",
+      "Le": "x"
+    },
+    "en-GB": {
+      "t": "‘Thursday’ title page",
+      "H": "‘<cite>Thursday</cite>’ title page",
+      "x": "`Thursday' title page",
+      "Le": "x"
     },
     "fr": {
       "t": "page de titre de «\u202fjeudi\u202f»",
-      "H": "page de titre de <cite class=i>jeudi</cite>"
+      "H": "page de titre de <cite class=i>jeudi</cite>",
+      "x": "page de titre de {\\it jeudi}",
+      "L": "page de titre de \\textit{jeudi}"
     }
   },
   "description": {
     "en-US": {
-      "t": "The title page for “JoeRunner and Co. Beta,” originally “JoeRunner and Co.”",
-      "H": "The title page for <cite class=i>JoeRunner and Co. Beta</cite>, originally <cite class=i>JoeRunner and Co.</cite>"
+      "t": "The title page for “JoeRunner and\u00a0Co. Beta,” originally “JoeRunner and\u00a0Co.”",
+      "H": "The title page for <cite class=i>JoeRunner and\u00a0Co. Beta</cite>, originally <cite class=i>JoeRunner and\u00a0Co.</cite>"
     },
     "fr": {
-      "t": "La page de titre de «\u202fJoeRunner et cie Bêta\u202f», intitulée originalement «\u202fJoeRunner et cie\u202f».",
-      "H": "La page de titre de <cite class=i>JoeRunner et cie Bêta</cite>, intitulée originalement <cite class=i>JoeRunner et cie</cite>."
+      "t": "La page de titre de «\u202fJoeRunner et\u00a0cie Bêta\u202f», intitulée originalement «\u202fJoeRunner et\u00a0cie\u202f».",
+      "H": "La page de titre de <cite class=i>JoeRunner et\u00a0cie Bêta</cite>, intitulée originalement <cite class=i>JoeRunner et\u00a0cie</cite>."
     }
   },
   "tooltip": {
     "en": {
-      "t": "pro tip for 5th graders: DO NOT wake up at 6:30\u00a0a.m.",
-      "H": "pro tip for 5th graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0a.m.</time>"
+      "t": "pro tip for 5th\u00a0graders: DO NOT wake up at 6:30\u00a0a.m.",
+      "H": "pro tip for 5th\u00a0graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0a.m.</time>"
     },
     "fr": {
       "t": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à 6h30",
@@ -56,10 +76,10 @@
       "H": "meta/logo",
       "d": {
         "en-US": {
-          "H": "<p><cite class=i>JoeRunner and Co.</cite><p>by <span translate=no>gabl</span><p>episode\u00a01 <cite class=i>Edulympiad</cite><p>chapter\u00a01 “<cite>Thursday</cite>”"
+          "H": "<p><cite class=i>JoeRunner and\u00a0Co.</cite><p>by <span translate=no>gabl</span><p>episode\u00a01 <cite class=i>Edulympiad</cite><p>chapter\u00a01 “<cite>Thursday</cite>”"
         },
         "fr": {
-          "H": "<p><cite class=i>JoeRunner et cie</cite><p>par <span translate=no>gabl</span><p>épisode\u00a01 <cite class=i>Edulympiade</cite><p>chapitre\u00a01 <cite class=i>jeudi</cite>"
+          "H": "<p><cite class=i>JoeRunner et\u00a0cie</cite><p>par <span translate=no>gabl</span><p>épisode\u00a01 <cite class=i>Edulympiade</cite><p>chapitre\u00a01 <cite class=i>jeudi</cite>"
         }
       }
     },
@@ -114,10 +134,10 @@
         {
           "p": {
             "en": {
-              "H": "<p>Hey there! Welcome to <cite class=\"i nw\">JoeRunner and Co.</cite>!"
+              "H": "<p>Hey there! Welcome to <cite class=i>JoeRunner and\u00a0Co.</cite>!"
             },
             "fr": {
-              "H": "<p>Salut\u202f! Bienvenue dans <cite class=\"i nw\">JoeRunner et cie</cite>\u202f!"
+              "H": "<p>Salut\u202f! Bienvenue dans <cite class=i>JoeRunner et\u00a0cie</cite>\u202f!"
             }
           }
         },
