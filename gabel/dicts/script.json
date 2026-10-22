@@ -156,7 +156,7 @@
         "t": "hangul"
       },
       "fr": {
-        "t": "hangeul",
+        "te": "ko-Latn",
         "H": "<i lang=ko-Latn>hangeul</i>"
       }
     }
@@ -247,14 +247,11 @@
       {
         "lang": "ja",
         "name": {
-          "ja-Latn-hepburn": {
+          "en": {
             "t": "kanji"
           },
-          "en": {
-            "e": "ja-Latn-hepburn"
-          },
           "fr": {
-            "e": "ja-Latn-hepburn"
+            "e": "en"
           }
         }
       },

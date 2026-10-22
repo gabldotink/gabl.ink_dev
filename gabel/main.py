@@ -189,16 +189,37 @@ def get_i_id(i: Path) -> str:
 def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
     # e.g. get_var_l10n(data["jrco_beta/1"]["location"], "series", "t", lang)
 
+    formats: str = "HiLpt"
     options: list[str] = [f"{l10n_lang}", l10n_lang.l, "mul", "zxx", "z"]
+
+    if format not in formats:
+        raise ValueError("Invalid format given")
+
+    def _find_equals(pointer: str) -> str:
+        to_find: tuple = index[key][o][pointer].rpartition("_")
+
+        # TODO: catch invalid equals
+        if to_find[2] and to_find[2] not in formats:
+            raise ValueError("Equals does not contain a valid format")
+        elif to_find[0] and not to_find[1]:
+            return get_var_l10n(index, key, format, to_find[0])
+        else:
+            return get_var_l10n(index, key, to_find[2], to_find[0])
+
 
     # identifier
     if format == "i":
         for o in options:
             if o == "z":
                 return ""
-            elif "i" in index.get(key, {}).get(o, {}):
+
+            to_check: dict = index.get(key, {}).get(o, {})
+            
+            if "i" in to_check:
                 return index[key][o]["i"]
-            elif "e" in index.get(key, {}).get(o, {}):
+            elif "ie" in to_check:
+                return _find_equals("ie")
+            elif "e" in to_check:
                 return get_var_l10n(index, key, format,
                                     L.get(index[key][o]["e"]))
     # print
@@ -206,11 +227,18 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
         for o in options:
             if o == "z":
                 return ""
-            elif "p" in index.get(key, {}).get(o, {}):
+            
+            to_check: dict = index.get(key, {}).get(o, {})
+
+            if "p" in to_check:
                 return index[key][o]["p"]
-            elif "t" in index.get(key, {}).get(o, {}):
+            elif "pe" in to_check:
+                return _find_equals("pe")
+            elif "t" in to_check:
                 return index[key][o]["t"]
-            elif "e" in index.get(key, {}).get(o, {}):
+            elif "te" in to_check:
+                _find_equals("te")
+            elif "e" in to_check:
                 return get_var_l10n(index, key, format,
                                     L.get(index[key][o]["e"]))
     # text
@@ -218,9 +246,14 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
         for o in options:
             if o == "z":
                 return ""
-            elif "t" in index.get(key, {}).get(o, {}):
+
+            to_check: dict = index.get(key, {}).get(o, {})
+
+            if "t" in to_check:
                 return index[key][o]["t"]
-            elif "e" in index.get(key, {}).get(o, {}):
+            elif "te" in to_check:
+                return _find_equals("te")
+            elif "e" in to_check:
                 return get_var_l10n(index, key, format,
                                     L.get(index[key][o]["e"]))
     # HTML5
@@ -228,11 +261,18 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
         for o in options:
             if o == "z":
                 return ""
-            elif "H" in index.get(key, {}).get(o, {}):
+
+            to_check: dict = index.get(key, {}).get(o, {})
+
+            if "H" in to_check:
                 return index[key][o]["H"]
-            elif "t" in index.get(key, {}).get(o, {}):
+            elif "He" in to_check:
+                return _find_equals("He")
+            elif "t" in to_check:
                 return text_to_html(index[key][o]["t"])
-            elif "e" in index.get(key, {}).get(o, {}):
+            elif "te" in to_check:
+                return text_to_html(_find_equals("te"))
+            elif "e" in to_check:
                 return get_var_l10n(index, key, format,
                                     L.get(index[key][o]["e"]))
 
