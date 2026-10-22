@@ -28,7 +28,7 @@
   },
   "transcript": [
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "JoeRunner and T.T. walk through a door. A desk with a desktop computer and a sheet of paper folded into a triangle reading “Mr.\u00a0Mahan.” T.T. looks confused and a bit annoyed. JoeRunner looks at him amusedly."
@@ -36,15 +36,15 @@
       }
     },
     {
-      "h": "jrco_beta/t_t",
+      "H": "jrco_beta/t_t",
       "d": {
         "en": {
-          "h": "<p>But, like\u00a0.\u00a0.\u00a0. how come no one <em>told</em> me?"
+          "H": "<p>But, like\u00a0.\u00a0.\u00a0. how come no one <em>told</em> me?"
         }
       }
     },
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "JoeRunner and T.T. go to their seats next to each other. T.T. points backward."
@@ -52,7 +52,7 @@
       }
     },
     {
-      "h": "jrco_beta/t_t",
+      "H": "jrco_beta/t_t",
       "d": {
         "en": {
           "t": "Oh, hey, I think the new kid is back there."
@@ -60,18 +60,18 @@
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "h": "<p>(<i>smiling</i>) Oh, really?"
+          "H": "<p>(<i>smiling</i>) Oh, really?"
         },
         "fr": {
-          "h": "<p>(<i>souriant</i>) Oh, vraiment\u202f?"
+          "H": "<p>(<i>souriant</i>) Oh, vraiment\u202f?"
         }
       }
     },
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "The new kid is writing a letter at her desk, just finishing her signature. She has medium‑length red (orange) hair. She wears a dark turquoise shirt."
@@ -79,23 +79,23 @@
       }
     },
     {
-      "h": "meta/letter",
+      "H": "meta/letter",
       "d": {
         "en": {
-          "h": "<p>Dear Mr.\u00a0Mahan, Thank you very much for having me for the last two weeks of school. I look forward to it. That is all I have to say.<p>—\u2060Ma"
+          "H": "<p>Dear Mr.\u00a0Mahan, Thank you very much for having me for the last two weeks of school. I look forward to it. That is all I have to say.<p>—\u2060Ma"
         }
       }
     },
     {
-      "h": "jrco_beta/t_t",
+      "H": "jrco_beta/t_t",
       "d": {
         "en": {
-          "h": "<p>(<i>off‑panel</i>) Oh, darn, I forgot to get her name from Harry."
+          "H": "<p>(<i>off‑panel</i>) Oh, darn, I forgot to get her name from Harry."
         }
       }
     },
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "JoeRunner starts getting out of his seat."
@@ -103,7 +103,7 @@
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
           "t": "Well then, let’s go ask her!"
@@ -111,7 +111,7 @@
       }
     },
     {
-      "h": "jrco_beta/t_t",
+      "H": "jrco_beta/t_t",
       "d": {
         "en": {
           "t": "Great plan, except\u00a0.\u00a0.\u00a0."
@@ -119,15 +119,15 @@
       }
     },
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
-          "h": "<p>A wall clock shows it’s <time datetime=2021-05-27T08:30-0600>8:30</time>."
+          "H": "<p>A wall clock shows it’s <time datetime=2021-05-27T08:30-0600>8:30</time>."
         }
       }
     },
     {
-      "h": "meta/sound_effect",
+      "H": "meta/sound_effect",
       "d": {
         "en": {
           "t": "Brrrrrring!"
@@ -138,7 +138,7 @@
       }
     },
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "JoeRunner and T.T. look back, a little disappointed."
@@ -146,7 +146,7 @@
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
           "t": "Oh, well, I guess she’ll introduce herself first."
@@ -161,10 +161,10 @@
         {
           "p": {
             "en": {
-              "h": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "h": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },
@@ -178,21 +178,21 @@
         {
           "p": {
             "en": {
-              "h": "<p>This page includes the full‐size image, while previously they’ve been half‐size. The HTML <code>&lt;picture></code> element should either automatically choose one to display, or simply skip it and use the full image, depending on your browser\u00a0/ user agent."
+              "H": "<p>This page includes the full‐size image, while previously they’ve been half‐size. The HTML <code>&lt;picture></code> element should either automatically choose one to display, or simply skip it and use the full image, depending on your browser\u00a0/ user agent."
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p>I was initially meaning to upload the full‐size versions to <cite>Patreon</cite>, but I’ll probably just save that for the <code>.clip</code> work files. I don’t know when I’ll get the images out, but I will."
+              "H": "<p>I was initially meaning to upload the full‐size versions to <cite>Patreon</cite>, but I’ll probably just save that for the <code>.clip</code> work files. I don’t know when I’ll get the images out, but I will."
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p>Of course, you can safely expect Patreon to be a pretty long ways away at this rate. If I can be real for a sec, one of the main reasons I started this comic was to feel like I was doing something with my life, and now it’s ended up as a huge source of anxiety for me because progress is so slow. I’m so excited to continue this, especially since I have a lot of other ideas to work on aside from <cite class=i>JoeRunner and co.</cite>\u2060—both apart from and on top of it. I’m so sorry that I’m not getting that out sooner."
+              "H": "<p>Of course, you can safely expect Patreon to be a pretty long ways away at this rate. If I can be real for a sec, one of the main reasons I started this comic was to feel like I was doing something with my life, and now it’s ended up as a huge source of anxiety for me because progress is so slow. I’m so excited to continue this, especially since I have a lot of other ideas to work on aside from <cite class=i>JoeRunner and co.</cite>\u2060—both apart from and on top of it. I’m so sorry that I’m not getting that out sooner."
             }
           }
         },
@@ -206,14 +206,14 @@
         {
           "p": {
             "en": {
-              "h": "<p>On a dumb, overthinking‐related note (feel free to skip this), I’m trying to decide if I want to stick with <cite><abbr title=\"Creative Commons Attribution‐ShareAlike\u00a04.0\">CC\u00a0BY‑SA\u00a04.0</abbr></cite>, or if I want to move it to <cite><abbr title=\"Creative Commons Attribution\">CC\u00a0BY</abbr></cite>. At the start it was <cite><abbr title=Attribution‐NonCommercial‐ShareAlike>BY‑NC‑SA</abbr></cite>. Both times the <abbr title=ShareAlike>SA</abbr> was because I wanted to keep derivatives of actual, general utility free, like books and translations. I know that <a rel=external href=https://peppercarrot.com/ type=text/html><cite class=i>Pepper&amp;Carrot</cite></a> is thriving in those regards under CC\u00a0BY, but that may or may not be different, considering that <cite class=i>Pepper&amp;Carrot</cite> isn’t one of the most egregious abominations known to man."
+              "H": "<p>On a dumb, overthinking‐related note (feel free to skip this), I’m trying to decide if I want to stick with <cite><abbr title=\"Creative Commons Attribution‐ShareAlike\u00a04.0\">CC\u00a0BY‑SA\u00a04.0</abbr></cite>, or if I want to move it to <cite><abbr title=\"Creative Commons Attribution\">CC\u00a0BY</abbr></cite>. At the start it was <cite><abbr title=Attribution‐NonCommercial‐ShareAlike>BY‑NC‑SA</abbr></cite>. Both times the <abbr title=ShareAlike>SA</abbr> was because I wanted to keep derivatives of actual, general utility free, like books and translations. I know that <a rel=external href=https://peppercarrot.com/ type=text/html><cite class=i>Pepper&amp;Carrot</cite></a> is thriving in those regards under CC\u00a0BY, but that may or may not be different, considering that <cite class=i>Pepper&amp;Carrot</cite> isn’t one of the most egregious abominations known to man."
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p>And about those multiple image size problems, I want to make a <cite>Git</cite> repository to hold all of those (and the other stuff, of course) in order to have a sort of structured, static API, while also just having the files available in a human‐browsable and easily downloadable manner. I already tried that with <cite>files.gabl.ink</cite>\u00a0<small>[<i>link removed</i>]</small>, but I ended up not liking how it turned out."
+              "H": "<p>And about those multiple image size problems, I want to make a <cite>Git</cite> repository to hold all of those (and the other stuff, of course) in order to have a sort of structured, static API, while also just having the files available in a human‐browsable and easily downloadable manner. I already tried that with <cite>files.gabl.ink</cite>\u00a0<small>[<i>link removed</i>]</small>, but I ended up not liking how it turned out."
             }
           }
         }

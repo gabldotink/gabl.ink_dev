@@ -14,68 +14,68 @@
   "title": {
     "en-US": {
       "t": "‘Thursday’ title page",
-      "h": "‘<cite>Thursday</cite>’ title page"
+      "H": "‘<cite>Thursday</cite>’ title page"
     },
     "fr": {
       "t": "page de titre de “jeudi”",
-      "h": "page de titre de <cite class=\"r\">jeudi</cite>"
+      "H": "page de titre de <cite class=\"r\">jeudi</cite>"
     }
   },
   "title_unnested": {
     "en-US": {
       "t": "“Thursday” title page",
-      "h": "“<cite>Thursday</cite>” title page"
+      "H": "“<cite>Thursday</cite>” title page"
     },
     "fr": {
       "t": "page de titre de «\u202fjeudi\u202f»",
-      "h": "page de titre de <cite class=i>jeudi</cite>"
+      "H": "page de titre de <cite class=i>jeudi</cite>"
     }
   },
   "description": {
     "en-US": {
       "t": "The title page for “JoeRunner and Co. Beta,” originally “JoeRunner and Co.”",
-      "h": "The title page for <cite class=i>JoeRunner and Co. Beta</cite>, originally <cite class=i>JoeRunner and Co.</cite>"
+      "H": "The title page for <cite class=i>JoeRunner and Co. Beta</cite>, originally <cite class=i>JoeRunner and Co.</cite>"
     },
     "fr": {
       "t": "La page de titre de «\u202fJoeRunner et cie Bêta\u202f», intitulée originalement «\u202fJoeRunner et cie\u202f».",
-      "h": "La page de titre de <cite class=i>JoeRunner et cie Bêta</cite>, intitulée originalement <cite class=i>JoeRunner et cie</cite>."
+      "H": "La page de titre de <cite class=i>JoeRunner et cie Bêta</cite>, intitulée originalement <cite class=i>JoeRunner et cie</cite>."
     }
   },
   "tooltip": {
     "en": {
       "t": "pro tip for 5th graders: DO NOT wake up at 6:30\u00a0a.m.",
-      "h": "pro tip for 5th graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0a.m.</time>"
+      "H": "pro tip for 5th graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0a.m.</time>"
     },
     "fr": {
       "t": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à 6h30",
-      "h": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime=06:30>6h30</time>"
+      "H": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime=06:30>6h30</time>"
     }
   },
   "transcript": [
     {
-      "h": "meta/logo",
+      "H": "meta/logo",
       "d": {
         "en-US": {
-          "h": "<p><cite class=i>JoeRunner and Co.</cite><p>by <span translate=no>gabl</span><p>episode\u00a01 <cite class=i>Edulympiad</cite><p>chapter\u00a01 “<cite>Thursday</cite>”"
+          "H": "<p><cite class=i>JoeRunner and Co.</cite><p>by <span translate=no>gabl</span><p>episode\u00a01 <cite class=i>Edulympiad</cite><p>chapter\u00a01 “<cite>Thursday</cite>”"
         },
         "fr": {
-          "h": "<p><cite class=i>JoeRunner et cie</cite><p>par <span translate=no>gabl</span><p>épisode\u00a01 <cite class=i>Edulympiade</cite><p>chapitre\u00a01 <cite class=i>jeudi</cite>"
+          "H": "<p><cite class=i>JoeRunner et cie</cite><p>par <span translate=no>gabl</span><p>épisode\u00a01 <cite class=i>Edulympiade</cite><p>chapitre\u00a01 <cite class=i>jeudi</cite>"
         }
       }
     },
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
-          "h": "<p>The setting is a bedroom. On the desk next to the bed are some notebooks and an alarm clock. It’s <time datetime=2021-05-27T06:30-0600>6:30\u00a0a.m. on May\u00a027</time>, a Thursday. There is a button labeled “snooze” on the side of the alarm clock. The alarm is going off."
+          "H": "<p>The setting is a bedroom. On the desk next to the bed are some notebooks and an alarm clock. It’s <time datetime=2021-05-27T06:30-0600>6:30\u00a0a.m. on May\u00a027</time>, a Thursday. There is a button labeled “snooze” on the side of the alarm clock. The alarm is going off."
         },
         "fr": {
-          "h": "<p>La scène se passe dans une chambre. Sur le bureau à côté du lit, il y a des cahiers et un réveil. Il est <time datetime=2021-05-27T06:30-0600>6h30 le 27\u00a0mai</time>, un jeudi. Il y a un bouton étiqueté «\u202fsnooze\u202f» sur le côté du réveil. L’alarme sonne."
+          "H": "<p>La scène se passe dans une chambre. Sur le bureau à côté du lit, il y a des cahiers et un réveil. Il est <time datetime=2021-05-27T06:30-0600>6h30 le 27\u00a0mai</time>, un jeudi. Il y a un bouton étiqueté «\u202fsnooze\u202f» sur le côté du réveil. L’alarme sonne."
         }
       }
     },
     {
-      "h": "meta/sound_effect",
+      "H": "meta/sound_effect",
       "d": {
         "en": {
           "t": "Beep, beep, beep"
@@ -86,13 +86,13 @@
       }
     },
     {
-      "h": "meta/tooltip",
+      "H": "meta/tooltip",
       "d": {
         "en": {
-          "h": "<p>pro tip for 5th graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0a.m.</time>"
+          "H": "<p>pro tip for 5th graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0a.m.</time>"
         },
         "fr": {
-          "h": "<p>Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime=06:30>6h30</time>"
+          "H": "<p>Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime=06:30>6h30</time>"
         }
       }
     }
@@ -104,30 +104,30 @@
         {
           "p": {
             "en": {
-              "h": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "h": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p>Hey there! Welcome to <cite class=\"i nw\">JoeRunner and Co.</cite>!"
+              "H": "<p>Hey there! Welcome to <cite class=\"i nw\">JoeRunner and Co.</cite>!"
             },
             "fr": {
-              "h": "<p>Salut\u202f! Bienvenue dans <cite class=\"i nw\">JoeRunner et cie</cite>\u202f!"
+              "H": "<p>Salut\u202f! Bienvenue dans <cite class=\"i nw\">JoeRunner et cie</cite>\u202f!"
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p>My name’s Gabriel, a.k.a. <span translate=no>gabl</span>, and I can’t wait to share my passion‐project comics with you. I’ve been drawing these characters for several years, and I’ve wanted to do a webcomic for\u00a0.\u00a0.\u00a0. less years, but still multiple. Years."
+              "H": "<p>My name’s Gabriel, a.k.a. <span translate=no>gabl</span>, and I can’t wait to share my passion‐project comics with you. I’ve been drawing these characters for several years, and I’ve wanted to do a webcomic for\u00a0.\u00a0.\u00a0. less years, but still multiple. Years."
             },
             "fr": {
-              "h": "<p>Je m’appelle Gabriel, alias <span translate=no>gabl</span>, et j’ai hâte de partager mes bandes dessinées, mes projets de passion, avec vous. Je dessine ces personnages depuis plusieurs années, et je veux faire un webcomic depuis… moins longtemps, mais encore plusieurs années."
+              "H": "<p>Je m’appelle Gabriel, alias <span translate=no>gabl</span>, et j’ai hâte de partager mes bandes dessinées, mes projets de passion, avec vous. Je dessine ces personnages depuis plusieurs années, et je veux faire un webcomic depuis… moins longtemps, mais encore plusieurs années."
             }
           }
         },
@@ -137,7 +137,7 @@
               "t": "They’re\u00a0.\u00a0.\u00a0. still a bit rough around the edges. I’ve been drawing cartoons for half of my life, but I haven’t been good about challenging myself. Hopefully, this comic will help improve my cartooning skills. Hopefully, I’ll be able to make people laugh. Maybe I’ll even be able to get a girlfriend. I dunno. It’s possible."
             },
             "fr": {
-              "h": "<p>Ils sont encore… un peu bruts. Je dessine les cartoons pour la moitié de ma vie, mais je n’ai pas été bon en défier moi‐même. Avec un peu de chance, cette BD m’aidera à améliorer mes compétences en dessin. Avec un peu de chance, je peux faire rire les gens. Peut‐être que je peux trouver une copine. J’sais pas. C’est possible."
+              "H": "<p>Ils sont encore… un peu bruts. Je dessine les cartoons pour la moitié de ma vie, mais je n’ai pas été bon en défier moi‐même. Avec un peu de chance, cette BD m’aidera à améliorer mes compétences en dessin. Avec un peu de chance, je peux faire rire les gens. Peut‐être que je peux trouver une copine. J’sais pas. C’est possible."
             }
           }
         },
@@ -154,7 +154,7 @@
         {
           "p": {
             "en": {
-              "h": "<p>—\u2060<span translate=no>gabl</span>",
+              "H": "<p>—\u2060<span translate=no>gabl</span>",
               "t": "—\u2060gabl"
             },
             "mul": {

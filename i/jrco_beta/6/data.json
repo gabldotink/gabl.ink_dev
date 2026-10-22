@@ -35,7 +35,7 @@
   },
   "transcript": [
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "JoeRunner and Eden are in the kitchen now."
@@ -43,7 +43,7 @@
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
           "t": "I was just finishing up the last essay of the year."
@@ -51,7 +51,7 @@
       }
     },
     {
-      "h": "jrco_beta/eden_runner",
+      "H": "jrco_beta/eden_runner",
       "d": {
         "en": {
           "t": "Oh, hey, the last one?"
@@ -62,15 +62,15 @@
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "h": "<p>(<i>shrugging</i>) I mean\u00a0.\u00a0.\u00a0. until next year, anyway."
+          "H": "<p>(<i>shrugging</i>) I mean\u00a0.\u00a0.\u00a0. until next year, anyway."
         }
       }
     },
     {
-      "h": "jrco_beta/eden_runner",
+      "H": "jrco_beta/eden_runner",
       "d": {
         "en": {
           "t": "Ooooh, next year! Middle school!"
@@ -81,21 +81,21 @@
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "h": "<p>(<i>sulking</i>) Yeah; it’s kinda gonna stink, though."
+          "H": "<p>(<i>sulking</i>) Yeah; it’s kinda gonna stink, though."
         },
         "fr": {
-          "h": "<p>(<i>boudant</i>) Ouais… mais ça va être un peu nul."
+          "H": "<p>(<i>boudant</i>) Ouais… mais ça va être un peu nul."
         }
       }
     },
     {
-      "h": "jrco_beta/eden_runner",
+      "H": "jrco_beta/eden_runner",
       "d": {
         "en": {
-          "h": "<p>Well, I <em class=\"r u\">loved</em> middle school."
+          "H": "<p>Well, I <em class=\"r u\">loved</em> middle school."
         },
         "fr": {
           "t": "Eh bien, j’ai adorée le collège."
@@ -103,7 +103,7 @@
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
           "t": "Well, yeah, but T.T.’s brother totally hated it, so\u00a0.\u00a0.\u00a0."
@@ -114,15 +114,15 @@
       }
     },
     {
-      "h": "jrco_beta/eden_runner",
+      "H": "jrco_beta/eden_runner",
       "d": {
         "en": {
-          "h": "<p><i>Sigh.</i> Come get some cereal, Joseph."
+          "H": "<p><i>Sigh.</i> Come get some cereal, Joseph."
         }
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
           "t": "Hey, you’re not objecting! I totally got you! It’s totally gonna stink!"
@@ -130,7 +130,7 @@
       }
     },
     {
-      "h": "meta/tooltip",
+      "H": "meta/tooltip",
       "d": {
         "en": {
           "t": "you can really hear that semicolon"
@@ -148,10 +148,10 @@
         {
           "p": {
             "en": {
-              "h": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "h": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },
@@ -165,14 +165,14 @@
         {
           "p": {
             "en": {
-              "h": "<p>First off, this comic has a mobile‐friendly version! Similarly to the format that <cite>Webtoon</cite> uses, the mobile version is comprised of several narrower images that are easier to read on a vertical screen. If you’re using a fullscreen desktop browser window, the “desktop” version should show up by default; if you’re on mobile, the mobile version should appear instead. I’m testing it out with this one, and I’ll see how well it turns out. (You can view the mobile comic on desktop by resizing your browser window to be narrower; however, I’m still trying to figure out a way to view the desktop comic on mobile. Your best bet for now is probably to just view the original image source here<ins>\u00a0<small>[<i>link removed</i>]</small></ins>.)"
+              "H": "<p>First off, this comic has a mobile‐friendly version! Similarly to the format that <cite>Webtoon</cite> uses, the mobile version is comprised of several narrower images that are easier to read on a vertical screen. If you’re using a fullscreen desktop browser window, the “desktop” version should show up by default; if you’re on mobile, the mobile version should appear instead. I’m testing it out with this one, and I’ll see how well it turns out. (You can view the mobile comic on desktop by resizing your browser window to be narrower; however, I’m still trying to figure out a way to view the desktop comic on mobile. Your best bet for now is probably to just view the original image source here<ins>\u00a0<small>[<i>link removed</i>]</small></ins>.)"
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p>Second, I’m renaming “episodes” to “seasons.” I know, I know, calm down. I know how attached people have gotten to episodes over the last five pages, but believe me, it’s for the greater good. I want you to know that I don’t make this dramatic change lightly, and that it has a purpose. I’m calling them seasons now because webcomic “episodes” have a different meaning in <cite class=\"i nw\">JoeRunner and Co.</cite> than on <cite>Webtoon</cite>, the most popular webcomic publisher (that’s right, I mentioned <cite>Webtoon</cite> <em>twice</em>), in addition to the fact that having both “episodes” and “chapters” at once is a bit confusing. I hope your anger has more or less subsided; I understand, however, that it will likely take a long time for you to truly forgive me."
+              "H": "<p>Second, I’m renaming “episodes” to “seasons.” I know, I know, calm down. I know how attached people have gotten to episodes over the last five pages, but believe me, it’s for the greater good. I want you to know that I don’t make this dramatic change lightly, and that it has a purpose. I’m calling them seasons now because webcomic “episodes” have a different meaning in <cite class=\"i nw\">JoeRunner and Co.</cite> than on <cite>Webtoon</cite>, the most popular webcomic publisher (that’s right, I mentioned <cite>Webtoon</cite> <em>twice</em>), in addition to the fact that having both “episodes” and “chapters” at once is a bit confusing. I hope your anger has more or less subsided; I understand, however, that it will likely take a long time for you to truly forgive me."
             }
           }
         },
@@ -186,28 +186,28 @@
         {
           "p": {
             "en": {
-              "h": "<p>First, you can follow my <cite>Twitter</cite>, <a rel=\"external me\" href=https://x.com/i/user/1352061598836264960 type=text/html>@gabldotink</a>. I don’t tweet too often, so it shouldn’t flood your timeline, and I’ll keep the latest comic pinned to my profile so you can easily get to the most recent one."
+              "H": "<p>First, you can follow my <cite>Twitter</cite>, <a rel=\"external me\" href=https://x.com/i/user/1352061598836264960 type=text/html>@gabldotink</a>. I don’t tweet too often, so it shouldn’t flood your timeline, and I’ll keep the latest comic pinned to my profile so you can easily get to the most recent one."
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p>Alternatively, I have an RSS (Really Simple Syndication) feed! It’s located here<ins>\u00a0<small>[<i>link removed</i>]</small></ins>. If you click on the link, you’ll just see a bunch of code\u2060—it’s your job to get it to do its magic through an RSS reader, which will keep you posted whenever I update. You can learn how to do this at my handy‐dandy RSS info page<ins>\u00a0<small>[<i>link removed</i>]</small></ins>. Aren’t I so helpful?<ins>\u00a0<small>[<i>not anymore</i>]</small></ins>"
+              "H": "<p>Alternatively, I have an RSS (Really Simple Syndication) feed! It’s located here<ins>\u00a0<small>[<i>link removed</i>]</small></ins>. If you click on the link, you’ll just see a bunch of code\u2060—it’s your job to get it to do its magic through an RSS reader, which will keep you posted whenever I update. You can learn how to do this at my handy‐dandy RSS info page<ins>\u00a0<small>[<i>link removed</i>]</small></ins>. Aren’t I so helpful?<ins>\u00a0<small>[<i>not anymore</i>]</small></ins>"
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p>Thank you so much for reading <cite class=i>JoeRunner and Co.</cite> This is personally my favorite page I’ve made so far, and as I continue to draw this comic, they’ll continue to get better. And I’m so glad I’m finally sharing these with such a potentially wide group of people\u2060—even if I only end up updating, like, once a month."
+              "H": "<p>Thank you so much for reading <cite class=i>JoeRunner and Co.</cite> This is personally my favorite page I’ve made so far, and as I continue to draw this comic, they’ll continue to get better. And I’m so glad I’m finally sharing these with such a potentially wide group of people\u2060—even if I only end up updating, like, once a month."
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p><b>—\u2060<span translate=no>gabl</span></b>",
+              "H": "<p><b>—\u2060<span translate=no>gabl</span></b>",
               "t": "—\u2060gabl"
             },
             "mul": {

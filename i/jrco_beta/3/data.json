@@ -41,7 +41,7 @@
   },
   "transcript": [
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "The boy looks in the bathroom mirror in his pajamas, with unkempt hair and a pair of glasses on the counter. He looks kinda gross."
@@ -52,18 +52,18 @@
       }
     },
     {
-      "h": "meta/boy",
+      "H": "meta/boy",
       "d": {
         "en": {
-          "h": "<p>(<i>thinking</i>) Ugh."
+          "H": "<p>(<i>thinking</i>) Ugh."
         },
         "fr": {
-          "h": "<p>(<i>pensant</i>) Euh."
+          "H": "<p>(<i>pensant</i>) Euh."
         }
       }
     },
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "He runs his hand through his hair, causing it to become smooth almost magically. He confidently sets his glasses on his face."
@@ -74,7 +74,7 @@
       }
     },
     {
-      "h": "meta/bio",
+      "H": "meta/bio",
       "d": {
         "en": {
           "t": "JoeRunner\u00a0/ master of mornings"
@@ -85,7 +85,7 @@
       }
     },
     {
-      "h": "meta/tooltip",
+      "H": "meta/tooltip",
       "d": {
         "en": {
           "t": "first panel is based on the experience of looking at my drawings"
@@ -103,10 +103,10 @@
         {
           "p": {
             "en": {
-              "h": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "h": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },

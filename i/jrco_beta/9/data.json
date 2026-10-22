@@ -29,48 +29,48 @@
   },
   "transcript": [
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
-          "h": "<p>A computer screen shows a video game, <cite class=i>Hyper Galactic Battle Ducks\u00a0III</cite>. The player is <span class=m>tomatotoe07</span>, and the time is <time datetime=2021-05-27T07:57-0600>0757</time>. The player’s ship is shaped like a mouse cursor. They have a middling Physical bar, and a low Energy bar. There is a chat in the bottom left corner."
+          "H": "<p>A computer screen shows a video game, <cite class=i>Hyper Galactic Battle Ducks\u00a0III</cite>. The player is <span class=m>tomatotoe07</span>, and the time is <time datetime=2021-05-27T07:57-0600>0757</time>. The player’s ship is shaped like a mouse cursor. They have a middling Physical bar, and a low Energy bar. There is a chat in the bottom left corner."
         }
       }
     },
     {
-      "h": "meta/chat",
+      "H": "meta/chat",
       "d": {
         "en": {
-          "h": "<p><span class=\"u m\">brightful</span> On the move!</p><p><span class=\"u m\">brightful</span> Uh-oh!</p><p><span class=\"u m\">sharkles5</span> stop spamming defaults</p><p><span class=\"u m\">brightful</span> I'm using tilt controls!"
+          "H": "<p><span class=\"u m\">brightful</span> On the move!</p><p><span class=\"u m\">brightful</span> Uh-oh!</p><p><span class=\"u m\">sharkles5</span> stop spamming defaults</p><p><span class=\"u m\">brightful</span> I'm using tilt controls!"
         },
         "fr": {
-          "h": "<p><span class=\"u m\">plein_de_brillant</span> En mouvement\u00a0!</p><p><span class=\"u m\">plein_de_brillant</span> Oups\u00a0!</p><p><span class=\"u m\">sans_des_requin5</span> arrete de spammer ca</p><span class=\"u m\">plein_de_brillant</span> Je joue avec le gyroscope\u00a0!"
+          "H": "<p><span class=\"u m\">plein_de_brillant</span> En mouvement\u00a0!</p><p><span class=\"u m\">plein_de_brillant</span> Oups\u00a0!</p><p><span class=\"u m\">sans_des_requin5</span> arrete de spammer ca</p><span class=\"u m\">plein_de_brillant</span> Je joue avec le gyroscope\u00a0!"
         }
       }
     },
     {
-      "h": "jrco_beta/t_t",
+      "H": "jrco_beta/t_t",
       "d": {
         "en": {
-          "h": "<p>(<i>off-panel</i>) Ha! I berzork’d your rear energy shields!"
+          "H": "<p>(<i>off-panel</i>) Ha! I berzork’d your rear energy shields!"
         },
         "fr": {
-          "h": "<p>(<i>hors‐case</i>) Ha\u202f! J’ai berzorké tes boucliers d’énergie arrière\u202f!"
+          "H": "<p>(<i>hors‐case</i>) Ha\u202f! J’ai berzorké tes boucliers d’énergie arrière\u202f!"
         }
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "h": "<p>(<i>off-panel</i>) Perhaps\u00a0.\u00a0.\u00a0."
+          "H": "<p>(<i>off-panel</i>) Perhaps\u00a0.\u00a0.\u00a0."
         },
         "fr": {
-          "h": "<p>(<i>hors‐case</i>) Oui, peut‐être…"
+          "H": "<p>(<i>hors‐case</i>) Oui, peut‐être…"
         }
       }
     },
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "JoeRunner and T.T. are sitting next to each other at computers. JoeRunner looks very confident."
@@ -78,7 +78,7 @@
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
           "t": ".\u00a0.\u00a0.\u00a0but that got me enough reputation to access the Pan‐Galactic Gargle Blaster from the Retnia shop!"
@@ -90,7 +90,7 @@
       }
     },
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "JoeRunner is imagining his ship blowing up another, while his duck avatar gives a thumbs up."
@@ -98,7 +98,7 @@
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
           "t": "Say your last\u2060—"
@@ -109,7 +109,7 @@
       }
     },
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "JoeRunner raises his eyebrows, and a burst symbol appears above his head. It turns into a loading wheel with the text “Processing\u00a0.\u00a0.\u00a0.” as JoeRunner stares blankly at the screen."
@@ -117,26 +117,26 @@
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "h": "<p>(<i>off‐panel, loudly</i>) Shoot!"
+          "H": "<p>(<i>off‐panel, loudly</i>) Shoot!"
         },
         "fr": {
-          "h": "<p>(<i>hors‐case, fort</i>) Zut\u00a0!"
+          "H": "<p>(<i>hors‐case, fort</i>) Zut\u00a0!"
         }
       }
     },
     {
-      "h": "jrco_beta/t_t",
+      "H": "jrco_beta/t_t",
       "d": {
         "en": {
-          "h": "<p>(<i>looking over, raising eyebrow</i>) What, what is it?"
+          "H": "<p>(<i>looking over, raising eyebrow</i>) What, what is it?"
         }
       }
     },
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "T.T. raises his hand and gets an annoyed look."
@@ -144,23 +144,23 @@
       }
     },
     {
-      "h": "jrco_beta/t_t",
+      "H": "jrco_beta/t_t",
       "d": {
         "en": {
-          "h": "<p>Oh, heck, me too! <span class=m>ottohammr</span> again?"
+          "H": "<p>Oh, heck, me too! <span class=m>ottohammr</span> again?"
         }
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "h": "<p>Every day there are what, like 300\u00a0players and he keeps finding <em class=\"r u\">us</em>?"
+          "H": "<p>Every day there are what, like 300\u00a0players and he keeps finding <em class=\"r u\">us</em>?"
         }
       }
     },
     {
-      "h": "jrco_beta/t_t",
+      "H": "jrco_beta/t_t",
       "d": {
         "en": {
           "t": "I swear he’s just trolling us at this point."
@@ -168,7 +168,7 @@
       }
     },
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "A boy on another computer with long black hair and an unbuttoned polo shirt has a smug look on his face. He speaks in a textured font."
@@ -176,7 +176,7 @@
       }
     },
     {
-      "h": "meta/boy",
+      "H": "meta/boy",
       "d": {
         "en": {
           "t": "Ah, guilty as charged. It is just so funny when you guys rage."
@@ -184,7 +184,7 @@
       }
     },
     {
-      "h": "meta/bio",
+      "H": "meta/bio",
       "d": {
         "en": {
           "t": "Harry\u00a0/ gamer of the highest order"
@@ -192,28 +192,28 @@
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "h": "<p>(<i>surprised</i>) Harry, <em class=\"r u\">you’ve</em> been <span class=m>ottohammr</span> this whole time?"
+          "H": "<p>(<i>surprised</i>) Harry, <em class=\"r u\">you’ve</em> been <span class=m>ottohammr</span> this whole time?"
         }
       }
     },
     {
-      "h": "jrco_beta/harry_mahan",
+      "H": "jrco_beta/harry_mahan",
       "d": {
         "en": {
           "t": "The last four years, anyway. And now you are approximately 1.39729\u00a0×\u00a010¹² molecules of space debris.",
-          "h": "<p>The last four years, anyway. And now you are approximately 1.39729\u00a0×\u00a010<sup>12</sup> molecules of space debris."
+          "H": "<p>The last four years, anyway. And now you are approximately 1.39729\u00a0×\u00a010<sup>12</sup> molecules of space debris."
         },
         "fr": {
           "t": "Pour ces quatres dernières années, de toute façon. Et maintenant vous êtes approximativement 1,39729\u00a0×\u00a010¹² molécules de débris spatiaux.",
-          "h": "<p>Pour ces quatres dernières années, de toute façon. Et maintenant vous êtes approximativement 1,39729\u00a0×\u00a010<sup>12</sup> molécules de débris spatiaux."
+          "H": "<p>Pour ces quatres dernières années, de toute façon. Et maintenant vous êtes approximativement 1,39729\u00a0×\u00a010<sup>12</sup> molécules de débris spatiaux."
         }
       }
     },
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "T.T. and Harry dap each other up."
@@ -221,7 +221,7 @@
       }
     },
     {
-      "h": "jrco_beta/harry_mahan",
+      "H": "jrco_beta/harry_mahan",
       "d": {
         "en": {
           "t": "But, my friends, it was quite an honorable battle."
@@ -229,13 +229,13 @@
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "h": "<p>(<i>saluting</i>) Farewell, Captain <span class=m>tomatotoe07</span>. Farewell."
+          "H": "<p>(<i>saluting</i>) Farewell, Captain <span class=m>tomatotoe07</span>. Farewell."
         },
         "fr": {
-          "h": "<p>(<i>salué</i>) Au revoir, capitaine <span class=m>tomate_taxidermiste_07</span>. Au revoir.",
+          "H": "<p>(<i>salué</i>) Au revoir, capitaine <span class=m>tomate_taxidermiste_07</span>. Au revoir.",
           "comment": "I don’t really know what to do here mdrrrrrr"
         }
       }
@@ -248,55 +248,55 @@
         {
           "p": {
             "en": {
-              "h": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "h": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p>Alas, poor <span class=m>tomatotoe07</span>."
+              "H": "<p>Alas, poor <span class=m>tomatotoe07</span>."
             },
             "fr": {
-              "h": "<p>Hélas\u202f! pauvre <span class=m>tomate_taxidermiste_07</span>."
+              "H": "<p>Hélas\u202f! pauvre <span class=m>tomate_taxidermiste_07</span>."
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p>This page only took a month to come out instead of, like, five. There’s so much that I want to get to, and it’s a bit upsetting to me that I’ve only gotten this far, with <i><cite>JoeRunner and Co.</cite></i>’s first anniversary being in two days (<time datetime=2023-04-01>April\u00a01</time>). This page especially took a lot of effort\u2060—the most yet\u2060—due to its length."
+              "H": "<p>This page only took a month to come out instead of, like, five. There’s so much that I want to get to, and it’s a bit upsetting to me that I’ve only gotten this far, with <i><cite>JoeRunner and Co.</cite></i>’s first anniversary being in two days (<time datetime=2023-04-01>April\u00a01</time>). This page especially took a lot of effort\u2060—the most yet\u2060—due to its length."
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p>Only about 60% of the draft I wrote back on\u00a0.\u00a0.\u00a0. <i>checks</i> <em class=nw><time datetime=2021-05-25>May\u00a025, 2021</time>?</em> I really <em>am</em> behind. <i>ahem</i> Only about 60% of the original draft is in this final version. None of these pages so far are super faithful to that draft\u2060—I wrote them when I was around 14\u00a0years old, and of course my dialogue has changed a lot in two years of my teenage life. It means the same thing, but it’s expanded and, dare I say, funnier. Assuming it’s funny at all."
+              "H": "<p>Only about 60% of the draft I wrote back on\u00a0.\u00a0.\u00a0. <i>checks</i> <em class=nw><time datetime=2021-05-25>May\u00a025, 2021</time>?</em> I really <em>am</em> behind. <i>ahem</i> Only about 60% of the original draft is in this final version. None of these pages so far are super faithful to that draft\u2060—I wrote them when I was around 14\u00a0years old, and of course my dialogue has changed a lot in two years of my teenage life. It means the same thing, but it’s expanded and, dare I say, funnier. Assuming it’s funny at all."
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p>I have 30\u00a0more pages drafted out, and while undoubtedly not all of it will stay, I’m excited to get through them. I’ve decided that I can get a comic done every week, posted on Thursday, while still doing school. So I’ll try it, and we’ll see how it goes."
+              "H": "<p>I have 30\u00a0more pages drafted out, and while undoubtedly not all of it will stay, I’m excited to get through them. I’ve decided that I can get a comic done every week, posted on Thursday, while still doing school. So I’ll try it, and we’ll see how it goes."
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p>Once again, I so sincerely appreciate everyone who reads my silly, medium–low quality webcomic. I hope that you’ve enjoyed them regardless."
+              "H": "<p>Once again, I so sincerely appreciate everyone who reads my silly, medium–low quality webcomic. I hope that you’ve enjoyed them regardless."
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p><b>—\u2060Gabriel\u00a0/ <span translate=no>gabl</span></b>",
+              "H": "<p><b>—\u2060Gabriel\u00a0/ <span translate=no>gabl</span></b>",
               "t": "—\u2060Gabriel\u00a0/ gabl"
             },
             "mul": {

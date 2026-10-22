@@ -3,17 +3,17 @@
     "name": {
       "en": {
         "t": "the Nu Html Checker",
-        "h": "the <cite>Nu Html Checker</cite>"
+        "H": "the <cite>Nu Html Checker</cite>"
       },
       "fr": {
         "t": "le Nu Html Checker",
-        "h": "le <cite>Nu Html Checker</cite>"
+        "H": "le <cite>Nu Html Checker</cite>"
       }
     },
     "format": {
       "en": {
         "t": "HTML5",
-        "h": "<abbr title=\"Hypertext Markup Language\u00a05\">HTML5</abbr>"
+        "H": "<abbr title=\"Hypertext Markup Language\u00a05\">HTML5</abbr>"
       },
       "fr": {
         "e": "en"
@@ -25,17 +25,17 @@
     "name": {
       "en": {
         "t": "the W3C\u00a0Markup Validation Service",
-        "h": "the <cite><abbr title=\"World Wide Web Consortium\">W3C</abbr>\u00a0Markup Validation Service</cite>"
+        "H": "the <cite><abbr title=\"World Wide Web Consortium\">W3C</abbr>\u00a0Markup Validation Service</cite>"
       },
       "fr": {
         "t": "le W3C\u00a0Markup Validation Service",
-        "h": "le <cite><abbr title=\"World Wide Web Consortium\">W3C</abbr>\u00a0Markup Validation Service</cite>"
+        "H": "le <cite><abbr title=\"World Wide Web Consortium\">W3C</abbr>\u00a0Markup Validation Service</cite>"
       }
     },
     "format": {
       "en": {
         "t": "HTML5",
-        "h": "<abbr title=\"Hypertext Markup Language\u00a05\">HTML5</abbr>"
+        "H": "<abbr title=\"Hypertext Markup Language\u00a05\">HTML5</abbr>"
       },
       "fr": {
         "e": "en"

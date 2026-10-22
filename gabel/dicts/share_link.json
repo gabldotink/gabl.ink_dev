@@ -37,7 +37,7 @@
     "name": {
       "en": {
         "t": "X",
-        "h": "<cite>X</cite>"
+        "H": "<cite>X</cite>"
       },
       "mul": {
         "e": "en"
@@ -58,7 +58,7 @@
     "name": {
       "en": {
         "t": "Reddit",
-        "h": "<cite>Reddit</cite>"
+        "H": "<cite>Reddit</cite>"
       },
       "mul": {
         "e": "en"
@@ -76,7 +76,7 @@
     "name": {
       "en": {
         "t": "Facebook",
-        "h": "<cite>Facebook</cite>"
+        "H": "<cite>Facebook</cite>"
       },
       "mul": {
         "e": "en"
@@ -91,7 +91,7 @@
     "name": {
       "en": {
         "t": "Telegram",
-        "h": "<cite>Telegram</cite>"
+        "H": "<cite>Telegram</cite>"
       },
       "mul": {
         "e": "en"
@@ -109,7 +109,7 @@
     "name": {
       "en": {
         "t": "Bluesky",
-        "h": "<cite>Bluesky</cite>"
+        "H": "<cite>Bluesky</cite>"
       },
       "mul": {
         "e": "en"
@@ -124,7 +124,7 @@
     "name": {
       "en": {
         "t": "WhatsApp",
-        "h": "<cite>WhatsApp</cite>"
+        "H": "<cite>WhatsApp</cite>"
       },
       "mul": {
         "e": "en"
@@ -139,7 +139,7 @@
     "name": {
       "en": {
         "t": "Mastodon",
-        "h": "<cite>Mastodon</cite>"
+        "H": "<cite>Mastodon</cite>"
       },
       "mul": {
         "e": "en"
@@ -157,7 +157,7 @@
     "name": {
       "en": {
         "t": "Threads",
-        "h": "<cite>Threads</cite>"
+        "H": "<cite>Threads</cite>"
       },
       "mul": {
         "e": "en"
@@ -175,7 +175,7 @@
     "name": {
       "en": {
         "t": "Truth Social",
-        "h": "<cite>Truth Social</cite>"
+        "H": "<cite>Truth Social</cite>"
       },
       "mul": {
         "e": "en"
@@ -193,7 +193,7 @@
     "name": {
       "en": {
         "t": "Gab",
-        "h": "<cite>Gab</cite>"
+        "H": "<cite>Gab</cite>"
       },
       "mul": {
         "e": "en"
@@ -211,15 +211,15 @@
     "name": {
       "ru": {
         "t": "ВКонтакте",
-        "h": "<cite>ВКонтакте</cite>"
+        "H": "<cite>ВКонтакте</cite>"
       },
       "ru-Latn": {
         "t": "VKontakte",
-        "h": "<cite>VKontakte</cite>"
+        "H": "<cite>VKontakte</cite>"
       },
       "mul": {
         "t": "VK",
-        "h": "<cite>VK</cite>"
+        "H": "<cite>VK</cite>"
       }
     },
     "base": "https://vk.ru/share.php?",

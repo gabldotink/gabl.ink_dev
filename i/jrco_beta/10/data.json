@@ -26,7 +26,7 @@
   },
   "transcript": [
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "JoeRunner, T.T., and Harry are sitting at a table. JoeRunner looks up from a book as Harry speaks, pointing at JoeRunner and T.T."
@@ -34,7 +34,7 @@
       }
     },
     {
-      "h": "jrco_beta/harry_mahan",
+      "H": "jrco_beta/harry_mahan",
       "d": {
         "en": {
           "t": "Oh, hey, I heard from my father that your class is getting a new kid."
@@ -45,7 +45,7 @@
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
           "t": "From Mr.\u00a0Mahan?"
@@ -56,7 +56,7 @@
       }
     },
     {
-      "h": "jrco_beta/t_t",
+      "H": "jrco_beta/t_t",
       "d": {
         "en": {
           "t": "What’s his name?"
@@ -67,7 +67,7 @@
       }
     },
     {
-      "h": "jrco_beta/harry_mahan",
+      "H": "jrco_beta/harry_mahan",
       "d": {
         "en": {
           "t": "She’s a girl, actually. She just moved from France."
@@ -78,18 +78,18 @@
       }
     },
     {
-      "h": "jrco_beta/t_t",
+      "H": "jrco_beta/t_t",
       "d": {
         "en": {
-          "h": "<p>(<i>raising eyebrows</i>) Wait\u00a0.\u00a0.\u00a0. They have <em class=\"r u\">girls</em> in <em class=\"r u\">France</em>?"
+          "H": "<p>(<i>raising eyebrows</i>) Wait\u00a0.\u00a0.\u00a0. They have <em class=\"r u\">girls</em> in <em class=\"r u\">France</em>?"
         }
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "h": "<p>(<i>weirded out</i>) Yeah, they\u2060—<em>what</em>?"
+          "H": "<p>(<i>weirded out</i>) Yeah, they\u2060—<em>what</em>?"
         }
       }
     }
@@ -101,10 +101,10 @@
         {
           "p": {
             "en": {
-              "h": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "h": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },

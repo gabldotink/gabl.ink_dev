@@ -37,7 +37,7 @@
   },
   "transcript": [
     {
-      "h": "meta/out_of_frame",
+      "H": "meta/out_of_frame",
       "d": {
         "en": {
           "t": "Joseph?"
@@ -48,7 +48,7 @@
       }
     },
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "JoeRunner looks over the back of the chair."
@@ -56,7 +56,7 @@
       }
     },
     {
-      "h": "meta/sound_effect",
+      "H": "meta/sound_effect",
       "d": {
         "en": {
           "t": "?"
@@ -67,7 +67,7 @@
       }
     },
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "A tired‐looking woman with long hair and glasses is there. She speaks in the same font as JoeRunner."
@@ -75,7 +75,7 @@
       }
     },
     {
-      "h": "meta/woman",
+      "H": "meta/woman",
       "d": {
         "en": {
           "t": "What are you doing up so early?"
@@ -86,7 +86,7 @@
       }
     },
     {
-      "h": "meta/bio",
+      "H": "meta/bio",
       "d": {
         "en": {
           "t": "Eden Runner\u00a0/ heavy sleeper and mom"
@@ -94,7 +94,7 @@
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
           "t": "No, I’m pretty sure you just take a while to wake up."
@@ -102,18 +102,18 @@
       }
     },
     {
-      "h": "jrco_beta/eden_runner",
+      "H": "jrco_beta/eden_runner",
       "d": {
         "en": {
-          "h": "<p>(<i>smiling</i>) <i>Heh.</i> Yeah, I know."
+          "H": "<p>(<i>smiling</i>) <i>Heh.</i> Yeah, I know."
         },
         "fr": {
-          "h": "<p>(<i>souriant</i>) <i>Heh.</i> Ouais, je sais."
+          "H": "<p>(<i>souriant</i>) <i>Heh.</i> Ouais, je sais."
         }
       }
     },
     {
-      "h": "meta/tooltip",
+      "H": "meta/tooltip",
       "d": {
         "en": {
           "t": "JoeRunner inherited having no nose from his dad"
@@ -128,10 +128,10 @@
         {
           "p": {
             "en": {
-              "h": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "h": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },

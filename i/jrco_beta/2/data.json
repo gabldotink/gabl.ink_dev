@@ -33,7 +33,7 @@
   },
   "transcript": [
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "There’s a view of the bed next to the desk now. As the alarm clock audibly beeps, a hand reaches out from a lump under the covers and smacks the alarm clock on the snooze button on its side, which causes it to slide off the desk. After it clatters, there are sounds of a car crash, a man screaming in pain (the Wilhelm scream), and a cat shrieking. An exasperated young male voice speaks."
@@ -44,7 +44,7 @@
       }
     },
     {
-      "h": "meta/boy",
+      "H": "meta/boy",
       "d": {
         "en": {
           "t": "I really need to get a new snooze button."
@@ -62,20 +62,20 @@
         {
           "p": {
             "en": {
-              "h": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "h": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },
         {
           "p": {
             "en": {
-              "h": "<p>This one is laminated.\u00a0[<i>sic</i>]"
+              "H": "<p>This one is laminated.\u00a0[<i>sic</i>]"
             },
             "fr": {
-              "h": "<p>Cette vidéo est aimée.\u00a0[<i>sic</i>]"
+              "H": "<p>Cette vidéo est aimée.\u00a0[<i>sic</i>]"
             }
           }
         },
@@ -92,10 +92,10 @@
         {
           "p": {
             "en": {
-              "h": "<p>Aside from page\u00a04, I don’t have another animated page written for at least the next thirty‐or‐so pages, and there probably won’t be many (or any) more until the end of <cite class=i>Edulympiad</cite>. This one and page\u00a04 are animated mostly to better get the jokes across, and since I am incredibly lazy, if I don’t need to animate them for that purpose I probably won’t."
+              "H": "<p>Aside from page\u00a04, I don’t have another animated page written for at least the next thirty‐or‐so pages, and there probably won’t be many (or any) more until the end of <cite class=i>Edulympiad</cite>. This one and page\u00a04 are animated mostly to better get the jokes across, and since I am incredibly lazy, if I don’t need to animate them for that purpose I probably won’t."
             },
             "fr": {
-              "h": "<p>Excepter page\u00a04, je n’ai pas une autre page animée écrit depuis au moins de les troixante pages prochaines, et il n’y a pas principalement beaucoup (ou du tout) des plus avant la fin d’<cite class=i>Edulympiade</cite>. Celui‐ci et page\u00a04 sont animées primarement passer les gags mieux, et parce que je suis incroyablement paresseux, si je ne dois pas les animate pour ce objectif, je ne fais pas probalement."
+              "H": "<p>Excepter page\u00a04, je n’ai pas une autre page animée écrit depuis au moins de les troixante pages prochaines, et il n’y a pas principalement beaucoup (ou du tout) des plus avant la fin d’<cite class=i>Edulympiade</cite>. Celui‐ci et page\u00a04 sont animées primarement passer les gags mieux, et parce que je suis incroyablement paresseux, si je ne dois pas les animate pour ce objectif, je ne fais pas probalement."
             }
           }
         }

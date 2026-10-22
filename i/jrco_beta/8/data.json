@@ -26,15 +26,15 @@
   },
   "transcript": [
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
-          "h": "<p>The boy with black hair watches as JoeRunner walks out of a minivan with a canoe strapped to the top. The boy wears a T‐shirt reading <i>77</i> and shorts, has constant dropped eyebrows, and speaks in an all‐lowercase sans‐serif font."
+          "H": "<p>The boy with black hair watches as JoeRunner walks out of a minivan with a canoe strapped to the top. The boy wears a T‐shirt reading <i>77</i> and shorts, has constant dropped eyebrows, and speaks in an all‐lowercase sans‐serif font."
         }
       }
     },
     {
-      "h": "meta/boy",
+      "H": "meta/boy",
       "d": {
         "en": {
           "t": "Oh, finally."
@@ -45,7 +45,7 @@
       }
     },
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "JoeRunner walks up to the boy."
@@ -56,7 +56,7 @@
       }
     },
     {
-      "h": "meta/boy",
+      "H": "meta/boy",
       "d": {
         "en": {
           "t": "Hey, JoeRunner, you made it! And it only took, like, two decades!"
@@ -67,7 +67,7 @@
       }
     },
     {
-      "h": "jrco_beta/joerunner",
+      "H": "jrco_beta/joerunner",
       "d": {
         "en": {
           "t": "Yeah, there was lots of traffic on North\u00a01 today."
@@ -78,7 +78,7 @@
       }
     },
     {
-      "h": "meta/none",
+      "H": "meta/none",
       "d": {
         "en": {
           "t": "The boy starts walking to the door."
@@ -86,7 +86,7 @@
       }
     },
     {
-      "h": "meta/bio",
+      "H": "meta/bio",
       "d": {
         "en": {
           "t": "T.T.\u00a0/ one heck of a guy"
@@ -97,13 +97,13 @@
       }
     },
     {
-      "h": "jrco_beta/t_t",
+      "H": "jrco_beta/t_t",
       "d": {
         "en": {
-          "h": "<p>Yeah, yeah, excuses, excuses.<p>Come on! We’re only gonna have time for six games of <cite class=i>Hyper Galactic Battle Ducks\u00a0III</cite>! <em>Six!</em>"
+          "H": "<p>Yeah, yeah, excuses, excuses.<p>Come on! We’re only gonna have time for six games of <cite class=i>Hyper Galactic Battle Ducks\u00a0III</cite>! <em>Six!</em>"
         },
         "fr": {
-          "h": "<p>Ouais, ouais, je veux pas tes excuses.<p>Allez\u00a0! Nous aurons seulement de temps pour six parties de <cite class=i>Hyper Galactic Battle Ducks\u00a0III</cite>\u00a0! Seulement six\u00a0!"
+          "H": "<p>Ouais, ouais, je veux pas tes excuses.<p>Allez\u00a0! Nous aurons seulement de temps pour six parties de <cite class=i>Hyper Galactic Battle Ducks\u00a0III</cite>\u00a0! Seulement six\u00a0!"
         }
       }
     }
@@ -115,10 +115,10 @@
         {
           "p": {
             "en": {
-              "h": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "h": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "H": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },

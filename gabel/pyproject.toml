@@ -2,7 +2,7 @@
 
 [project]
 name="gabel"
-description="Gabel, the static site generator for gabl.ink"
+description="Gabel, the static site generator for gabl.ink."
 version="0"
 requires-python=">=3.10"
 dependencies=[
