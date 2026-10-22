@@ -6,8 +6,8 @@
       },
       "fr": {
         "t": "États‐Unis",
-        "A": "États-Unis",
-        "Le": "A"
+        "x": "États-Unis",
+        "Le": "x"
       },
       "es": {
         "A": "Estados Unidos"
@@ -52,8 +52,8 @@
       },
       "fr": {
         "t": "Royaume‐Uni",
-        "A": "Royaume-Uni",
-        "Le": "A"
+        "x": "Royaume-Uni",
+        "Le": "x"
       },
       "es": {
         "A": "Reino Unido"
