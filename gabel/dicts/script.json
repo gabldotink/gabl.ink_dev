@@ -48,11 +48,6 @@
   },
   "jpan": {
     "dir": "ltr",
-    "alias_of": [
-      "hani",
-      "hira",
-      "kana"
-    ],
     "name": {
       "ja": {
         "t": "漢字、ひらがな、カタカナ"
@@ -83,6 +78,12 @@
       "ja": {
         "t": "ひらがな"
       },
+      "ja-Hira": {
+        "e": "ja"
+      },
+      "ja-Hrkt": {
+        "e": "ja"
+      },
       "ja-Hani": {
         "t": "平仮名"
       },
@@ -103,6 +104,12 @@
       "ja": {
         "t": "カタカナ"
       },
+      "ja-Kana": {
+        "e": "ja"
+      },
+      "ja-Hrkt": {
+        "e": "ja"
+      },
       "ja-Hani": {
         "t": "片仮名"
       },
@@ -122,10 +129,6 @@
   },
   "kore": {
     "dir": "ltr",
-    "alias_of": [
-      "hang",
-      "hani"
-    ],
     "name": {
       "ko": {
         "t": "한글과 한자"
@@ -271,10 +274,6 @@
   },
   "hrkt": {
     "dir": "ltr",
-    "alias_of": [
-      "hira",
-      "kana"
-    ],
     "name": {
       "ja": {
         "t": "ひらがなとカタカナ"

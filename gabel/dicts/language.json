@@ -19,6 +19,9 @@
       "ja-Hira": {
         "t": "えいご"
       },
+      "ja-Hrkt": {
+        "e": "ja-Hira"
+      },
       "ja-Latn": {
         "t": "Eigo"
       }
@@ -120,6 +123,12 @@
       "ja": {
         "t": "トキポナ"
       },
+      "ja-Kana": {
+        "e": "ja"
+      },
+      "ja-Hrkt": {
+        "e": "ja"
+      },
       "ja-Latn": {
         "t": "Tokipona"
       }
@@ -150,6 +159,9 @@
       },
       "ja-Hira": {
         "t": "にほんご"
+      },
+      "ja-Hrkt": {
+        "e": "ja-Hira"
       },
       "ja-Latn": {
         "t": "Nihongo"
@@ -182,6 +194,9 @@
       },
       "ja-Hira": {
         "t": "ちゅうごくご"
+      },
+      "ja-Hrkt": {
+        "e": "ja-Hira"
       },
       "ja-Latn-hepburn": {
         "t": "Chūgokugo"
@@ -228,6 +243,12 @@
       },
       "ja": {
         "t": "エスペラント"
+      },
+      "ja-Kana": {
+        "e": "ja"
+      },
+      "ja-Hrkt": {
+        "e": "ja"
       },
       "ja-Latn": {
         "t": "Esuperanto"
