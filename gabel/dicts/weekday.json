@@ -4,13 +4,13 @@
     {
       "name": {
         "en": {
-          "t": "Monday"
+          "t": "Mon"
         },
         "fr": {
           "t": "lundi"
         },
         "eo": {
-          "t": "lundo"
+          "t": "lund"
         },
         "es": {
           "t": "lunes"
@@ -20,13 +20,13 @@
     {
       "name": {
         "en": {
-          "t": "Tuesday"
+          "t": "Tues"
         },
         "fr": {
           "t": "mardi"
         },
         "eo": {
-          "t": "mardo"
+          "t": "mard"
         },
         "es": {
           "t": "martes"
@@ -36,13 +36,13 @@
     {
       "name": {
         "en": {
-          "t": "Wednesday"
+          "t": "Wednes"
         },
         "fr": {
           "t": "mercredi"
         },
         "eo": {
-          "t": "merkredo"
+          "t": "merkred"
         },
         "es": {
           "t": "miércoles"
@@ -52,13 +52,13 @@
     {
       "name": {
         "en": {
-          "t": "Thursday"
+          "t": "Thurs"
         },
         "fr": {
           "t": "jeudi"
         },
         "eo": {
-          "t": "ĵaŭdo"
+          "t": "ĵaŭd"
         },
         "es": {
           "t": "jueves"
@@ -68,13 +68,13 @@
     {
       "name": {
         "en": {
-          "t": "Friday"
+          "t": "Fri"
         },
         "fr": {
           "t": "vendredi"
         },
         "eo": {
-          "t": "vendredo"
+          "t": "vendred"
         },
         "es": {
           "t": "viernes"
@@ -84,13 +84,13 @@
     {
       "name": {
         "en": {
-          "t": "Saturday"
+          "t": "Satur"
         },
         "fr": {
           "t": "samedi"
         },
         "eo": {
-          "t": "sabato"
+          "t": "sabat"
         },
         "es": {
           "t": "sábado"
@@ -100,13 +100,13 @@
     {
       "name": {
         "en": {
-          "t": "Sunday"
+          "t": "Sun"
         },
         "fr": {
           "t": "dimanche"
         },
         "eo": {
-          "t": "dimanĉo"
+          "t": "dimanĉ"
         },
         "es": {
           "t": "domingo"
