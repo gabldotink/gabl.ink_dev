@@ -213,6 +213,10 @@
         "t": "ВКонтакте",
         "h": "<cite>ВКонтакте</cite>"
       },
+      "ru-Latn": {
+        "t": "VKontakte",
+        "h": "<cite>VKontakte</cite>"
+      },
       "mul": {
         "t": "VK",
         "h": "<cite>VK</cite>"

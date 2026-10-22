@@ -3,15 +3,18 @@
     "spdx": "CC-BY-4.0",
     "title": {
       "en-US": {
-        "t": "Creative Commons Attribution\u00a04.0 International Public License"
+        "t": "Creative Commons Attribution\u00a04.0 International Public License",
+        "l": "Creative Commons Attribution~4.0 International Public License"
       },
       "fr": {
-        "t": "Publique licence Creative Commons Attribution\u00a04.0 International"
+        "t": "Publique licence Creative Commons Attribution\u00a04.0 International",
+        "l": "Publique licence Creative Commons Attribution~4.0 International"
       }
     },
     "abbr": {
       "mul": {
-        "t": "CC\u00a0BY\u00a04.0"
+        "t": "CC\u00a0BY\u00a04.0",
+        "l": "CC~BY~4.0"
       }
     },
     "url": {
@@ -34,15 +37,18 @@
     "spdx": "CC-BY-SA-4.0",
     "title": {
       "en-US": {
-        "t": "Creative Commons Attribution‐ShareAlike\u00a04.0 International Public License"
+        "t": "Creative Commons Attribution‐ShareAlike\u00a04.0 International Public License",
+        "l": "Creative Commons Attribution-ShareAlike~4.0 International Public License"
       },
       "fr": {
-        "t": "Publique licence Creative Commons Attribution\u00a0‐ Partage dans les mêmes conditions\u00a04.0 International"
+        "t": "Publique licence Creative Commons Attribution\u00a0‐ Partage dans les mêmes conditions\u00a04.0 International",
+        "l": "Publique licence Creative Commons Attribution~- Partage dans les mêmes conditions~4.0 International"
       }
     },
     "abbr": {
       "mul": {
-        "t": "CC\u00a0BY‐SA\u00a04.0"
+        "t": "CC\u00a0BY‑SA\u00a04.0",
+        "l": "CC~\\mbox{BY-SA}~4.0"
       }
     },
     "url": {
@@ -64,15 +70,18 @@
     "spdx": "CC-BY-NC-SA-4.0",
     "title": {
       "en-US": {
-        "t": "Creative Commons Attribution‐NonCommercial‐ShareAlike\u00a04.0 International Public License"
+        "t": "Creative Commons Attribution‐NonCommercial‐ShareAlike\u00a04.0 International Public License",
+        "l": "Creative Commons Attribution-NonCommercial-ShareAlike~4.0 International Public License"
       },
       "fr": {
-        "t": "Publique licence Creative Commons Attribution\u00a0‐ Utilisation non commerciale\u00a0‐ Partage dans les mêmes conditions\u00a04.0 International"
+        "t": "Publique licence Creative Commons Attribution\u00a0‐ Utilisation non commerciale\u00a0‐ Partage dans les mêmes conditions\u00a04.0 International",
+        "l": "Publique license Creative Commons Attribution~- Utilisation non commerciale~- Partage dans les mêmes conditions~4.0 International"
       }
     },
     "abbr": {
       "mul": {
-        "t": "CC\u00a0BY‑NC‑SA\u00a04.0"
+        "t": "CC\u00a0BY‑NC‑SA\u00a04.0",
+        "l": "CC~\\mbox{BY-NC-SA}~4.0"
       }
     },
     "url": {
@@ -91,15 +100,17 @@
     "spdx": "CC0-1.0",
     "title": {
       "en-US": {
-        "t": "CC0\u00a01.0 Universal"
+        "t": "CC0\u00a01.0 Universal",
+        "l": "CC0~1.0 Universal"
       },
       "fr": {
-        "t": "CC0\u00a01.0 Universal"
+        "e": "en-US"
       }
     },
     "abbr": {
       "mul": {
-        "t": "CC0\u00a01.0"
+        "t": "CC0\u00a01.0",
+        "l": "CC0~1.0"
       }
     },
     "url": {
