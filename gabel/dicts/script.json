@@ -3,13 +3,13 @@
     "dir": "ltr",
     "name": {
       "en": {
-        "t": "Latin script"
+        "A": "Latin script"
       },
       "fr": {
         "t": "écriture latine"
       },
       "es": {
-        "t": "escritura latina"
+        "A": "escritura latina"
       }
     },
     "alt": [
@@ -17,7 +17,7 @@
         "lang": "ja",
         "name": {
           "en": {
-            "t": "Romaji"
+            "A": "Romaji"
           },
           "ja": {
             "t": "ローマ字"
@@ -38,8 +38,11 @@
       "ru": {
         "t": "кириллица"
       },
+      "ru-Latn": {
+        "t": "kiríllica"
+      },
       "en": {
-        "t": "Cyrillic script"
+        "A": "Cyrillic script"
       },
       "fr": {
         "t": "écriture cyrillique"
@@ -62,13 +65,13 @@
         "t": "かんじ、ひらがな、カタカナ"
       },
       "ja-Latn-hepburn": {
-        "t": "kanji, hiragana, katakana"
+        "A": "kanji, hiragana, katakana"
       },
       "en": {
-        "t": "kanji, hiragana, and katakana"
+        "A": "kanji, hiragana, and katakana"
       },
       "fr": {
-        "t": "kanji, hiragana et katakana"
+        "A": "kanji, hiragana et katakana"
       }
     }
   },
@@ -88,7 +91,7 @@
         "t": "平仮名"
       },
       "ja-Latn": {
-        "t": "hiragana"
+        "A": "hiragana"
       },
       "en": {
         "e": "ja-Latn"
@@ -117,7 +120,7 @@
         "t": "かたかな"
       },
       "ja-Latn": {
-        "t": "katakana"
+        "A": "katakana"
       },
       "en": {
         "e": "ja-Latn"
@@ -134,11 +137,11 @@
         "t": "한글과 한자"
       },
       "en": {
-        "t": "hangul and hanja",
+        "A": "hangul and hanja",
         "H": "hangul and <i lang=ko-Latn>hanja</i>"
       },
       "fr": {
-        "t": "hangeul et hanja",
+        "A": "hangeul et hanja",
         "H": "<i lang=ko-Latn>hangeul</i> et <i lang=ko-Latn>hanja</i>"
       }
     }
@@ -153,10 +156,10 @@
         "t": "韓㐎"
       },
       "ko-Latn": {
-        "t": "hangeul"
+        "A": "hangeul"
       },
       "en": {
-        "t": "hangul"
+        "A": "hangul"
       },
       "fr": {
         "te": "ko-Latn",
@@ -168,10 +171,10 @@
     "dir": "ltr",
     "name": {
       "en": {
-        "t": "Traditional Han script"
+        "A": "Traditional Han script"
       },
       "fr": {
-        "t": "sinogrammes traditionnels"
+        "A": "sinogrammes traditionnels"
       }
     },
     "alt": [
@@ -179,10 +182,10 @@
         "lang": "zh",
         "name": {
           "en": {
-            "t": "Traditional"
+            "A": "Traditional"
           },
           "fr": {
-            "t": "traditionnel"
+            "A": "traditionnel"
           }
         }
       }
@@ -192,10 +195,10 @@
     "dir": "ltr",
     "name": {
       "en": {
-        "t": "Simplified Han script"
+        "A": "Simplified Han script"
       },
       "fr": {
-        "t": "sinogrammes simplifiés"
+        "A": "sinogrammes simplifiés"
       }
     },
     "alt": [
@@ -203,10 +206,10 @@
         "lang": "zh",
         "name": {
           "en": {
-            "t": "Simplified"
+            "A": "Simplified"
           },
           "fr": {
-            "t": "simplifié"
+            "A": "simplifié"
           }
         }
       }
@@ -216,10 +219,10 @@
     "dir": "ltr",
     "name": {
       "en": {
-        "t": "Han script"
+        "A": "Han script"
       },
       "fr": {
-        "t": "sinogrammes"
+        "A": "sinogrammes"
       },
       "zh-Hant": {
         "t": "漢字"
@@ -234,7 +237,7 @@
         "t": "かんじ"
       },
       "ja-Latn-hepburn": {
-        "t": "kanji"
+        "A": "kanji"
       },
       "ko": {
         "t": "한자"
@@ -243,7 +246,7 @@
         "e": "zh-Hant"
       },
       "ko-Latn": {
-        "t": "hanja"
+        "A": "hanja"
       }
     },
     "alt": [
@@ -251,7 +254,7 @@
         "lang": "ja",
         "name": {
           "en": {
-            "t": "kanji"
+            "A": "kanji"
           },
           "fr": {
             "e": "en"
@@ -262,7 +265,7 @@
         "lang": "ko",
         "name": {
           "en": {
-            "t": "hanja",
+            "A": "hanja",
             "H": "<i lang=ko-Latn>hanja</i>"
           },
           "fr": {
@@ -282,13 +285,13 @@
         "t": "ひらがなとかたかな"
       },
       "ja-Latn": {
-        "t": "hiragana to katakana"
+        "A": "hiragana to katakana"
       },
       "en": {
-        "t": "hiragana and katakana"
+        "A": "hiragana and katakana"
       },
       "fr": {
-        "t": "hiragana et katakana"
+        "A": "hiragana et katakana"
       }
     }
   }

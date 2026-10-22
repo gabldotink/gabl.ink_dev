@@ -2,16 +2,16 @@
   "en": {
     "name": {
       "en": {
-        "t": "English"
+        "A": "English"
       },
       "fr": {
-        "t": "anglais"
+        "A": "anglais"
       },
       "es": {
         "t": "inglés"
       },
       "eo": {
-        "t": "la angla"
+        "A": "la angla"
       },
       "ja": {
         "t": "英語"
@@ -23,7 +23,7 @@
         "e": "ja-Hira"
       },
       "ja-Latn": {
-        "t": "Eigo"
+        "A": "Eigo"
       }
     },
     "script": "latn"
@@ -31,7 +31,7 @@
   "fr": {
     "name": {
       "en": {
-        "t": "French"
+        "A": "French"
       },
       "fr": {
         "t": "français"
@@ -40,7 +40,7 @@
         "t": "francés"
       },
       "eo": {
-        "t": "la franco"
+        "A": "la franco"
       },
       "ja": {
         "t": "フランス語"
@@ -49,7 +49,7 @@
         "t": "フランスご"
       },
       "ja-Latn": {
-        "t": "Furansugo"
+        "A": "Furansugo"
       }
     },
     "script": "latn"
@@ -60,13 +60,13 @@
         "t": "español"
       },
       "en": {
-        "t": "Spanish"
+        "A": "Spanish"
       },
       "fr": {
-        "t": "espagnol"
+        "A": "espagnol"
       },
       "eo": {
-        "t": "la hispana"
+        "A": "la hispana"
       },
       "ja": {
         "t": "スペイン語"
@@ -75,7 +75,7 @@
         "t": "スペインご"
       },
       "ja-Latn": {
-        "t": "Supeingo"
+        "A": "Supeingo"
       }
     },
     "script": "latn"
@@ -86,10 +86,10 @@
         "t": "português"
       },
       "en": {
-        "t": "Portuguese"
+        "A": "Portuguese"
       },
       "fr": {
-        "t": "portugais"
+        "A": "portugais"
       },
       "es": {
         "t": "portugués"
@@ -101,7 +101,7 @@
         "t": "ポルトガルご"
       },
       "ja-Latn": {
-        "t": "Porutogarugo"
+        "A": "Porutogarugo"
       }
     },
     "script": "latn"
@@ -109,16 +109,16 @@
   "tok": {
     "name": {
       "tok": {
-        "t": "toki pona"
+        "A": "toki pona"
       },
       "en": {
-        "t": "Toki Pona"
+        "A": "Toki Pona"
       },
       "fr": {
         "e": "tok"
       },
       "eo": {
-        "t": "Tokipono"
+        "A": "Tokipono"
       },
       "ja": {
         "t": "トキポナ"
@@ -130,7 +130,7 @@
         "e": "ja"
       },
       "ja-Latn": {
-        "t": "Tokipona"
+        "A": "Tokipona"
       }
     },
     "script": "latn"
@@ -140,14 +140,17 @@
       "ru": {
         "t": "русский"
       },
+      "ru-Latn": {
+        "t": "rússkij"
+      },
       "en": {
-        "t": "Russian"
+        "A": "Russian"
       },
       "fr": {
-        "t": "russe"
+        "A": "russe"
       },
       "eo": {
-        "t": "la rusa"
+        "A": "la rusa"
       }
     },
     "script": "cyrl"
@@ -164,19 +167,19 @@
         "e": "ja-Hira"
       },
       "ja-Latn": {
-        "t": "Nihongo"
+        "A": "Nihongo"
       },
       "zh": {
         "t": "日文"
       },
       "en": {
-        "t": "Japanese"
+        "A": "Japanese"
       },
       "fr": {
-        "t": "japonais"
+        "A": "japonais"
       },
       "eo": {
-        "t": "la japana"
+        "A": "la japana"
       }
     },
     "script": "jpan"
@@ -202,10 +205,10 @@
         "t": "Chūgokugo"
       },
       "en": {
-        "t": "Chinese"
+        "A": "Chinese"
       },
       "fr": {
-        "t": "chinois"
+        "A": "chinois"
       },
       "eo": {
         "t": "la ĉina"
@@ -218,14 +221,17 @@
       "ko": {
         "t": "한국어"
       },
+      "ko-Latn": {
+        "A": "Hangugeo"
+      },
       "en": {
-        "t": "Korean"
+        "A": "Korean"
       },
       "fr": {
         "t": "coréen"
       },
       "eo": {
-        "t": "la korea"
+        "A": "la korea"
       }
     },
     "script": "kore"
@@ -233,7 +239,7 @@
   "eo": {
     "name": {
       "eo": {
-        "t": "Esperanto"
+        "A": "Esperanto"
       },
       "en": {
         "e": "eo"
@@ -251,7 +257,7 @@
         "e": "ja"
       },
       "ja-Latn": {
-        "t": "Esuperanto"
+        "A": "Esuperanto"
       }
     },
     "script": "latn"
@@ -259,10 +265,10 @@
   "mul": {
     "name": {
       "en": {
-        "t": "Multiple languages"
+        "A": "Multiple languages"
       },
       "fr": {
-        "t": "Plusieurs langues"
+        "A": "Plusieurs langues"
       }
     },
     "script": "latn"
@@ -270,7 +276,7 @@
   "zxx": {
     "name": {
       "en": {
-        "t": "No linguistic content"
+        "A": "No linguistic content"
       }
     }
   }

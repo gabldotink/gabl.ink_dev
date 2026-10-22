@@ -5,46 +5,46 @@
       "name": {
         "en": {
           "comment": "All days end in _day_ in English",
-          "t": "Mon"
+          "A": "Mon"
         },
         "fr": {
-          "t": "lundi"
+          "A": "lundi"
         },
         "eo": {
           "comment": "All days end in _o_ in Esperanto",
-          "t": "lund"
+          "A": "lund"
         },
         "es": {
-          "t": "lunes"
+          "A": "lunes"
         }
       }
     },
     {
       "name": {
         "en": {
-          "t": "Tues"
+          "A": "Tues"
         },
         "fr": {
-          "t": "mardi"
+          "A": "mardi"
         },
         "eo": {
-          "t": "mard"
+          "A": "mard"
         },
         "es": {
-          "t": "martes"
+          "A": "martes"
         }
       }
     },
     {
       "name": {
         "en": {
-          "t": "Wednes"
+          "A": "Wednes"
         },
         "fr": {
-          "t": "mercredi"
+          "A": "mercredi"
         },
         "eo": {
-          "t": "merkred"
+          "A": "merkred"
         },
         "es": {
           "t": "miércoles"
@@ -54,45 +54,45 @@
     {
       "name": {
         "en": {
-          "t": "Thurs"
+          "A": "Thurs"
         },
         "fr": {
-          "t": "jeudi"
+          "A": "jeudi"
         },
         "eo": {
           "t": "ĵaŭd"
         },
         "es": {
-          "t": "jueves"
+          "A": "jueves"
         }
       }
     },
     {
       "name": {
         "en": {
-          "t": "Fri"
+          "A": "Fri"
         },
         "fr": {
-          "t": "vendredi"
+          "A": "vendredi"
         },
         "eo": {
-          "t": "vendred"
+          "A": "vendred"
         },
         "es": {
-          "t": "viernes"
+          "A": "viernes"
         }
       }
     },
     {
       "name": {
         "en": {
-          "t": "Satur"
+          "A": "Satur"
         },
         "fr": {
-          "t": "samedi"
+          "A": "samedi"
         },
         "eo": {
-          "t": "sabat"
+          "A": "sabat"
         },
         "es": {
           "t": "sábado"
@@ -102,16 +102,16 @@
     {
       "name": {
         "en": {
-          "t": "Sun"
+          "A": "Sun"
         },
         "fr": {
-          "t": "dimanche"
+          "A": "dimanche"
         },
         "eo": {
           "t": "dimanĉ"
         },
         "es": {
-          "t": "domingo"
+          "A": "domingo"
         }
       }
     }

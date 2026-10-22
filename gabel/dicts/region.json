@@ -2,33 +2,34 @@
   "us": {
     "name": {
       "en": {
-        "t": "United States"
+        "A": "United States"
       },
       "fr": {
         "t": "États‐Unis",
-        "L": "États-Unis"
+        "A": "États-Unis",
+        "Le": "A"
       },
       "es": {
-        "t": "Estados Unidos"
+        "A": "Estados Unidos"
       },
       "eo": {
-        "t": "Usono"
+        "A": "Usono"
       }
     }
   },
   "fr": {
     "name": {
       "fr": {
-        "t": "France"
+        "A": "France"
       },
       "en": {
         "e": "fr"
       },
       "es": {
-        "t": "Francia"
+        "A": "Francia"
       },
       "eo": {
-        "t": "Francio"
+        "A": "Francio"
       },
       "ja": {
         "t": "フランス"
@@ -40,21 +41,22 @@
         "e": "ja"
       },
       "ja-Latn": {
-        "t": "Furansu"
+        "A": "Furansu"
       }
     }
   },
   "gb": {
     "name": {
       "en": {
-        "t": "United Kingdom"
+        "A": "United Kingdom"
       },
       "fr": {
         "t": "Royaume‐Uni",
-        "L": "Royaume-Uni"
+        "A": "Royaume-Uni",
+        "Le": "A"
       },
       "es": {
-        "t": "Reino Unido"
+        "A": "Reino Unido"
       },
       "eo": {
         "t": "Unuiĝinta Reĝlando"
@@ -64,7 +66,7 @@
   "ca": {
     "name": {
       "fr": {
-        "t": "Canada"
+        "A": "Canada"
       },
       "en": {
         "e": "fr"
@@ -73,7 +75,7 @@
         "t": "Canadá"
       },
       "eo": {
-        "t": "Kanado"
+        "A": "Kanado"
       },
       "ja": {
         "t": "カナダ"
@@ -85,14 +87,14 @@
         "e": "ja"
       },
       "ja-Latn": {
-        "t": "Kanada"
+        "A": "Kanada"
       }
     }
   },
   "pt": {
     "name": {
       "pt": {
-        "t": "Portugal"
+        "A": "Portugal"
       },
       "en": {
         "e": "pt"
@@ -113,7 +115,7 @@
         "e": "ja"
       },
       "ja-Latn": {
-        "t": "Porutogaru"
+        "A": "Porutogaru"
       }
     }
   },
@@ -123,13 +125,13 @@
         "t": "América Latina"
       },
       "en": {
-        "t": "Latin America"
+        "A": "Latin America"
       },
       "fr": {
         "t": "Amérique latine"
       },
       "eo": {
-        "t": "Latinameriko"
+        "A": "Latinameriko"
       }
     }
   },
@@ -138,14 +140,17 @@
       "ru": {
         "t": "Росси́я"
       },
+      "ru-Latn": {
+        "t": "Rossíja"
+      },
       "en": {
-        "t": "Russia"
+        "A": "Russia"
       },
       "fr": {
-        "t": "Russie"
+        "A": "Russie"
       },
       "eo": {
-        "t": "Rusio"
+        "A": "Rusio"
       }
     }
   },
@@ -170,10 +175,10 @@
         "t": "Chūgoku"
       },
       "en": {
-        "t": "China"
+        "A": "China"
       },
       "fr": {
-        "t": "Chine"
+        "A": "Chine"
       },
       "eo": {
         "t": "Ĉinio"
@@ -195,26 +200,26 @@
         "e": "ja-Hira"
       },
       "ja-Latn": {
-        "t": "Nihon"
+        "A": "Nihon"
       },
       "en": {
-        "t": "Japan"
+        "A": "Japan"
       },
       "fr": {
-        "t": "Japon"
+        "A": "Japon"
       },
       "eo": {
-        "t": "Japanio"
+        "A": "Japanio"
       }
     }
   },
   "br": {
     "name": {
       "pt": {
-        "t": "Brasil"
+        "A": "Brasil"
       },
       "en": {
-        "t": "Brazil"
+        "A": "Brazil"
       },
       "fr": {
         "t": "Brésil"
@@ -232,7 +237,7 @@
         "e": "ja"
       },
       "ja-Latn-hepburn": {
-        "t": "Burajiru"
+        "A": "Burajiru"
       }
     }
   }

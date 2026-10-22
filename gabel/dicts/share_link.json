@@ -2,41 +2,41 @@
   "email": {
     "name": {
       "en": {
-        "t": "email"
+        "A": "email"
       },
       "fr-FR": {
         "e": "en"
       },
       "fr-CA": {
-        "t": "courriel"
+        "A": "courriel"
       }
     },
     "base": "mailto:?",
     "title": {
       "key": "subject"
     },
-    "t": {
+    "text": {
       "key": "body"
     }
   },
   "sms": {
     "name": {
       "en": {
-        "t": "text messaging"
+        "A": "text messaging"
       },
       "fr": {
-        "t": "messagerie texto"
+        "A": "messagerie texto"
       }
     },
     "base": "sms:?",
-    "t": {
+    "text": {
       "key": "body"
     }
   },
   "x": {
     "name": {
       "en": {
-        "t": "X",
+        "A": "X",
         "H": "<cite>X</cite>"
       },
       "mul": {
@@ -44,8 +44,8 @@
       }
     },
     "base": "https://x.com/intent/tweet?",
-    "t": {
-      "key": "t"
+    "text": {
+      "key": "text"
     },
     "url": {
       "key": "url"
@@ -57,7 +57,7 @@
   "reddit": {
     "name": {
       "en": {
-        "t": "Reddit",
+        "A": "Reddit",
         "H": "<cite>Reddit</cite>"
       },
       "mul": {
@@ -75,7 +75,7 @@
   "facebook": {
     "name": {
       "en": {
-        "t": "Facebook",
+        "A": "Facebook",
         "H": "<cite>Facebook</cite>"
       },
       "mul": {
@@ -90,7 +90,7 @@
   "telegram": {
     "name": {
       "en": {
-        "t": "Telegram",
+        "A": "Telegram",
         "H": "<cite>Telegram</cite>"
       },
       "mul": {
@@ -98,8 +98,8 @@
       }
     },
     "base": "https://t.me/share?",
-    "t": {
-      "key": "t"
+    "text": {
+      "key": "text"
     },
     "url": {
       "key": "url"
@@ -108,7 +108,7 @@
   "bluesky": {
     "name": {
       "en": {
-        "t": "Bluesky",
+        "A": "Bluesky",
         "H": "<cite>Bluesky</cite>"
       },
       "mul": {
@@ -116,14 +116,14 @@
       }
     },
     "base": "https://bsky.app/intent/compose?",
-    "t": {
-      "key": "t"
+    "text": {
+      "key": "text"
     }
   },
   "whatsapp": {
     "name": {
       "en": {
-        "t": "WhatsApp",
+        "A": "WhatsApp",
         "H": "<cite>WhatsApp</cite>"
       },
       "mul": {
@@ -131,14 +131,14 @@
       }
     },
     "base": "https://wa.me/?",
-    "t": {
-      "key": "t"
+    "text": {
+      "key": "text"
     }
   },
   "mastodon": {
     "name": {
       "en": {
-        "t": "Mastodon",
+        "A": "Mastodon",
         "H": "<cite>Mastodon</cite>"
       },
       "mul": {
@@ -146,8 +146,8 @@
       }
     },
     "base": "https://mastodonshare.com/?",
-    "t": {
-      "key": "t"
+    "text": {
+      "key": "text"
     },
     "url": {
       "key": "url"
@@ -156,7 +156,7 @@
   "threads": {
     "name": {
       "en": {
-        "t": "Threads",
+        "A": "Threads",
         "H": "<cite>Threads</cite>"
       },
       "mul": {
@@ -164,8 +164,8 @@
       }
     },
     "base": "https://www.threads.com/intent/post?",
-    "t": {
-      "key": "t"
+    "text": {
+      "key": "text"
     },
     "url": {
       "key": "url"
@@ -174,7 +174,7 @@
   "truth_social": {
     "name": {
       "en": {
-        "t": "Truth Social",
+        "A": "Truth Social",
         "H": "<cite>Truth Social</cite>"
       },
       "mul": {
@@ -182,8 +182,8 @@
       }
     },
     "base": "https://truthsocial.com/share?",
-    "t": {
-      "key": "t"
+    "text": {
+      "key": "text"
     },
     "url": {
       "key": "url"
@@ -192,7 +192,7 @@
   "gab": {
     "name": {
       "en": {
-        "t": "Gab",
+        "A": "Gab",
         "H": "<cite>Gab</cite>"
       },
       "mul": {
@@ -200,8 +200,8 @@
       }
     },
     "base": "https://gab.com/compose?",
-    "t": {
-      "key": "t"
+    "text": {
+      "key": "text"
     },
     "url": {
       "key": "url"
@@ -214,11 +214,11 @@
         "H": "<cite>ВКонтакте</cite>"
       },
       "ru-Latn": {
-        "t": "VKontakte",
+        "A": "VKontakte",
         "H": "<cite>VKontakte</cite>"
       },
       "mul": {
-        "t": "VK",
+        "A": "VK",
         "H": "<cite>VK</cite>"
       }
     },
@@ -226,7 +226,7 @@
     "title": {
       "key": "title"
     },
-    "t": {
+    "text": {
       "key": "comment"
     },
     "url": {

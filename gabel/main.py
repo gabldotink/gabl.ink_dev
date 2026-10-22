@@ -189,7 +189,7 @@ def get_i_id(i: Path) -> str:
 def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
     # e.g. get_var_l10n(data["jrco_beta/1"]["location"], "series", "t", lang)
 
-    formats: str = "HiLpt"
+    formats: str = "AHiLpt"
     options: list[str] = [f"{l10n_lang}", l10n_lang.l, "mul", "zxx", "z"]
 
     if format not in formats:
@@ -201,58 +201,25 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
         # TODO: catch invalid equals
         if to_find[2] and to_find[2] not in formats:
             raise ValueError("Equals does not contain a valid format")
+        elif to_find[2] and not to_find[1]:
+            return get_var_l10n(index, key, to_find[2], l10n_lang)
         elif to_find[0] and not to_find[1]:
             return get_var_l10n(index, key, format, to_find[0])
         else:
             return get_var_l10n(index, key, to_find[2], to_find[0])
 
-
-    # identifier
-    if format == "i":
+    # ASCII
+    if format == "A":
         for o in options:
             if o == "z":
                 return ""
-
-            to_check: dict = index.get(key, {}).get(o, {})
-            
-            if "i" in to_check:
-                return index[key][o]["i"]
-            elif "ie" in to_check:
-                return _find_equals("ie")
-            elif "e" in to_check:
-                return get_var_l10n(index, key, format,
-                                    L.get(index[key][o]["e"]))
-    # print
-    elif format == "p":
-        for o in options:
-            if o == "z":
-                return ""
-            
+        
             to_check: dict = index.get(key, {}).get(o, {})
 
-            if "p" in to_check:
-                return index[key][o]["p"]
-            elif "pe" in to_check:
-                return _find_equals("pe")
-            elif "t" in to_check:
-                return index[key][o]["t"]
-            elif "te" in to_check:
-                _find_equals("te")
-            elif "e" in to_check:
-                return get_var_l10n(index, key, format,
-                                    L.get(index[key][o]["e"]))
-    # text
-    elif format == "t":
-        for o in options:
-            if o == "z":
-                return ""
-
-            to_check: dict = index.get(key, {}).get(o, {})
-
-            if "t" in to_check:
-                return index[key][o]["t"]
-            elif "te" in to_check:
-                return _find_equals("te")
+            if "A" in to_check:
+                return index[key][o]["A"]
+            elif "Ae" in to_check:
+                return _find_equals("Ae")
             elif "e" in to_check:
                 return get_var_l10n(index, key, format,
                                     L.get(index[key][o]["e"]))
@@ -272,6 +239,70 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
                 return text_to_html(index[key][o]["t"])
             elif "te" in to_check:
                 return text_to_html(_find_equals("te"))
+            elif "A" in to_check:
+                return index[key][o]["A"]
+            elif "Ae" in to_check:
+                return _find_equals("Ae")
+            elif "e" in to_check:
+                return get_var_l10n(index, key, format,
+                                    L.get(index[key][o]["e"]))
+    # identifier
+    elif format == "i":
+        for o in options:
+            if o == "z":
+                return ""
+
+            to_check: dict = index.get(key, {}).get(o, {})
+            
+            if "i" in to_check:
+                return index[key][o]["i"]
+            elif "ie" in to_check:
+                return _find_equals("ie")
+            elif "e" in to_check:
+                return get_var_l10n(index, key, format,
+                                    L.get(index[key][o]["e"]))
+    # LaTeX
+    elif format == "L":
+        pass
+    # print
+    elif format == "p":
+        for o in options:
+            if o == "z":
+                return ""
+            
+            to_check: dict = index.get(key, {}).get(o, {})
+
+            if "p" in to_check:
+                return index[key][o]["p"]
+            elif "pe" in to_check:
+                return _find_equals("pe")
+            elif "t" in to_check:
+                return index[key][o]["t"]
+            elif "te" in to_check:
+                _find_equals("te")
+            elif "A" in to_check:
+                return index[key][o]["A"]
+            elif "Ae" in to_check:
+                return _find_equals("Ae")
+            elif "e" in to_check:
+                return get_var_l10n(index, key, format,
+                                    L.get(index[key][o]["e"]))
+    # text
+    elif format == "t":
+        for o in options:
+            if o == "z":
+                return ""
+
+            to_check: dict = index.get(key, {}).get(o, {})
+
+            if "t" in to_check:
+                return index[key][o]["t"]
+            elif "te" in to_check:
+                return _find_equals("te")
+            elif "A" in to_check:
+                return index[key][o]["A"]
+            elif "Ae" in to_check:
+                return _find_equals("Ae")
             elif "e" in to_check:
                 return get_var_l10n(index, key, format,
                                     L.get(index[key][o]["e"]))
