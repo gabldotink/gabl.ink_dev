@@ -189,7 +189,7 @@ def get_i_id(i: Path) -> str:
 def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
     # e.g. get_var_l10n(data["jrco_beta/1"]["location"], "series", "t", lang)
 
-    formats: str = "AHiLpt"
+    formats: str = "AHiLptx"
     options: list[str] = [f"{l10n_lang}", l10n_lang.l, "mul", "zxx", "z"]
 
     if format not in formats:
@@ -263,7 +263,20 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
                                     L.get(index[key][o]["e"]))
     # LaTeX
     elif format == "L":
-        pass
+        for o in options:
+            if o == "z":
+                return ""
+                    
+            to_check: dict = index.get(key, {}).get(o, {})
+
+            if "L" in to_check:
+                return index[key][o]["L"]
+            elif "Le" in to_check:
+                return _find_equals("Le")
+            elif "e" in to_check:
+                return get_var_l10n(index, key, format,
+                                    L.get(index[key][o]["e"]))
+            # LaTeX is not a strict superset of TeX
     # print
     elif format == "p":
         for o in options:
@@ -303,6 +316,21 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
                 return index[key][o]["A"]
             elif "Ae" in to_check:
                 return _find_equals("Ae")
+            elif "e" in to_check:
+                return get_var_l10n(index, key, format,
+                                    L.get(index[key][o]["e"]))
+    # TeX
+    elif format == "x":
+        for o in options:
+            if o == "z":
+                return ""
+            
+            to_check: dict = index.get(key, {}).get(o, {})
+
+            if "x" in to_check:
+                return index[key][o]["x"]
+            elif "xe" in to_check:
+                return _find_equals("xe")
             elif "e" in to_check:
                 return get_var_l10n(index, key, format,
                                     L.get(index[key][o]["e"]))

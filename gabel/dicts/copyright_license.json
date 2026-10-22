@@ -4,17 +4,20 @@
     "title": {
       "en-US": {
         "t": "Creative Commons Attribution\u00a04.0 International Public License",
-        "L": "Creative Commons Attribution~4.0 International Public License"
+        "x": "Creative Commons Attribution~4.0 International Public License",
+        "Le": "x"
       },
       "fr": {
         "t": "Publique licence Creative Commons Attribution\u00a04.0 International",
-        "L": "Publique licence Creative Commons Attribution~4.0 International"
+        "x": "Publique licence Creative Commons Attribution~4.0 International",
+        "Le": "x"
       }
     },
     "abbr": {
       "mul": {
         "t": "CC\u00a0BY\u00a04.0",
-        "L": "CC~BY~4.0"
+        "x": "CC~BY~4.0",
+        "Le": "x"
       }
     },
     "url": {
@@ -38,11 +41,13 @@
     "title": {
       "en-US": {
         "t": "Creative Commons Attribution‐ShareAlike\u00a04.0 International Public License",
-        "L": "Creative Commons Attribution-ShareAlike~4.0 International Public License"
+        "x": "Creative Commons Attribution-ShareAlike~4.0 International Public License",
+        "Le": "x"
       },
       "fr": {
         "t": "Publique licence Creative Commons Attribution\u00a0‐ Partage dans les mêmes conditions\u00a04.0 International",
-        "L": "Publique licence Creative Commons Attribution~- Partage dans les mêmes conditions~4.0 International"
+        "x": "Publique licence Creative Commons Attribution~- Partage dans les mêmes conditions~4.0 International",
+        "Le": "x"
       }
     },
     "abbr": {
@@ -71,11 +76,13 @@
     "title": {
       "en-US": {
         "t": "Creative Commons Attribution‐NonCommercial‐ShareAlike\u00a04.0 International Public License",
-        "L": "Creative Commons Attribution-NonCommercial-ShareAlike~4.0 International Public License"
+        "x": "Creative Commons Attribution-NonCommercial-ShareAlike~4.0 International Public License",
+        "Le": "x"
       },
       "fr": {
         "t": "Publique licence Creative Commons Attribution\u00a0‐ Utilisation non commerciale\u00a0‐ Partage dans les mêmes conditions\u00a04.0 International",
-        "L": "Publique license Creative Commons Attribution~- Utilisation non commerciale~- Partage dans les mêmes conditions~4.0 International"
+        "x": "Publique license Creative Commons Attribution~- Utilisation non commerciale~- Partage dans les mêmes conditions~4.0 International",
+        "Le": "x"
       }
     },
     "abbr": {
@@ -101,7 +108,8 @@
     "title": {
       "en-US": {
         "t": "CC0\u00a01.0 Universal",
-        "L": "CC0~1.0 Universal"
+        "x": "CC0~1.0 Universal",
+        "Le": "x"
       },
       "fr": {
         "e": "en-US"
@@ -110,7 +118,8 @@
     "abbr": {
       "mul": {
         "t": "CC0\u00a01.0",
-        "L": "CC0~1.0"
+        "x": "CC0~1.0",
+        "Le": "x"
       }
     },
     "url": {
