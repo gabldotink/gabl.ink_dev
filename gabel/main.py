@@ -189,11 +189,11 @@ def get_i_id(i: Path) -> str:
 def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
     # e.g. get_var_l10n(data["jrco_beta/1"]["location"], "series", "t", lang)
 
-    options: list[str] = [f"{l10n_lang}", l10n_lang.l, "mul", "zxx", "x"]
+    options: list[str] = [f"{l10n_lang}", l10n_lang.l, "mul", "zxx", "z"]
 
     if format == "i":
         for o in options:
-            if o == "x":
+            if o == "z":
                 return ""
             elif "i" in index.get(key, {}).get(o, {}):
                 return index[key][o]["i"]
@@ -202,7 +202,7 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
                                     L.get(index[key][o]["e"]))
     elif format == "p":
         for o in options:
-            if o == "x":
+            if o == "z":
                 return ""
             elif "p" in index.get(key, {}).get(o, {}):
                 return index[key][o]["p"]
@@ -213,7 +213,7 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
                                     L.get(index[key][o]["e"]))
     elif format == "t":
         for o in options:
-            if o == "x":
+            if o == "z":
                 return ""
             elif "t" in index.get(key, {}).get(o, {}):
                 return index[key][o]["t"]
@@ -222,7 +222,7 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
                                     L.get(index[key][o]["e"]))
     elif format == "h":
         for o in options:
-            if o == "x":
+            if o == "z":
                 return ""
             elif "h" in index.get(key, {}).get(o, {}):
                 return index[key][o]["h"]
