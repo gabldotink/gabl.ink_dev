@@ -420,14 +420,14 @@ def make_nav_button(button: str, lang: L) -> str:
 #
 #    query: dict = {}
 #    for key in "title", "url", "text", "hashtag":
-#        if data["dictionaries/share_link"][name].get(key, {}).get("key"):
+#        if ddict["share_link"][name].get(key, {}).get("key"):
 #            pass
 #
-#    r.append(data["dictionaries/share_link"][name]["base"])
+#    r.append(ddict["share_link"][name]["base"])
 
 
 def msg_l10n(*args, lang: L, string: str) -> str:
-    return get_var_l10n(data["dictionaries/string"]["dictionary"], string, "p",
+    return get_var_l10n(ddict["string"], string, "p",
                         lang).format(*args)
 
 
@@ -461,7 +461,7 @@ def text_to_latex(string: str) -> str:
         string = string.replace(c, f"\\{c}")
     for q, w in [("\xa0", "~"), ("‐", "-"), ("–", "--"), ("—", "---"),
                  ("‘", "`"), ("’", "'"), ("``", "“"), ("''", "”"),
-                 ("\u202f", "\\,"), ("−", "$-$")]:
+                 ("\u202f", "\\,"), ("−", "\\(-\\)")]:
         string = string.replace(q, w)
     return string
 
@@ -517,13 +517,13 @@ def say_date(d: date, lang: L) -> str:
 
     if lang.l == "en":
         if lang.t == "US":
-            r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]
-                                  ["months"][d.month-1], "name", "H", lang))
+            r.append(get_var_l10n(ddict["month"]["months"][d.month-1], "name",
+                                  "H", lang))
             r.append(f"\xa0{d.day}, ")
         elif lang.t == "GB":
             r.append(f"{d.day}\xa0")
-            r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]
-                                  ["months"][d.month-1], "name", "H", lang))
+            r.append(get_var_l10n(ddict["month"]["months"][d.month-1], "name",
+                                  "H", lang))
             r.append(" ")
         if ad:
             r.append("AD\xa0")
@@ -534,14 +534,15 @@ def say_date(d: date, lang: L) -> str:
         else:
             r.append(f"{d.day}")
         r.append("\xa0")
-        r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]["months"][d.month-1], "name", "H", lang))
+        r.append(get_var_l10n(ddict["month"]["months"][d.month-1], "name", "H",
+                              lang))
         if ad:
             r.append(f"{d.year}\xa0ap.\xa0J.‑C.")
         r.append(f" {d.year}")
     elif lang.l == "es":
         r.append(f"{d.day}\xa0de\xa0")
-        r.append(get_var_l10n(data["dictionaries/month"]["dictionary"]
-                              ["months"][d.month-1], "name", "H", lang))
+        r.append(get_var_l10n(ddict["month"]["months"][d.month-1], "name", "H",
+                              lang))
         r.append(" de ")
         if ad:
             r.append(f'{d.year}\xa0d.\xa0C.')
@@ -565,7 +566,7 @@ def say_lang(lang: L, format: str) -> str:
     'Français (France)'
     """
     if lang.l in ("en", "fr"):
-        return f'{to_sentence_case(get_var_l10n(data["dictionaries/language"]["dictionary"][lang.l], "name", format, lang), lang)} ({get_var_l10n(data["dictionaries/region"]["dictionary"][f"{lang.t}".lower()], "name", format, lang)})'
+        return f'{to_sentence_case(get_var_l10n(ddict["language"][lang.l], "name", format, lang), lang)} ({get_var_l10n(ddict["region"][f"{lang.t}".lower()], "name", format, lang)})'
 
 
 #def validate_data()->None:
@@ -599,15 +600,13 @@ item_files: list[Path] = [
     if path.is_file()
 ]
 
+ddict: dict = {}
+
 for dictionary in ["copyright_license", "disclaimer", "language", "month",
                    "region", "script", "share_link", "string", "validate_link",
                    "weekday"]:
-    data[f"dictionaries/{dictionary}"] = {}
-    data[f"dictionaries/{dictionary}"]["id"] = f"dictionaries/{dictionary}"
-    data[f"dictionaries/{dictionary}"]["type"] = "dictionary"
-    data[f"dictionaries/{dictionary}"]["dictionary_name"] = dictionary
     with open(Path(DICTS)/f"{dictionary}.json", "r", encoding="utf-8") as f:
-        data[f"dictionaries/{dictionary}"]["dictionary"] = json.load(f)
+        ddict[dictionary] = json.load(f)
 
 for item_file in item_files:
     with open(item_file, "r", encoding="utf-8") as f:
@@ -641,7 +640,7 @@ if __name__ == "__main__":
                 spdx_license_count = len(data[i_id]["copyright"]["license"])
                 spdx_license_num = 1
                 for license in data[i_id]["copyright"]["license"]:
-                    F.append(data["dictionaries/copyright_license"]["dictionary"][license]["spdx"])
+                    F.append(ddict["copyright_license"][license]["spdx"])
                     if spdx_license_num < spdx_license_count:
                         F.append(" OR ")
                         spdx_license_num += 1
@@ -649,9 +648,9 @@ if __name__ == "__main__":
 
             lang_dir: str
             if lang.s:
-                lang_dir = data["dictionaries/script"]["dictionary"][lang.s]["dir"]
-            elif data["dictionaries/language"]["dictionary"][lang.l].get("script"):
-                lang_dir = data["dictionaries/script"]["dictionary"][data["dictionaries/language"]["dictionary"][lang.l]["script"]]["dir"]
+                lang_dir = ddict["script"][lang.s]["dir"]
+            elif ddict["language"][lang.l].get("script"):
+                lang_dir = ddict["script"][ddict["language"][lang.l]["script"]]["dir"]
             else:
                 lang_dir = "auto"
 
@@ -676,7 +675,7 @@ if __name__ == "__main__":
                 f"<link rel=stylesheet href={styles}/{lang.l}.css hreflang=zxx>"
                 f"<link rel=stylesheet href={styles}/comic_page.css hreflang=zxx>"
 
-                f'<link rel="external license" href{attribute_string(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]], "url", "i", lang))}>'
+                f'<link rel="external license" href{attribute_string(get_var_l10n(ddict["copyright_license"][data[i_id]["copyright"]["license"][0]], "url", "i", lang))}>'
 
                 # TODO: Prefetches (starting at sh:420)
 
@@ -825,26 +824,24 @@ if __name__ == "__main__":
 
             F.append(f'<p>{msg_l10n(lang=lang, string="license")}')
             F.append('<a rel="external license" href')
-            F.append(attribute_string(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]], "url", "i", lang)))
+            F.append(attribute_string(get_var_l10n(ddict["copyright_license"][data[i_id]["copyright"]["license"][0]], "url", "i", lang)))
             F.append(">")
-            F.append(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]], "title", "H", lang))
-            if data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]].get("abbr"):
-                F.append(msg_l10n(get_var_l10n(data["dictionaries/copyright_license"]["dictionary"][data[i_id]["copyright"]["license"][0]], "abbr", "H", lang), lang=lang, string="copyright_license_abbr"))
+            F.append(get_var_l10n(ddict["copyright_license"][data[i_id]["copyright"]["license"][0]], "title", "H", lang))
+            if ddict["copyright_license"][data[i_id]["copyright"]["license"][0]].get("abbr"):
+                F.append(msg_l10n(get_var_l10n(ddict["copyright_license"][data[i_id]["copyright"]["license"][0]], "abbr", "H", lang), lang=lang, string="copyright_license_abbr"))
             F.append("</a>")
 
             if data[i_id].get("disclaimer"):
                 F.append("<p>")
                 if len(data[i_id]["disclaimer"]) == 1:
                     F.append(msg_l10n(lang=lang, string="disclaimer"))
-                    F.append(get_var_l10n(data["dictionaries/disclaimer"]
-                                          ["dictionary"][data[i_id]["disclaimer"][0]], "text", "H", lang))
+                    F.append(get_var_l10n(ddict["disclaimer"][data[i_id]["disclaimer"][0]], "text", "H", lang))
                 else:
                     F.append(msg_l10n(lang=lang, string="disclaimer_plural"))
                     F.append("<ul class=horizontal_list>")
                     for d in data[i_id]["disclaimer"]:
                         F.append("<li><p>")
-                        F.append(get_var_l10n(data["dictionaries/disclaimer"]
-                                              ["dictionary"][d], "text", "H", lang))
+                        F.append(get_var_l10n(ddict["disclaimer"][d], "text", "H", lang))
                     F.append("</ul>")
 
             F.append("</footer>")
