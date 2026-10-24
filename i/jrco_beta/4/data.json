@@ -13,7 +13,7 @@
   ],
   "title": {
     "en": {
-      "t": "Magna Carta",
+      "A": "Magna Carta",
       "H": "<cite>Magna Carta</cite>"
     },
     "fr": {
@@ -22,10 +22,10 @@
   },
   "description": {
     "en": {
-      "t": "JoeRunner finishes an essay."
+      "A": "JoeRunner finishes an essay."
     },
     "fr": {
-      "t": "JoeRunner finit un essai."
+      "A": "JoeRunner finit un essai."
     }
   },
   "tooltip": {
@@ -55,7 +55,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "A box appears on the screen."
+          "A": "A box appears on the screen."
         },
         "fr": {
           "t": "Une fenêtre apparaît sur l’écran."
@@ -77,7 +77,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "The cursor selects the Submit button."
+          "A": "The cursor selects the Submit button."
         },
         "fr": {
           "t": "Le curseur sélectionne le bouton Rendre."
@@ -88,7 +88,7 @@
       "H": "meta/sound_effect",
       "d": {
         "en": {
-          "t": "Click!"
+          "A": "Click!"
         },
         "fr": {
           "t": "Clic\u202f!"
@@ -99,7 +99,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "JoeRunner leans back in his chair. He speaks in all capitals."
+          "A": "JoeRunner leans back in his chair. He speaks in all capitals."
         },
         "fr": {
           "t": "JoeRunner se penche en arrière dans sa chaise. Il parle dans toutes les capitales."

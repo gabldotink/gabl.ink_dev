@@ -14,26 +14,26 @@
   ],
   "title": {
     "en": {
-      "t": "mirror"
+      "A": "mirror"
     },
     "fr": {
-      "t": "miroir"
+      "A": "miroir"
     },
     "eo": {
-      "t": "spegulo"
+      "A": "spegulo"
     }
   },
   "description": {
     "en": {
-      "t": "JoeRunner brushes his hair with his hand and puts on his glasses."
+      "A": "JoeRunner brushes his hair with his hand and puts on his glasses."
     },
     "fr": {
-      "t": "JoeRunner se brosse les cheveux avec son main et mette ses lunettes."
+      "A": "JoeRunner se brosse les cheveux avec son main et mette ses lunettes."
     }
   },
   "tooltip": {
     "en": {
-      "t": "first panel is based on the experience of looking at my drawings"
+      "A": "first panel is based on the experience of looking at my drawings"
     },
     "fr": {
       "t": "la première case est adapté en l’expérience de regarder mes dessins"
@@ -44,7 +44,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "The boy looks in the bathroom mirror in his pajamas, with unkempt hair and a pair of glasses on the counter. He looks kinda gross."
+          "A": "The boy looks in the bathroom mirror in his pajamas, with unkempt hair and a pair of glasses on the counter. He looks kinda gross."
         },
         "fr": {
           "t": "Le garçon regarde le miroir de salle de bain dans son pyjama, avec des cheveux ébouriffé et ses lunettes sur la comptoir. Il semble un peu dégoûtant."
@@ -66,10 +66,10 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "He runs his hand through his hair, causing it to become smooth almost magically. He confidently sets his glasses on his face."
+          "A": "He runs his hand through his hair, causing it to become smooth almost magically. He confidently sets his glasses on his face."
         },
         "fr": {
-          "t": "Il passe ses mains dans ses cheveux, cause les cheveux deviennent lisse presque magiquement. Il mette avec confiance ses lunettes sur son visage."
+          "A": "Il passe ses mains dans ses cheveux, cause les cheveux deviennent lisse presque magiquement. Il mette avec confiance ses lunettes sur son visage."
         }
       }
     },
@@ -88,7 +88,7 @@
       "H": "meta/tooltip",
       "d": {
         "en": {
-          "t": "first panel is based on the experience of looking at my drawings"
+          "A": "first panel is based on the experience of looking at my drawings"
         },
         "fr": {
           "t": "la première case est adapté en l’expérience de regarder mes dessins"
@@ -113,7 +113,7 @@
         {
           "p": {
             "en": {
-              "t": "If only it were really this easy."
+              "A": "If only it were really this easy."
             },
             "fr": {
               "t": "Si seulement il était si facile."
@@ -133,10 +133,10 @@
         {
           "p": {
             "en": {
-              "t": "Some of them. Some of the other characters have noses."
+              "A": "Some of them. Some of the other characters have noses."
             },
             "fr": {
-              "t": "Eh bien, quelques des autres personnages ont les nez."
+              "A": "Eh bien, quelques des autres personnages ont les nez."
             }
           }
         }

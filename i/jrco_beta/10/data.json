@@ -13,10 +13,10 @@
   ],
   "title": {
     "en": {
-      "t": "new kid"
+      "A": "new kid"
     },
     "fr": {
-      "t": "petite nouvelle"
+      "A": "petite nouvelle"
     }
   },
   "description": {
@@ -29,7 +29,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "JoeRunner, T.T., and Harry are sitting at a table. JoeRunner looks up from a book as Harry speaks, pointing at JoeRunner and T.T."
+          "A": "JoeRunner, T.T., and Harry are sitting at a table. JoeRunner looks up from a book as Harry speaks, pointing at JoeRunner and T.T."
         }
       }
     },
@@ -37,7 +37,7 @@
       "H": "jrco_beta/harry_mahan",
       "d": {
         "en": {
-          "t": "Oh, hey, I heard from my father that your class is getting a new kid."
+          "A": "Oh, hey, I heard from my father that your class is getting a new kid."
         },
         "fr": {
           "t": "Oh, hé, j’ai entendu de mon père que votre classe obté une petite nouvelle."
@@ -111,7 +111,7 @@
         {
           "p": {
             "en": {
-              "t": "JoeRunner gets to be in the thumbnail for his own comic again."
+              "A": "JoeRunner gets to be in the thumbnail for his own comic again."
             }
           }
         },

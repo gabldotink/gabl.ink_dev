@@ -450,16 +450,18 @@ def text_to_html(string: str) -> str:
 
 
 def text_to_latex(string: str) -> str:
-    for C, R in [("\\", "textbackslash"), ("^", "textasciicircum"),
-                 ("~", "textasciitilde"), ("\u202f", ",")]:
+    for C, R in [("\\", "textbackslash"), ('"', "textquotedbl"),
+                 ("'", "textquotesingle"), ("^", "textasciicircum"),
+                 ("~", "textasciitilde")]:
         C = re.escape(C)
         string = re.sub(fr"{C}(?=[A-Za-z])", lambda _: f"\\{R} ", string)
         string = re.sub(fr"{C}(?![A-Za-z])(?! )", lambda _: f"\\{R}", string)
         string = re.sub(fr"{C}(?= )", lambda _: f"\\{R}\\", string)
     for c in "#$%&_{}":
         string = string.replace(c, f"\\{c}")
-    for q, w in [("\xa0", "~"), ("‘", "`"), ("’", "'"), ("``", "“"),
-                 ("''", "”")]:
+    for q, w in [("\xa0", "~"), ("‐", "-"), ("–", "--"), ("—", "---"),
+                 ("‘", "`"), ("’", "'"), ("``", "“"), ("''", "”"),
+                 ("\u202f", "\\,"), ("−", "$-$")]:
         string = string.replace(q, w)
     return string
 

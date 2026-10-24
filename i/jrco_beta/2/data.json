@@ -14,7 +14,7 @@
   ],
   "title": {
     "en": {
-      "t": "alarm clock"
+      "A": "alarm clock"
     },
     "fr": {
       "t": "réveil"
@@ -25,10 +25,10 @@
   },
   "description": {
     "en": {
-      "t": "JoeRunner wakes up."
+      "A": "JoeRunner wakes up."
     },
     "fr": {
-      "t": "JoeRunner se reveille."
+      "A": "JoeRunner se reveille."
     }
   },
   "transcript": [
@@ -47,7 +47,7 @@
       "H": "meta/boy",
       "d": {
         "en": {
-          "t": "I really need to get a new snooze button."
+          "A": "I really need to get a new snooze button."
         },
         "fr": {
           "t": "J’ai vraiment besoin d’un nouveau bouton snooze."
@@ -85,7 +85,7 @@
               "t": "Obviously, I’m not much of an animator. Oh well. At least it gets the point across."
             },
             "fr": {
-              "t": "Clairement, je ne suis pas vraiment un animateur. Tant pis. Du moins, il fais passer le message."
+              "A": "Clairement, je ne suis pas vraiment un animateur. Tant pis. Du moins, il fais passer le message."
             }
           }
         },

@@ -13,7 +13,7 @@
   ],
   "title": {
     "en": {
-      "t": "Harry"
+      "A": "Harry"
     },
     "mul": {
       "e": "en"
@@ -21,10 +21,10 @@
   },
   "description": {
     "en": {
-      "t": "JoeRunner, T.T., and Harry play an online game."
+      "A": "JoeRunner, T.T., and Harry play an online game."
     },
     "fr": {
-      "t": "JoeRunner, T.T. et Harry jouent un jeu en ligne."
+      "A": "JoeRunner, T.T. et Harry jouent un jeu en ligne."
     }
   },
   "transcript": [
@@ -73,7 +73,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "JoeRunner and T.T. are sitting next to each other at computers. JoeRunner looks very confident."
+          "A": "JoeRunner and T.T. are sitting next to each other at computers. JoeRunner looks very confident."
         }
       }
     },
@@ -93,7 +93,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "JoeRunner is imagining his ship blowing up another, while his duck avatar gives a thumbs up."
+          "A": "JoeRunner is imagining his ship blowing up another, while his duck avatar gives a thumbs up."
         }
       }
     },
@@ -139,7 +139,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "T.T. raises his hand and gets an annoyed look."
+          "A": "T.T. raises his hand and gets an annoyed look."
         }
       }
     },
@@ -171,7 +171,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "A boy on another computer with long black hair and an unbuttoned polo shirt has a smug look on his face. He speaks in a textured font."
+          "A": "A boy on another computer with long black hair and an unbuttoned polo shirt has a smug look on his face. He speaks in a textured font."
         }
       }
     },
@@ -179,7 +179,7 @@
       "H": "meta/boy",
       "d": {
         "en": {
-          "t": "Ah, guilty as charged. It is just so funny when you guys rage."
+          "A": "Ah, guilty as charged. It is just so funny when you guys rage."
         }
       }
     },
@@ -204,11 +204,13 @@
       "d": {
         "en": {
           "t": "The last four years, anyway. And now you are approximately 1.39729\u00a0×\u00a010¹² molecules of space debris.",
-          "H": "<p>The last four years, anyway. And now you are approximately 1.39729\u00a0×\u00a010<sup>12</sup> molecules of space debris."
+          "H": "<p>The last four years, anyway. And now you are approximately 1.39729\u00a0×\u00a010<sup>12</sup> molecules of space debris.",
+          "L": "The last four years, anyway. And now you are approximately \\(1.39729\\times 10^{12}\\) molecules of space debris."
         },
         "fr": {
           "t": "Pour ces quatres dernières années, de toute façon. Et maintenant vous êtes approximativement 1,39729\u00a0×\u00a010¹² molécules de débris spatiaux.",
-          "H": "<p>Pour ces quatres dernières années, de toute façon. Et maintenant vous êtes approximativement 1,39729\u00a0×\u00a010<sup>12</sup> molécules de débris spatiaux."
+          "H": "<p>Pour ces quatres dernières années, de toute façon. Et maintenant vous êtes approximativement 1,39729\u00a0×\u00a010<sup>12</sup> molécules de débris spatiaux.",
+          "L": "Pour ces quatres dernières années, de toute façon. Et maintenant vous êtes approximativement \\(1{,}39729\\times10^{12}\\) molécules de débris spatiaux."
         }
       }
     },
@@ -216,7 +218,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "T.T. and Harry dap each other up."
+          "A": "T.T. and Harry dap each other up."
         }
       }
     },
@@ -224,7 +226,7 @@
       "H": "jrco_beta/harry_mahan",
       "d": {
         "en": {
-          "t": "But, my friends, it was quite an honorable battle."
+          "A": "But, my friends, it was quite an honorable battle."
         }
       }
     },
@@ -258,17 +260,19 @@
         {
           "p": {
             "en": {
-              "H": "<p>Alas, poor <span class=m>tomatotoe07</span>."
+              "H": "<p>Alas, poor <span class=m>tomatotoe07</span>.",
+              "L": "Alas, poor \\texttt{tomatotoe07}."
             },
             "fr": {
-              "H": "<p>Hélas\u202f! pauvre <span class=m>tomate_taxidermiste_07</span>."
+              "H": "<p>Hélas\u202f! pauvre <span class=m>tomate_taxidermiste_07</span>.",
+              "L": "Hélas\\,! pauvre \\texttt{tomate_taxidermiste_07}."
             }
           }
         },
         {
           "p": {
             "en": {
-              "H": "<p>This page only took a month to come out instead of, like, five. There’s so much that I want to get to, and it’s a bit upsetting to me that I’ve only gotten this far, with <i><cite>JoeRunner and Co.</cite></i>’s first anniversary being in two days (<time datetime=2023-04-01>April\u00a01</time>). This page especially took a lot of effort\u2060—the most yet\u2060—due to its length."
+              "H": "<p>This page only took a month to come out instead of, like, five. There’s so much that I want to get to, and it’s a bit upsetting to me that I’ve only gotten this far, with <cite class=i>JoeRunner and Co.</cite>’s first anniversary being in two days (<time datetime=2023-04-01>April\u00a01</time>). This page especially took a lot of effort\u2060—the most yet\u2060—due to its length."
             }
           }
         },
@@ -282,14 +286,14 @@
         {
           "p": {
             "en": {
-              "H": "<p>I have 30\u00a0more pages drafted out, and while undoubtedly not all of it will stay, I’m excited to get through them. I’ve decided that I can get a comic done every week, posted on Thursday, while still doing school. So I’ll try it, and we’ll see how it goes."
+              "t": "I have 30\u00a0more pages drafted out, and while undoubtedly not all of it will stay, I’m excited to get through them. I’ve decided that I can get a comic done every week, posted on Thursday, while still doing school. So I’ll try it, and we’ll see how it goes."
             }
           }
         },
         {
           "p": {
             "en": {
-              "H": "<p>Once again, I so sincerely appreciate everyone who reads my silly, medium–low quality webcomic. I hope that you’ve enjoyed them regardless."
+              "t": "Once again, I so sincerely appreciate everyone who reads my silly, medium–low quality webcomic. I hope that you’ve enjoyed them regardless."
             }
           }
         },
@@ -297,7 +301,8 @@
           "p": {
             "en": {
               "H": "<p><b>—\u2060Gabriel\u00a0/ <span translate=no>gabl</span></b>",
-              "t": "—\u2060Gabriel\u00a0/ gabl"
+              "t": "—\u2060Gabriel\u00a0/ gabl",
+              "L": "\\textbf{\\mbox{---Gabriel}~/ gabl}}"
             },
             "mul": {
               "e": "en"

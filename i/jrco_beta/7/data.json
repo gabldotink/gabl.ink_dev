@@ -13,7 +13,7 @@
   ],
   "title": {
     "en": {
-      "t": "establishing shot"
+      "A": "establishing shot"
     },
     "fr": {
       "t": "plan d’ensemble"
@@ -21,12 +21,12 @@
   },
   "description": {
     "en": {
-      "t": "A boy stands by the door of Schulz Elementary School."
+      "A": "A boy stands by the door of Schulz Elementary School."
     }
   },
   "tooltip": {
     "en": {
-      "t": "featuring: several background characters in a white void"
+      "A": "featuring: several background characters in a white void"
     },
     "fr": {
       "t": "avec\u202f: quelques personnages du fond dans un vide blanc"
@@ -45,7 +45,7 @@
       "H": "meta/tooltip",
       "d": {
         "en": {
-          "t": "featuring: several background characters in a white void"
+          "A": "featuring: several background characters in a white void"
         },
         "fr": {
           "t": "avec\u202f: quelques personnages du fond dans un vide blanc"
@@ -92,7 +92,8 @@
           "p": {
             "en": {
               "H": "<p>—\u2060<span translate=no>gabl</span>",
-              "t": "—\u2060gabl"
+              "t": "—\u2060gabl",
+              "L": "\\mbox{---gabl}"
             },
             "mul": {
               "e": "en"

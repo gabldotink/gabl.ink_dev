@@ -19,7 +19,7 @@
       "t": "la mère de Joseph"
     },
     "eo": {
-      "t": "la patrino de Joseph"
+      "A": "la patrino de Joseph"
     }
   },
   "description": {
@@ -32,7 +32,7 @@
   },
   "tooltip": {
     "en": {
-      "t": "JoeRunner inherited having no nose from his dad"
+      "A": "JoeRunner inherited having no nose from his dad"
     }
   },
   "transcript": [
@@ -40,10 +40,13 @@
       "H": "meta/out_of_frame",
       "d": {
         "en": {
-          "t": "Joseph?"
+          "A": "Joseph?"
         },
         "fr": {
           "t": "Joseph\u202f?"
+        },
+        "fr-CA": {
+          "e": "en"
         }
       }
     },
@@ -51,7 +54,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "JoeRunner looks over the back of the chair."
+          "A": "JoeRunner looks over the back of the chair."
         }
       }
     },
@@ -59,7 +62,7 @@
       "H": "meta/sound_effect",
       "d": {
         "en": {
-          "t": "?"
+          "A": "?"
         },
         "mul": {
           "e": "en"
@@ -78,7 +81,7 @@
       "H": "meta/woman",
       "d": {
         "en": {
-          "t": "What are you doing up so early?"
+          "A": "What are you doing up so early?"
         },
         "fr": {
           "t": "Que fais-tu debout si tôt\u202f?"
@@ -116,7 +119,7 @@
       "H": "meta/tooltip",
       "d": {
         "en": {
-          "t": "JoeRunner inherited having no nose from his dad"
+          "A": "JoeRunner inherited having no nose from his dad"
         }
       }
     }

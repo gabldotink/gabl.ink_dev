@@ -13,7 +13,7 @@
   ],
   "title": {
     "en": {
-      "t": "next year"
+      "A": "next year"
     },
     "fr": {
       "t": "l’année prochaine"
@@ -26,7 +26,7 @@
   },
   "tooltip": {
     "en": {
-      "t": "you can really hear that semicolon"
+      "A": "you can really hear that semicolon"
     },
     "fr": {
       "comment": "I think I’ll use _vous_ for posts and _tu_ for stuff like this",
@@ -38,7 +38,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "JoeRunner and Eden are in the kitchen now."
+          "A": "JoeRunner and Eden are in the kitchen now."
         }
       }
     },
@@ -46,7 +46,7 @@
       "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "t": "I was just finishing up the last essay of the year."
+          "A": "I was just finishing up the last essay of the year."
         }
       }
     },
@@ -54,7 +54,7 @@
       "H": "jrco_beta/eden_runner",
       "d": {
         "en": {
-          "t": "Oh, hey, the last one?"
+          "A": "Oh, hey, the last one?"
         },
         "fr": {
           "t": "Oh, hé, le dernier\u202f?"
@@ -73,7 +73,7 @@
       "H": "jrco_beta/eden_runner",
       "d": {
         "en": {
-          "t": "Ooooh, next year! Middle school!"
+          "A": "Ooooh, next year! Middle school!"
         },
         "fr": {
           "t": "Ooooh, l’année prochaine\u202f! Le collège\u202f!"
@@ -133,7 +133,7 @@
       "H": "meta/tooltip",
       "d": {
         "en": {
-          "t": "you can really hear that semicolon"
+          "A": "you can really hear that semicolon"
         },
         "fr": {
           "t": "tu peux vraiment entendre ce point‐virgule"
@@ -158,7 +158,7 @@
         {
           "p": {
             "en": {
-              "t": "Alright, lotta stuff to say on this one."
+              "A": "Alright, lotta stuff to say on this one."
             }
           }
         },
@@ -208,7 +208,8 @@
           "p": {
             "en": {
               "H": "<p><b>—\u2060<span translate=no>gabl</span></b>",
-              "t": "—\u2060gabl"
+              "t": "—\u2060gabl",
+              "L": "\\textbf{\\mbox{---gabl}}"
             },
             "mul": {
               "e": "en"

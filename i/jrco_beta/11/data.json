@@ -12,7 +12,7 @@
   ],
   "title": {
     "en": {
-      "t": "entrance"
+      "A": "entrance"
     },
     "fr": {
       "t": "entrée"
@@ -20,10 +20,10 @@
   },
   "description": {
     "en": {
-      "t": "JoeRunner and T.T. see the new kid in class."
+      "A": "JoeRunner and T.T. see the new kid in class."
     },
     "fr": {
-      "t": "JoeRunner et T.T. voient la petite nouvelle en classe."
+      "A": "JoeRunner et T.T. voient la petite nouvelle en classe."
     }
   },
   "transcript": [
@@ -47,7 +47,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "JoeRunner and T.T. go to their seats next to each other. T.T. points backward."
+          "A": "JoeRunner and T.T. go to their seats next to each other. T.T. points backward."
         }
       }
     },
@@ -55,7 +55,7 @@
       "H": "jrco_beta/t_t",
       "d": {
         "en": {
-          "t": "Oh, hey, I think the new kid is back there."
+          "A": "Oh, hey, I think the new kid is back there."
         }
       }
     },
@@ -98,7 +98,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "JoeRunner starts getting out of his seat."
+          "A": "JoeRunner starts getting out of his seat."
         }
       }
     },
@@ -130,10 +130,13 @@
       "H": "meta/sound_effect",
       "d": {
         "en": {
-          "t": "Brrrrrring!"
+          "A": "Brrrrrring!"
         },
         "fr": {
           "t": "Drrrrrring\u202f!"
+        },
+        "fr-CA": {
+          "A": "Drrrrrring!"
         }
       }
     },
@@ -141,7 +144,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "JoeRunner and T.T. look back, a little disappointed."
+          "A": "JoeRunner and T.T. look back, a little disappointed."
         }
       }
     },

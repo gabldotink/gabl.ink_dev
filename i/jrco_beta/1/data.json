@@ -14,13 +14,11 @@
   "title": {
     "en-US": {
       "t": "‘Thursday’ title page",
-      "H": "‘<cite>Thursday</cite>’ title page",
-      "x": "`Thursday' title page"
+      "H": "‘<cite>Thursday</cite>’ title page"
     },
     "en-GB": {
       "t": "“Thursday” title page",
-      "H": "“<cite>Thursday</cite> title page",
-      "x": "``Thursday'' title page"
+      "H": "“<cite>Thursday</cite> title page"
     },
     "fr": {
       "t": "page de titre de “jeudi”",
@@ -31,13 +29,11 @@
   "title_unnested": {
     "en-US": {
       "t": "“Thursday” title page",
-      "H": "“<cite>Thursday</cite>” title page",
-      "x": "``Thursday'' title page"
+      "H": "“<cite>Thursday</cite>” title page"
     },
     "en-GB": {
       "t": "‘Thursday’ title page",
-      "H": "‘<cite>Thursday</cite>’ title page",
-      "x": "`Thursday' title page"
+      "H": "‘<cite>Thursday</cite>’ title page"
     },
     "fr": {
       "t": "page de titre de «\u202fjeudi\u202f»",
@@ -60,13 +56,11 @@
   "tooltip": {
     "en": {
       "t": "pro tip for 5th\u00a0graders: DO NOT wake up at 6:30\u00a0a.m.",
-      "H": "pro tip for 5th\u00a0graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0a.m.</time>",
-      "x": "pro tip for 5th~graders: DO NOT wake up at 6:30~a.m."
+      "H": "pro tip for 5th\u00a0graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0a.m.</time>"
     },
     "fr": {
       "t": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à 6h30",
-      "H": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime=06:30>6h30</time>",
-      "L": "Un conseil de pro pour les élèves de cinquième\\,: ne vous réveillez pas à 6h30"
+      "H": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime=06:30>6h30</time>"
     }
   },
   "transcript": [
@@ -96,10 +90,10 @@
       "H": "meta/sound_effect",
       "d": {
         "en": {
-          "t": "Beep, beep, beep"
+          "A": "Beep, beep, beep"
         },
         "fr": {
-          "t": "Bip, bip, bip"
+          "A": "Bip, bip, bip"
         }
       }
     },
@@ -132,10 +126,12 @@
         {
           "p": {
             "en": {
-              "H": "<p>Hey there! Welcome to <cite class=i>JoeRunner and\u00a0Co.</cite>!"
+              "H": "<p>Hey there! Welcome to <cite class=i>JoeRunner and\u00a0Co.</cite>!",
+              "L": "Hey there! Welcome to \\textit{JoeRunner and~Co.}!"
             },
             "fr": {
-              "H": "<p>Salut\u202f! Bienvenue dans <cite class=i>JoeRunner et\u00a0cie</cite>\u202f!"
+              "H": "<p>Salut\u202f! Bienvenue dans <cite class=i>JoeRunner et\u00a0cie</cite>\u202f!",
+              "L": "Salut\\,! Bienvenue dans \\textit{JoeRunner et~cie}\\,!"
             }
           }
         },
@@ -155,7 +151,7 @@
               "t": "They’re\u00a0.\u00a0.\u00a0. still a bit rough around the edges. I’ve been drawing cartoons for half of my life, but I haven’t been good about challenging myself. Hopefully, this comic will help improve my cartooning skills. Hopefully, I’ll be able to make people laugh. Maybe I’ll even be able to get a girlfriend. I dunno. It’s possible."
             },
             "fr": {
-              "H": "<p>Ils sont encore… un peu bruts. Je dessine les cartoons pour la moitié de ma vie, mais je n’ai pas été bon en défier moi‐même. Avec un peu de chance, cette BD m’aidera à améliorer mes compétences en dessin. Avec un peu de chance, je peux faire rire les gens. Peut‐être que je peux trouver une copine. J’sais pas. C’est possible."
+              "t": "Ils sont encore… un peu bruts. Je dessine les cartoons pour la moitié de ma vie, mais je n’ai pas été bon en défier moi‐même. Avec un peu de chance, cette BD m’aidera à améliorer mes compétences en dessin. Avec un peu de chance, je peux faire rire les gens. Peut‐être que je peux trouver une copine. J’sais pas. C’est possible."
             }
           }
         },
@@ -173,7 +169,8 @@
           "p": {
             "en": {
               "H": "<p>—\u2060<span translate=no>gabl</span>",
-              "t": "—\u2060gabl"
+              "t": "—\u2060gabl",
+              "L": "\\mbox{---gabl}"
             },
             "mul": {
               "e": "en"

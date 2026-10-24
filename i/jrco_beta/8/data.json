@@ -13,7 +13,7 @@
   ],
   "title": {
     "en": {
-      "t": "T.T."
+      "A": "T.T."
     },
     "mul": {
       "e": "en"
@@ -21,7 +21,7 @@
   },
   "description": {
     "en": {
-      "t": "JoeRunner meets his friend T.T. outside the school."
+      "A": "JoeRunner meets his friend T.T. outside the school."
     }
   },
   "transcript": [
@@ -37,10 +37,10 @@
       "H": "meta/boy",
       "d": {
         "en": {
-          "t": "Oh, finally."
+          "A": "Oh, finally."
         },
         "fr": {
-          "t": "Oh, enfin."
+          "A": "Oh, enfin."
         }
       }
     },
@@ -48,7 +48,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "JoeRunner walks up to the boy."
+          "A": "JoeRunner walks up to the boy."
         },
         "fr": {
           "t": "JoeRunner marche jusqu’au garçon."
@@ -59,7 +59,7 @@
       "H": "meta/boy",
       "d": {
         "en": {
-          "t": "Hey, JoeRunner, you made it! And it only took, like, two decades!"
+          "A": "Hey, JoeRunner, you made it! And it only took, like, two decades!"
         },
         "fr": {
           "t": "Hé, JoeRunner, tu es arrivé\u00a0! Et ça n’a pris que, genre, deux décennies\u00a0!"
@@ -81,7 +81,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "t": "The boy starts walking to the door."
+          "A": "The boy starts walking to the door."
         }
       }
     },

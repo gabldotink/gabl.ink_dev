@@ -70,12 +70,10 @@
     "spdx": "CC-BY-NC-SA-4.0",
     "title": {
       "en-US": {
-        "t": "Creative Commons Attribution‐NonCommercial‐ShareAlike\u00a04.0 International Public License",
-        "x": "Creative Commons Attribution-NonCommercial-ShareAlike~4.0 International Public License"
+        "t": "Creative Commons Attribution‐NonCommercial‐ShareAlike\u00a04.0 International Public License"
       },
       "fr": {
-        "t": "Publique licence Creative Commons Attribution\u00a0‐ Utilisation non commerciale\u00a0‐ Partage dans les mêmes conditions\u00a04.0 International",
-        "x": "Publique license Creative Commons Attribution~- Utilisation non commerciale~- Partage dans les mêmes conditions~4.0 International"
+        "t": "Publique licence Creative Commons Attribution\u00a0‐ Utilisation non commerciale\u00a0‐ Partage dans les mêmes conditions\u00a04.0 International"
       }
     },
     "abbr": {
@@ -100,9 +98,7 @@
     "spdx": "CC0-1.0",
     "title": {
       "en-US": {
-        "t": "CC0\u00a01.0 Universal",
-        "x": "CC0~1.0 Universal",
-        "Le": "x"
+        "t": "CC0\u00a01.0 Universal"
       },
       "fr": {
         "e": "en-US"
@@ -110,9 +106,7 @@
     },
     "abbr": {
       "mul": {
-        "t": "CC0\u00a01.0",
-        "x": "CC0~1.0",
-        "Le": "x"
+        "t": "CC0\u00a01.0"
       }
     },
     "url": {
