@@ -138,11 +138,13 @@
       },
       "en": {
         "A": "hangul and hanja",
-        "H": "hangul and <i lang=ko-Latn>hanja</i>"
+        "H": "hangul and <i lang=ko-Latn>hanja</i>",
+        "L": "hangul and \\textit{hanja}"
       },
       "fr": {
         "A": "hangeul et hanja",
-        "H": "<i lang=ko-Latn>hangeul</i> et <i lang=ko-Latn>hanja</i>"
+        "H": "<i lang=ko-Latn>hangeul</i> et <i lang=ko-Latn>hanja</i>",
+        "L": "\\textit{hangeul} et \\textit{hanja}"
       }
     }
   },
@@ -163,7 +165,8 @@
       },
       "fr": {
         "te": "ko-Latn",
-        "H": "<i lang=ko-Latn>hangeul</i>"
+        "H": "<i lang=ko-Latn>hangeul</i>",
+        "L": "\\textit{hangeul}"
       }
     }
   },
@@ -266,7 +269,8 @@
         "name": {
           "en": {
             "A": "hanja",
-            "H": "<i lang=ko-Latn>hanja</i>"
+            "H": "<i lang=ko-Latn>hanja</i>",
+            "L": "\\textit{hanja}"
           },
           "fr": {
             "e": "en"

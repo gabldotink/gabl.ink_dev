@@ -15,19 +15,16 @@
     "en-US": {
       "t": "‘Thursday’ title page",
       "H": "‘<cite>Thursday</cite>’ title page",
-      "x": "`Thursday' title page",
-      "Le": "x"
+      "x": "`Thursday' title page"
     },
     "en-GB": {
       "t": "“Thursday” title page",
       "H": "“<cite>Thursday</cite> title page",
-      "x": "``Thursday'' title page",
-      "Le": "x"
+      "x": "``Thursday'' title page"
     },
     "fr": {
       "t": "page de titre de “jeudi”",
       "H": "page de titre de <cite class=\"r\">jeudi</cite>",
-      "x": "page de titre de {\\rm jeudi}",
       "L": "page de titre de \\textup{jeudi}"
     }
   },
@@ -35,19 +32,16 @@
     "en-US": {
       "t": "“Thursday” title page",
       "H": "“<cite>Thursday</cite>” title page",
-      "x": "``Thursday'' title page",
-      "Le": "x"
+      "x": "``Thursday'' title page"
     },
     "en-GB": {
       "t": "‘Thursday’ title page",
       "H": "‘<cite>Thursday</cite>’ title page",
-      "x": "`Thursday' title page",
-      "Le": "x"
+      "x": "`Thursday' title page"
     },
     "fr": {
       "t": "page de titre de «\u202fjeudi\u202f»",
       "H": "page de titre de <cite class=i>jeudi</cite>",
-      "x": "page de titre de {\\it jeudi}",
       "L": "page de titre de \\textit{jeudi}"
     }
   },
@@ -55,13 +49,11 @@
     "en": {
       "t": "The title page for “JoeRunner and\u00a0Co. Beta,” originally “JoeRunner and\u00a0Co.”",
       "H": "The title page for <cite class=i>JoeRunner and\u00a0Co. Beta</cite>, originally <cite class=i>JoeRunner and\u00a0Co.</cite>",
-      "x": "The title page for {\\it JoeRunner and~Co. Beta}, originally {\\it JoeRunner and~Co.}",
       "L": "The title page for \\textit{JoeRunner and~Co. Beta}, originally \\textit{JoeRunner and~Co.}"
     },
     "fr": {
       "t": "La page de titre de «\u202fJoeRunner et\u00a0cie Bêta\u202f», intitulée originalement «\u202fJoeRunner et\u00a0cie\u202f».",
       "H": "La page de titre de <cite class=i>JoeRunner et\u00a0cie Bêta</cite>, intitulée originalement <cite class=i>JoeRunner et\u00a0cie</cite>.",
-      "x": "La page de titre de {\\it JoeRunner et~cie Bêta}, intitulée originalement {\\it JoeRunner et~cie}.",
       "L": "La page de titre de \\textit{JoeRunner et~cie Bêta}, intitulée originalement \\textit{JoeRunner et~cie}."
     }
   },
@@ -69,13 +61,11 @@
     "en": {
       "t": "pro tip for 5th\u00a0graders: DO NOT wake up at 6:30\u00a0a.m.",
       "H": "pro tip for 5th\u00a0graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0a.m.</time>",
-      "x": "pro tip for 5th~graders: DO NOT wake up at 6:30~a.m.",
-      "Le": "x"
+      "x": "pro tip for 5th~graders: DO NOT wake up at 6:30~a.m."
     },
     "fr": {
       "t": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à 6h30",
       "H": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime=06:30>6h30</time>",
-      "x": "Un conseil de pro pour les élèves de cinquième\\thinspace : ne vous réveillez pas à 6h30",
       "L": "Un conseil de pro pour les élèves de cinquième\\,: ne vous réveillez pas à 6h30"
     }
   },

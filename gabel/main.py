@@ -190,10 +190,11 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
     # e.g. get_var_l10n(data["jrco_beta/1"]["location"], "series", "t", lang)
 
     formats: str = "AHiLptx"
+    real_formats: str = "HiLpt"
     options: list[str] = [f"{l10n_lang}", l10n_lang.l, "mul", "zxx", "z"]
 
-    if format not in formats:
-        raise ValueError("Invalid format given")
+    if format not in real_formats:
+        raise ValueError("Invalid real format given")
 
     def _find_equals(pointer: str) -> str:
         to_find: tuple = index[key][o][f"{pointer}e"].rpartition("_")
@@ -209,22 +210,9 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
             return get_var_l10n(index, key, to_find[2], to_find[0])
 
     # ASCII
-    if format == "A":
-        for o in options:
-            if o == "z":
-                return ""
-        
-            to_check: dict = index.get(key, {}).get(o, {})
 
-            if "A" in to_check:
-                return to_check["A"]
-            elif "Ae" in to_check:
-                return _find_equals("A")
-            elif "e" in to_check:
-                return get_var_l10n(index, key, format,
-                                    L.get(to_check["e"]))
     # HTML5
-    elif format == "H":
+    if format == "H":
         for o in options:
             if o == "z":
                 return ""
@@ -273,6 +261,10 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
                 return to_check["L"]
             elif "Le" in to_check:
                 return _find_equals("L")
+            elif "x" in to_check:
+                return to_check("x")
+            elif "xe" in to_check:
+                return _find_equals("x")
             elif "t" in to_check:
                 return text_to_latex(to_check["t"])
             elif "te" in to_check:
@@ -324,20 +316,6 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
                 return get_var_l10n(index, key, format,
                                     L.get(to_check["e"]))
     # TeX
-    elif format == "x":
-        for o in options:
-            if o == "z":
-                return ""
-            
-            to_check: dict = index.get(key, {}).get(o, {})
-
-            if "x" in to_check:
-                return to_check["x"]
-            elif "xe" in to_check:
-                return _find_equals("x")
-            elif "e" in to_check:
-                return get_var_l10n(index, key, format,
-                                    L.get(to_check["e"]))
 
 
 def id_base(i: str) -> str:
