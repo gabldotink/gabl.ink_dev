@@ -273,6 +273,10 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
                 return to_check["L"]
             elif "Le" in to_check:
                 return _find_equals("L")
+            elif "t" in to_check:
+                return text_to_latex(to_check["t"])
+            elif "te" in to_check:
+                return text_to_latex(_find_equals("t"))
             elif "e" in to_check:
                 return get_var_l10n(index, key, format,
                                     L.get(to_check["e"]))
@@ -464,6 +468,21 @@ def text_to_html(string: str) -> str:
     string = string.replace("<", "&lt;")  # &#60;
     string = string.replace("\u200b", "<wbr>")
     string = string.replace("\n", "<br>")
+    return string
+
+
+def text_to_latex(string: str) -> str:
+    for C, R in [("\\", "textbackslash"), ("^", "textasciicircum"),
+                 ("~", "textasciitilde"), ("\u202f", ",")]:
+        C = re.escape(C)
+        string = re.sub(fr"{C}(?=[A-Za-z])", lambda _: f"\\{R} ", string)
+        string = re.sub(fr"{C}(?![A-Za-z])(?! )", lambda _: f"\\{R}", string)
+        string = re.sub(fr"{C}(?= )", lambda _: f"\\{R}\\", string)
+    for c in "#$%&_{}":
+        string = string.replace(c, f"\\{c}")
+    for q, w in [("\xa0", "~"), ("‘", "`"), ("’", "'"), ("``", "“"),
+                 ("''", "”")]:
+        string = string.replace(q, w)
     return string
 
 
