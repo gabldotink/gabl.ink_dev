@@ -14,6 +14,7 @@
 *.sh text eol=lf linguist-language=Shell
 .shellcheckrc text eol=lf linguist-language=ShellCheck-Config
 *.svg text eol=lf linguist-language=SVG
+*.tex text eol=lf linguist-language=TeX
 *.toml text eol=lf linguist-language=TOML
 *.txt text eol=lf linguist-language=Text
 *.vcf text eol=crlf linguist-language=vCard

@@ -126,12 +126,19 @@
         {
           "p": {
             "en": {
-              "H": "<p>Hey there! Welcome to <cite class=i>JoeRunner and\u00a0Co.</cite>!",
-              "L": "Hey there! Welcome to \\textit{JoeRunner and~Co.}!"
+              "t": "Hey there! Welcome to “JoeRunner\u00a0and\u00a0Co.”!",
+              "H": "<p>Hey there! Welcome to <cite class=i>JoeRunner\u00a0and\u00a0Co.</cite>!",
+              "L": "Hey there! Welcome to \\textit{JoeRunner~and~Co.}!"
             },
             "fr": {
-              "H": "<p>Salut\u202f! Bienvenue dans <cite class=i>JoeRunner et\u00a0cie</cite>\u202f!",
-              "L": "Salut\\,! Bienvenue dans \\textit{JoeRunner et~cie}\\,!"
+              "t": "Salut\u202f! Bienvenue dans «\u202fJoeRunner\u00a0et\u00a0cie\u202f»\u202f!",
+              "H": "<p>Salut\u202f! Bienvenue dans <cite class=i>JoeRunner\u00a0et\u00a0cie</cite>\u202f!",
+              "L": "Salut\\,! Bienvenue dans \\textit{JoeRunner~et~cie}\\,!"
+            },
+            "fr-CA": {
+              "t": "Salut! Bienvenue dans «\u202fJoeRunner\u00a0et\u00a0cie\u202f»!",
+              "H": "<p>Salut! Bienvenue dans <cite class=i>JoeRunner\u00a0et\u00a0cie</cite>!",
+              "L": "Salut! Bienvenue dans \\textit{JoeRunner~et~cie}!"
             }
           }
         },

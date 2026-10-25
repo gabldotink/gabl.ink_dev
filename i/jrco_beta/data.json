@@ -13,13 +13,13 @@
   ],
   "title": {
     "en": {
-      "t": "JoeRunner and Co. Beta"
+      "t": "JoeRunner\u00a0and\u00a0Co. Beta"
     },
     "fr": {
-      "t": "JoeRunner et cie Bêta"
+      "t": "JoeRunner\u00a0et\u00a0cie Bêta"
     },
     "eo": {
-      "t": "JoeRunner kaj Kunularo Beta"
+      "t": "JoeRunner\u00a0kaj Kunularo Beta"
     }
   },
   "hashtag": {
@@ -35,14 +35,14 @@
   },
   "description": {
     "en": {
-      "t": "The first “JoeRunner and Co.” webcomic series, which ran for eleven pages from 2022 to 2023.",
-      "H": "The first <cite class=i>JoeRunner and Co.</cite> webcomic series, which ran for eleven pages from <time>2022</time> to <time>2023</time>.",
-      "L": "The first \\textit{JoeRunner and Co.} webcomic series, which ran for eleven pages from 2022 to 2023."
+      "t": "The first “JoeRunner\u00a0and\u00a0Co.” webcomic series, which ran for eleven pages from 2022 to 2023.",
+      "H": "The first <cite class=i>JoeRunner\u00a0and\u00a0Co.</cite> webcomic series, which ran for eleven pages from <time>2022</time> to <time>2023</time>.",
+      "L": "The first \\textit{JoeRunner~and~Co.} webcomic series, which ran for eleven pages from 2022 to 2023."
     },
     "fr": {
-      "t": "La première série de webcomics «\u202fJoeRunner et cie\u202f», qui a compté onze pages de 2022 à 2023 en anglais.",
-      "H": "La première série de webcomics <cite class=i>JoeRunner et cie</cite>, qui a compté onze pages de <time>2022</time> à <time>2023</time> en anglais.",
-      "L": "La première série de webcomics \\textit{JoeRunner et cie}, qui a compté onze pages de 2022 à 2023 en anglais."
+      "t": "La première série de webcomics «\u202fJoeRunner\u00a0et\u00a0cie\u202f», qui a compté onze pages de 2022 à 2023 en anglais.",
+      "H": "La première série de webcomics <cite class=i>JoeRunner\u00a0et\u00a0cie</cite>, qui a compté onze pages de <time>2022</time> à <time>2023</time> en anglais.",
+      "L": "La première série de webcomics \\textit{JoeRunner~et~cie}, qui a compté onze pages de 2022 à 2023 en anglais."
     }
   },
   "start_date": "20220401",
