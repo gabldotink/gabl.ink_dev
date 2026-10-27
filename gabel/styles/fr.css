@@ -5,10 +5,6 @@
   --nav_bottom_list_pages_label: "Page\a0";
 }
 
-abbr {
-  all: unset;
-}
-
 body,
 ::cue {
   font-family: "Noto Serif", serif;
@@ -22,34 +18,10 @@ em {
   all: unset;
 }
 
-ins {
-  all: unset;
-}
-
-code,
-.m {
+code, .m {
   font-family: "Noto Sans Mono", monospace;
 }
 
-strong,
-b,
-.b {
-  font-weight: bold;
-}
-
-i,
-.i {
+i {
   font-style: italic;
-}
-
-.w {
-  white-space: nowrap;
-}
-
-.r {
-  font-style: normal;
-}
-
-.u {
-  text-decoration-line: underline;
 }

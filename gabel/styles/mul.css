@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* SPDX-License-Identifier: CC0-1.0 */
+
+abbr {
+  all: unset;
+}
+
+ins {
+  all: unset;
+}
+
+strong, b, .b {
+  font-weight: bold;
+}
+
+.i {
+  font-style: italic;
+}
+
+.r {
+  font-style: normal;
+}
+
+.u {
+  text-decoration-line: underline;
+}
+
+.w {
+  white-space: nowrap;
+}

@@ -679,6 +679,7 @@ if __name__ == "__main__":
 
                 # TODO: `if type != comic_page` (sh:349)
 
+                f"<link rel=stylesheet href={styles}/mul.css hreflang=zxx>"
                 f"<link rel=stylesheet href={styles}/{lang.l}.css hreflang=zxx>"
                 f"<link rel=stylesheet href={styles}/comic_page.css hreflang=zxx>"
 
