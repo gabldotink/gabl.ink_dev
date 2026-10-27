@@ -381,7 +381,7 @@ def make_nav_button(button: str, lang: L) -> str:
         "l": ("⇨", "last", "last"),
     }[button]
 
-    r: list[str] = ["<div class=nav_button title"]
+    r: list[str] = ["<div class=B title"]
 
     if (
         data[i_id]["location"]["page"]
@@ -403,7 +403,7 @@ def make_nav_button(button: str, lang: L) -> str:
             r.append(f'{data[i_id]["location"][button_id]}')
         r.append(f'/{f"{lang}".lower()}/ hreflang={lang}>')
 
-    r.append(f'<span class=nav_button_arrow aria-hidden=true>{button_arrow}</span><br>{msg_l10n(lang=lang, string=f"nav_button_{button_id}")}')
+    r.append(f'<span class=A aria-hidden=true>{button_arrow}</span><br>{msg_l10n(lang=lang, string=f"nav_button_{button_id}")}')
 
     if (
         data[i_id]["location"]["page"]
@@ -713,7 +713,7 @@ if __name__ == "__main__":
 
                 f'<h1>{msg_l10n(get_var_l10n(data[i_id], "title", "H", lang), lang=lang, string="page_title_html")}</h1>'
 
-                "<nav class=nav_buttons>"
+                "<nav class=N>"
 
                 f'{make_nav_button("f", lang)}'
                 f'{make_nav_button("p", lang)}'
@@ -725,7 +725,7 @@ if __name__ == "__main__":
 
             if Path(INDEX/i_id/f"{lang}".lower()/"video.webm").is_file():
                 F.append(
-                    "<video controls poster=image.png preload=auto>"
+                    "<video id=M controls poster=image.png preload=auto>"
                     "<source src=video.webm type=video/webm>"
                 )
                 if Path(INDEX/i_id/f"{lang}".lower()/"subs.vtt").is_file():
@@ -744,18 +744,18 @@ if __name__ == "__main__":
                     "</p></video>"
                 )
             elif Path(INDEX/i_id/f"{lang}".lower()/"image.png").is_file():
-                F.append("<picture")
+                F.append("<picture id=M")
                 if get_var_l10n(data[i_id], "tooltip", "H", lang) is not None:
                     F.append(f' title{attribute_string(get_var_l10n(data[i_id], "tooltip", "t", lang))}')
                 F.append(
                     ">"
                     f'<img src=image.png fetchpriority=high alt{attribute_string(msg_l10n(lang=lang, string="see_transcript"))}>'
                     "</picture>"
-
-                    "<nav class=nav_buttons>"
                 )
 
             F.append(
+                "<nav class=N>"
+
                 f'{make_nav_button("f", lang)}'
                 f'{make_nav_button("p", lang)}'
                 f'{make_nav_button("n", lang)}'
@@ -776,7 +776,7 @@ if __name__ == "__main__":
 
                 "<details>"
                 f'<summary><h2>{msg_l10n(lang=lang, string="transcript_name")}</h2></summary>'
-                "<table>"
+                "<table id=T>"
             )
 
             for line in data[i_id]["transcript"]:

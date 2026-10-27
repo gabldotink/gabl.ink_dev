@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* SPDX-License-Identifier: CC0-1.0 */
 
-#panels {
+body {
   margin: 0% 15%;
 }
 
@@ -23,8 +23,7 @@
   opacity: 10%;
 }
 
-#nav_top_buttons,
-#nav_bottom_buttons {
+.N {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -33,21 +32,21 @@
   width: 100%;
 }
 
-div.nav_button {
+.B {
   text-align: center;
   font-size: xx-large;
   width: 5em;
 }
 
-div.nav_button p {
+.B {
   color: gray;
 }
 
-div.nav_button a {
+.B a {
   text-decoration-line: none;
 }
 
-div.nav_button a p {
+.B a p {
   color: inherit;
 }
 
@@ -58,12 +57,8 @@ div.nav_button picture img {
 }
 */
 
-div.nav_button p {
+.B p {
   text-align: center;
-}
-
-a .nav_button_arrow {
-  text-decoration-line: none;
 }
 
 p.nav_buttons {
@@ -76,8 +71,7 @@ p.nav_buttons {
   text-align: center;
 }
 
-#comic_page_video video,
-#comic_page_image picture img {
+#M {
   width: 100%;
   max-width: 100%;
 }
@@ -112,16 +106,12 @@ p.nav_buttons {
   list-style-type: none;
 }
 
-#comic_transcript_table {
+#T {
   border: none;
   margin-left: 1em;
 }
 
-#comic_transcript_table thead {
-  display: none;
-}
-
-#comic_transcript_table th {
+#T th {
   text-align: left;
   vertical-align: top;
   padding-right: .3em;
@@ -130,28 +120,28 @@ p.nav_buttons {
   font-weight: normal;
 }
 
-#comic_transcript_table th::before {
+#T th::before {
   content: "[";
 }
 
-#comic_transcript_table th::after {
+#T th::after {
   content: "]";
 }
 
-#comic_transcript_table th:empty::before {
+#T th:empty::before {
   content: "—";
 }
 
-#comic_transcript_table th:empty::after {
+#T th:empty::after {
   content: "";
 }
 
-#comic_trascript_table td {
+#T td {
   text-align: left;
   vertical-align: top;
 }
 
-#comic_transcript_table p {
+#T p {
   margin-top: 0;
 }
 
@@ -160,11 +150,13 @@ summary h3 {
   display: inline;
 }
 
+/*
 @media (max-width: 992px) {
   #panels {
     margin: 0%
   }
 }
+*/
 
 .horizontal_list {
   display: inline;
