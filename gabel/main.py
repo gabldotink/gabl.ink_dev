@@ -830,7 +830,7 @@ if __name__ == "__main__":
                 f'<summary>{msg_l10n(lang=lang, string="validate_this_page")}</summary>'
                 "<ul></ul></details>"
 
-                "<footer><p><span class=nw>"
+                "<footer><p><span class=w>"
                 f'{msg_l10n(lang=lang, string="copyright_notice")}'
                 f'{data[i_id]["copyright"]["year"]["first"]}'
             )
