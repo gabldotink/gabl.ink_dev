@@ -272,7 +272,6 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
             elif "e" in to_check:
                 return get_var_l10n(index, key, format,
                                     L.get(to_check["e"]))
-            # LaTeX is not a strict superset of TeX
     # print
     elif format == "p":
         for o in options:
@@ -355,8 +354,9 @@ def language_list_entry(l: L) -> str:
 
     if l.t is not None:
         r.append(
-            f''' style="list-style-type:'{to_regional_indicators(l.t)} '"''')
-    r.append(">")
+            f''' style="list-style-type:'{to_regional_indicators(l.t)} '"'''
+            ">"
+        )
 
     if f"{l}" == f"{lang}":
         r.append("<b>")
@@ -387,8 +387,10 @@ def make_nav_button(button: str, lang: L) -> str:
         data[i_id]["location"]["page"]
         == data[data[i_id]["location"]["series"]].get(button_fl)
     ):
-        r.append(attribute_string(msg_l10n(msg_l10n(lang=lang, string=f"nav_button_{button_id}_inline"), lang=lang, string="this_is_x_page")))
-        r.append(">")
+        r.append(
+            f'{attribute_string(msg_l10n(msg_l10n(lang=lang, string=f"nav_button_{button_id}_inline"), lang=lang, string="this_is_x_page"))}'
+            ">"
+        )
     else:
         if button in ("f", "l"):
             r.append(attribute_string(msg_l10n(get_var_l10n(data[f'{data[i_id]["location"]["series"]}/{data[data[i_id]["location"]["series"]][button_id]}'], "title", "t", lang), lang=lang, string="nav_button_page_title")))
@@ -517,14 +519,16 @@ def say_date(d: date, lang: L) -> str:
 
     if lang.l == "en":
         if lang.t == "US":
-            r.append(get_var_l10n(ddict["month"]["months"][d.month-1], "name",
-                                  "H", lang))
-            r.append(f"\xa0{d.day}, ")
+            r.append(
+                f'{get_var_l10n(ddict["month"]["months"][d.month-1], "name", "H", lang)}'
+                f"\xa0{d.day}, "
+            )
         elif lang.t == "GB":
-            r.append(f"{d.day}\xa0")
-            r.append(get_var_l10n(ddict["month"]["months"][d.month-1], "name",
-                                  "H", lang))
-            r.append(" ")
+            r.append(
+                f"{d.day}\xa0"
+                f'{get_var_l10n(ddict["month"]["months"][d.month-1], "name", "H", lang)}'
+                " "
+            )
         if ad:
             r.append("AD\xa0")
         r.append(f"{d.year}")
@@ -533,24 +537,28 @@ def say_date(d: date, lang: L) -> str:
             r.append("1er")
         else:
             r.append(f"{d.day}")
-        r.append("\xa0")
-        r.append(get_var_l10n(ddict["month"]["months"][d.month-1], "name", "H",
-                              lang))
+        r.append(
+            "\xa0"
+            f'{get_var_l10n(ddict["month"]["months"][d.month-1], "name", "H", lang)}'
+        )
         if ad:
             r.append(f"{d.year}\xa0ap.\xa0J.‑C.")
         r.append(f" {d.year}")
     elif lang.l == "es":
-        r.append(f"{d.day}\xa0de\xa0")
-        r.append(get_var_l10n(ddict["month"]["months"][d.month-1], "name", "H",
-                              lang))
-        r.append(" de ")
+        r.append(
+            f"{d.day}\xa0de\xa0"
+            f'{get_var_l10n(ddict["month"]["months"][d.month-1], "name", "H", lang)}'
+            " de "
+        )
         if ad:
             r.append(f'{d.year}\xa0d.\xa0C.')
         r.append(f"{d.year}")
     elif lang.l in ("ja", "ko", "zh"):
-        r.append(f'{d.year}{msg_l10n(lang=lang, string="say_date_cjk_year")}')
-        r.append(f'{d.month}{msg_l10n(lang=lang, string="say_date_cjk_month")}')
-        r.append(f'{d.day}{msg_l10n(lang=lang, string="say_date_cjk_day")}')
+        r.append(
+            f'{d.year}{msg_l10n(lang=lang, string="say_date_cjk_year")}'
+            f'{d.month}{msg_l10n(lang=lang, string="say_date_cjk_month")}'
+            f'{d.day}{msg_l10n(lang=lang, string="say_date_cjk_day")}'
+        )
 
     r.append("</time>")
 
@@ -730,18 +738,22 @@ if __name__ == "__main__":
                         f"<track src=cc.vtt srclang={lang} kind=captions "
                         f'''label{attribute_string(f'{say_lang(lang, "t")}{msg_l10n(lang=lang, string="cc")}')}>'''
                     )
-                F.append("<p>")
-                F.append(msg_l10n(lang, get_var_l10n(data[data[i_id]["location"]["series"]], "title", "t", lang), get_var_l10n(data[i_id], "title", "t", lang), get_var_l10n(data[i_id], "title", "t", lang), lang=lang, string="video_not_supported"))
-                F.append("</p></video>")
+                F.append(
+                    "<p>"
+                    f'{msg_l10n(lang, get_var_l10n(data[data[i_id]["location"]["series"]], "title", "t", lang), get_var_l10n(data[i_id], "title", "t", lang), get_var_l10n(data[i_id], "title", "t", lang), lang=lang, string="video_not_supported")}'
+                    "</p></video>"
+                )
             elif Path(INDEX/i_id/f"{lang}".lower()/"image.png").is_file():
                 F.append("<picture")
                 if get_var_l10n(data[i_id], "tooltip", "H", lang) is not None:
                     F.append(f' title{attribute_string(get_var_l10n(data[i_id], "tooltip", "t", lang))}')
-                F.append(">")
-                F.append(f'<img src=image.png fetchpriority=high alt{attribute_string(msg_l10n(lang=lang, string="see_transcript"))}>')
-                F.append("</picture>")
+                F.append(
+                    ">"
+                    f'<img src=image.png fetchpriority=high alt{attribute_string(msg_l10n(lang=lang, string="see_transcript"))}>'
+                    "</picture>"
 
-                F.append("<nav class=nav_buttons>")
+                    "<nav class=nav_buttons>"
+                )
 
             F.append(
                 f'{make_nav_button("f", lang)}'
@@ -754,78 +766,89 @@ if __name__ == "__main__":
 
             # TODO: Support multiple container depths
 
-            F.append(msg_l10n(get_var_l10n(data[data[i_id]["location"]["series"]], "title", "H", lang), lang=lang, string="series_title_html"))
-            F.append(msg_l10n(data[i_id]["location"]["page"], lang=lang, string="comma_page"))
-            F.append(msg_l10n(get_var_l10n(data[i_id], "title", "H", lang), lang=lang, string="page_title_html"))
-            F.append("</summary></details></nav>")
+            F.append(
+                f'{msg_l10n(get_var_l10n(data[data[i_id]["location"]["series"]], "title", "H", lang), lang=lang, string="series_title_html")}'
+                f'{msg_l10n(data[i_id]["location"]["page"], lang=lang, string="comma_page")}'
+                f'{msg_l10n(get_var_l10n(data[i_id], "title", "H", lang), lang=lang, string="page_title_html")}'
+                "</summary></details></nav>"
 
             # TODO: Page list
 
-            F.append("<details>")
-            F.append(f'<summary><h2>{msg_l10n(lang=lang, string="transcript_name")}</h2></summary>')
-            F.append("<table>")
+                "<details>"
+                f'<summary><h2>{msg_l10n(lang=lang, string="transcript_name")}</h2></summary>'
+                "<table>"
+            )
 
             for line in data[i_id]["transcript"]:
                 # TODO: Check encyclopedia item type
                 #line_h_type=data[f'encyclopedia/{line["H"]}']["type"]
-                F.append("<tr>")
-                F.append("<th scope=row>")
+                F.append(
+                    "<tr>"
+                    "<th scope=row>"
+                )
                 line_h_label: str
                 if data[f'encyclopedia/{line["H"]}'].get("name", {}).get("label"):
                     line_h_label = get_var_l10n(data[f'encyclopedia/{line["H"]}'].get("name", {}), "label", "H", lang)
                 else:
                     line_h_label = get_var_l10n(data[f'encyclopedia/{line["H"]}'].get("name", {}), "label", "H", lang)
-                F.append(line_h_label)
-
-                F.append("<td>")
+                F.append(
+                    f"{line_h_label}"
+                    "<td>"
+                )
                 if get_var_l10n(line, "d", "t", lang) == get_var_l10n(line, "d", "H", lang):
                     F.append("<p>")
-                    F.append(get_var_l10n(line, "d", "H", lang))
-                else:
-                    F.append(get_var_l10n(line, "d", "H", lang))
-            F.append("</table></details><hr>")
-
-            F.append(f'<h2>{msg_l10n(lang=lang, string="log")}</h2>')
+                F.append(get_var_l10n(line, "d", "H", lang))
+            F.append(
+                "</table></details><hr>"
+                f'<h2>{msg_l10n(lang=lang, string="log")}</h2>'
+            )
 
             for entry in data[i_id]["log"]:
-                F.append(f'<article id=log_{print_date(date.fromisoformat(entry["date"]))}><details>')
-                F.append(f'<summary><h3>{say_date(date.fromisoformat(entry["date"]), lang)}</h3></summary>')
+                F.append(
+                    f'<article id=log_{print_date(date.fromisoformat(entry["date"]))}><details>'
+                    f'<summary><h3>{say_date(date.fromisoformat(entry["date"]), lang)}</h3></summary>'
+                )
                 for line in entry["content"]:
                     if text_to_html(get_var_l10n(line, "p", "t", lang)) == get_var_l10n(line, "p", "H", lang):
                         F.append("<p>")
                     F.append(get_var_l10n(line, "p", "H", lang))
                 F.append("</details></article>")
 
-            F.append("<hr>")
-            F.append("<p id=canonical_url>")
-            F.append(msg_l10n(canonical, lang=lang, string="canonical_url"))
-            F.append(f"<a href={canonical} hreflang={lang} type=text/html>")
-            F.append(canonical)
-            F.append("</a>")
+            F.append(
+                "<hr>"
+                "<p id=canonical_url>"
+                f'{msg_l10n(canonical, lang=lang, string="canonical_url")}'
+                f"<a href={canonical} hreflang={lang} type=text/html>"
+                f"{canonical}"
+                "</a>"
 
-            F.append("<details id=share_links>")
-            F.append(f'<summary>{msg_l10n(lang=lang, string="share_this_page")}</summary>')
-            F.append("<ul></ul></details>")
+                "<details id=share_links>"
+                f'<summary>{msg_l10n(lang=lang, string="share_this_page")}</summary>'
+                "<ul></ul></details>"
 
-            F.append("<details id=validate_links>")
-            F.append(f'<summary>{msg_l10n(lang=lang, string="validate_this_page")}</summary>')
-            F.append("<ul></ul></details>")
+                "<details id=validate_links>"
+                f'<summary>{msg_l10n(lang=lang, string="validate_this_page")}</summary>'
+                "<ul></ul></details>"
 
-            F.append("<footer><p><span class=nw>")
-            F.append(msg_l10n(lang=lang, string="copyright_notice"))
-            F.append(f'{data[i_id]["copyright"]["year"]["first"]}')
+                "<footer><p><span class=nw>"
+                f'{msg_l10n(lang=lang, string="copyright_notice")}'
+                f'{data[i_id]["copyright"]["year"]["first"]}'
+            )
             if data[i_id]["copyright"]["year"].get("last"):
-                F.append(msg_l10n(lang=lang, 
-                                  string="copyright_year_separator"))
-                F.append(f'{data[i_id]["copyright"]["year"]["last"]}')
-            F.append("</span> ")
-            F.append("<span translate=no>gabl.ink</span>")
+                F.append(
+                    f'{msg_l10n(lang=lang, string="copyright_year_separator")}'
+                    f'{data[i_id]["copyright"]["year"]["last"]}'
+                )
+            F.append(
+                "</span> "
+                "<span translate=no>gabl.ink</span>"
 
-            F.append(f'<p>{msg_l10n(lang=lang, string="license")}')
-            F.append('<a rel="external license" href')
-            F.append(attribute_string(get_var_l10n(ddict["license"][data[i_id]["copyright"]["license"][0]], "url", "i", lang)))
-            F.append(">")
-            F.append(get_var_l10n(ddict["license"][data[i_id]["copyright"]["license"][0]], "title", "H", lang))
+                f'<p>{msg_l10n(lang=lang, string="license")}'
+                '<a rel="external license" href'
+                f'{attribute_string(get_var_l10n(ddict["license"][data[i_id]["copyright"]["license"][0]], "url", "i", lang))}'
+                ">"
+                f'{get_var_l10n(ddict["license"][data[i_id]["copyright"]["license"][0]], "title", "H", lang)}'
+            )
             if ddict["license"][data[i_id]["copyright"]["license"][0]].get("abbr"):
                 F.append(msg_l10n(get_var_l10n(ddict["license"][data[i_id]["copyright"]["license"][0]], "abbr", "H", lang), lang=lang, string="copyright_license_abbr"))
             F.append("</a>")
@@ -833,19 +856,23 @@ if __name__ == "__main__":
             if data[i_id].get("disclaimer"):
                 F.append("<p>")
                 if len(data[i_id]["disclaimer"]) == 1:
-                    F.append(msg_l10n(lang=lang, string="disclaimer"))
-                    F.append(get_var_l10n(ddict["disclaim"][data[i_id]["disclaimer"][0]], "text", "H", lang))
+                    F.append(
+                        f'{msg_l10n(lang=lang, string="disclaimer")}'
+                        f'{get_var_l10n(ddict["disclaim"][data[i_id]["disclaimer"][0]], "text", "H", lang)}'
+                    )
                 else:
-                    F.append(msg_l10n(lang=lang, string="disclaimer_plural"))
-                    F.append("<ul class=horizontal_list>")
+                    F.append(
+                        f'{msg_l10n(lang=lang, string="disclaimer_plural")}'
+                        "<ul class=horizontal_list>"
+                    )
                     for d in data[i_id]["disclaimer"]:
-                        F.append("<li><p>")
-                        F.append(get_var_l10n(ddict["disclaim"][d], "text", "H", lang))
+                        F.append(
+                            "<li><p>"
+                            f'{get_var_l10n(ddict["disclaim"][d], "text", "H", lang)}'
+                        )
                     F.append("</ul>")
 
-            F.append("</footer>")
-
-            F.append("\n")
+            F.append("</footer>\n")
 
             output: str = "".join(F)
 
