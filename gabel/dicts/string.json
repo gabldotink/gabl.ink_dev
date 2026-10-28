@@ -236,11 +236,18 @@
     "ja": {
       "e": "zh"
     },
+    "ja-Hani": {
+      "e": "zh"
+    },
     "ja-Hira": {
       "t": "ねん"
     },
+    "ja-Hrkt": {
+      "e": "ja-Hira"
+    },
     "ja-Latn-hepburn": {
-      "t": "‐nen"
+      "t": "‑nen ",
+      "L": "\\mbox{-nen} "
     },
     "ko": {
       "t": "년\u00a0"
@@ -256,11 +263,18 @@
     "ja": {
       "e": "zh"
     },
+    "ja-Hani": {
+      "e": "zh"
+    },
     "ja-Hira": {
       "t": "がつ"
     },
+    "ja-Hrkt": {
+      "e": "ja-Hira"
+    },
     "ja-Latn-hepburn": {
-      "t": "‐gatsu"
+      "t": "‑gatsu ",
+      "L": "\\mbox{-gatsu} "
     },
     "ko": {
       "t": "월\u00a0"
@@ -279,8 +293,12 @@
     "ja-Hira": {
       "t": "にち"
     },
+    "ja-Hrkt": {
+      "e": "ja-Hira"
+    },
     "ja-Latn-hepburn": {
-      "t": "‐nichi"
+      "t": "‑nichi",
+      "L": "\\mbox{-nichi}"
     },
     "ko": {
       "t": "일"
@@ -301,6 +319,9 @@
     },
     "ja-Hira": {
       "t": "きげんぜん"
+    },
+    "ja-Hrkt": {
+      "e": "ja-Hira"
     },
     "ja-Latn-hepburn": {
       "t": "kigenzen"
