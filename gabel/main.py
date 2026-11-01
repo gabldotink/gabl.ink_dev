@@ -886,7 +886,7 @@ if __name__ == "__main__":
 
             F.append("</footer>\n")
 
-            output: str = "".join(F)
+            F: str = "".join(F)
 
             output_file_path: Path = Path(INDEX)/i_id/f"{lang}".lower()/"index.html"
             output_file_path.parent.mkdir(parents=True, exist_ok=True)
@@ -894,9 +894,9 @@ if __name__ == "__main__":
 
             with open(output_file_path, "r+", encoding="utf-8", newline="") as output_file:
                 # Only write if there is a change
-                if output != output_file.read():
+                if F != output_file.read():
                     output_file.seek(0)
                     output_file.truncate()
-                    output_file.write(output)
+                    output_file.write(F)
     end_time = time.perf_counter()
     sys.stderr.write(f"\rGenerated HTML pages in {end_time-start_time:.3f}\xa0s\n")
