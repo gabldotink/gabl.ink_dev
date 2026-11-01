@@ -661,8 +661,19 @@ if __name__ == "__main__":
             else:
                 lang_dir = "auto"
 
-            # TODO: Only works for one type of depth, but I want to redesign that whole system anyway (sh:349–385)
-            styles: str = "../../../../gabel/styles"
+            # TODO: I don’t think this always works
+            if data.get("config",{}).get("config",{}).get("relative_paths") is True:
+                if i_id == "root":
+                    styles: str = "../gabel/styles"
+                else:
+                    depth: int = i_id.count("/") + 2
+                    styles: list[str] = ["../"]
+                    for d in range(depth):
+                        styles.append("../")
+                    styles.append("gabel/styles")
+                    styles: str = "".join(styles)
+            else:
+                styles: str = "/gabel/styles"
 
             F.append(
                 f"<html lang={lang} dir={lang_dir} itemscope itemtype=https://schema.org/WebPage>"

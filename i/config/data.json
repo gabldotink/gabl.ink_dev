@@ -1,0 +1,7 @@
+{
+  "id": "config",
+  "type": "config",
+  "config": {
+    "relative_paths": true
+  }
+}

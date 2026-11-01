@@ -2,6 +2,7 @@
   "id": "root",
   "type": "container",
   "contents": [
+    "config",
     "encyclopedia",
     "jrco_beta"
   ]
