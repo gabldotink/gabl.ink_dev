@@ -22,16 +22,16 @@ class L:
     Works perfectly! If the tag is already well‐formed.
     """
     def __init__(self, l: str, s: str | None = None, t: str | None = None,
-                 v: list | None = None, x: str | None = None):
+                 v: list[str] | None = None, x: str | None = None):
         self.l: str = l
         self.s: str | None = s
         self.t: str | None = t
-        self.v: list | None = v
+        self.v: list[str] | None = v
         self.x: str | None = x
 
     @classmethod
     def make(cls, l: str, s: str | None = None, t: str | None = None,
-             v: list | None = None, x: str | None = None) -> "L":
+             v: list[str] | None = None, x: str | None = None) -> "L":
         return cls(l, s, t, v, x)
 
     @staticmethod
@@ -79,7 +79,7 @@ class L:
         if not isinstance(self.l, str) or not self.l:
             raise ValueError("Invalid language code")
 
-        r: list = [self.l]
+        r: list[str] = [self.l]
 
         if self.s:
             r.append(f"-{self.s}")
@@ -158,8 +158,8 @@ def attribute_string(string: str) -> str:
         return f"={string}"
 
 
-def expand_parts(parts: list) -> list:
-    """Returns a list of integers from a `parts` list.
+def expand_parts(parts: list[str | int]) -> list[int]:
+    """Returns a list of integers from a ``parts`` list.
 
     >>> expand_parts([1, 2, 3])
     [1, 2, 3]
@@ -168,7 +168,7 @@ def expand_parts(parts: list) -> list:
     >>> expand_parts([4, 7, "1-5"])
     [1, 2, 3, 4, 5, 7]
     """
-    result: set = set()
+    result: set[int] = set()
 
     for part in parts:
         if isinstance(part, int):
@@ -350,7 +350,7 @@ def id_parent(i: str) -> str | None:
 
 
 def language_list_entry(l: L) -> str:
-    r: list = ["<li"]
+    r: list[str] = ["<li"]
 
     if l.t is not None:
         r.append(
@@ -471,8 +471,8 @@ def text_to_latex(string: str) -> str:
 def to_regional_indicators(string: str) -> str:
     """Returns a set of regional indicators from an uppercase string.
 
-    >>> to_regional_indicators("HELLOWORLD")
-    '🇭🇪🇱🇱🇴🇼🇴🇷🇱🇩'
+    >>> to_regional_indicators("HELLOWORLDS")
+    '🇭🇪🇱🇱🇴🇼🇴🇷🇱🇩🇸'
     >>> to_regional_indicators("US")
     '🇺🇸'
     """
@@ -644,8 +644,8 @@ if __name__ == "__main__":
 
             if data[i_id].get("copyright", {}).get("license"):
                 F.append("<!-- SPDX-License-Identifier: ")
-                spdx_license_count = len(data[i_id]["copyright"]["license"])
-                spdx_license_num = 1
+                spdx_license_count: int = len(data[i_id]["copyright"]["license"])
+                spdx_license_num: int = 1
                 for license in data[i_id]["copyright"]["license"]:
                     F.append(ddict["license"][license]["spdx"])
                     if spdx_license_num < spdx_license_count:
