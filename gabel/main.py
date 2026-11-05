@@ -180,8 +180,8 @@ def expand_parts(parts: list[str | int]) -> list[int]:
     return sorted(result)
 
 
-def get_i_id(i: Path) -> str:
-    with open(i, "r", encoding="utf-8") as f:
+def get_i(i_item_file: Path) -> str:
+    with open(i_item_file, "r", encoding="utf-8") as f:
         item_obj = json.load(f)
         return item_obj["id"]
 
@@ -318,7 +318,7 @@ def get_var_l10n(index, key: str, format: str, flang: L) -> str:
                                     L.get(to_check["e"]))
 
 
-def id_base(i: str) -> str:
+def id_base(id_i: str) -> str:
     """Returns the base part of an ID.
 
     >>> id_base("foo")
@@ -328,13 +328,13 @@ def id_base(i: str) -> str:
     >>> id_base("foo/bar/baz")
     'baz'
     """
-    if "/" in i:
-        return i.rpartition("/")[2]
+    if "/" in id_i:
+        return id_i.rpartition("/")[2]
     else:
-        return i
+        return id_i
 
 
-def id_parent(i: str) -> str | None:
+def id_parent(id_i: str) -> str | None:
     """Returns the non‐base part of an ID.
 
     >>> id_parent("foo")
@@ -344,8 +344,8 @@ def id_parent(i: str) -> str | None:
     >>> id_parent("foo/bar/baz")
     'foo/bar'
     """
-    if "/" in i:
-        return i.rpartition("/")[0]
+    if "/" in id_i:
+        return id_i.rpartition("/")[0]
     else:
         return None
 
@@ -385,8 +385,8 @@ def make_nav_button(button: str, lang: L) -> str:
     r: list[str] = ["<div class=B title"]
 
     if (
-        data[i_id]["location"]["page"]
-        == data[data[i_id]["location"]["series"]].get(button_fl)
+        data[i]["location"]["page"]
+        == data[data[i]["location"]["series"]].get(button_fl)
     ):
         r.append(
             f'{attribute_string(msg_l10n(msg_l10n(lang=lang, string=f"nav_button_{button_id}_inline"), lang=lang, string="this_is_x_page"))}'
@@ -394,21 +394,21 @@ def make_nav_button(button: str, lang: L) -> str:
         )
     else:
         if button in ("f", "l"):
-            r.append(attribute_string(msg_l10n(get_var_l10n(data[f'{data[i_id]["location"]["series"]}/{data[data[i_id]["location"]["series"]][button_id]}'], "title", "t", lang), lang=lang, string="nav_button_page_title")))
+            r.append(attribute_string(msg_l10n(get_var_l10n(data[f'{data[i]["location"]["series"]}/{data[data[i]["location"]["series"]][button_id]}'], "title", "t", lang), lang=lang, string="nav_button_page_title")))
         elif button in ("p", "n"):
-            r.append(attribute_string(msg_l10n(get_var_l10n(data[f'{data[i_id]["location"]["series"]}/{data[i_id]["location"][button_id]}'], "title", "t", lang), lang=lang, string="nav_button_page_title")))
+            r.append(attribute_string(msg_l10n(get_var_l10n(data[f'{data[i]["location"]["series"]}/{data[i]["location"][button_id]}'], "title", "t", lang), lang=lang, string="nav_button_page_title")))
         r.append("><a href=../../")
         if button in ("f", "l"):
-            r.append(f'{data[data[i_id]["location"]["series"]][button_id]}')
+            r.append(f'{data[data[i]["location"]["series"]][button_id]}')
         elif button in ("p", "n"):
-            r.append(f'{data[i_id]["location"][button_id]}')
+            r.append(f'{data[i]["location"][button_id]}')
         r.append(f'/{f"{lang}".lower()}/ hreflang={lang}>')
 
     r.append(f'<span class=A aria-hidden=true>{button_arrow}</span><br>{msg_l10n(lang=lang, string=f"nav_button_{button_id}")}')
 
     if (
-        data[i_id]["location"]["page"]
-        != data[data[i_id]["location"]["series"]].get(button_fl, {})
+        data[i]["location"]["page"]
+        != data[data[i]["location"]["series"]].get(button_fl, {})
     ):
         r.append("</a>")
 
@@ -630,24 +630,24 @@ if __name__ == "__main__":
     start_time = time.perf_counter()
 
     # TODO: Make this a function(s); these variables are global.
-    for i in item_files:
-        i_id: str = get_i_id(i)
+    for item_file in item_files:
+        i: str = get_i(item_file)
 
-        if data[i_id]["type"] != "comic_page":
+        if data[i]["type"] != "comic_page":
             continue
 
-        for lang in data[i_id]["langs"]:
+        for lang in data[i]["langs"]:
             lang: L = L.get(lang)
 
-            canonical: str = f'https://gabl.ink/i/{i_id}/{f"{lang}".lower()}/'
+            canonical: str = f'https://gabl.ink/i/{i}/{f"{lang}".lower()}/'
 
             F: list[str] = ["<!DOCTYPE html>\n"]
 
-            if data[i_id].get("copyright", {}).get("license"):
+            if data[i].get("copyright", {}).get("license"):
                 F.append("<!-- SPDX-License-Identifier: ")
-                spdx_license_count: int = len(data[i_id]["copyright"]["license"])
+                spdx_license_count: int = len(data[i]["copyright"]["license"])
                 spdx_license_num: int = 1
-                for license in data[i_id]["copyright"]["license"]:
+                for license in data[i]["copyright"]["license"]:
                     F.append(ddict["license"][license]["spdx"])
                     if spdx_license_num < spdx_license_count:
                         F.append(" OR ")
@@ -664,10 +664,10 @@ if __name__ == "__main__":
 
             # TODO: I don’t think this always works
             if data.get("config",{}).get("config",{}).get("relative_paths") is True:
-                if i_id == "root":
+                if i == "root":
                     styles: str = "../gabel/styles"
                 else:
-                    depth: int = i_id.count("/") + 2
+                    depth: int = i.count("/") + 2
                     styles: list[str] = ["../"]
                     for d in range(depth):
                         styles.append("../")
@@ -681,9 +681,9 @@ if __name__ == "__main__":
 
                 '<meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">'
 
-                f'<title>{msg_l10n(get_var_l10n(data[i_id], "title", "t", lang), lang=lang, string="html_title")}</title>'
+                f'<title>{msg_l10n(get_var_l10n(data[i], "title", "t", lang), lang=lang, string="html_title")}</title>'
 
-                f'<meta name=description content{attribute_string(get_var_l10n(data[i_id], "description", "t", lang))}>'
+                f'<meta name=description content{attribute_string(get_var_l10n(data[i], "description", "t", lang))}>'
 
                 "<meta name=robots content=index,follow>"
 
@@ -695,13 +695,13 @@ if __name__ == "__main__":
                 f"<link rel=stylesheet href={styles}/{lang.l}.css hreflang=zxx>"
                 f"<link rel=stylesheet href={styles}/comic_page.css hreflang=zxx>"
 
-                f'<link rel="external license" href{attribute_string(get_var_l10n(ddict["license"][data[i_id]["copyright"]["license"][0]], "url", "i", lang))}>'
+                f'<link rel="external license" href{attribute_string(get_var_l10n(ddict["license"][data[i]["copyright"]["license"][0]], "url", "i", lang))}>'
 
                 # TODO: Prefetches (starting at sh:420)
 
                 "<meta property=og:type content=article>"
-                f'<meta property=og:title content{attribute_string(get_var_l10n(data[i_id], "title", "t", lang))}>'
-                f'<meta property=og:description content{attribute_string(get_var_l10n(data[i_id], "description", "t", lang))}>'
+                f'<meta property=og:title content{attribute_string(get_var_l10n(data[i], "title", "t", lang))}>'
+                f'<meta property=og:description content{attribute_string(get_var_l10n(data[i], "description", "t", lang))}>'
                 "<meta property=og:site_name content=gabl.ink>"
                 f"<meta property=og:url content={canonical}>"
                 f"<meta property=og:image content={canonical}image.png>"
@@ -718,13 +718,13 @@ if __name__ == "__main__":
 
                 "<ul id=L>"
             )
-            for l in sorted(data[i_id]["langs"]):
+            for l in sorted(data[i]["langs"]):
                 l: L = L.get(l)
                 F.append(language_list_entry(l))
             F.append(
                 "</ul></header>"
 
-                f'<h1>{msg_l10n(get_var_l10n(data[i_id], "title", "H", lang), lang=lang, string="page_title_html")}</h1>'
+                f'<h1>{msg_l10n(get_var_l10n(data[i], "title", "H", lang), lang=lang, string="page_title_html")}</h1>'
 
                 "<nav class=N>"
 
@@ -736,30 +736,30 @@ if __name__ == "__main__":
                 "</nav>"
             )
 
-            if Path(INDEX/i_id/f"{lang}".lower()/"video.webm").is_file():
+            if Path(INDEX/i/f"{lang}".lower()/"video.webm").is_file():
                 F.append(
                     "<video id=M controls poster=image.png preload=auto>"
                     "<source src=video.webm type=video/webm>"
                 )
-                if Path(INDEX/i_id/f"{lang}".lower()/"subs.vtt").is_file():
+                if Path(INDEX/i/f"{lang}".lower()/"subs.vtt").is_file():
                     F.append(
                         f"<track default src=subs.vtt srclang={lang} kind=subtitles "
                         f'label{attribute_string(say_lang(lang, "t"))}>'
                     )
-                if Path(INDEX/i_id/f"{lang}".lower()/"cc.vtt").is_file():
+                if Path(INDEX/i/f"{lang}".lower()/"cc.vtt").is_file():
                     F.append(
                         f"<track src=cc.vtt srclang={lang} kind=captions "
                         f'''label{attribute_string(f'{say_lang(lang, "t")}{msg_l10n(lang=lang, string="cc")}')}>'''
                     )
                 F.append(
                     "<p>"
-                    f'{msg_l10n(lang, get_var_l10n(data[data[i_id]["location"]["series"]], "title", "t", lang), get_var_l10n(data[i_id], "title", "t", lang), get_var_l10n(data[i_id], "title", "t", lang), lang=lang, string="video_not_supported")}'
+                    f'{msg_l10n(lang, get_var_l10n(data[data[i]["location"]["series"]], "title", "t", lang), get_var_l10n(data[i], "title", "t", lang), get_var_l10n(data[i], "title", "t", lang), lang=lang, string="video_not_supported")}'
                     "</p></video>"
                 )
-            elif Path(INDEX/i_id/f"{lang}".lower()/"image.png").is_file():
+            elif Path(INDEX/i/f"{lang}".lower()/"image.png").is_file():
                 F.append("<picture id=M")
-                if get_var_l10n(data[i_id], "tooltip", "H", lang) is not None:
-                    F.append(f' title{attribute_string(get_var_l10n(data[i_id], "tooltip", "t", lang))}')
+                if get_var_l10n(data[i], "tooltip", "H", lang) is not None:
+                    F.append(f' title{attribute_string(get_var_l10n(data[i], "tooltip", "t", lang))}')
                 F.append(
                     ">"
                     f'<img src=image.png fetchpriority=high alt{attribute_string(msg_l10n(lang=lang, string="see_transcript"))}>'
@@ -780,9 +780,9 @@ if __name__ == "__main__":
             # TODO: Support multiple container depths
 
             F.append(
-                f'{msg_l10n(get_var_l10n(data[data[i_id]["location"]["series"]], "title", "H", lang), lang=lang, string="series_title_html")}'
-                f'{msg_l10n(data[i_id]["location"]["page"], lang=lang, string="comma_page")}'
-                f'{msg_l10n(get_var_l10n(data[i_id], "title", "H", lang), lang=lang, string="page_title_html")}'
+                f'{msg_l10n(get_var_l10n(data[data[i]["location"]["series"]], "title", "H", lang), lang=lang, string="series_title_html")}'
+                f'{msg_l10n(data[i]["location"]["page"], lang=lang, string="comma_page")}'
+                f'{msg_l10n(get_var_l10n(data[i], "title", "H", lang), lang=lang, string="page_title_html")}'
                 "</summary></details></nav>"
 
             # TODO: Page list
@@ -792,7 +792,7 @@ if __name__ == "__main__":
                 "<table id=T>"
             )
 
-            for line in data[i_id]["transcript"]:
+            for line in data[i]["transcript"]:
                 # TODO: Check encyclopedia item type
                 #line_h_type=data[f'encyclopedia/{line["H"]}']["type"]
                 F.append(
@@ -816,7 +816,7 @@ if __name__ == "__main__":
                 f'<h2>{msg_l10n(lang=lang, string="log")}</h2>'
             )
 
-            for entry in data[i_id]["log"]:
+            for entry in data[i]["log"]:
                 F.append(
                     f'<article id=log_{print_date(date.fromisoformat(entry["date"]))}><details>'
                     f'<summary><h3>{say_date(date.fromisoformat(entry["date"]), lang)}</h3></summary>'
@@ -845,12 +845,12 @@ if __name__ == "__main__":
 
                 "<footer><p><span class=w>"
                 f'{msg_l10n(lang=lang, string="copyright_notice")}'
-                f'{data[i_id]["copyright"]["year"]["first"]}'
+                f'{data[i]["copyright"]["year"]["first"]}'
             )
-            if data[i_id]["copyright"]["year"].get("last"):
+            if data[i]["copyright"]["year"].get("last"):
                 F.append(
                     f'{msg_l10n(lang=lang, string="copyright_year_separator")}'
-                    f'{data[i_id]["copyright"]["year"]["last"]}'
+                    f'{data[i]["copyright"]["year"]["last"]}'
                 )
             F.append(
                 "</span> "
@@ -858,27 +858,27 @@ if __name__ == "__main__":
 
                 f'<p>{msg_l10n(lang=lang, string="license")}'
                 '<a rel="external license" href'
-                f'{attribute_string(get_var_l10n(ddict["license"][data[i_id]["copyright"]["license"][0]], "url", "i", lang))}'
+                f'{attribute_string(get_var_l10n(ddict["license"][data[i]["copyright"]["license"][0]], "url", "i", lang))}'
                 ">"
-                f'{get_var_l10n(ddict["license"][data[i_id]["copyright"]["license"][0]], "title", "H", lang)}'
+                f'{get_var_l10n(ddict["license"][data[i]["copyright"]["license"][0]], "title", "H", lang)}'
             )
-            if ddict["license"][data[i_id]["copyright"]["license"][0]].get("abbr"):
-                F.append(msg_l10n(get_var_l10n(ddict["license"][data[i_id]["copyright"]["license"][0]], "abbr", "H", lang), lang=lang, string="copyright_license_abbr"))
+            if ddict["license"][data[i]["copyright"]["license"][0]].get("abbr"):
+                F.append(msg_l10n(get_var_l10n(ddict["license"][data[i]["copyright"]["license"][0]], "abbr", "H", lang), lang=lang, string="copyright_license_abbr"))
             F.append("</a>")
 
-            if data[i_id].get("disclaimer"):
+            if data[i].get("disclaimer"):
                 F.append("<p>")
-                if len(data[i_id]["disclaimer"]) == 1:
+                if len(data[i]["disclaimer"]) == 1:
                     F.append(
                         f'{msg_l10n(lang=lang, string="disclaimer")}'
-                        f'{get_var_l10n(ddict["disclaim"][data[i_id]["disclaimer"][0]], "text", "H", lang)}'
+                        f'{get_var_l10n(ddict["disclaim"][data[i]["disclaimer"][0]], "text", "H", lang)}'
                     )
                 else:
                     F.append(
                         f'{msg_l10n(lang=lang, string="disclaimer_plural")}'
                         "<ul class=horizontal_list>"
                     )
-                    for d in data[i_id]["disclaimer"]:
+                    for d in data[i]["disclaimer"]:
                         F.append(
                             "<li><p>"
                             f'{get_var_l10n(ddict["disclaim"][d], "text", "H", lang)}'
@@ -889,7 +889,7 @@ if __name__ == "__main__":
 
             F: str = "".join(F)
 
-            output_file_path: Path = Path(INDEX)/i_id/f"{lang}".lower()/"index.html"
+            output_file_path: Path = Path(INDEX)/i/f"{lang}".lower()/"index.html"
             output_file_path.parent.mkdir(parents=True, exist_ok=True)
             output_file_path.touch()
 
