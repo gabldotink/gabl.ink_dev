@@ -186,12 +186,12 @@ def get_i_id(i: Path) -> str:
         return item_obj["id"]
 
 
-def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
+def get_var_l10n(index, key: str, format: str, flang: L) -> str:
     # e.g. get_var_l10n(data["jrco_beta/1"]["location"], "series", "t", lang)
 
     formats: str = "AHiLpTt"
     real_formats: str = "HiLpt"
-    options: list[str] = [f"{l10n_lang}", l10n_lang.l, "mul", "zxx", "z"]
+    options: list[str] = [f"{flang}", flang.l, "mul", "zxx", "z"]
 
     if format not in real_formats:
         raise ValueError("Invalid real format given")
@@ -203,7 +203,7 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
         if to_find[2] and to_find[2] not in formats:
             raise ValueError("Equals does not contain a valid format")
         elif to_find[2] and not to_find[1]:
-            return get_var_l10n(index, key, to_find[2], l10n_lang)
+            return get_var_l10n(index, key, to_find[2], flang)
         elif to_find[0] and not to_find[1]:
             return get_var_l10n(index, key, format, to_find[0])
         else:
