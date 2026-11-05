@@ -189,8 +189,8 @@ def get_i(i_item_file: Path) -> str:
 def get_var_l10n(index, key: str, format: str, flang: L) -> str:
     # e.g. get_var_l10n(data["jrco_beta/1"]["location"], "series", "t", lang)
 
-    formats: str = "AHiLpTt"
-    real_formats: str = "HiLpt"
+    formats: str = "AHiLpTtX"
+    real_formats: str = "HiLptX"
     options: list[str] = [f"{flang}", flang.l, "mul", "zxx", "z"]
 
     if format not in real_formats:
@@ -309,6 +309,33 @@ def get_var_l10n(index, key: str, format: str, flang: L) -> str:
                 return to_check["t"]
             elif "te" in to_check:
                 return _find_equals("t")
+            elif "A" in to_check:
+                return to_check["A"]
+            elif "Ae" in to_check:
+                return _find_equals("A")
+            elif "e" in to_check:
+                return get_var_l10n(index, key, format,
+                                    L.get(to_check["e"]))
+    # XHTML5 (polyglot)
+    elif format == "X":
+        for o in options:
+            if o == "z":
+                return ""
+
+            to_check: dict = index.get(key, {}).get(o, {})
+
+            if "X" in to_check:
+                return to_check["X"]
+            elif "Xe" in to_check:
+                return _find_equals("X")
+            elif "H" in to_check:
+                return to_check["H"]
+            elif "He" in to_check:
+                return _find_equals("H")
+            elif "t" in to_check:
+                return text_to_html(to_check["t"])
+            elif "te" in to_check:
+                return text_to_html(_find_equals("t"))
             elif "A" in to_check:
                 return to_check["A"]
             elif "Ae" in to_check:
