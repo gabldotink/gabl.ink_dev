@@ -189,7 +189,7 @@ def get_i_id(i: Path) -> str:
 def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
     # e.g. get_var_l10n(data["jrco_beta/1"]["location"], "series", "t", lang)
 
-    formats: str = "AHiLptx"
+    formats: str = "AHiLpTt"
     real_formats: str = "HiLpt"
     options: list[str] = [f"{l10n_lang}", l10n_lang.l, "mul", "zxx", "z"]
 
@@ -261,10 +261,10 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
                 return to_check["L"]
             elif "Le" in to_check:
                 return _find_equals("L")
-            elif "x" in to_check:
-                return to_check("x")
-            elif "xe" in to_check:
-                return _find_equals("x")
+            elif "T" in to_check:
+                return to_check["T"]
+            elif "Te" in to_check:
+                return _find_equals("T")
             elif "t" in to_check:
                 return text_to_latex(to_check["t"])
             elif "te" in to_check:
@@ -295,6 +295,8 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
             elif "e" in to_check:
                 return get_var_l10n(index, key, format,
                                     L.get(to_check["e"]))
+    # TeX
+
     # text
     elif format == "t":
         for o in options:
@@ -314,7 +316,6 @@ def get_var_l10n(index, key: str, format: str, l10n_lang: L) -> str:
             elif "e" in to_check:
                 return get_var_l10n(index, key, format,
                                     L.get(to_check["e"]))
-    # TeX
 
 
 def id_base(i: str) -> str:
