@@ -22,7 +22,8 @@
     },
     "fr": {
       "t": "page de titre de “jeudi”",
-      "H": "page de titre de <cite class=\"r\">jeudi</cite>",
+      "H": "page de titre de <cite class=r>jeudi</cite>",
+      "X": "page de titre de <cite class=\"r\">jeudi</cite>",
       "L": "page de titre de \\textup{jeudi}"
     }
   },
@@ -38,6 +39,7 @@
     "fr": {
       "t": "page de titre de «\u202fjeudi\u202f»",
       "H": "page de titre de <cite class=i>jeudi</cite>",
+      "X": "page de titre de <cite class=\"i\">jeudi</cite>",
       "L": "page de titre de \\textit{jeudi}"
     }
   },
@@ -45,22 +47,26 @@
     "en": {
       "t": "The title page for “JoeRunner and\u00a0Co. Beta,” originally “JoeRunner and\u00a0Co.”",
       "H": "The title page for <cite class=i>JoeRunner and\u00a0Co. Beta</cite>, originally <cite class=i>JoeRunner and\u00a0Co.</cite>",
+      "X": "The title page for <cite class=\"i\">JoeRunner and\u00a0Co. Beta</cite>, originally <cite class=\"i\">JoeRunner and\u00a0Co.</cite>",
       "L": "The title page for \\textit{JoeRunner and~Co. Beta}, originally \\textit{JoeRunner and~Co.}"
     },
     "fr": {
       "t": "La page de titre de «\u202fJoeRunner et\u00a0cie Bêta\u202f», intitulée originalement «\u202fJoeRunner et\u00a0cie\u202f».",
       "H": "La page de titre de <cite class=i>JoeRunner et\u00a0cie Bêta</cite>, intitulée originalement <cite class=i>JoeRunner et\u00a0cie</cite>.",
+      "X": "La page de titre de <cite class=\"i\">JoeRunner et\u00a0cie Bêta</cite>, intitulée originalement <cite class=\"i\">JoeRunner et\u00a0cie</cite>.",
       "L": "La page de titre de \\textit{JoeRunner et~cie Bêta}, intitulée originalement \\textit{JoeRunner et~cie}."
     }
   },
   "tooltip": {
     "en": {
       "t": "pro tip for 5th\u00a0graders: DO NOT wake up at 6:30\u00a0a.m.",
-      "H": "pro tip for 5th\u00a0graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0a.m.</time>"
+      "H": "pro tip for 5th\u00a0graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0a.m.</time>",
+      "X": "pro tip for 5th\u00a0graders: <em class=\"r\">DO NOT</em> wake up at <time datetime=\"06:30\">6:30\u00a0a.m.</time>"
     },
     "fr": {
       "t": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à 6h30",
-      "H": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime=06:30>6h30</time>"
+      "H": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime=06:30>6h30</time>",
+      "X": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime=\"06:30\">6h30</time>"
     }
   },
   "transcript": [
@@ -68,10 +74,12 @@
       "H": "meta/logo",
       "d": {
         "en-US": {
-          "H": "<p><cite class=i>JoeRunner and\u00a0Co.</cite><p>by <span translate=no>gabl</span><p>episode\u00a01 <cite class=i>Edulympiad</cite><p>chapter\u00a01 “<cite>Thursday</cite>”"
+          "H": "<p><cite class=i>JoeRunner and\u00a0Co.</cite><p>by <span translate=no>gabl</span><p>episode\u00a01 <cite class=i>Edulympiad</cite><p>chapter\u00a01 “<cite>Thursday</cite>”",
+          "X": "<p><cite class=\"i\">JoeRunner and\u00a0Co.</cite></p><p>by <span translate=\"no\">gabl</span></p><p>episode\u00a01 <cite class=\"i\">Edulympiad</cite></p><p>chapter\u00a01 “<cite>Thursday</cite>”</p>"
         },
         "fr": {
-          "H": "<p><cite class=i>JoeRunner et\u00a0cie</cite><p>par <span translate=no>gabl</span><p>épisode\u00a01 <cite class=i>Edulympiade</cite><p>chapitre\u00a01 <cite class=i>jeudi</cite>"
+          "H": "<p><cite class=i>JoeRunner et\u00a0cie</cite><p>par <span translate=no>gabl</span><p>épisode\u00a01 <cite class=i>Edulympiade</cite><p>chapitre\u00a01 <cite class=i>jeudi</cite>",
+          "X": "<p><cite class=\"i\">JoeRunner et\u00a0cie</cite></p><p>par <span translate=\"no\">gabl</span></p><p>épisode\u00a01 <cite class=\"i\">Edulympiade</cite></p><p>chapitre\u00a01 <cite class=\"i\">jeudi</cite></p>"
         }
       }
     },
