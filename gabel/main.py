@@ -97,36 +97,43 @@ class L:
         return "".join(r)
 
 
-def attribute_string(string: str) -> str:
+def attr_string(string: str, fformat: str | None = None) -> str:
     """Takes a plain text string as input and returns the HTML
     component that comes right after the attribute name. Returns an
     empty string if the input is empty. Returns the equals sign,
     quotation marks as appropriate, and the string with characters
     escapes as necessary if the input is not empty.
 
-    >>> attribute_string("")
+    >>> attr_string("")
     ''
-    >>> attribute_string("hello, world")
+    >>> attr_string("hello, world")
     '="hello, world"'
-    >>> attribute_string("&")
+    >>> attr_string("&")
     '=&'
-    >>> attribute_string("&amp;")
+    >>> attr_string("&amp;")
     '=&amp;amp;'
-    >>> attribute_string("'")
+    >>> attr_string("'")
     '="\\'"'
-    >>> attribute_string('"')
+    >>> attr_string('"')
     '=\\'"\\''
     """
     if not isinstance(string, str):
         raise TypeError("Not a string")
+    if fformat is None:
+        fformat = format
 
-    # In HTML5, `attribute` is equivalent to `attribute=""`
     if not string:
-        return ""
+        if fformat == "X":
+            return '=""'
+        else:
+            # In HTML5, `attribute` is equivalent to `attribute=""`
+            return ""
 
     quoted: bool
 
-    if any(c in string for c in " \"'=<>`\n\r\t\v\f"):
+    if fformat == "X":
+        quoted = True
+    elif any(c in string for c in " \"'=<>`\n\r\t\v\f"):
         quoted = True
     else:
         quoted = False
@@ -156,6 +163,15 @@ def attribute_string(string: str) -> str:
         return f"={quote_char}{string}{quote_char}"
     else:
         return f"={string}"
+
+
+def close_tag(tag: str, fformat: str | None = None):
+    if fformat is None:
+        fformat = format
+    if fformat == "X":
+        return f"</{tag}>"
+    else:
+        return ""
 
 
 def expand_parts(parts: list[str | int]) -> list[int]:
@@ -426,14 +442,14 @@ def make_nav_button(button: str, flang: None | L = None) -> str:
         == data[data[i]["location"]["series"]].get(button_fl)
     ):
         r.append(
-            f'{attribute_string(msg_l10n(msg_l10n(flang=flang, string=f"nav_button_{button_id}_inline"), flang=flang, string="this_is_x_page"))}'
+            f'{attr_string(msg_l10n(msg_l10n(flang=flang, string=f"nav_button_{button_id}_inline"), flang=flang, string="this_is_x_page"))}'
             ">"
         )
     else:
         if button in ("f", "l"):
-            r.append(attribute_string(msg_l10n(get_var_l10n(data[f'{data[i]["location"]["series"]}/{data[data[i]["location"]["series"]][button_id]}'], "title", "t"), flang=flang, string="nav_button_page_title")))
+            r.append(attr_string(msg_l10n(get_var_l10n(data[f'{data[i]["location"]["series"]}/{data[data[i]["location"]["series"]][button_id]}'], "title", "t"), flang=flang, string="nav_button_page_title")))
         elif button in ("p", "n"):
-            r.append(attribute_string(msg_l10n(get_var_l10n(data[f'{data[i]["location"]["series"]}/{data[i]["location"][button_id]}'], "title", "t"), string="nav_button_page_title")))
+            r.append(attr_string(msg_l10n(get_var_l10n(data[f'{data[i]["location"]["series"]}/{data[i]["location"][button_id]}'], "title", "t"), string="nav_button_page_title")))
         r.append("><a href=../../")
         if button in ("f", "l"):
             r.append(f'{data[data[i]["location"]["series"]][button_id]}')
@@ -628,6 +644,17 @@ def say_lang(to_say: L, fformat: str | None = None, flang: L | None = None) -> s
         return f'{to_sentence_case(get_var_l10n(ddict["lang"][to_say.l], "name", fformat, flang), flang)} ({get_var_l10n(ddict["region"][f"{to_say.t}".lower()], "name", fformat, flang)})'
 
 
+def self_close(fformat: str | None = None) -> str:
+    if fformat is None:
+        fformat = format
+    if fformat == "H":
+        return ">"
+    elif fformat == "X":
+        return "/>"
+    else:
+        raise ValueError("`self_close` format is not `H` or `X`")
+
+
 #def validate_data()->None:
 #    sys.stderr.write("Validating data…")
 #    start_time=time.perf_counter()
@@ -730,34 +757,35 @@ if __name__ == "__main__":
             F.append(
                 f"<html lang={lang} dir={lang_dir} itemscope itemtype=https://schema.org/WebPage>"
 
-                '<meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">'
+                f"<meta charset=utf-8{self_close()}"
+                f'<meta name=viewport content="width=device-width,initial-scale=1"{self_close()}'
 
                 f'<title>{msg_l10n(get_var_l10n(data[i], "title", "t"), string="html_title")}</title>'
 
-                f'<meta name=description content{attribute_string(get_var_l10n(data[i], "description", "t"))}>'
+                f'<meta name=description content{attr_string(get_var_l10n(data[i], "description", "t"))}{self_close()}'
 
-                "<meta name=robots content=index,follow>"
+                f"<meta name=robots content=index,follow{self_close()}"
 
-                f"<link rel=canonical href={canonical} hreflang={lang} type=text/html>"
+                f"<link rel=canonical href={canonical} hreflang={lang} type=text/html{self_close()}"
 
                 # TODO: `if type != comic_page` (sh:349)
 
-                f"<link rel=stylesheet href={styles}/mul.css hreflang=zxx>"
-                f"<link rel=stylesheet href={styles}/{lang.l}.css hreflang=zxx>"
-                f"<link rel=stylesheet href={styles}/comic_page.css hreflang=zxx>"
+                f"<link rel=stylesheet href={styles}/mul.css hreflang=zxx{self_close()}"
+                f"<link rel=stylesheet href={styles}/{lang.l}.css hreflang=zxx{self_close()}"
+                f"<link rel=stylesheet href={styles}/comic_page.css hreflang=zxx{self_close()}"
 
-                f'<link rel="external license" href{attribute_string(get_var_l10n(ddict["license"][data[i]["copyright"]["license"][0]], "url", "i"))}>'
+                f'<link rel="external license" href{attr_string(get_var_l10n(ddict["license"][data[i]["copyright"]["license"][0]], "url", "i"))}{self_close()}'
 
                 # TODO: Prefetches (starting at sh:420)
 
-                "<meta property=og:type content=article>"
-                f'<meta property=og:title content{attribute_string(get_var_l10n(data[i], "title", "t"))}>'
-                f'<meta property=og:description content{attribute_string(get_var_l10n(data[i], "description", "t"))}>'
-                "<meta property=og:site_name content=gabl.ink>"
-                f"<meta property=og:url content={canonical}>"
-                f"<meta property=og:image content={canonical}image.png>"
+                f"<meta property=og:type content=article{self_close()}"
+                f'<meta property=og:title content{attr_string(get_var_l10n(data[i], "title", "t"))}{self_close()}'
+                f'<meta property=og:description content{attr_string(get_var_l10n(data[i], "description", "t"))}{self_close()}'
+                f"<meta property=og:site_name content=gabl.ink{self_close()}"
+                f"<meta property=og:url content={canonical}{self_close()}"
+                f"<meta property=og:image content={canonical}image.png{self_close()}"
                 # TODO: video_exists (sh:322–332, sh:454)
-                f"<meta property=og:locale content={lang.l}_{lang.t}>"
+                f"<meta property=og:locale content={lang.l}_{lang.t}{self_close()}"
 
                 "<script type=application/ld+json>{"
                 '"@context":"https://schema.org",'
@@ -790,17 +818,17 @@ if __name__ == "__main__":
             if Path(INDEX/i/f"{lang}".lower()/"video.webm").is_file():
                 F.append(
                     "<video id=M controls poster=image.png preload=auto>"
-                    "<source src=video.webm type=video/webm>"
+                    f"<source src=video.webm type=video/webm{self_close()}"
                 )
                 if Path(INDEX/i/f"{lang}".lower()/"subs.vtt").is_file():
                     F.append(
                         f"<track default src=subs.vtt srclang={lang} kind=subtitles "
-                        f'label{attribute_string(say_lang(lang, "t"))}>'
+                        f'label{attr_string(say_lang(lang, "t"))}{self_close()}'
                     )
                 if Path(INDEX/i/f"{lang}".lower()/"cc.vtt").is_file():
                     F.append(
                         f"<track src=cc.vtt srclang={lang} kind=captions "
-                        f'''label{attribute_string(f'{say_lang(lang, "t")}{msg_l10n(string="cc")}')}>'''
+                        f'''label{attr_string(f'{say_lang(lang, "t")}{msg_l10n(string="cc")}')}{self_close()}'''
                     )
                 F.append(
                     "<p>"
@@ -810,10 +838,10 @@ if __name__ == "__main__":
             elif Path(INDEX/i/f"{lang}".lower()/"image.png").is_file():
                 F.append("<picture id=M")
                 if get_var_l10n(data[i], "tooltip") is not None:
-                    F.append(f' title{attribute_string(get_var_l10n(data[i], "tooltip", "t"))}')
+                    F.append(f' title{attr_string(get_var_l10n(data[i], "tooltip", "t"))}')
                 F.append(
                     ">"
-                    f'<img src=image.png fetchpriority=high alt{attribute_string(msg_l10n(string="see_transcript"))}>'
+                    f'<img src=image.png fetchpriority=high alt{attr_string(msg_l10n(string="see_transcript"))}{self_close()}'
                     "</picture>"
                 )
 
@@ -857,11 +885,18 @@ if __name__ == "__main__":
                     line_h_label = get_var_l10n(data[f'encyclopedia/{line["H"]}'].get("name", {}), "label")
                 F.append(
                     f"{line_h_label}"
+                    f'{close_tag("th")}'
                     "<td>"
                 )
                 if get_var_l10n(line, "d", "t") == get_var_l10n(line, "d"):
                     F.append("<p>")
                 F.append(get_var_l10n(line, "d"))
+                if get_var_l10n(line, "d", "t") == get_var_l10n(line, "d"):
+                    F.append(close_tag("p"))
+                F.append(
+                    f'{close_tag("td")}'
+                    f'{close_tag("tr")}'
+                )
             F.append(
                 "</table></details><hr>"
                 f'<h2>{msg_l10n(string="log")}</h2>'
@@ -909,7 +944,7 @@ if __name__ == "__main__":
 
                 f'<p>{msg_l10n(string="license")}'
                 '<a rel="external license" href'
-                f'{attribute_string(get_var_l10n(ddict["license"][data[i]["copyright"]["license"][0]], "url", "i"))}'
+                f'{attr_string(get_var_l10n(ddict["license"][data[i]["copyright"]["license"][0]], "url", "i"))}'
                 ">"
                 f'{get_var_l10n(ddict["license"][data[i]["copyright"]["license"][0]], "title")}'
             )
@@ -936,7 +971,12 @@ if __name__ == "__main__":
                         )
                     F.append("</ul>")
 
-            F.append("</footer>\n")
+            F.append(
+                "</footer>"
+                f'{close_tag("body")}'
+                f'{close_tag("html")}'
+                "\n"
+            )
 
             F: str = "".join(F)
 
