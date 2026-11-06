@@ -32,7 +32,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "H": "<p>A computer screen shows a video game, <cite class=i>Hyper Galactic Battle Ducks\u00a0III</cite>. The player is <span class=m>tomatotoe07</span>, and the time is <time datetime=2021-05-27T07:57-0600>0757</time>. The player’s ship is shaped like a mouse cursor. They have a middling Physical bar, and a low Energy bar. There is a chat in the bottom left corner."
+          "H": "A computer screen shows a video game, <cite class=i>Hyper Galactic Battle Ducks\u00a0III</cite>. The player is <span class=m>tomatotoe07</span>, and the time is <time datetime=2021-05-27T07:57-0600>0757</time>. The player’s ship is shaped like a mouse cursor. They have a middling Physical bar, and a low Energy bar. There is a chat in the bottom left corner."
         }
       }
     },
@@ -40,10 +40,10 @@
       "H": "meta/chat",
       "d": {
         "en": {
-          "H": "<p><span class=\"u m\">brightful</span> On the move!</p><p><span class=\"u m\">brightful</span> Uh-oh!</p><p><span class=\"u m\">sharkles5</span> stop spamming defaults</p><p><span class=\"u m\">brightful</span> I'm using tilt controls!"
+          "H": "<span class=\"u m\">brightful</span> On the move!<br><span class=\"u m\">brightful</span> Uh-oh!<br><span class=\"u m\">sharkles5</span> stop spamming defaults<br><span class=\"u m\">brightful</span> I'm using tilt controls!"
         },
         "fr": {
-          "H": "<p><span class=\"u m\">plein_de_brillant</span> En mouvement\u00a0!</p><p><span class=\"u m\">plein_de_brillant</span> Oups\u00a0!</p><p><span class=\"u m\">sans_des_requin5</span> arrete de spammer ca</p><span class=\"u m\">plein_de_brillant</span> Je joue avec le gyroscope\u00a0!"
+          "H": "<span class=\"u m\">plein_de_brillant</span> En mouvement\u00a0!<br><span class=\"u m\">plein_de_brillant</span> Oups\u00a0!<br><span class=\"u m\">sans_des_requin5</span> arrete de spammer ca<br><span class=\"u m\">plein_de_brillant</span> Je joue avec le gyroscope\u00a0!"
         }
       }
     },
@@ -51,10 +51,10 @@
       "H": "jrco_beta/t_t",
       "d": {
         "en": {
-          "H": "<p>(<i>off-panel</i>) Ha! I berzork’d your rear energy shields!"
+          "H": "(<i>off-panel</i>) Ha! I berzork’d your rear energy shields!"
         },
         "fr": {
-          "H": "<p>(<i>hors‐case</i>) Ha\u202f! J’ai berzorké tes boucliers d’énergie arrière\u202f!"
+          "H": "(<i>hors‐case</i>) Ha\u202f! J’ai berzorké tes boucliers d’énergie arrière\u202f!"
         }
       }
     },
@@ -62,10 +62,10 @@
       "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "H": "<p>(<i>off-panel</i>) Perhaps\u00a0.\u00a0.\u00a0."
+          "H": "(<i>off-panel</i>) Perhaps\u00a0.\u00a0.\u00a0."
         },
         "fr": {
-          "H": "<p>(<i>hors‐case</i>) Oui, peut‐être…"
+          "H": "(<i>hors‐case</i>) Oui, peut‐être…"
         }
       }
     },
@@ -120,10 +120,10 @@
       "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "H": "<p>(<i>off‐panel, loudly</i>) Shoot!"
+          "H": "(<i>off‐panel, loudly</i>) Shoot!"
         },
         "fr": {
-          "H": "<p>(<i>hors‐case, fort</i>) Zut\u00a0!"
+          "H": "(<i>hors‐case, fort</i>) Zut\u00a0!"
         }
       }
     },
@@ -131,7 +131,7 @@
       "H": "jrco_beta/t_t",
       "d": {
         "en": {
-          "H": "<p>(<i>looking over, raising eyebrow</i>) What, what is it?"
+          "H": "(<i>looking over, raising eyebrow</i>) What, what is it?"
         }
       }
     },
@@ -147,7 +147,7 @@
       "H": "jrco_beta/t_t",
       "d": {
         "en": {
-          "H": "<p>Oh, heck, me too! <span class=m>ottohammr</span> again?"
+          "H": "Oh, heck, me too! <span class=m>ottohammr</span> again?"
         }
       }
     },
@@ -155,7 +155,7 @@
       "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "H": "<p>Every day there are what, like 300\u00a0players and he keeps finding <em class=\"r u\">us</em>?"
+          "H": "Every day there are what, like 300\u00a0players and he keeps finding <em class=\"r u\">us</em>?"
         }
       }
     },
@@ -195,7 +195,7 @@
       "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "H": "<p>(<i>surprised</i>) Harry, <em class=\"r u\">you’ve</em> been <span class=m>ottohammr</span> this whole time?"
+          "H": "(<i>surprised</i>) Harry, <em class=\"r u\">you’ve</em> been <span class=m>ottohammr</span> this whole time?"
         }
       }
     },
@@ -204,12 +204,12 @@
       "d": {
         "en": {
           "t": "The last four years, anyway. And now you are approximately 1.39729\u00a0×\u00a010¹² molecules of space debris.",
-          "H": "<p>The last four years, anyway. And now you are approximately 1.39729\u00a0×\u00a010<sup>12</sup> molecules of space debris.",
-          "L": "The last four years, anyway. And now you are approximately \\(1.39729\\times 10^{12}\\) molecules of space debris."
+          "H": "The last four years, anyway. And now you are approximately 1.39729\u00a0×\u00a010<sup>12</sup> molecules of space debris.",
+          "L": "The last four years, anyway. And now you are approximately \\(1.39729\\times10^{12}\\) molecules of space debris."
         },
         "fr": {
           "t": "Pour ces quatres dernières années, de toute façon. Et maintenant vous êtes approximativement 1,39729\u00a0×\u00a010¹² molécules de débris spatiaux.",
-          "H": "<p>Pour ces quatres dernières années, de toute façon. Et maintenant vous êtes approximativement 1,39729\u00a0×\u00a010<sup>12</sup> molécules de débris spatiaux.",
+          "H": "Pour ces quatres dernières années, de toute façon. Et maintenant vous êtes approximativement 1,39729\u00a0×\u00a010<sup>12</sup> molécules de débris spatiaux.",
           "L": "Pour ces quatres dernières années, de toute façon. Et maintenant vous êtes approximativement \\(1{,}39729\\times10^{12}\\) molécules de débris spatiaux."
         }
       }
@@ -234,10 +234,10 @@
       "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "H": "<p>(<i>saluting</i>) Farewell, Captain <span class=m>tomatotoe07</span>. Farewell."
+          "H": "(<i>saluting</i>) Farewell, Captain <span class=m>tomatotoe07</span>. Farewell."
         },
         "fr": {
-          "H": "<p>(<i>salué</i>) Au revoir, capitaine <span class=m>tomate_taxidermiste_07</span>. Au revoir.",
+          "H": "(<i>salué</i>) Au revoir, capitaine <span class=m>tomate_taxidermiste_07</span>. Au revoir.",
           "comment": "I don’t really know what to do here mdrrrrrr"
         }
       }

@@ -39,7 +39,7 @@
       "H": "jrco_beta/t_t",
       "d": {
         "en": {
-          "H": "<p>But, like\u00a0.\u00a0.\u00a0. how come no one <em>told</em> me?"
+          "H": "But, like\u00a0.\u00a0.\u00a0. how come no one <em>told</em> me?"
         }
       }
     },
@@ -63,10 +63,10 @@
       "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "H": "<p>(<i>smiling</i>) Oh, really?"
+          "H": "(<i>smiling</i>) Oh, really?"
         },
         "fr": {
-          "H": "<p>(<i>souriant</i>) Oh, vraiment\u202f?"
+          "H": "(<i>souriant</i>) Oh, vraiment\u202f?"
         }
       }
     },
@@ -82,7 +82,7 @@
       "H": "meta/letter",
       "d": {
         "en": {
-          "H": "<p>Dear Mr.\u00a0Mahan, Thank you very much for having me for the last two weeks of school. I look forward to it. That is all I have to say.<p>—\u2060Ma"
+          "H": "Dear Mr.\u00a0Mahan, Thank you very much for having me for the last two weeks of school. I look forward to it. That is all I have to say.<p>—\u2060Ma"
         }
       }
     },
@@ -90,7 +90,7 @@
       "H": "jrco_beta/t_t",
       "d": {
         "en": {
-          "H": "<p>(<i>off‑panel</i>) Oh, darn, I forgot to get her name from Harry."
+          "H": "(<i>off‑panel</i>) Oh, darn, I forgot to get her name from Harry."
         }
       }
     },
@@ -122,7 +122,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "H": "<p>A wall clock shows it’s <time datetime=2021-05-27T08:30-0600>8:30</time>."
+          "H": "A wall clock shows it’s <time datetime=2021-05-27T08:30-0600>8:30</time>."
         }
       }
     },

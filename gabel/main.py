@@ -888,11 +888,7 @@ if __name__ == "__main__":
                     f'{close_tag("th")}'
                     "<td>"
                 )
-                if get_var_l10n(line, "d", "t") == get_var_l10n(line, "d"):
-                    F.append("<p>")
                 F.append(get_var_l10n(line, "d"))
-                if get_var_l10n(line, "d", "t") == get_var_l10n(line, "d"):
-                    F.append(close_tag("p"))
                 F.append(
                     f'{close_tag("td")}'
                     f'{close_tag("tr")}'

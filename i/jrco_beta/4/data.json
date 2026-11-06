@@ -47,7 +47,7 @@
       "H": "meta/screen",
       "d": {
         "en": {
-          "H": "<p>first version in 1215. Even 800\u00a0years after its original issuance, the Magna Carta continues to be relevant today as a symbol and foundation for democracy and liberty, an influence of the United States constitution, and a lasting presence in the United Kingdom. (<i>page break</i>) WORKS CITED"
+          "H": "first version in 1215. Even 800\u00a0years after its original issuance, the Magna Carta continues to be relevant today as a symbol and foundation for democracy and liberty, an influence of the United States constitution, and a lasting presence in the United Kingdom. (<i>page break</i>) WORKS CITED"
         }
       }
     },
@@ -66,10 +66,10 @@
       "H": "meta/screen",
       "d": {
         "en": {
-          "H": "<p>Are you sure you want to turn in 📄\ufe0e\u00a0<cite>Joseph Runner\u00a0– Magna Carta</cite>? (<i>buttons</i>) Submit\u00a0/ Cancel"
+          "H": "Are you sure you want to turn in 📄\ufe0e\u00a0<cite>Joseph Runner\u00a0– Magna Carta</cite>? (<i>buttons</i>) Submit\u00a0/ Cancel"
         },
         "fr": {
-          "H": "<p>Êtes‐vous sûr vous vouloir rendre 📄\ufe0e\u00a0<cite>Joseph Runner\u00a0– Magna Carta</cite>\u202f? (<i>boutons</i>) Rendre\u00a0/ Annuler"
+          "H": "Êtes‐vous sûr vous vouloir rendre 📄\ufe0e\u00a0<cite>Joseph Runner\u00a0– Magna Carta</cite>\u202f? (<i>boutons</i>) Rendre\u00a0/ Annuler"
         }
       }
     },
@@ -110,10 +110,10 @@
       "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "H": "<p>(<i>relaxed</i>) Ahh\u00a0.\u00a0.\u00a0. (<i>closing eyes</i>) Well, <em class=\"r u\">I’ve</em> had enough of the Magna Carta for a <em class=\"r u\">lifetime</em>."
+          "H": "(<i>relaxed</i>) Ahh\u00a0.\u00a0.\u00a0. (<i>closing eyes</i>) Well, <em class=\"r u\">I’ve</em> had enough of the Magna Carta for a <em class=\"r u\">lifetime</em>."
         },
         "fr": {
-          "H": "<p>(<i>relaxé</i>) Ahh… (<i>ferme les yeux</i>) Eh bien, j’en ai assez de la Magna Carta pour toute une vie."
+          "H": "(<i>relaxé</i>) Ahh… (<i>ferme les yeux</i>) Eh bien, j’en ai assez de la Magna Carta pour toute une vie."
         }
       }
     },
@@ -121,7 +121,7 @@
       "H": "meta/tooltip",
       "d": {
         "en": {
-          "H": "<p><time datetime=2021-05-27>May\u00a027</time>. I have spent every waking moment for the last four weeks only experiencing the <cite>Magna Carta</cite>. My soul is the <cite>Magna Carta</cite>. My mind is the <cite>Magna Carta</cite>. My dreams are the <cite>Magna Carta</cite>. This school project has dragged on so long I’ve forgotten what it was like\u00a0.\u00a0.\u00a0. before. But now it is done. With the click of a mouse, I have finally found inner peace."
+          "H": "<time datetime=2021-05-27>May\u00a027</time>. I have spent every waking moment for the last four weeks only experiencing the <cite>Magna Carta</cite>. My soul is the <cite>Magna Carta</cite>. My mind is the <cite>Magna Carta</cite>. My dreams are the <cite>Magna Carta</cite>. This school project has dragged on so long I’ve forgotten what it was like\u00a0.\u00a0.\u00a0. before. But now it is done. With the click of a mouse, I have finally found inner peace."
         }
       }
     }

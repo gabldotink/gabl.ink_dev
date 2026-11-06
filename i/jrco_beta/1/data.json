@@ -87,10 +87,10 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "H": "<p>The setting is a bedroom. On the desk next to the bed are some notebooks and an alarm clock. It’s <time datetime=2021-05-27T06:30-0600>6:30\u00a0a.m. on May\u00a027</time>, a Thursday. There is a button labeled “snooze” on the side of the alarm clock. The alarm is going off."
+          "H": "The setting is a bedroom. On the desk next to the bed are some notebooks and an alarm clock. It’s <time datetime=2021-05-27T06:30-0600>6:30\u00a0a.m. on May\u00a027</time>, a Thursday. There is a button labeled “snooze” on the side of the alarm clock. The alarm is going off."
         },
         "fr": {
-          "H": "<p>La scène se passe dans une chambre. Sur le bureau à côté du lit, il y a des cahiers et un réveil. Il est <time datetime=2021-05-27T06:30-0600>6h30 le 27\u00a0mai</time>, un jeudi. Il y a un bouton étiqueté «\u202fsnooze\u202f» sur le côté du réveil. L’alarme sonne."
+          "H": "La scène se passe dans une chambre. Sur le bureau à côté du lit, il y a des cahiers et un réveil. Il est <time datetime=2021-05-27T06:30-0600>6h30 le 27\u00a0mai</time>, un jeudi. Il y a un bouton étiqueté «\u202fsnooze\u202f» sur le côté du réveil. L’alarme sonne."
         }
       }
     },
@@ -109,10 +109,10 @@
       "H": "meta/tooltip",
       "d": {
         "en": {
-          "H": "<p>pro tip for 5th graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0a.m.</time>"
+          "H": "pro tip for 5th graders: <em class=r>DO NOT</em> wake up at <time datetime=06:30>6:30\u00a0a.m.</time>"
         },
         "fr": {
-          "H": "<p>Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime=06:30>6h30</time>"
+          "H": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime=06:30>6h30</time>"
         }
       }
     }

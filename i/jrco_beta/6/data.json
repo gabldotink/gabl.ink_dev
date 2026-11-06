@@ -65,7 +65,7 @@
       "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "H": "<p>(<i>shrugging</i>) I mean\u00a0.\u00a0.\u00a0. until next year, anyway."
+          "H": "(<i>shrugging</i>) I mean\u00a0.\u00a0.\u00a0. until next year, anyway."
         }
       }
     },
@@ -84,10 +84,10 @@
       "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "H": "<p>(<i>sulking</i>) Yeah; it’s kinda gonna stink, though."
+          "H": "(<i>sulking</i>) Yeah; it’s kinda gonna stink, though."
         },
         "fr": {
-          "H": "<p>(<i>boudant</i>) Ouais… mais ça va être un peu nul."
+          "H": "(<i>boudant</i>) Ouais… mais ça va être un peu nul."
         }
       }
     },
@@ -95,7 +95,7 @@
       "H": "jrco_beta/eden_runner",
       "d": {
         "en": {
-          "H": "<p>Well, I <em class=\"r u\">loved</em> middle school."
+          "H": "Well, I <em class=\"r u\">loved</em> middle school."
         },
         "fr": {
           "t": "Eh bien, j’ai adorée le collège."
@@ -117,7 +117,7 @@
       "H": "jrco_beta/eden_runner",
       "d": {
         "en": {
-          "H": "<p><i>Sigh.</i> Come get some cereal, Joseph."
+          "H": "<i>Sigh.</i> Come get some cereal, Joseph."
         }
       }
     },
