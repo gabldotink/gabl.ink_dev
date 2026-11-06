@@ -196,7 +196,7 @@ def get_var_l10n(index, key: str, format: str, flang: L) -> str:
     if format not in real_formats:
         raise ValueError("Invalid real format given")
 
-    def _find_equals(pointer: str) -> str:
+    def find_equals(pointer: str) -> str:
         to_find: tuple = index[key][o][f"{pointer}e"].rpartition("_")
 
         # TODO: catch invalid equals
@@ -222,15 +222,15 @@ def get_var_l10n(index, key: str, format: str, flang: L) -> str:
             if "H" in to_check:
                 return to_check["H"]
             elif "He" in to_check:
-                return _find_equals("H")
+                return find_equals("H")
             elif "t" in to_check:
                 return text_to_html(to_check["t"])
             elif "te" in to_check:
-                return text_to_html(_find_equals("t"))
+                return text_to_html(find_equals("t"))
             elif "A" in to_check:
-                return to_check["A"]
+                return text_to_html(to_check["A"])
             elif "Ae" in to_check:
-                return _find_equals("A")
+                return text_to_html(find_equals("A"))
             elif "e" in to_check:
                 return get_var_l10n(index, key, format,
                                     L.get(to_check["e"]))
@@ -245,7 +245,7 @@ def get_var_l10n(index, key: str, format: str, flang: L) -> str:
             if "i" in to_check:
                 return to_check["i"]
             elif "ie" in to_check:
-                return _find_equals("i")
+                return find_equals("i")
             elif "e" in to_check:
                 return get_var_l10n(index, key, format,
                                     L.get(to_check["e"]))
@@ -260,15 +260,19 @@ def get_var_l10n(index, key: str, format: str, flang: L) -> str:
             if "L" in to_check:
                 return to_check["L"]
             elif "Le" in to_check:
-                return _find_equals("L")
+                return find_equals("L")
             elif "T" in to_check:
                 return to_check["T"]
             elif "Te" in to_check:
-                return _find_equals("T")
+                return find_equals("T")
             elif "t" in to_check:
                 return text_to_latex(to_check["t"])
             elif "te" in to_check:
-                return text_to_latex(_find_equals("t"))
+                return text_to_latex(find_equals("t"))
+            elif "A" in to_check:
+                return text_to_latex(to_check["A"])
+            elif "Ae" in to_check:
+                return text_to_latex(find_equals("A"))
             elif "e" in to_check:
                 return get_var_l10n(index, key, format,
                                     L.get(to_check["e"]))
@@ -283,15 +287,15 @@ def get_var_l10n(index, key: str, format: str, flang: L) -> str:
             if "p" in to_check:
                 return to_check["p"]
             elif "pe" in to_check:
-                return _find_equals("p")
+                return find_equals("p")
             elif "t" in to_check:
                 return to_check["t"]
             elif "te" in to_check:
-                _find_equals("t")
+                find_equals("t")
             elif "A" in to_check:
                 return to_check["A"]
             elif "Ae" in to_check:
-                return _find_equals("A")
+                return find_equals("A")
             elif "e" in to_check:
                 return get_var_l10n(index, key, format,
                                     L.get(to_check["e"]))
@@ -308,11 +312,11 @@ def get_var_l10n(index, key: str, format: str, flang: L) -> str:
             if "t" in to_check:
                 return to_check["t"]
             elif "te" in to_check:
-                return _find_equals("t")
+                return find_equals("t")
             elif "A" in to_check:
                 return to_check["A"]
             elif "Ae" in to_check:
-                return _find_equals("A")
+                return find_equals("A")
             elif "e" in to_check:
                 return get_var_l10n(index, key, format,
                                     L.get(to_check["e"]))
@@ -327,19 +331,19 @@ def get_var_l10n(index, key: str, format: str, flang: L) -> str:
             if "X" in to_check:
                 return to_check["X"]
             elif "Xe" in to_check:
-                return _find_equals("X")
+                return find_equals("X")
             elif "H" in to_check:
                 return to_check["H"]
             elif "He" in to_check:
-                return _find_equals("H")
+                return find_equals("H")
             elif "t" in to_check:
                 return text_to_html(to_check["t"])
             elif "te" in to_check:
-                return text_to_html(_find_equals("t"))
+                return text_to_html(find_equals("t"))
             elif "A" in to_check:
-                return to_check["A"]
+                return text_to_html(to_check["A"])
             elif "Ae" in to_check:
-                return _find_equals("A")
+                return text_to_html(find_equals("A"))
             elif "e" in to_check:
                 return get_var_l10n(index, key, format,
                                     L.get(to_check["e"]))
