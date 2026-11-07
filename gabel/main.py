@@ -240,14 +240,21 @@ def get_var_l10n(index, key: str, fformat: str | None = None, flang: L | None = 
 
             if "H" in to_check:
                 return to_check["H"]
+            elif "Hf" in to_check:
+                return eval(f'f"{to_check["Hf"]}"')
             elif "He" in to_check:
                 return find_equals("H")
             elif "t" in to_check:
                 return text_to_html(to_check["t"])
+            elif "tf" in to_check:
+                # TODO: Not tested and maybe wrong
+                return eval(f'{text_to_html(f"{to_check["tf"]}")}')
             elif "te" in to_check:
                 return text_to_html(find_equals("t"))
             elif "A" in to_check:
                 return text_to_html(to_check["A"])
+            elif "Af" in to_check:
+                return eval(f'f"{to_check["Af"]}"')
             elif "Ae" in to_check:
                 return text_to_html(find_equals("A"))
             elif "e" in to_check:
@@ -263,6 +270,8 @@ def get_var_l10n(index, key: str, fformat: str | None = None, flang: L | None = 
             
             if "i" in to_check:
                 return to_check["i"]
+            elif "if" in to_check:
+                return eval(f'f"{to_check["if"]}"')
             elif "ie" in to_check:
                 return find_equals("i")
             elif "e" in to_check:
@@ -278,18 +287,26 @@ def get_var_l10n(index, key: str, fformat: str | None = None, flang: L | None = 
 
             if "L" in to_check:
                 return to_check["L"]
+            elif "Lf" in to_check:
+                return eval(f'f"{to_check["Lf"]}"')
             elif "Le" in to_check:
                 return find_equals("L")
             elif "T" in to_check:
                 return to_check["T"]
+            elif "Tf" in to_check:
+                return eval(f'f"{to_check["Tf"]}"')
             elif "Te" in to_check:
                 return find_equals("T")
             elif "t" in to_check:
                 return text_to_latex(to_check["t"])
+            elif "tf" in to_check:
+                return eval(f'{text_to_latex(f"{to_check["tf"]}")}')
             elif "te" in to_check:
                 return text_to_latex(find_equals("t"))
             elif "A" in to_check:
                 return text_to_latex(to_check["A"])
+            elif "Af" in to_check:
+                return eval(f'{text_to_latex(f"{to_check["Af"]}")}')
             elif "Ae" in to_check:
                 return text_to_latex(find_equals("A"))
             elif "e" in to_check:
@@ -305,10 +322,14 @@ def get_var_l10n(index, key: str, fformat: str | None = None, flang: L | None = 
 
             if "p" in to_check:
                 return to_check["p"]
+            elif "pf" in to_check:
+                return eval(f'f"{to_check["pf"]}"')
             elif "pe" in to_check:
                 return find_equals("p")
             elif "t" in to_check:
                 return to_check["t"]
+            elif "tf" in to_check:
+                return eval(f'f"{to_check["tf"]}"')
             elif "te" in to_check:
                 find_equals("t")
             elif "A" in to_check:
@@ -330,10 +351,14 @@ def get_var_l10n(index, key: str, fformat: str | None = None, flang: L | None = 
 
             if "t" in to_check:
                 return to_check["t"]
+            elif "tf" in to_check:
+                return eval(f'f"{to_check["tf"]}"')
             elif "te" in to_check:
                 return find_equals("t")
             elif "A" in to_check:
                 return to_check["A"]
+            elif "Af" in to_check:
+                return eval(f'f"{to_check["Af"]}"')
             elif "Ae" in to_check:
                 return find_equals("A")
             elif "e" in to_check:
@@ -349,18 +374,26 @@ def get_var_l10n(index, key: str, fformat: str | None = None, flang: L | None = 
 
             if "X" in to_check:
                 return to_check["X"]
+            elif "Xf" in to_check:
+                return eval(f'f"{to_check["Xf"]}"')
             elif "Xe" in to_check:
                 return find_equals("X")
             elif "H" in to_check:
                 return to_check["H"]
+            elif "Hf" in to_check:
+                return eval(f'f"{to_check["Hf"]}"')
             elif "He" in to_check:
                 return find_equals("H")
             elif "t" in to_check:
                 return text_to_html(to_check["t"])
+            elif "tf" in to_check:
+                return eval(f'f"{to_check["tf"]}"')
             elif "te" in to_check:
                 return text_to_html(find_equals("t"))
             elif "A" in to_check:
                 return text_to_html(to_check["A"])
+            elif "Af" in to_check:
+                return eval(f'f"{to_check["Af"]}"')
             elif "Ae" in to_check:
                 return text_to_html(find_equals("A"))
             elif "e" in to_check:
