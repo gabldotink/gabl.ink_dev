@@ -97,24 +97,24 @@ class L:
         return "".join(r)
 
 
-def attr_string(string: str, fformat: str | None = None) -> str:
+def attr(string: str, fformat: str | None = None) -> str:
     """Takes a plain text string as input and returns the HTML
     component that comes right after the attribute name. Returns an
     empty string if the input is empty. Returns the equals sign,
     quotation marks as appropriate, and the string with characters
     escapes as necessary if the input is not empty.
 
-    >>> attr_string("")
+    >>> attr("")
     ''
-    >>> attr_string("hello, world")
+    >>> attr("hello, world")
     '="hello, world"'
-    >>> attr_string("&")
+    >>> attr("&")
     '=&'
-    >>> attr_string("&amp;")
+    >>> attr("&amp;")
     '=&amp;amp;'
-    >>> attr_string("'")
+    >>> attr("'")
     '="\\'"'
-    >>> attr_string('"')
+    >>> attr('"')
     '=\\'"\\''
     """
     if not isinstance(string, str):
@@ -441,14 +441,14 @@ def make_nav_button(button: str, flang: None | L = None) -> str:
         == data[data[i]["location"]["series"]].get(button_fl)
     ):
         r.append(
-            f"{attr_string(msg_l10n(msg_l10n(flang=flang, string=f"nav_button_{button_id}_inline"), flang=flang, string="this_is_x_page"))}"
+            f"{attr(msg_l10n(msg_l10n(flang=flang, string=f"nav_button_{button_id}_inline"), flang=flang, string="this_is_x_page"))}"
             ">"
         )
     else:
         if button in ("f", "l"):
-            r.append(attr_string(msg_l10n(get_var_l10n(data[f"{data[i]["location"]["series"]}/{data[data[i]["location"]["series"]][button_id]}"], "title", "t"), flang=flang, string="nav_button_page_title")))
+            r.append(attr(msg_l10n(get_var_l10n(data[f"{data[i]["location"]["series"]}/{data[data[i]["location"]["series"]][button_id]}"], "title", "t"), flang=flang, string="nav_button_page_title")))
         elif button in ("p", "n"):
-            r.append(attr_string(msg_l10n(get_var_l10n(data[f"{data[i]["location"]["series"]}/{data[i]["location"][button_id]}"], "title", "t"), string="nav_button_page_title")))
+            r.append(attr(msg_l10n(get_var_l10n(data[f"{data[i]["location"]["series"]}/{data[i]["location"][button_id]}"], "title", "t"), string="nav_button_page_title")))
         r.append("><a href=../../")
         if button in ("f", "l"):
             r.append(f"{data[data[i]["location"]["series"]][button_id]}")
@@ -761,7 +761,7 @@ if __name__ == "__main__":
 
                 f"<title>{msg_l10n(get_var_l10n(data[i], "title", "t"), string="html_title")}</title>"
 
-                f"<meta name=description content{attr_string(get_var_l10n(data[i], "description", "t"))}{self_close()}"
+                f"<meta name=description content{attr(get_var_l10n(data[i], "description", "t"))}{self_close()}"
 
                 f"<meta name=robots content=index,follow{self_close()}"
 
@@ -773,13 +773,13 @@ if __name__ == "__main__":
                 f"<link rel=stylesheet href={styles}/{lang.l}.css hreflang=zxx{self_close()}"
                 f"<link rel=stylesheet href={styles}/comic_page.css hreflang=zxx{self_close()}"
 
-                f'<link rel="external license" href{attr_string(get_var_l10n(ddict["license"][data[i]["copyright"]["license"][0]], "url", "i"))}{self_close()}'
+                f'<link rel="external license" href{attr(get_var_l10n(ddict["license"][data[i]["copyright"]["license"][0]], "url", "i"))}{self_close()}'
 
                 # TODO: Prefetches (starting at sh:420)
 
                 f"<meta property=og:type content=article{self_close()}"
-                f"<meta property=og:title content{attr_string(get_var_l10n(data[i], "title", "t"))}{self_close()}"
-                f"<meta property=og:description content{attr_string(get_var_l10n(data[i], "description", "t"))}{self_close()}"
+                f"<meta property=og:title content{attr(get_var_l10n(data[i], "title", "t"))}{self_close()}"
+                f"<meta property=og:description content{attr(get_var_l10n(data[i], "description", "t"))}{self_close()}"
                 f"<meta property=og:site_name content=gabl.ink{self_close()}"
                 f"<meta property=og:url content={canonical}{self_close()}"
                 f"<meta property=og:image content={canonical}image.png{self_close()}"
@@ -822,12 +822,12 @@ if __name__ == "__main__":
                 if Path(INDEX/i/f"{lang}".lower()/"subs.vtt").is_file():
                     F.append(
                         f"<track default src=subs.vtt srclang={lang} kind=subtitles "
-                        f"label{attr_string(say_lang(lang, "t"))}{self_close()}"
+                        f"label{attr(say_lang(lang, "t"))}{self_close()}"
                     )
                 if Path(INDEX/i/f"{lang}".lower()/"cc.vtt").is_file():
                     F.append(
                         f"<track src=cc.vtt srclang={lang} kind=captions "
-                        f"label{attr_string(f"{say_lang(lang, "t")}{msg_l10n(string="cc")}")}{self_close()}"
+                        f"label{attr(f"{say_lang(lang, "t")}{msg_l10n(string="cc")}")}{self_close()}"
                     )
                 F.append(
                     "<p>"
@@ -837,10 +837,10 @@ if __name__ == "__main__":
             elif Path(INDEX/i/f"{lang}".lower()/"image.png").is_file():
                 F.append("<picture id=M")
                 if get_var_l10n(data[i], "tooltip") is not None:
-                    F.append(f" title{attr_string(get_var_l10n(data[i], "tooltip", "t"))}")
+                    F.append(f" title{attr(get_var_l10n(data[i], "tooltip", "t"))}")
                 F.append(
                     ">"
-                    f"<img src=image.png fetchpriority=high alt{attr_string(msg_l10n(string="see_transcript"))}{self_close()}"
+                    f"<img src=image.png fetchpriority=high alt{attr(msg_l10n(string="see_transcript"))}{self_close()}"
                     "</picture>"
                 )
 
@@ -935,11 +935,11 @@ if __name__ == "__main__":
                 )
             F.append(
                 "</span> "
-                "<span translate=no>gabl.ink</span>"
+                f"<span translate{attr("no")}>gabl.ink</span>"
 
                 f"<p>{msg_l10n(string="license")}"
                 '<a rel="external license" href'
-                f"{attr_string(get_var_l10n(ddict["license"][data[i]["copyright"]["license"][0]], "url", "i"))}"
+                f"{attr(get_var_l10n(ddict["license"][data[i]["copyright"]["license"][0]], "url", "i"))}"
                 ">"
                 f"{get_var_l10n(ddict["license"][data[i]["copyright"]["license"][0]], "title")}"
             )
