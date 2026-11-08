@@ -68,10 +68,10 @@
       "H": "meta/logo",
       "d": {
         "en-US": {
-          "Hf": "<p><cite class{attr('i')}>JoeRunner and\u00a0Co.</cite>{close_tag('p')}<p>by <span translate{attr('no')}>gabl</span>{close_tag('p')}<p>episode\u00a01 <cite class{attr('i')}>Edulympiad</cite>{close_tag('p')}<p>chapter\u00a01 “<cite>Thursday</cite>”{close_tag('p')}"
+          "Hf": "<p><cite class{attr('i')}>JoeRunner and\u00a0Co.</cite>{close('p')}<p>by <span translate{attr('no')}>gabl</span>{close('p')}<p>episode\u00a01 <cite class{attr('i')}>Edulympiad</cite>{close('p')}<p>chapter\u00a01 “<cite>Thursday</cite>”{close('p')}"
         },
         "fr": {
-          "Hf": "<p><cite class{attr('i')}>JoeRunner et\u00a0cie</cite>{close_tag('p')}<p>par <span translate{attr('no')}>gabl</span>{close_tag('p')}<p>épisode\u00a01 <cite class{attr('i')}>Edulympiade</cite>{close_tag('p')}<p>chapitre\u00a01 <cite class{attr('i')}>jeudi</cite>{close_tag('p')}"
+          "Hf": "<p><cite class{attr('i')}>JoeRunner et\u00a0cie</cite>{close('p')}<p>par <span translate{attr('no')}>gabl</span>{close('p')}<p>épisode\u00a01 <cite class{attr('i')}>Edulympiade</cite>{close('p')}<p>chapitre\u00a01 <cite class{attr('i')}>jeudi</cite>{close('p')}"
         }
       }
     },

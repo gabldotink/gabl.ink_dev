@@ -165,7 +165,7 @@ def attr(string: str, fformat: str | None = None) -> str:
         return f"={string}"
 
 
-def close_tag(tag: str, fformat: str | None = None):
+def close(tag: str, fformat: str | None = None):
     if fformat is None:
         fformat = format
     if fformat == "X":
@@ -916,13 +916,13 @@ if __name__ == "__main__":
                     line_h_label = get_l(data[f"encyclopedia/{line["H"]}"].get("name", {}), "label")
                 F.append(
                     f"{line_h_label}"
-                    f"{close_tag("th")}"
+                    f"{close("th")}"
                     "<td>"
                 )
                 F.append(get_l(line, "d"))
                 F.append(
-                    f"{close_tag("td")}"
-                    f"{close_tag("tr")}"
+                    f"{close("td")}"
+                    f"{close("tr")}"
                 )
             F.append(
                 "</table></details><hr>"
@@ -936,7 +936,7 @@ if __name__ == "__main__":
                 )
                 for line in entry["content"]:
                     if get_l(line, "p"):
-                        F.append(f"<p>{get_l(line, "p")}{close_tag("p")}")
+                        F.append(f"<p>{get_l(line, "p")}{close("p")}")
                     elif get_l(line, "x"):
                         F.append(get_l(line, "x"))
                 F.append("</details></article>")
@@ -1001,8 +1001,8 @@ if __name__ == "__main__":
 
             F.append(
                 "</footer>"
-                f"{close_tag("body")}"
-                f"{close_tag("html")}"
+                f"{close("body")}"
+                f"{close("html")}"
                 "\n"
             )
 
