@@ -936,9 +936,10 @@ if __name__ == "__main__":
                     f"<summary><h3>{say_date(date.fromisoformat(entry["date"]))}</h3></summary>"
                 )
                 for line in entry["content"]:
-                    if text_to_html(get_var_l10n(line, "p", "t")) == get_var_l10n(line, "p"):
-                        F.append("<p>")
-                    F.append(get_var_l10n(line, "p"))
+                    if get_var_l10n(line, "p"):
+                        F.append(f"<p>{get_var_l10n(line, "p")}{close_tag("p")}")
+                    elif get_var_l10n(line, "x"):
+                        F.append(get_var_l10n(line, "x"))
                 F.append("</details></article>")
 
             F.append(

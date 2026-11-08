@@ -131,10 +131,10 @@
         {
           "p": {
             "en": {
-              "H": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "H": "<i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "H": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "H": "<i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },

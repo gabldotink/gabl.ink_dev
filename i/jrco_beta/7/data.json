@@ -60,38 +60,38 @@
         {
           "p": {
             "en": {
-              "H": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "H": "<i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "H": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "H": "<i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },
         {
           "p": {
             "en": {
-              "H": "<p>I’m back! Between week‐long campouts, computer issues, low motivation, reading lots of <cite>Wikipedia</cite>, tweeting about the <cite class=i>Mario</cite> movie, and discovering the lost city of Atlantis, I’ve had a lot on my plate. I’m pleased to announce that, <em>probably</em>, the pace of pages coming out should pick up, although unfortunately I’m still not ready to make an update schedule yet."
+              "H": "I’m back! Between week‐long campouts, computer issues, low motivation, reading lots of <cite>Wikipedia</cite>, tweeting about the <cite class=i>Mario</cite> movie, and discovering the lost city of Atlantis, I’ve had a lot on my plate. I’m pleased to announce that, <em>probably</em>, the pace of pages coming out should pick up, although unfortunately I’m still not ready to make an update schedule yet."
             }
           }
         },
         {
           "p": {
             "en": {
-              "H": "<p>This page was a bit rushed, and I forgot to preview the rendered image at half resolution, so when you zoom in this page kinda looks bad because of the brush I used. This is the first time the details have been so small yet, and I hadn’t tested <cite>Clip Studio Paint</cite>’s “Real G‐Pen” with those details yet. The full‐size version looks a bit better. I’m planning to release those bigger images (and <code>.clip</code> files) on <cite>Patreon</cite> at a later time, but I’m holding off on creating one until I’m able to establish a more consistent schedule."
+              "H": "This page was a bit rushed, and I forgot to preview the rendered image at half resolution, so when you zoom in this page kinda looks bad because of the brush I used. This is the first time the details have been so small yet, and I hadn’t tested <cite>Clip Studio Paint</cite>’s “Real G‐Pen” with those details yet. The full‐size version looks a bit better. I’m planning to release those bigger images (and <code>.clip</code> files) on <cite>Patreon</cite> at a later time, but I’m holding off on creating one until I’m able to establish a more consistent schedule."
             }
           }
         },
         {
           "p": {
             "en": {
-              "H": "<p>Who is that mysterious boy at the door? Will I ever flesh out the characters that are sitting around on the grass (that’s supposed to be grass)? Will I actually start posting more often, or will I slip into another slump of not drawing even though I love doing it? Find out next time on\u00a0.\u00a0.\u00a0. <cite class=i>JoeRunner and\u00a0Co.</cite>! Or something!"
+              "H": "Who is that mysterious boy at the door? Will I ever flesh out the characters that are sitting around on the grass (that’s supposed to be grass)? Will I actually start posting more often, or will I slip into another slump of not drawing even though I love doing it? Find out next time on\u00a0.\u00a0.\u00a0. <cite class=i>JoeRunner and\u00a0Co.</cite>! Or something!"
             }
           }
         },
         {
           "p": {
             "en": {
-              "H": "<p>—\u2060<span translate=no>gabl</span>",
+              "H": "—\u2060<span translate=no>gabl</span>",
               "t": "—\u2060gabl",
               "L": "\\mbox{---gabl}"
             },

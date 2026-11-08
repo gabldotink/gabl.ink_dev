@@ -250,21 +250,21 @@
         {
           "p": {
             "en": {
-              "H": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "H": "<i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "H": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "H": "<i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },
         {
           "p": {
             "en": {
-              "H": "<p>Alas, poor <span class=m>tomatotoe07</span>.",
+              "H": "Alas, poor <span class=m>tomatotoe07</span>.",
               "L": "Alas, poor \\texttt{tomatotoe07}."
             },
             "fr": {
-              "H": "<p>Hélas\u202f! pauvre <span class=m>tomate_taxidermiste_07</span>.",
+              "H": "Hélas\u202f! pauvre <span class=m>tomate_taxidermiste_07</span>.",
               "L": "Hélas\\,! pauvre \\texttt{tomate_taxidermiste_07}."
             }
           }
@@ -272,14 +272,14 @@
         {
           "p": {
             "en": {
-              "H": "<p>This page only took a month to come out instead of, like, five. There’s so much that I want to get to, and it’s a bit upsetting to me that I’ve only gotten this far, with <cite class=i>JoeRunner and Co.</cite>’s first anniversary being in two days (<time datetime=2023-04-01>April\u00a01</time>). This page especially took a lot of effort\u2060—the most yet\u2060—due to its length."
+              "H": "This page only took a month to come out instead of, like, five. There’s so much that I want to get to, and it’s a bit upsetting to me that I’ve only gotten this far, with <cite class=i>JoeRunner and Co.</cite>’s first anniversary being in two days (<time datetime=2023-04-01>April\u00a01</time>). This page especially took a lot of effort\u2060—the most yet\u2060—due to its length."
             }
           }
         },
         {
           "p": {
             "en": {
-              "H": "<p>Only about 60% of the draft I wrote back on\u00a0.\u00a0.\u00a0. <i>checks</i> <em><time datetime=2021-05-25>May\u00a025, 2021</time>?</em> I really <em>am</em> behind. <i>ahem</i> Only about 60% of the original draft is in this final version. None of these pages so far are super faithful to that draft\u2060—I wrote them when I was around 14\u00a0years old, and of course my dialogue has changed a lot in two years of my teenage life. It means the same thing, but it’s expanded and, dare I say, funnier. Assuming it’s funny at all."
+              "H": "Only about 60% of the draft I wrote back on\u00a0.\u00a0.\u00a0. <i>checks</i> <em><time datetime=2021-05-25>May\u00a025, 2021</time>?</em> I really <em>am</em> behind. <i>ahem</i> Only about 60% of the original draft is in this final version. None of these pages so far are super faithful to that draft\u2060—I wrote them when I was around 14\u00a0years old, and of course my dialogue has changed a lot in two years of my teenage life. It means the same thing, but it’s expanded and, dare I say, funnier. Assuming it’s funny at all."
             }
           }
         },
@@ -300,7 +300,7 @@
         {
           "p": {
             "en": {
-              "H": "<p><b>—\u2060Gabriel\u00a0/ <span translate=no>gabl</span></b>",
+              "H": "<b>—\u2060Gabriel\u00a0/ <span translate=no>gabl</span></b>",
               "t": "—\u2060Gabriel\u00a0/ gabl",
               "L": "\\textbf{\\mbox{---Gabriel}~/ gabl}}"
             },

@@ -148,10 +148,10 @@
         {
           "p": {
             "en": {
-              "H": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "H": "<i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "H": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "H": "<i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },
@@ -165,14 +165,14 @@
         {
           "p": {
             "en": {
-              "H": "<p>First off, this comic has a mobile‐friendly version! Similarly to the format that <cite>Webtoon</cite> uses, the mobile version is comprised of several narrower images that are easier to read on a vertical screen. If you’re using a fullscreen desktop browser window, the “desktop” version should show up by default; if you’re on mobile, the mobile version should appear instead. I’m testing it out with this one, and I’ll see how well it turns out. (You can view the mobile comic on desktop by resizing your browser window to be narrower; however, I’m still trying to figure out a way to view the desktop comic on mobile. Your best bet for now is probably to just view the original image source here<ins>\u00a0<small>[<i>link removed</i>]</small></ins>.)"
+              "H": "First off, this comic has a mobile‐friendly version! Similarly to the format that <cite>Webtoon</cite> uses, the mobile version is comprised of several narrower images that are easier to read on a vertical screen. If you’re using a fullscreen desktop browser window, the “desktop” version should show up by default; if you’re on mobile, the mobile version should appear instead. I’m testing it out with this one, and I’ll see how well it turns out. (You can view the mobile comic on desktop by resizing your browser window to be narrower; however, I’m still trying to figure out a way to view the desktop comic on mobile. Your best bet for now is probably to just view the original image source here<ins>\u00a0<small>[<i>link removed</i>]</small></ins>.)"
             }
           }
         },
         {
           "p": {
             "en": {
-              "H": "<p>Second, I’m renaming “episodes” to “seasons.” I know, I know, calm down. I know how attached people have gotten to episodes over the last five pages, but believe me, it’s for the greater good. I want you to know that I don’t make this dramatic change lightly, and that it has a purpose. I’m calling them seasons now because webcomic “episodes” have a different meaning in <cite class=i>JoeRunner and\u00a0Co.</cite> than on <cite>Webtoon</cite>, the most popular webcomic publisher (that’s right, I mentioned <cite>Webtoon</cite> <em>twice</em>), in addition to the fact that having both “episodes” and “chapters” at once is a bit confusing. I hope your anger has more or less subsided; I understand, however, that it will likely take a long time for you to truly forgive me."
+              "H": "Second, I’m renaming “episodes” to “seasons.” I know, I know, calm down. I know how attached people have gotten to episodes over the last five pages, but believe me, it’s for the greater good. I want you to know that I don’t make this dramatic change lightly, and that it has a purpose. I’m calling them seasons now because webcomic “episodes” have a different meaning in <cite class=i>JoeRunner and\u00a0Co.</cite> than on <cite>Webtoon</cite>, the most popular webcomic publisher (that’s right, I mentioned <cite>Webtoon</cite> <em>twice</em>), in addition to the fact that having both “episodes” and “chapters” at once is a bit confusing. I hope your anger has more or less subsided; I understand, however, that it will likely take a long time for you to truly forgive me."
             }
           }
         },
@@ -186,28 +186,28 @@
         {
           "p": {
             "en": {
-              "H": "<p>First, you can follow my <cite>Twitter</cite>, <a rel=\"external me\" href=https://x.com/i/user/1352061598836264960 type=text/html>@gabldotink</a>. I don’t tweet too often, so it shouldn’t flood your timeline, and I’ll keep the latest comic pinned to my profile so you can easily get to the most recent one."
+              "H": "First, you can follow my <cite>Twitter</cite>, <a rel=\"external me\" href=https://x.com/i/user/1352061598836264960 type=text/html>@gabldotink</a>. I don’t tweet too often, so it shouldn’t flood your timeline, and I’ll keep the latest comic pinned to my profile so you can easily get to the most recent one."
             }
           }
         },
         {
           "p": {
             "en": {
-              "H": "<p>Alternatively, I have an RSS (Really Simple Syndication) feed! It’s located here<ins>\u00a0<small>[<i>link removed</i>]</small></ins>. If you click on the link, you’ll just see a bunch of code\u2060—it’s your job to get it to do its magic through an RSS reader, which will keep you posted whenever I update. You can learn how to do this at my handy‐dandy RSS info page<ins>\u00a0<small>[<i>link removed</i>]</small></ins>. Aren’t I so helpful?<ins>\u00a0<small>[<i>not anymore</i>]</small></ins>"
+              "H": "Alternatively, I have an RSS (Really Simple Syndication) feed! It’s located here<ins>\u00a0<small>[<i>link removed</i>]</small></ins>. If you click on the link, you’ll just see a bunch of code\u2060—it’s your job to get it to do its magic through an RSS reader, which will keep you posted whenever I update. You can learn how to do this at my handy‐dandy RSS info page<ins>\u00a0<small>[<i>link removed</i>]</small></ins>. Aren’t I so helpful?<ins>\u00a0<small>[<i>not anymore</i>]</small></ins>"
             }
           }
         },
         {
           "p": {
             "en": {
-              "H": "<p>Thank you so much for reading <cite class=i>JoeRunner\u00a0and\u00a0Co.</cite> This is personally my favorite page I’ve made so far, and as I continue to draw this comic, they’ll continue to get better. And I’m so glad I’m finally sharing these with such a potentially wide group of people\u2060—even if I only end up updating, like, once a month."
+              "H": "Thank you so much for reading <cite class=i>JoeRunner\u00a0and\u00a0Co.</cite> This is personally my favorite page I’ve made so far, and as I continue to draw this comic, they’ll continue to get better. And I’m so glad I’m finally sharing these with such a potentially wide group of people\u2060—even if I only end up updating, like, once a month."
             }
           }
         },
         {
           "p": {
             "en": {
-              "H": "<p><b>—\u2060<span translate=no>gabl</span></b>",
+              "H": "<b>—\u2060<span translate=no>gabl</span></b>",
               "t": "—\u2060gabl",
               "L": "\\textbf{\\mbox{---gabl}}"
             },

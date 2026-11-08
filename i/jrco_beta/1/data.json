@@ -116,10 +116,10 @@
         {
           "p": {
             "en": {
-              "H": "<p><i>Published at <cite>comics.gabl.ink</cite></i>"
+              "H": "<i>Published at <cite>comics.gabl.ink</cite></i>"
             },
             "fr": {
-              "H": "<p><i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
+              "H": "<i>Publiée en anglais sur <cite>comics.gabl.ink</cite></i>"
             }
           }
         },
@@ -127,17 +127,17 @@
           "p": {
             "en": {
               "t": "Hey there! Welcome to “JoeRunner\u00a0and\u00a0Co.”!",
-              "H": "<p>Hey there! Welcome to <cite class=i>JoeRunner\u00a0and\u00a0Co.</cite>!",
+              "H": "Hey there! Welcome to <cite class=i>JoeRunner\u00a0and\u00a0Co.</cite>!",
               "L": "Hey there! Welcome to \\textit{JoeRunner~and~Co.}!"
             },
             "fr": {
               "t": "Salut\u202f! Bienvenue dans «\u202fJoeRunner\u00a0et\u00a0cie\u202f»\u202f!",
-              "H": "<p>Salut\u202f! Bienvenue dans <cite class=i>JoeRunner\u00a0et\u00a0cie</cite>\u202f!",
+              "H": "Salut\u202f! Bienvenue dans <cite class=i>JoeRunner\u00a0et\u00a0cie</cite>\u202f!",
               "L": "Salut\\,! Bienvenue dans \\textit{JoeRunner~et~cie}\\,!"
             },
             "fr-CA": {
               "t": "Salut! Bienvenue dans «\u202fJoeRunner\u00a0et\u00a0cie\u202f»!",
-              "H": "<p>Salut! Bienvenue dans <cite class=i>JoeRunner\u00a0et\u00a0cie</cite>!",
+              "H": "Salut! Bienvenue dans <cite class=i>JoeRunner\u00a0et\u00a0cie</cite>!",
               "L": "Salut! Bienvenue dans \\textit{JoeRunner~et~cie}!"
             }
           }
@@ -145,10 +145,10 @@
         {
           "p": {
             "en": {
-              "H": "<p>My name’s Gabriel, a.k.a. <span translate=no>gabl</span>, and I can’t wait to share my passion‐project comics with you. I’ve been drawing these characters for several years, and I’ve wanted to do a webcomic for\u00a0.\u00a0.\u00a0. less years, but still multiple. Years."
+              "H": "My name’s Gabriel, a.k.a. <span translate=no>gabl</span>, and I can’t wait to share my passion‐project comics with you. I’ve been drawing these characters for several years, and I’ve wanted to do a webcomic for\u00a0.\u00a0.\u00a0. less years, but still multiple. Years."
             },
             "fr": {
-              "H": "<p>Je m’appelle Gabriel, alias <span translate=no>gabl</span>, et j’ai hâte de partager mes bandes dessinées, mes projets de passion, avec vous. Je dessine ces personnages depuis plusieurs années, et je veux faire un webcomic depuis… moins longtemps, mais encore plusieurs années."
+              "H": "Je m’appelle Gabriel, alias <span translate=no>gabl</span>, et j’ai hâte de partager mes bandes dessinées, mes projets de passion, avec vous. Je dessine ces personnages depuis plusieurs années, et je veux faire un webcomic depuis… moins longtemps, mais encore plusieurs années."
             }
           }
         },
@@ -175,7 +175,7 @@
         {
           "p": {
             "en": {
-              "H": "<p>—\u2060<span translate=no>gabl</span>",
+              "H": "—\u2060<span translate=no>gabl</span>",
               "t": "—\u2060gabl",
               "L": "\\mbox{---gabl}"
             },
