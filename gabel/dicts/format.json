@@ -15,7 +15,9 @@
       "fr": {
         "t": "Texte brut sans formatage."
       }
-    }
+    },
+    "extension": "txt",
+    "type": "text/plain"
   },
   "T": {
     "name": {
@@ -27,7 +29,9 @@
       "mul": {
         "e": "en"
       }
-    }
+    },
+    "extension": "tex",
+    "type": "application/x-tex"
   },
   "L": {
     "name": {
@@ -39,7 +43,9 @@
       "mul": {
         "e": "en"
       }
-    }
+    },
+    "extension": "ltx",
+    "type": "application/x-latex"
   },
   "H": {
     "name": {
@@ -57,7 +63,9 @@
         "t": "Hypertext Markup Language (HTML), as defined by the WHATWG Living Standard.",
         "H": "Hypertext Markup Language (HTML), as defined by the <a rel{attr('external')} href{attr('https://html.spec.whatwg.org/multipage/')} type{attr('text/html')} hreflang{attr('en-US')}><cite><abbr title=\"Web Hypertext Application Technology Working Group\">WHATWG</abbr></a> Living Standard</cite></a>."
       }
-    }
+    },
+    "extension": "html",
+    "type": "text/html"
   },
   "X": {
     "name": {
@@ -75,7 +83,9 @@
         "t": "Hypertext Markup Language (HTML)’s Extensible Markup Language (XML) syntax, as defined by the WHATWG Living Standard, section\u00a014, “The XML syntax.”",
         "H": "Hypertext Markup Language (HTML)’s Extensible Markup Language (XML) syntax, as defined by the <a rel{attr('external')} href{attr('https://html.spec.whatwg.org/multipage/xhtml.html#the-xhtml-syntax')} type{attr('text/html')} hreflang{attr('en-US')}><cite><abbr title=\"Web Hypertext Application Technology Working Group\">WHATWG</abbr></a> Living Standard</cite>, section\u00a014, “<cite>The XML syntax</cite>.”</a>."
       }
-    }
+    },
+    "extension": "xhtml",
+    "type": "application/xhtml+xml"
   },
   "A": {
     "name": {
@@ -92,7 +102,9 @@
       "en": {
         "t": "A subset of text exclusively using the 127\u00a0characters of the American Standard Code for Information Interchange (ASCII)."
       }
-    }
+    },
+    "extension": "txt",
+    "type": "text/plain"
   },
   "i": {
     "name": {
