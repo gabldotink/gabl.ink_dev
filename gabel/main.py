@@ -165,13 +165,22 @@ def attr(string: str, fformat: str | None = None) -> str:
         return f"={string}"
 
 
-def close(tag: str, fformat: str | None = None):
+def close(tag: str | None = None, fformat: str | None = None):
     if fformat is None:
         fformat = format
-    if fformat == "X":
+    if tag is None:
+        if fformat == "X":
+            return "/>"
+        elif fformat == "H":
+            return ">"
+        else:
+            raise ValueError("format must be H or X")
+    elif fformat == "X":
         return f"</{tag}>"
-    else:
+    elif fformat == "H":
         return ""
+    else:
+        raise ValueError("format must be H or X")
 
 
 def expand_parts(parts: list[str | int]) -> list[int]:
@@ -675,17 +684,6 @@ def say_lang(to_say: L, fformat: str | None = None, flang: L | None = None) -> s
         return f"{to_sentence_case(get_l(ddict["lang"][to_say.l], "name", fformat, flang), flang)} ({get_l(ddict["region"][f"{to_say.t}".lower()], "name", fformat, flang)})"
 
 
-def self_close(fformat: str | None = None) -> str:
-    if fformat is None:
-        fformat = format
-    if fformat == "H":
-        return ">"
-    elif fformat == "X":
-        return "/>"
-    else:
-        raise ValueError("`self_close` format is not `H` or `X`")
-
-
 #def validate_data()->None:
 #    sys.stderr.write("Validating data…")
 #    start_time=time.perf_counter()
@@ -788,35 +786,35 @@ if __name__ == "__main__":
             F.append(
                 f"<html lang={lang} dir={lang_dir} itemscope itemtype=https://schema.org/WebPage>"
 
-                f"<meta charset=utf-8{self_close()}"
-                f'<meta name=viewport content="width=device-width,initial-scale=1"{self_close()}'
+                f"<meta charset=utf-8{close()}"
+                f'<meta name=viewport content="width=device-width,initial-scale=1"{close()}'
 
                 f"<title>{msg_l10n(get_l(data[i], "title", "t"), string="html_title")}</title>"
 
-                f"<meta name=description content{attr(get_l(data[i], "description", "t"))}{self_close()}"
+                f"<meta name=description content{attr(get_l(data[i], "description", "t"))}{close()}"
 
-                f"<meta name=robots content=index,follow{self_close()}"
+                f"<meta name=robots content=index,follow{close()}"
 
-                f"<link rel=canonical href={canonical} hreflang={lang} type=text/html{self_close()}"
+                f"<link rel=canonical href={canonical} hreflang={lang} type=text/html{close()}"
 
                 # TODO: `if type != comic_page` (sh:349)
 
-                f"<link rel=stylesheet href={styles}/mul.css hreflang=zxx{self_close()}"
-                f"<link rel=stylesheet href={styles}/{lang.l}.css hreflang=zxx{self_close()}"
-                f"<link rel=stylesheet href={styles}/comic_page.css hreflang=zxx{self_close()}"
+                f"<link rel=stylesheet href={styles}/mul.css hreflang=zxx{close()}"
+                f"<link rel=stylesheet href={styles}/{lang.l}.css hreflang=zxx{close()}"
+                f"<link rel=stylesheet href={styles}/comic_page.css hreflang=zxx{close()}"
 
-                f'<link rel="external license" href{attr(get_l(ddict["license"][data[i]["copyright"]["license"][0]], "url", "i"))}{self_close()}'
+                f'<link rel="external license" href{attr(get_l(ddict["license"][data[i]["copyright"]["license"][0]], "url", "i"))}{close()}'
 
                 # TODO: Prefetches (starting at sh:420)
 
-                f"<meta property=og:type content=article{self_close()}"
-                f"<meta property=og:title content{attr(get_l(data[i], "title", "t"))}{self_close()}"
-                f"<meta property=og:description content{attr(get_l(data[i], "description", "t"))}{self_close()}"
-                f"<meta property=og:site_name content=gabl.ink{self_close()}"
-                f"<meta property=og:url content={canonical}{self_close()}"
-                f"<meta property=og:image content={canonical}image.png{self_close()}"
+                f"<meta property=og:type content=article{close()}"
+                f"<meta property=og:title content{attr(get_l(data[i], "title", "t"))}{close()}"
+                f"<meta property=og:description content{attr(get_l(data[i], "description", "t"))}{close()}"
+                f"<meta property=og:site_name content=gabl.ink{close()}"
+                f"<meta property=og:url content={canonical}{close()}"
+                f"<meta property=og:image content={canonical}image.png{close()}"
                 # TODO: video_exists (sh:322–332, sh:454)
-                f"<meta property=og:locale content={lang.l}_{lang.t}{self_close()}"
+                f"<meta property=og:locale content={lang.l}_{lang.t}{close()}"
 
                 "<script type=application/ld+json>{"
                 '"@context":"https://schema.org",'
@@ -849,17 +847,17 @@ if __name__ == "__main__":
             if Path(INDEX/i/f"{lang}".lower()/"video.webm").is_file():
                 F.append(
                     "<video id=M controls poster=image.png preload=auto>"
-                    f"<source src=video.webm type=video/webm{self_close()}"
+                    f"<source src=video.webm type=video/webm{close()}"
                 )
                 if Path(INDEX/i/f"{lang}".lower()/"subs.vtt").is_file():
                     F.append(
                         f"<track default src=subs.vtt srclang={lang} kind=subtitles "
-                        f"label{attr(say_lang(lang, "t"))}{self_close()}"
+                        f"label{attr(say_lang(lang, "t"))}{close()}"
                     )
                 if Path(INDEX/i/f"{lang}".lower()/"cc.vtt").is_file():
                     F.append(
                         f"<track src=cc.vtt srclang={lang} kind=captions "
-                        f"label{attr(f"{say_lang(lang, "t")}{msg_l10n(string="cc")}")}{self_close()}"
+                        f"label{attr(f"{say_lang(lang, "t")}{msg_l10n(string="cc")}")}{close()}"
                     )
                 F.append(
                     "<p>"
@@ -872,7 +870,7 @@ if __name__ == "__main__":
                     F.append(f" title{attr(get_l(data[i], "tooltip", "t"))}")
                 F.append(
                     ">"
-                    f"<img src=image.png fetchpriority=high alt{attr(msg_l10n(string="see_transcript"))}{self_close()}"
+                    f"<img src=image.png fetchpriority=high alt{attr(msg_l10n(string="see_transcript"))}{close()}"
                     "</picture>"
                 )
 
