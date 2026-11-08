@@ -8,6 +8,7 @@ import sys
 import time
 from datetime import date
 from pathlib import Path
+from typing import Literal
 
 __author__ = "gabl.ink"
 __version__ = "0"
@@ -165,7 +166,7 @@ def attr(string: str, fformat: str | None = None) -> str:
         return f"={string}"
 
 
-def close(tag: str | None = None, fformat: str | None = None):
+def close(tag: str | None = None, fformat: Literal["H", "X"] | None = None):
     if fformat is None:
         fformat = format
     if tag is None:
@@ -211,7 +212,7 @@ def get_i(i_item_file: Path) -> str:
         return item_obj["id"]
 
 
-def get_l(index, key: str, fformat: str | None = None, flang: L | None = None) -> str:
+def get_l(index, key: str, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | None = None, flang: L | None = None) -> str:
     if fformat is None:
         fformat = format
     if flang is None:
@@ -464,7 +465,7 @@ def language_list_entry(l: L) -> str:
     return "".join(r)
 
 
-def make_nav_button(button: str, flang: None | L = None) -> str:
+def make_nav_button(button: Literal["f", "p", "n", "l"], flang: None | L = None) -> str:
     if flang is None:
         flang = lang
 
