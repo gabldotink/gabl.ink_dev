@@ -203,10 +203,10 @@ def get_i(i_item_file: Path) -> str:
 
 
 def get_var_l10n(index, key: str, fformat: str | None = None, flang: L | None = None) -> str:
-    if flang is None:
-        flang = lang
     if fformat is None:
         fformat = format
+    if flang is None:
+        flang = lang
 
     formats: str = "AHiLpTtX"
     real_formats: str = "HiLptX"
@@ -221,9 +221,9 @@ def get_var_l10n(index, key: str, fformat: str | None = None, flang: L | None = 
         # TODO: catch invalid equals
         if to_find[2] and to_find[2] not in formats:
             raise ValueError("Equals does not contain a valid format")
-        elif to_find[2] and not to_find[1]:
+        elif to_find[2] and not to_find[0]:
             return get_var_l10n(index, key, to_find[2], flang)
-        elif to_find[0] and not to_find[1]:
+        elif to_find[0] and not to_find[2]:
             return get_var_l10n(index, key, fformat, to_find[0])
         else:
             return get_var_l10n(index, key, to_find[2], to_find[0])
@@ -438,7 +438,7 @@ def language_list_entry(l: L) -> str:
 
     if l.t is not None:
         r.append(
-            f''' style="list-style-type:'{to_regional_indicators(l.t)} '">'''
+            f''' style="list-style-type:'{to_regional_indicators(l.t)}\xa0'">'''
         )
 
     if f"{l}" == f"{lang}":
@@ -720,8 +720,8 @@ item_files: list[Path] = [
 
 ddict: dict = {}
 
-for dictionary in ["disclaim", "lang", "license", "month", "region", "script",
-                   "share", "string", "validate", "weekday"]:
+for dictionary in ["disclaim", "format", "lang", "license", "month", "region",
+                   "script", "share", "string", "validate", "weekday"]:
     with open(Path(DICTS)/f"{dictionary}.json", "r", encoding="utf-8") as f:
         ddict[dictionary] = json.load(f)
 

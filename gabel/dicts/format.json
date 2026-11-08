@@ -1,0 +1,119 @@
+{
+  "t": {
+    "name": {
+      "en": {
+        "t": "text"
+      },
+      "fr": {
+        "t": "texte"
+      }
+    },
+    "description": {
+      "en": {
+        "t": "Plain text with no formatting."
+      },
+      "fr": {
+        "t": "Texte brut sans formatage."
+      }
+    }
+  },
+  "T": {
+    "name": {
+      "en": {
+        "t": "TeX",
+        "Hf": "<span class{attr('t')}>T<span class{attr('e')}>e</span>X</span>",
+        "T": "\\TeX"
+      },
+      "mul": {
+        "e": "en"
+      }
+    }
+  },
+  "L": {
+    "name": {
+      "en": {
+        "t": "LaTeX",
+        "Hf": "<span class{attr('t')}>L<span class{attr('a')}>a</span>T<span class{attr('e')}>e</span>X</span>",
+        "L": "\\LaTeX"
+      },
+      "mul": {
+        "e": "en"
+      }
+    }
+  },
+  "H": {
+    "name": {
+      "en": {
+        "t": "HTML",
+        "H": "<abbr title=\"Hypertext Markup Language\">HTML</abbr>"
+      },
+      "mul": {
+        "te": "en",
+        "Hf": "<abbr lang{attr('en')} title=\"Hypertext Markup Language\"><span lang{attr(f'{flang}')}>HTML</span></abbr>"
+      }
+    },
+    "description": {
+      "en": {
+        "t": "Hypertext Markup Language (HTML), as defined by the WHATWG Living Standard.",
+        "H": "Hypertext Markup Language (HTML), as defined by the <a rel{attr('external')} href{attr('https://html.spec.whatwg.org/multipage/')} type{attr('text/html')} hreflang{attr('en-US')}><cite><abbr title=\"Web Hypertext Application Technology Working Group\">WHATWG</abbr></a> Living Standard</cite></a>."
+      }
+    }
+  },
+  "X": {
+    "name": {
+      "en": {
+        "t": "XML syntax for HTML",
+        "H": "<abbr title=\"Extensible Markup Language\">XML</abbr> syntax for <abbr title=\"Hypertext Markup Language\">HTML</abbr>"
+      },
+      "fr": {
+        "t": "syntaxe XML pour l’HTML",
+        "H": "syntaxe <abbr lang{attr('en')} title=\"Extensible Markup Language\"><span lang{attr('fr')}XML</abbr> pour l’<abbr title=\"Hypertext Markup Language\">HTML</abbr>"
+      }
+    },
+    "description": {
+      "en-US": {
+        "t": "Hypertext Markup Language (HTML)’s Extensible Markup Language (XML) syntax, as defined by the WHATWG Living Standard, section\u00a014, “The XML syntax.”",
+        "H": "Hypertext Markup Language (HTML)’s Extensible Markup Language (XML) syntax, as defined by the <a rel{attr('external')} href{attr('https://html.spec.whatwg.org/multipage/xhtml.html#the-xhtml-syntax')} type{attr('text/html')} hreflang{attr('en-US')}><cite><abbr title=\"Web Hypertext Application Technology Working Group\">WHATWG</abbr></a> Living Standard</cite>, section\u00a014, “<cite>The XML syntax</cite>.”</a>."
+      }
+    }
+  },
+  "A": {
+    "name": {
+      "en": {
+        "t": "ASCII",
+        "H": "<abbr title=\"American Standard Code for Information Exchange\">ASCII</abbr>"
+      },
+      "mul": {
+        "te": "en",
+        "Hf": "<abbr lang{attr('en')} title=\"American Standard Code for Information Exchange\"><span lang{attr(f'{flang}')}>ASCII</span></abbr>"
+      }
+    },
+    "description": {
+      "en": {
+        "t": "A subset of text exclusively using the 127\u00a0characters of the American Standard Code for Information Interchange (ASCII)."
+      }
+    }
+  },
+  "i": {
+    "name": {
+      "en": {
+        "t": "identifier"
+      },
+      "fr": {
+        "t": "identificateur"
+      }
+    },
+    "description": {
+      "en": {
+        "t": "A string which is not linguistic content, but which changes based on language."
+      }
+    }
+  },
+  "p": {
+    "name": {
+      "en": {
+        "p": "print (deprecate)"
+      }
+    }
+  }
+}

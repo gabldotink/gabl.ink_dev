@@ -1,12 +1,13 @@
 @charset "UTF-8";
 /* SPDX-License-Identifier: CC0-1.0 */
 
-:root {
+#nav_bottom_list_pages {
   --nav_bottom_list_pages_label: "Page\a0";
 }
 
 body,
-::cue {
+::cue,
+math {
   font-family: "Noto Serif", serif;
 }
 

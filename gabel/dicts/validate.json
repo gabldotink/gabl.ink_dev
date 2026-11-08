@@ -7,16 +7,17 @@
       },
       "fr": {
         "t": "le Nu Html Checker",
-        "H": "le <cite>Nu Html Checker</cite>"
+        "H": "le <cite lang{attr('en')}><span lang{attr('fr')}>Nu Html</span> Checker</cite>"
       }
     },
     "format": {
       "en": {
-        "t": "HTML5",
-        "H": "<abbr title=\"Hypertext Markup Language\u00a05\">HTML5</abbr>"
+        "t": "HTML",
+        "H": "<abbr title=\"Hypertext Markup Language\">HTML</abbr>"
       },
-      "fr": {
-        "e": "en"
+      "mul": {
+        "te": "en",
+				"Hf": "<abbr lang{attr('en')} title=\"Hypertext Markup Language\"><span lang{attr(f'{flang}')}>HTML</span></abbr>"
       }
     },
     "base": "https://validator.nu/?doc="
@@ -29,13 +30,13 @@
       },
       "fr": {
         "t": "le W3C\u00a0Markup Validation Service",
-        "H": "le <cite><abbr title=\"World Wide Web Consortium\">W3C</abbr>\u00a0Markup Validation Service</cite>"
+        "Hf": "le <cite lang{attr('en')}><abbr title=\"World Wide Web Consortium\"><span lang{attr('fr')}>W3C</span></abbr>\u00a0Markup Validation Service</cite>"
       }
     },
     "format": {
       "en": {
-        "t": "HTML5",
-        "H": "<abbr title=\"Hypertext Markup Language\u00a05\">HTML5</abbr>"
+        "te": "en",
+				"Hf": "<abbr lang{attr('en')} title=\"Hypertext Markup Language\"><span lang{attr(f'{flang}')}>HTML</span></abbr>"
       },
       "fr": {
         "e": "en"

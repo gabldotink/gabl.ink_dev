@@ -204,12 +204,12 @@
       "d": {
         "en": {
           "t": "The last four years, anyway. And now you are approximately 1.39729\u00a0×\u00a010¹² molecules of space debris.",
-          "H": "The last four years, anyway. And now you are approximately 1.39729\u00a0×\u00a010<sup>12</sup> molecules of space debris.",
+          "H": "The last four years, anyway. And now you are approximately <math><mn>1.39729</mn><mo>×</mo><msup><mn>12</mn><mn>10</mn></msup></math> molecules of space debris.",
           "L": "The last four years, anyway. And now you are approximately \\(1.39729\\times10^{12}\\) molecules of space debris."
         },
         "fr": {
           "t": "Pour ces quatres dernières années, de toute façon. Et maintenant vous êtes approximativement 1,39729\u00a0×\u00a010¹² molécules de débris spatiaux.",
-          "H": "Pour ces quatres dernières années, de toute façon. Et maintenant vous êtes approximativement 1,39729\u00a0×\u00a010<sup>12</sup> molécules de débris spatiaux.",
+          "H": "Pour ces quatres dernières années, de toute façon. Et maintenant vous êtes approximativement <math><mn>1,39729</mn><mo>×</mo><msup><mn>12</mn><mn>10</mn></msup></math> molécules de débris spatiaux.",
           "L": "Pour ces quatres dernières années, de toute façon. Et maintenant vous êtes approximativement \\(1{,}39729\\times10^{12}\\) molécules de débris spatiaux."
         }
       }

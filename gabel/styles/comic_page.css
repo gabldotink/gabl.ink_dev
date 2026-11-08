@@ -16,7 +16,7 @@ body {
 
 #L {
   float: right;
-  list-style-type: "🌐 ";
+  list-style-type: "🌐\a0";
 }
 
 .nav_buttons_off {
@@ -94,7 +94,7 @@ p.nav_buttons {
 }
 
 #nav_bottom_list_pages li::before {
-  content: var(--nav_bottom_list_pages_label) counter(nav_bottom_list_page) " ";
+  content: var(--nav_bottom_list_pages_label, "Page\a0") counter(nav_bottom_list_page) "\a0";
 }
 
 #transcript_text {
