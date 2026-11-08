@@ -209,11 +209,10 @@ def get_l(index, key: str, fformat: str | None = None, flang: L | None = None) -
         flang = lang
 
     formats: str = "AHiLpTtX"
-    real_formats: str = "HiLptX"
     options: list[str] = [f"{flang}", flang.l, "mul", "zxx", "z"]
 
-    if fformat not in real_formats:
-        raise ValueError("Invalid real format given")
+    if fformat not in formats:
+        raise ValueError("Invalid format given")
 
     def find_equals(pointer: str) -> str:
         to_find: tuple = index[key][o][f"{pointer}e"].rpartition("_")
