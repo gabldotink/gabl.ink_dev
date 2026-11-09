@@ -6,7 +6,6 @@ import json
 import re
 import sys
 import time
-from datetime import date
 from pathlib import Path
 from typing import Literal
 
