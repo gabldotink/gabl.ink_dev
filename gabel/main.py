@@ -31,6 +31,21 @@ class D:
               f: int | None = None,
               Z: int | None = None
     ):
+        if (M is not None) and (M < 1 or M > 12):
+            raise ValueError("Invalid month")
+        elif (D is not None) and (D < 1 or D > 31):
+            raise ValueError("Invalid day")
+        elif (h is not None) and (h < 0 or h > 23):
+            raise ValueError("Invalid hour")
+        elif (m is not None) and (m < 0 or m > 59):
+            raise ValueError("Invalid minute")
+        elif (s is not None) and (s < 0 or s > 60):
+            raise ValueError("Invalid second")
+        elif (f is not None) and (f < 0 or f > 999):
+            raise ValueError("Invalid fractional second")
+        elif (Z is not None) and (Z < -720 or Z > 840):
+            raise ValueError("Invalid time offset")
+        
         self.Y: int | None = Y
         self.M: int | None = M
         self.D: int | None = D
@@ -158,6 +173,13 @@ class L:
               v: list[str] | None = None,
               x: str | None = None
     ):
+        if not re.fullmatch(r"^[a-z]{2,3}$", l):
+            raise ValueError("Invalid language subtag")
+        elif (s is not None) and not re.fullmatch(r"^[A-Z][a-z]{3}$", s):
+            raise ValueError("Invalid script subtag")
+        elif (t is not None) and not re.fullmatch(r"^[A-Z]{2}$|^[0-9]{3}$", t):
+            raise ValueError("Invalid territory subtag")
+        
         self.l: str = l
         self.s: str | None = s
         self.t: str | None = t
