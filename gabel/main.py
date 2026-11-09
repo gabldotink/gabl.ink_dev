@@ -14,16 +14,151 @@ __author__ = "gabl.ink"
 __version__ = "0"
 
 
+class D:
+    """Replacement for ``datetime.date`` and ``datetime.datetime``.
+    
+    Supports arbitrary positive or negative years. ``datetime`` only
+    supports 1–9999.
+
+    Works perfectly! If the input is already well-formed.
+    """
+    def __init__(
+        self, Y: int | None = None,
+              M: int | None = None,
+              D: int | None = None,
+              h: int | None = None,
+              m: int | None = None,
+              s: int | None = None,
+              f: int | None = None,
+              Z: int | None = None
+    ):
+        self.Y: int | None = Y
+        self.M: int | None = M
+        self.D: int | None = D
+        self.h: int | None = h
+        self.m: int | None = m
+        self.s: int | None = s
+        self.f: int | None = f
+        self.Z: int | None = Z
+
+
+    @classmethod
+    def make(
+        cls, Y: int | None = None,
+             M: int | None = None,
+             D: int | None = None,
+             h: int | None = None,
+             m: int | None = None,
+             s: int | None = None,
+             f: int | None = None,
+             Z: int | None = None
+    ) -> "D":
+        return cls(Y, M, D, h, m, s, f, Z)
+    
+
+    @staticmethod
+    def get(dt: "dict[int] | D") -> "D":
+        if isinstance(dt, D):
+            return dt
+        elif not isinstance(dt, dict) or not dt:
+            raise ValueError("Invalid datetime object")
+
+        return D.make(dt)
+
+        #dtdata: dict = {}
+
+        #dstr: str
+        #tstr: str
+
+        #if "T" in dt:
+        #    dstr=dt.split("T")[0]
+        #    tstr=dt.split("T")[1]
+        #elif ":" not in dt:
+        #    dstr=dt
+        #elif ":" in dt:
+        #    tstr=dt
+
+        #if dstr:
+        #    if dstr.startswith("-"):
+        #        dtdata["Y"] = -int(dt.split("-")[1])
+        #    elif len(dt.split("-")[0]) >= 4:
+        #        dtdata["Y"] = int(dt.split("-")[0])
+        #    else:
+        #        raise ValueError("missing year")
+        #    if len(dt.split("-")[1]) == 2:
+        #        dtdata["M"] = int(dt.split("-")[1])
+        #    if dtdata["M"] and len(dt.split("-")[2]) == 2:
+        #        dtdata["D"] = int(dt.split("-")[2])
+
+        #if 
+
+        #if dstr:
+        #    dtdata["Y"] = int(dstr[:-6])
+        #    dtdata["M"] = int(dstr[-5:-5+2])
+        #    dtdata["D"] = int(dstr[-2:])
+
+        #if tstr:
+
+    
+    def __str__(self) -> str:
+            """Returns a string suitable for a ``datetime`` attribute
+            in HTML."""
+            if not isinstance(self.Y, int) or not self.Y:
+                raise ValueError("Invalid datetime object")
+
+            if self.Y <= 0:
+                return ""
+    
+            r: list[str] = [f"{self.Y:04d}"]
+
+            if self.M:
+                r.append(f"-{self.M:02d}")
+    
+            if self.D:
+                r.append(f"-{self.D:02d}")
+
+            if self.h:
+                r.append(f"T{self.h:02d}")
+
+            if self.m:
+                r.append(f":{self.m:02d}")
+
+            if self.s:
+                r.append(f":{self.s:02d}")
+
+            if self.f:
+                r.append(f".{self.f:03d}")
+
+            if self.Z and self.h and self.m and self.s:
+                if self.Z == 0:
+                    r.append("Z")
+                else:
+                    z_symbol: str
+                    if self.Z < 0:
+                        z_symbol = "-"
+                    else:
+                        z_symbol = "+"
+                    z_hours: str = f"{(abs(self.Z) // 60):02d}"
+                    z_minutes: str = f"{((abs(self.Z)) - (abs(int(z_hours)) * 60)):02d}"
+                    r.append(f"{z_symbol}{z_hours}{z_minutes}")
+    
+            return "".join(r)
+
+
 class L:
-    """Simpler replacement for the ``Language`` class from
-    ``langcodes``.
+    """Simpler replacement for ``langcodes.Language``.
 
     Supports all subtags except for extensions (``t`` and ``u``).
 
-    Works perfectly! If the tag is already well‐formed.
+    Like ``D``, works perfectly if the input is already well-formed.
     """
-    def __init__(self, l: str, s: str | None = None, t: str | None = None,
-                 v: list[str] | None = None, x: str | None = None):
+    def __init__(
+        self, l: str,
+              s: str | None = None,
+              t: str | None = None,
+              v: list[str] | None = None,
+              x: str | None = None
+    ):
         self.l: str = l
         self.s: str | None = s
         self.t: str | None = t
@@ -31,16 +166,20 @@ class L:
         self.x: str | None = x
 
     @classmethod
-    def make(cls, l: str, s: str | None = None, t: str | None = None,
-             v: list[str] | None = None, x: str | None = None) -> "L":
+    def make(
+        cls, l: str,
+             s: str | None = None,
+             t: str | None = None,
+             v: list[str] | None = None,
+             x: str | None = None
+    ) -> "L":
         return cls(l, s, t, v, x)
 
     @staticmethod
     def get(tag: "str|L") -> "L":
         if isinstance(tag, L):
             return tag
-
-        if not isinstance(tag, str) or not tag:
+        elif not isinstance(tag, str) or not tag:
             raise ValueError("Invalid language code")
 
         langdata: dict = {}
@@ -225,17 +364,17 @@ def get_l(index, key: str, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "
         raise ValueError("Invalid format given")
 
     def find_equals(pointer: str) -> str:
-        to_find: tuple = index[key][o][f"{pointer}e"].rpartition("_")
+        to_find: tuple = index[key][o][f"{pointer}e"].split("_")
 
         # TODO: catch invalid equals
-        if to_find[2] and to_find[2] not in formats:
+        if to_find[0] and to_find[0] not in formats:
             raise ValueError("Equals does not contain a valid format")
-        elif to_find[2] and not to_find[0]:
-            return get_l(index, key, to_find[2], flang)
-        elif to_find[0] and not to_find[2]:
-            return get_l(index, key, fformat, to_find[0])
+        elif to_find[0] and not to_find[1]:
+            return get_l(index, key, to_find[0], flang)
+        elif to_find[1] and not to_find[0]:
+            return get_l(index, key, fformat, to_find[1])
         else:
-            return get_l(index, key, to_find[2], to_find[0])
+            return get_l(index, key, to_find[0], to_find[1])
 
     # ASCII
 
@@ -529,16 +668,6 @@ def msg_l10n(*args, string: str, flang: L | None = None) -> str:
     return get_l(ddict["string"], string, "p", flang).format(*args)
 
 
-def print_date(d: date) -> str:
-    """Returns a date string suitable for an HTML ``datetime``
-    attribute.
-
-    >>> print_date(date.fromisoformat("20260407"))
-    '2026-04-07'
-    """
-    return f"{d.year:04}-{d.month:02}-{d.day:02}"
-
-
 def text_to_html(string: str) -> str:
     string = re.sub(r"&(?=[#A-Za-z])", "&amp;", string)  # &#38;
     string = string.replace("<", "&lt;")  # &#60;
@@ -597,24 +726,16 @@ def to_sentence_case(string: str, flang: L | None = None) -> str:
 
 
 # The shell script supports negative years, but `datetime` does not.
-def say_date(d: date, flang: L | None = None) -> str:
-    """Returns word form of date in HTML format.
-
-    >>> say_date(date.fromisoformat("19971225"), L.get("en-US"))
-    '<time datetime=1997-12-25>December\xa025, 1997</time>'
-    >>> say_date(date.fromisoformat("19971225"), L.get("en-GB"))
-    '<time datetime=1997-12-25>25\xa0December 1997</time>'
-    >>> say_date(date.fromisoformat("20220401"), L.get("fr"))
-    '<time datetime=2022-04-01>1er\xa0avril 2022</time>'
-    """
+def say_date(d: D, flang: L | None = None) -> str:
+    """Returns word form of date in HTML format."""
     if flang is None:
         flang = lang
 
-    r: list[str] = [f"<time datetime={print_date(d)}>"]
+    r: list[str] = [f"<time datetime={d}>"]
 
     ad: bool
 
-    if d.year > 0 and d.year < 1000:
+    if d.Y > 0 and d.Y < 1000:
         ad = True
     else:
         ad = False
@@ -622,44 +743,44 @@ def say_date(d: date, flang: L | None = None) -> str:
     if flang.l == "en":
         if flang.t == "US":
             r.append(
-                f"{get_l(ddict["month"]["months"][d.month-1], "name")}"
-                f"\xa0{d.day}, "
+                f"{get_l(ddict["month"]["months"][d.M-1], "name")}"
+                f"\xa0{d.D}, "
             )
         elif flang.t == "GB":
             r.append(
-                f"{d.day}\xa0"
-                f"{get_l(ddict["month"]["months"][d.month-1], "name")}"
+                f"{d.D}\xa0"
+                f"{get_l(ddict["month"]["months"][d.M-1], "name")}"
                 " "
             )
         if ad:
             r.append("AD\xa0")
-        r.append(f"{d.year}")
+        r.append(f"{d.Y}")
     elif flang.l == "fr":
-        if d.day == 1:
+        if d.D == 1:
             r.append("1er")
         else:
-            r.append(f"{d.day}")
+            r.append(f"{d.D}")
         r.append(
             "\xa0"
-            f"{get_l(ddict["month"]["months"][d.month-1], "name")}"
+            f"{get_l(ddict["month"]["months"][d.M-1], "name")}"
         )
         if ad:
-            r.append(f"{d.year}\xa0ap.\xa0J.‑C.")
-        r.append(f" {d.year}")
+            r.append(f"{d.Y}\xa0ap.\xa0J.‑C.")
+        r.append(f" {d.Y}")
     elif flang.l == "es":
         r.append(
-            f"{d.day}\xa0de\xa0"
-            f"{get_l(ddict["month"]["months"][d.month-1], "name")}"
+            f"{d.D}\xa0de\xa0"
+            f"{get_l(ddict["month"]["months"][d.M-1], "name")}"
             " de "
         )
         if ad:
-            r.append(f"{d.year}\xa0d.\xa0C.")
-        r.append(f"{d.year}")
+            r.append(f"{d.Y}\xa0d.\xa0C.")
+        r.append(f"{d.Y}")
     elif flang.l in ("ja", "ko", "zh"):
         r.append(
-            f"{d.year}{msg_l10n(flang=flang, string="say_date_cjk_year")}"
-            f"{d.month}{msg_l10n(flang=flang, string="say_date_cjk_month")}"
-            f"{d.day}{msg_l10n(flang=flang, string="say_date_cjk_day")}"
+            f"{d.Y}{msg_l10n(flang=flang, string="say_date_cjk_year")}"
+            f"{d.M}{msg_l10n(flang=flang, string="say_date_cjk_month")}"
+            f"{d.D}{msg_l10n(flang=flang, string="say_date_cjk_day")}"
         )
 
     r.append("</time>")
@@ -930,8 +1051,8 @@ if __name__ == "__main__":
 
             for entry in data[i]["log"]:
                 F.append(
-                    f"<article id=log_{print_date(date.fromisoformat(entry["date"]))}><details>"
-                    f"<summary><h3>{say_date(date.fromisoformat(entry["date"]))}</h3></summary>"
+                    f"<article id=log_{D.make(**entry["date"])}><details>"
+                    f"<summary><h3>{say_date(D.make(**entry["date"]))}</h3></summary>"
                 )
                 for line in entry["content"]:
                     if get_l(line, "p"):
