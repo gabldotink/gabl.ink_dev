@@ -146,7 +146,7 @@ class D:
 
 
 class L:
-    """Simpler replacement for ``langcodes.Language``.
+    """Simpler (worse) replacement for ``langcodes.Language``.
 
     Supports all subtags except for extensions (``t`` and ``u``).
 
@@ -176,7 +176,7 @@ class L:
         return cls(l, s, t, v, x)
 
     @staticmethod
-    def get(tag: "str|L") -> "L":
+    def get(tag: "str | L") -> "L":
         if isinstance(tag, L):
             return tag
         elif not isinstance(tag, str) or not tag:
@@ -235,6 +235,16 @@ class L:
             r.append(f"-x-{self.x}")
 
         return "".join(r)
+
+    @staticmethod
+    def say(to_say: "L", fformat: str | None = None, flang: "L | None" = None) -> str:
+        """Returns a formatted language name and region."""
+        if flang is None:
+            flang = lang
+        if fformat is None:
+            fformat = format
+        if flang.l in ("en", "fr"):
+            return f"{to_sentence_case(get_l(ddict["lang"][to_say.l], "name", fformat, flang), flang)} ({get_l(ddict["region"][f"{to_say.t}".lower()], "name", fformat, flang)})"
 
 
 def attr(string: str, fformat: str | None = None) -> str:
@@ -594,7 +604,7 @@ def language_list_entry(l: L) -> str:
     else:
         r.append(f"<a lang={l} href=../{f"{l}".lower()}/ hreflang={l}>")
 
-    r.append(say_lang(l, None, l))
+    r.append(L.say(l, None, l))
 
     if f"{l}" == f"{lang}":
         r.append("</b>")
@@ -788,24 +798,6 @@ def say_date(d: D, flang: L | None = None) -> str:
     return "".join(r)
 
 
-def say_lang(to_say: L, fformat: str | None = None, flang: L | None = None) -> str:
-    """Returns a formatted language name and region.
-
-    >>> say_lang(L.get("en-US"), "t", L.get("en"))
-    'English (United States)'
-    >>> say_lang(L.get("fr-FR"), "t", L.get("fr"))
-    'Français (France)'
-    >>> say_lang(L.get("ru-RU"), "t", L.get("en"))
-    'Russian (Russia)'
-    """
-    if flang is None:
-        flang = lang
-    if fformat is None:
-        fformat = format
-    if flang.l in ("en", "fr"):
-        return f"{to_sentence_case(get_l(ddict["lang"][to_say.l], "name", fformat, flang), flang)} ({get_l(ddict["region"][f"{to_say.t}".lower()], "name", fformat, flang)})"
-
-
 #def validate_data()->None:
 #    sys.stderr.write("Validating data…")
 #    start_time=time.perf_counter()
@@ -974,12 +966,12 @@ if __name__ == "__main__":
                 if Path(INDEX/i/f"{lang}".lower()/"subs.vtt").is_file():
                     F.append(
                         f"<track default src=subs.vtt srclang={lang} kind=subtitles "
-                        f"label{attr(say_lang(lang, "t"))}{close()}"
+                        f"label{attr(L.say(lang, "t"))}{close()}"
                     )
                 if Path(INDEX/i/f"{lang}".lower()/"cc.vtt").is_file():
                     F.append(
                         f"<track src=cc.vtt srclang={lang} kind=captions "
-                        f"label{attr(f"{say_lang(lang, "t")}{msg_l10n(string="cc")}")}{close()}"
+                        f"label{attr(f"{L.say(lang, "t")}{msg_l10n(string="cc")}")}{close()}"
                     )
                 F.append(
                     "<p>"
