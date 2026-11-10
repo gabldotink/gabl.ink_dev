@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* SPDX-License-Identifier: CC0-1.0 */
 
-#nav_bottom_list_pages {
+:root {
   --nav_bottom_list_pages_label: "Page\a0";
 }
 

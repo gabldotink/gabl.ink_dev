@@ -76,24 +76,23 @@ p.nav_buttons {
   max-width: 100%;
 }
 
-#nav_bottom_list {
+#P {
   counter-reset: nav_bottom_list_page;
 }
 
-#nav_bottom_list details {
+#P details {
   white-space: nowrap;
 }
 
-#nav_bottom_list_pages {
+#P {
   list-style: none;
 }
 
-#nav_bottom_list_pages li::before {
-  white-space: nowrap;
+#P li::before {
   counter-increment: nav_bottom_list_page;
 }
 
-#nav_bottom_list_pages li::before {
+#P li::before {
   content: var(--nav_bottom_list_pages_label, "Page\a0") counter(nav_bottom_list_page) "\a0";
 }
 

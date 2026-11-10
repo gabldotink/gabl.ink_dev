@@ -1026,10 +1026,53 @@ if __name__ == "__main__":
                 f"{msg_l10n(get_l(data[data[i]["location"]["series"]], "title"), string="series_title_html")}"
                 f"{msg_l10n(data[i]["location"]["page"], string="comma_page")}"
                 f"{msg_l10n(get_l(data[i], "title"), string="page_title_html")}"
-                "</summary></details></nav>"
+                "</summary>"
 
-            # TODO: Page list
+                f"<ol id{attr("P")}>"
+            )
 
+            list_page_self: str = f"{data[i]["location"]["page"]}"
+
+            for list_page in expand_parts(data[data[i]["location"]["series"]]["parts"]):
+                F.append("<li>")
+                if not get_l(data[i], "title"):
+                    if data[i]["location"]["page"] == list_page:
+                        F.append("<b>")
+                    F.append(msg_l10n(string="no_title"))
+                    if data[i]["location"]["page"] == list_page:
+                        F.append("</b>")
+                else:
+                    if data[i]["location"]["page"] == list_page:
+                        if lang.l == "en":
+                            F.append("“<b><cite>")
+                        elif lang.l == "fr":
+                            F.append(f"<b><cite class{attr("i")}>")
+                        F.append(get_l(data[f"{data[i]["location"]["series"]}/{list_page}"], "title"))
+                        if lang.l == "en":
+                            F.append("</cite></b>”")
+                        elif lang.l == "fr":
+                            F.append("</cite></b>")
+                    else:
+                        if lang.l == "en":
+                            F.append(
+                                f"“<a href{attr(f"../../{data[i]["location"]["series"]}/{list_page}/{f"{lang}".lower()}/")} "
+                                f"hreflang{attr(f"{lang}")} "
+                                f"type{attr("text/html")}>"
+                                f"<cite>{get_l(data[f"{data[i]["location"]["series"]}/{list_page}"], "title")}</cite>"
+                                "</a>”"
+                            )
+                        elif lang.l == "fr":
+                            F.append(
+                                f"“<a href{attr(f"../../{data[i]["location"]["series"]}/{list_page}/{f"{lang}".lower()}/")} "
+                                f"hreflang{attr(f"{lang}")} "
+                                f"type{attr("text/html")}>"
+                                f"<cite class{attr("i")}>{get_l(data[f"{data[i]["location"]["series"]}/{list_page}"], "title")}</cite>"
+                                "</a>"
+                            )
+                F.append("</li>")
+
+            F.append(
+                "</ol></details></nav>"
                 "<details>"
                 f"<summary><h2>{msg_l10n(string="transcript_name")}</h2></summary>"
                 "<table id=T>"
