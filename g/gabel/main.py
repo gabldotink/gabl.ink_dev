@@ -15,7 +15,7 @@ __author__ = "gabl.ink"
 __version__ = "0"
 
 
-class D:
+class Date:
     """Replacement for ``datetime.date`` and ``datetime.datetime``.
     
     Supports arbitrary positive or negative years. ``datetime`` only
@@ -73,13 +73,13 @@ class D:
     
 
     @staticmethod
-    def get(dt: "dict[int] | D") -> "D":
-        if isinstance(dt, D):
+    def get(dt: "dict[int] | Date") -> "Date":
+        if isinstance(dt, Date):
             return dt
         elif not isinstance(dt, dict) or not dt:
             raise ValueError("Invalid datetime object")
 
-        return D.make(dt)
+        return Date.make(dt)
 
         #dtdata: dict = {}
 
@@ -116,7 +116,7 @@ class D:
         #if tstr:
     
 
-    def say(d: "D", flang: L | None = None) -> str:
+    def say(d: "Date", flang: Lang | None = None) -> str:
         """Returns word form of date in HTML format."""
         if flang is None:
             flang = lang
@@ -223,12 +223,12 @@ class D:
             return "".join(r)
 
 
-class L:
+class Lang:
     """Simpler (worse) replacement for ``langcodes.Language``.
 
     Supports all subtags except for extensions (``t`` and ``u``).
 
-    Like ``D``, works perfectly if the input is already well-formed.
+    Like ``Date``, works perfectly if the input is already well-formed.
     """
     def __init__(
         self, l: str,
@@ -257,12 +257,12 @@ class L:
              t: str | None = None,
              v: list[str] | None = None,
              x: str | None = None
-    ) -> "L":
+    ) -> "Lang":
         return cls(l, s, t, v, x)
 
     @staticmethod
-    def get(tag: "str | L") -> "L":
-        if isinstance(tag, L):
+    def get(tag: "str | Lang") -> "Lang":
+        if isinstance(tag, Lang):
             return tag
         elif not isinstance(tag, str) or not tag:
             raise ValueError("Invalid language code")
@@ -298,7 +298,7 @@ class L:
                 else:
                     raise ValueError("Invalid or unsupported language code")
 
-        return L.make(**langdata)
+        return Lang.make(**langdata)
 
     def __str__(self) -> str:
         if not isinstance(self.l, str) or not self.l:
@@ -322,7 +322,7 @@ class L:
         return "".join(r)
 
     @staticmethod
-    def say(to_say: "L", fformat: str | None = None, flang: "L | None" = None) -> str:
+    def say(to_say: "Lang", fformat: str | None = None, flang: "Lang | None" = None) -> str:
         """Returns a formatted language name and region."""
         if flang is None:
             flang = lang
@@ -501,7 +501,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "Ae" in to_check:
                 return text_to_html(find_equals("A"))
             elif "e" in to_check:
-                return get_l(key, fformat, L.get(to_check["e"]))
+                return get_l(key, fformat, Lang.get(to_check["e"]))
     # identifier
     elif fformat == "i":
         for o in options:
@@ -517,7 +517,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "ie" in to_check:
                 return find_equals("i")
             elif "e" in to_check:
-                return get_l(key, fformat, L.get(to_check["e"]))
+                return get_l(key, fformat, Lang.get(to_check["e"]))
     # LaTeX
     elif fformat == "L":
         for o in options:
@@ -551,7 +551,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "Ae" in to_check:
                 return text_to_latex(find_equals("A"))
             elif "e" in to_check:
-                return get_l(key, fformat, L.get(to_check["e"]))
+                return get_l(key, fformat, Lang.get(to_check["e"]))
     # print
     elif fformat == "p":
         for o in options:
@@ -577,7 +577,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "Ae" in to_check:
                 return find_equals("A")
             elif "e" in to_check:
-                return get_l(key, fformat, L.get(to_check["e"]))
+                return get_l(key, fformat, Lang.get(to_check["e"]))
     # TeX
 
     # text
@@ -601,7 +601,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "Ae" in to_check:
                 return find_equals("A")
             elif "e" in to_check:
-                return get_l(key, fformat, L.get(to_check["e"]))
+                return get_l(key, fformat, Lang.get(to_check["e"]))
     # XHTML5 (polyglot)
     elif fformat == "X":
         for o in options:
@@ -635,7 +635,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "Ae" in to_check:
                 return text_to_html(find_equals("A"))
             elif "e" in to_check:
-                return get_l(key, fformat, L.get(to_check["e"]))
+                return get_l(key, fformat, Lang.get(to_check["e"]))
 
 
 def id_base(id_i: str) -> str:
@@ -670,7 +670,7 @@ def id_parent(id_i: str) -> str | None:
         return None
 
 
-def language_list_entry(l: L) -> str:
+def language_list_entry(l: Lang) -> str:
     r: list[str] = ["<li"]
 
     if l.t is not None:
@@ -683,7 +683,7 @@ def language_list_entry(l: L) -> str:
     else:
         r.append(f"<a lang={l} href=../{f"{l}".lower()}/ hreflang={l}>")
 
-    r.append(L.say(l, None, l))
+    r.append(Lang.say(l, None, l))
 
     if f"{l}" == f"{lang}":
         r.append("</b>")
@@ -693,7 +693,7 @@ def language_list_entry(l: L) -> str:
     return "".join(r)
 
 
-def make_nav_button(button: Literal["f", "p", "n", "l"], flang: None | L = None) -> str:
+def make_nav_button(button: Literal["f", "p", "n", "l"], flang: None | Lang = None) -> str:
     if flang is None:
         flang = lang
 
@@ -751,7 +751,7 @@ def make_nav_button(button: Literal["f", "p", "n", "l"], flang: None | L = None)
 #    r.append(ddict["share"][name]["base"])
 
 
-def msg_l10n(*args, string: str, flang: L | None = None) -> str:
+def msg_l10n(*args, string: str, flang: Lang | None = None) -> str:
     if flang is None:
         flang = lang
     return get_l(ddict["string"][string], "p", flang).format(*args)
@@ -796,13 +796,13 @@ def to_regional_indicators(string: str) -> str:
     return "".join(out_chars)
 
 
-def to_sentence_case(string: str, flang: L | None = None) -> str:
+def to_sentence_case(string: str, flang: Lang | None = None) -> str:
     """Capitalizes the first character of a string as appropriate for
     the language.
 
-    >>> to_sentence_case("toki pona", L.get("tok"))
+    >>> to_sentence_case("toki pona", Lang.get("tok"))
     'toki pona'
-    >>> to_sentence_case("français", L.get("fr"))
+    >>> to_sentence_case("français", Lang.get("fr"))
     'Français'
     """
     if flang is None:
@@ -873,7 +873,7 @@ if __name__ == "__main__":
             continue
 
         for lang in data[i]["langs"]:
-            lang: L = L.get(lang)
+            lang: Lang = Lang.get(lang)
             format: str = "H"
 
             canonical: str = f"https://gabl.ink/i/{i}/{f"{lang}".lower()}/"
@@ -957,7 +957,7 @@ if __name__ == "__main__":
                 "<ul id=L>"
             )
             for l in sorted(data[i]["langs"]):
-                l: L = L.get(l)
+                l: Lang = Lang.get(l)
                 F.append(language_list_entry(l))
             F.append(
                 "</ul></header>"
@@ -982,12 +982,12 @@ if __name__ == "__main__":
                 if Path(INDEX/i/f"{lang}".lower()/"subs.vtt").is_file():
                     F.append(
                         f"<track default src=subs.vtt srclang={lang} kind=subtitles "
-                        f"label{attr(L.say(lang, "t"))}{close()}"
+                        f"label{attr(Lang.say(lang, "t"))}{close()}"
                     )
                 if Path(INDEX/i/f"{lang}".lower()/"cc.vtt").is_file():
                     F.append(
                         f"<track src=cc.vtt srclang={lang} kind=captions "
-                        f"label{attr(f"{L.say(lang, "t")}{msg_l10n(string="cc")}")}{close()}"
+                        f"label{attr(f"{Lang.say(lang, "t")}{msg_l10n(string="cc")}")}{close()}"
                     )
                 F.append(
                     "<p>"
@@ -1098,8 +1098,8 @@ if __name__ == "__main__":
 
             for entry in data[i]["log"]:
                 F.append(
-                    f"<article id=log_{D.make(**entry["date"])}><details>"
-                    f"<summary><h3>{D.say(D.make(**entry["date"]))}</h3></summary>"
+                    f"<article id=log_{Date.make(**entry["date"])}><details>"
+                    f"<summary><h3>{Date.say(Date.make(**entry["date"]))}</h3></summary>"
                 )
                 for line in entry["content"]:
                     if get_l(line.get("p")):
