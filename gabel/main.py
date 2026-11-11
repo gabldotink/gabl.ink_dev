@@ -824,7 +824,7 @@ def to_sentence_case(string: str, flang: Lang | None = None) -> str:
 
 
 SCRIPT: Path = Path(__file__).resolve()
-GABEL: Path = SCRIPT.parent.parent
+GABEL: Path = SCRIPT.parent
 DICTS: Path = Path(GABEL)/"dicts"
 INDEX: Path = Path(GABEL)/".."/"i"
 
@@ -889,16 +889,16 @@ if __name__ == "__main__":
             # TODO: I don’t think this always works
             if data.get("config",{}).get("config",{}).get("relative_paths") is True:
                 if i == "root":
-                    styles: str = "../g/styles"
+                    styles: str = "../gabel/styles"
                 else:
                     depth: int = i.count("/") + 2
                     styles: list[str] = ["../"]
                     for d in range(depth):
                         styles.append("../")
-                    styles.append("g/styles")
+                    styles.append("gabel/styles")
                     styles: str = "".join(styles)
             else:
-                styles: str = "/g/styles"
+                styles: str = "/gabel/styles"
 
             F.append(
                 f"<html lang={lang} dir={lang_dir} itemscope itemtype=https://schema.org/WebPage>"
