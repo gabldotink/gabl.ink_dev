@@ -24,52 +24,52 @@ class D:
     Works perfectly! If the input is already well-formed.
     """
     def __init__(
-        self, Y: int | None = None,
-              M: int | None = None,
-              D: int | None = None,
-              h: int | None = None,
+        self, y: int | None = None,
               m: int | None = None,
+              d: int | None = None,
+              h: int | None = None,
+              n: int | None = None,
               s: int | None = None,
               f: int | None = None,
-              Z: int | None = None
+              z: int | None = None
     ):
-        if (M is not None) and (M < 1 or M > 12):
+        if (m is not None) and (m < 1 or m > 12):
             raise ValueError("Invalid month")
-        elif (D is not None) and (D < 1 or D > 31):
+        elif (d is not None) and (d < 1 or d > 31):
             raise ValueError("Invalid day")
         elif (h is not None) and (h < 0 or h > 23):
             raise ValueError("Invalid hour")
-        elif (m is not None) and (m < 0 or m > 59):
+        elif (n is not None) and (n < 0 or m > 59):
             raise ValueError("Invalid minute")
         elif (s is not None) and (s < 0 or s > 60):
             raise ValueError("Invalid second")
         elif (f is not None) and (f < 0 or f > 999):
             raise ValueError("Invalid fractional second")
-        elif (Z is not None) and (Z < -720 or Z > 840):
+        elif (z is not None) and (z < -720 or z > 840):
             raise ValueError("Invalid time offset")
         
-        self.Y: int | None = Y
-        self.M: int | None = M
-        self.D: int | None = D
-        self.h: int | None = h
+        self.y: int | None = y
         self.m: int | None = m
+        self.d: int | None = d
+        self.h: int | None = h
+        self.n: int | None = n
         self.s: int | None = s
         self.f: int | None = f
-        self.Z: int | None = Z
+        self.z: int | None = z
 
 
     @classmethod
     def make(
-        cls, Y: int | None = None,
-             M: int | None = None,
-             D: int | None = None,
-             h: int | None = None,
+        cls, y: int | None = None,
              m: int | None = None,
+             d: int | None = None,
+             h: int | None = None,
+             n: int | None = None,
              s: int | None = None,
              f: int | None = None,
-             Z: int | None = None
-    ) -> "D":
-        return cls(Y, M, D, h, m, s, f, Z)
+             z: int | None = None
+    ) -> "d":
+        return cls(y, m, d, h, n, s, f, z)
     
 
     @staticmethod
@@ -96,22 +96,22 @@ class D:
 
         #if dstr:
         #    if dstr.startswith("-"):
-        #        dtdata["Y"] = -int(dt.split("-")[1])
+        #        dtdata["y"] = -int(dt.split("-")[1])
         #    elif len(dt.split("-")[0]) >= 4:
-        #        dtdata["Y"] = int(dt.split("-")[0])
+        #        dtdata["y"] = int(dt.split("-")[0])
         #    else:
         #        raise ValueError("missing year")
         #    if len(dt.split("-")[1]) == 2:
-        #        dtdata["M"] = int(dt.split("-")[1])
-        #    if dtdata["M"] and len(dt.split("-")[2]) == 2:
-        #        dtdata["D"] = int(dt.split("-")[2])
+        #        dtdata["m"] = int(dt.split("-")[1])
+        #    if dtdata["m"] and len(dt.split("-")[2]) == 2:
+        #        dtdata["d"] = int(dt.split("-")[2])
 
         #if 
 
         #if dstr:
-        #    dtdata["Y"] = int(dstr[:-6])
-        #    dtdata["M"] = int(dstr[-5:-5+2])
-        #    dtdata["D"] = int(dstr[-2:])
+        #    dtdata["y"] = int(dstr[:-6])
+        #    dtdata["m"] = int(dstr[-5:-5+2])
+        #    dtdata["d"] = int(dstr[-2:])
 
         #if tstr:
     
@@ -125,7 +125,7 @@ class D:
 
         ad: bool
 
-        if d.Y > 0 and d.Y < 1000:
+        if d.y > 0 and d.y < 1000:
             ad = True
         else:
             ad = False
@@ -133,44 +133,44 @@ class D:
         if flang.l == "en":
             if flang.t == "US":
                 r.append(
-                    f"{get_l(ddict["month"]["months"][d.M-1]["name"])}"
-                    f"\xa0{d.D}, "
+                    f"{get_l(ddict["month"]["months"][d.m-1]["name"])}"
+                    f"\xa0{d.d}, "
                 )
             elif flang.t == "GB":
                 r.append(
-                    f"{d.D}\xa0"
-                    f"{get_l(ddict["month"]["months"][d.M-1]["name"])}"
+                    f"{d.d}\xa0"
+                    f"{get_l(ddict["month"]["months"][d.m-1]["name"])}"
                     " "
                 )
             if ad:
                 r.append("AD\xa0")
-            r.append(f"{d.Y}")
+            r.append(f"{d.y}")
         elif flang.l == "fr":
-            if d.D == 1:
+            if d.d == 1:
                 r.append("1er")
             else:
-                r.append(f"{d.D}")
+                r.append(f"{d.d}")
             r.append(
                 "\xa0"
-                f"{get_l(ddict["month"]["months"][d.M-1]["name"])}"
+                f"{get_l(ddict["month"]["months"][d.m-1]["name"])}"
             )
             if ad:
-                r.append(f"{d.Y}\xa0ap.\xa0J.‑C.")
-            r.append(f" {d.Y}")
+                r.append(f"{d.y}\xa0ap.\xa0J.‑C.")
+            r.append(f" {d.y}")
         elif flang.l == "es":
             r.append(
-                f"{d.D}\xa0de\xa0"
-                f"{get_l(ddict["month"]["months"][d.M-1]["name"])}"
+                f"{d.d}\xa0de\xa0"
+                f"{get_l(ddict["month"]["months"][d.m-1]["name"])}"
                 " de "
             )
             if ad:
-                r.append(f"{d.Y}\xa0d.\xa0C.")
-            r.append(f"{d.Y}")
+                r.append(f"{d.y}\xa0d.\xa0C.")
+            r.append(f"{d.y}")
         elif flang.l in ("ja", "ko", "zh"):
             r.append(
-                f"{d.Y}{msg_l10n(flang=flang, string="say_date_cjk_year")}"
-                f"{d.M}{msg_l10n(flang=flang, string="say_date_cjk_month")}"
-                f"{d.D}{msg_l10n(flang=flang, string="say_date_cjk_day")}"
+                f"{d.y}{msg_l10n(flang=flang, string="say_date_cjk_year")}"
+                f"{d.m}{msg_l10n(flang=flang, string="say_date_cjk_month")}"
+                f"{d.d}{msg_l10n(flang=flang, string="say_date_cjk_day")}"
             )
 
         r.append("</time>")
@@ -181,25 +181,25 @@ class D:
     def __str__(self) -> str:
             """Returns a string suitable for a ``datetime`` attribute
             in HTML."""
-            if not isinstance(self.Y, int) or not self.Y:
+            if not isinstance(self.y, int) or not self.y:
                 raise ValueError("Invalid datetime object")
 
-            if self.Y <= 0:
+            if self.y <= 0:
                 return ""
     
-            r: list[str] = [f"{self.Y:04d}"]
+            r: list[str] = [f"{self.y:04d}"]
 
-            if self.M:
-                r.append(f"-{self.M:02d}")
+            if self.m:
+                r.append(f"-{self.m:02d}")
     
-            if self.D:
-                r.append(f"-{self.D:02d}")
+            if self.d:
+                r.append(f"-{self.d:02d}")
 
             if self.h:
                 r.append(f"T{self.h:02d}")
 
-            if self.m:
-                r.append(f":{self.m:02d}")
+            if self.n:
+                r.append(f":{self.n:02d}")
 
             if self.s:
                 r.append(f":{self.s:02d}")
@@ -207,17 +207,17 @@ class D:
             if self.f:
                 r.append(f".{self.f:03d}")
 
-            if self.Z and self.h and self.m and self.s:
-                if self.Z == 0:
+            if self.z and self.h and self.n and self.s:
+                if self.z == 0:
                     r.append("Z")
                 else:
                     z_symbol: str
-                    if self.Z < 0:
+                    if self.z < 0:
                         z_symbol = "-"
                     else:
                         z_symbol = "+"
-                    z_hours: str = f"{(abs(self.Z) // 60):02d}"
-                    z_minutes: str = f"{((abs(self.Z)) - (abs(int(z_hours)) * 60)):02d}"
+                    z_hours: str = f"{(abs(self.z) // 60):02d}"
+                    z_minutes: str = f"{((abs(self.z)) - (abs(int(z_hours)) * 60)):02d}"
                     r.append(f"{z_symbol}{z_hours}{z_minutes}")
     
             return "".join(r)
