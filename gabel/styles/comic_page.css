@@ -10,17 +10,9 @@ body {
   left: 0;
 }
 
-#gabldotink_logo img {
-  width: 20%;
-}
-
 #L {
   float: right;
-  list-style-type: "🌐\a0";
-}
-
-.nav_buttons_off {
-  opacity: 10%;
+  list-style: "🌐\a0";
 }
 
 .N {
@@ -36,73 +28,36 @@ body {
   text-align: center;
   font-size: xx-large;
   width: 5em;
-}
-
-.B {
   color: gray;
 }
 
 .B a {
-  text-decoration-line: none;
+  text-decoration: none;
 }
 
-.B a p {
-  color: inherit;
+.B a:hover {
+  text-decoration: underline;
 }
 
-/*
-div.nav_button picture img {
+#M, #M img {
   width: 100%;
   max-width: 100%;
-}
-*/
-
-.B p {
-  text-align: center;
-}
-
-p.nav_buttons {
-  width: 25%;
-  max-width: 25%;
-  display: block;
-}
-
-#nav_top_title {
-  text-align: center;
-}
-
-#M {
-  width: 100%;
-  max-width: 100%;
+  margin: 1em auto;
 }
 
 #P {
-  counter-reset: nav_bottom_list_page;
-}
-
-#P details {
-  white-space: nowrap;
-}
-
-#P {
+  counter-reset: P_count;
   list-style: none;
 }
 
 #P li::before {
-  counter-increment: nav_bottom_list_page;
-}
-
-#P li::before {
-  content: var(--nav_bottom_list_pages_label, "Page\a0") counter(nav_bottom_list_page) "\a0";
-}
-
-#transcript_text {
-  margin-left: 1em;
+  counter-increment: P_count;
+  content: var(--nav_bottom_list_pages_label, "Page\a0") counter(P_count) "\a0";
 }
 
 #share_links ul,
 #validate_links ul {
-  list-style-type: none;
+  list-style: none;
 }
 
 #T {

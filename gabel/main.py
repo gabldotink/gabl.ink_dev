@@ -674,7 +674,7 @@ def language_list_entry(l: Lang) -> str:
 
     if l.t is not None:
         r.append(
-            f''' style="list-style-type:'{to_regional_indicators(l.t)}\xa0'">'''
+            f''' style="list-style:'{to_regional_indicators(l.t)}\xa0'">'''
         )
 
     if f"{l}" == f"{lang}":

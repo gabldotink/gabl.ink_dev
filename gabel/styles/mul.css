@@ -2,32 +2,19 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 
 abbr {
-  all: unset;
+  text-decoration: none;
+}
+
+del {
+  display: none;
 }
 
 ins {
-  all: unset;
+  text-decoration: none;
 }
 
-strong, b, .b {
-  font-weight: bold;
-}
-
-/* A in LaTeX wordmark */
-/* TODO: While `t` and `e` come from tug.org, I didn’t find an official source for the LaTeX wordmark. */
-.t .a {
-  text-transform: uppercase;
-  font-size: 0.75em;
-	vertical-align: 0.25em;
-  margin-left: -0.3em;
-}
-
-/* E in TeX wordmark */
-.t .e {
-  text-transform: uppercase;
-  position: relative;
-  top: 0.5ex;
-  left: -0.0417em;
+.b {
+  font-weight: bolder;
 }
 
 .i {
@@ -43,8 +30,25 @@ strong, b, .b {
   letter-spacing: -0.125em;
 }
 
+/* A in LaTeX wordmark */
+/* TODO: While `t` and `e` come from tug.org, I didn’t find an official source for this LaTeX wordmark. */
+.t .a {
+  text-transform: uppercase;
+  font-size: 0.75em;
+  vertical-align: 0.25em;
+  margin-left: -0.3em;
+}
+
+/* E in TeX wordmark */
+.t .e {
+  text-transform: uppercase;
+  position: relative;
+  top: 0.5ex;
+  left: -0.0417em;
+}
+
 .u {
-  text-decoration-line: underline;
+  text-decoration: underline;
 }
 
 .w {

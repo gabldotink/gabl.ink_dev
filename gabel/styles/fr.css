@@ -11,18 +11,10 @@ math {
   font-family: "Noto Serif", serif;
 }
 
-cite {
-  all: unset;
-}
-
-em {
-  all: unset;
+cite, em {
+  font-style: normal;
 }
 
 code, .m {
   font-family: "Noto Sans Mono", monospace;
-}
-
-i {
-  font-style: italic;
 }

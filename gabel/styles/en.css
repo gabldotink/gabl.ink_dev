@@ -12,13 +12,9 @@ math {
 }
 
 cite {
-  all: unset;
+  font-style: normal;
 }
 
 code, .m {
   font-family: "Noto Sans Mono", monospace;
-}
-
-em, i {
-  font-style: italic;
 }
