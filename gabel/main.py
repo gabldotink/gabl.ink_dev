@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-# SPDX-License-Identifier: CC0-1.0
+# SPDX-License-Identifier: Apache-2.0
 """Gabel, the static site generator for gabl.ink."""
+
+# Copyright © 2024–2026 gabl.ink
 
 import json
 import re

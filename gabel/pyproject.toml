@@ -1,18 +1,20 @@
 # SPDX-License-Identifier: CC0-1.0
+# While the project is licensed under Apache-2.0, this file is available under
+# CC0-1.0.
 
 [project]
-name="gabel"
-description="Gabel, the static site generator for gabl.ink."
-version="0"
-requires-python=">=3.12"
-dependencies=[
+name = "gabel"
+description = "Gabel, the static site generator for gabl.ink."
+version = "0"
+requires-python = ">=3.12"
+dependencies = [
   "langcodes"
 ]
 authors=[
-  {name="Gabriel “gabldotink”",email="gabl@gabl.ink"}
+  {name = "Gabriel “gabldotink”", email = "gabl@gabl.ink"}
 ]
-license="CC0-1.0"
-classifiers=[
+license = "Apache-2.0"
+classifiers = [
   "Development Status :: 2 - Pre-Alpha",
   "Natural Language :: English",
   "Private :: Do Not Upload",
@@ -27,5 +29,5 @@ classifiers=[
 ]
 
 [project.urls]
-Repository="https://github.com/gabldotink/gabl.ink_dev"
-Issues="https://github.com/gabldotink/gabl.ink_dev/issues"
+Repository = "https://github.com/gabldotink/gabl.ink_dev"
+Issues = "https://github.com/gabldotink/gabl.ink_dev/issues"
