@@ -7,7 +7,6 @@
 import json
 import re
 import sys
-import time
 from pathlib import Path
 from typing import Literal
 
@@ -428,16 +427,16 @@ def expand_parts(parts: list[str | int]) -> list[int]:
     >>> expand_parts([4, 7, "1-5"])
     [1, 2, 3, 4, 5, 7]
     """
-    result: set[int] = set()
+    r: set[int] = set()
 
     for part in parts:
         if isinstance(part, int):
-            result.add(part)
+            r.add(part)
         else:
             start, end = map(int, part.split("-"))
-            result.update(range(start, end + 1))
+            r.update(range(start, end + 1))
 
-    return sorted(result)
+    return sorted(r)
 
 
 def get_i(i_item_file: Path) -> str:
@@ -815,8 +814,6 @@ def to_sentence_case(string: str, flang: Lang | None = None) -> str:
 
 
 #def validate_data()->None:
-#    sys.stderr.write("Validating data…")
-#    start_time=time.perf_counter()
 #    for key in data:
 #        if not unicodedata.is_normalized("NFC",key):
 #            raise SystemExit("Key name not normalized in NFC")
@@ -824,8 +821,6 @@ def to_sentence_case(string: str, flang: Lang | None = None) -> str:
 #        if isinstance(value,str):
 #            if not unicodedata.is_normalized("NFC",value):
 #                raise SystemExit("String not normalized in NFC")
-#    end_time=time.perf_counter()
-#    sys.stderr.write(f"\rValidated data in {end_time-start_time:.3f}\xa0s\n")
 
 
 SCRIPT: Path = Path(__file__).resolve()
@@ -834,10 +829,6 @@ DICTS: Path = Path(GABEL)/"dicts"
 INDEX: Path = Path(GABEL)/".."/"i"
 
 data: dict = {}
-
-if __name__ == "__main__":
-    sys.stderr.write("Loading data…")
-    data_start_time = time.perf_counter()
 
 item_files: list[Path] = [
     path
@@ -859,11 +850,7 @@ for item_file in item_files:
         data[obj_id] = obj
 
 if __name__ == "__main__":
-    data_end_time = time.perf_counter()
-    sys.stderr.write(f"\rLoaded data in {data_end_time-data_start_time:.3f}\xa0s\n")
-
     sys.stderr.write("Generating pages…")
-    start_time = time.perf_counter()
 
     # TODO: Make this a function(s); these variables are global.
     for item_file in item_files:
@@ -1185,5 +1172,5 @@ if __name__ == "__main__":
                     output_file.seek(0)
                     output_file.truncate()
                     output_file.write(F)
-    end_time = time.perf_counter()
-    sys.stderr.write(f"\rGenerated pages in {end_time-start_time:.3f}\xa0s\n")
+
+    sys.stderr.write(" done\n")
