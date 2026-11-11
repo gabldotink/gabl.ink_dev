@@ -112,6 +112,68 @@ class D:
         #    dtdata["D"] = int(dstr[-2:])
 
         #if tstr:
+    
+
+    def say(d: "D", flang: L | None = None) -> str:
+        """Returns word form of date in HTML format."""
+        if flang is None:
+            flang = lang
+
+        r: list[str] = [f"<time datetime={d}>"]
+
+        ad: bool
+
+        if d.Y > 0 and d.Y < 1000:
+            ad = True
+        else:
+            ad = False
+
+        if flang.l == "en":
+            if flang.t == "US":
+                r.append(
+                    f"{get_l(ddict["month"]["months"][d.M-1]["name"])}"
+                    f"\xa0{d.D}, "
+                )
+            elif flang.t == "GB":
+                r.append(
+                    f"{d.D}\xa0"
+                    f"{get_l(ddict["month"]["months"][d.M-1]["name"])}"
+                    " "
+                )
+            if ad:
+                r.append("AD\xa0")
+            r.append(f"{d.Y}")
+        elif flang.l == "fr":
+            if d.D == 1:
+                r.append("1er")
+            else:
+                r.append(f"{d.D}")
+            r.append(
+                "\xa0"
+                f"{get_l(ddict["month"]["months"][d.M-1]["name"])}"
+            )
+            if ad:
+                r.append(f"{d.Y}\xa0ap.\xa0J.‑C.")
+            r.append(f" {d.Y}")
+        elif flang.l == "es":
+            r.append(
+                f"{d.D}\xa0de\xa0"
+                f"{get_l(ddict["month"]["months"][d.M-1]["name"])}"
+                " de "
+            )
+            if ad:
+                r.append(f"{d.Y}\xa0d.\xa0C.")
+            r.append(f"{d.Y}")
+        elif flang.l in ("ja", "ko", "zh"):
+            r.append(
+                f"{d.Y}{msg_l10n(flang=flang, string="say_date_cjk_year")}"
+                f"{d.M}{msg_l10n(flang=flang, string="say_date_cjk_month")}"
+                f"{d.D}{msg_l10n(flang=flang, string="say_date_cjk_day")}"
+            )
+
+        r.append("</time>")
+
+        return "".join(r)
 
     
     def __str__(self) -> str:
@@ -750,69 +812,6 @@ def to_sentence_case(string: str, flang: L | None = None) -> str:
         return f"{string[:1].upper()}{string[1:]}"
 
 
-# The shell script supports negative years, but `datetime` does not.
-def say_date(d: D, flang: L | None = None) -> str:
-    """Returns word form of date in HTML format."""
-    if flang is None:
-        flang = lang
-
-    r: list[str] = [f"<time datetime={d}>"]
-
-    ad: bool
-
-    if d.Y > 0 and d.Y < 1000:
-        ad = True
-    else:
-        ad = False
-
-    if flang.l == "en":
-        if flang.t == "US":
-            r.append(
-                f"{get_l(ddict["month"]["months"][d.M-1]["name"])}"
-                f"\xa0{d.D}, "
-            )
-        elif flang.t == "GB":
-            r.append(
-                f"{d.D}\xa0"
-                f"{get_l(ddict["month"]["months"][d.M-1]["name"])}"
-                " "
-            )
-        if ad:
-            r.append("AD\xa0")
-        r.append(f"{d.Y}")
-    elif flang.l == "fr":
-        if d.D == 1:
-            r.append("1er")
-        else:
-            r.append(f"{d.D}")
-        r.append(
-            "\xa0"
-            f"{get_l(ddict["month"]["months"][d.M-1]["name"])}"
-        )
-        if ad:
-            r.append(f"{d.Y}\xa0ap.\xa0J.‑C.")
-        r.append(f" {d.Y}")
-    elif flang.l == "es":
-        r.append(
-            f"{d.D}\xa0de\xa0"
-            f"{get_l(ddict["month"]["months"][d.M-1]["name"])}"
-            " de "
-        )
-        if ad:
-            r.append(f"{d.Y}\xa0d.\xa0C.")
-        r.append(f"{d.Y}")
-    elif flang.l in ("ja", "ko", "zh"):
-        r.append(
-            f"{d.Y}{msg_l10n(flang=flang, string="say_date_cjk_year")}"
-            f"{d.M}{msg_l10n(flang=flang, string="say_date_cjk_month")}"
-            f"{d.D}{msg_l10n(flang=flang, string="say_date_cjk_day")}"
-        )
-
-    r.append("</time>")
-
-    return "".join(r)
-
-
 #def validate_data()->None:
 #    sys.stderr.write("Validating data…")
 #    start_time=time.perf_counter()
@@ -1098,7 +1097,7 @@ if __name__ == "__main__":
             for entry in data[i]["log"]:
                 F.append(
                     f"<article id=log_{D.make(**entry["date"])}><details>"
-                    f"<summary><h3>{say_date(D.make(**entry["date"]))}</h3></summary>"
+                    f"<summary><h3>{D.say(D.make(**entry["date"]))}</h3></summary>"
                 )
                 for line in entry["content"]:
                     if get_l(line.get("p")):
