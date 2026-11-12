@@ -13,8 +13,27 @@ ins {
   text-decoration: none;
 }
 
+/* A in LaTeX wordmark */
+.a {
+  text-transform: uppercase;
+  font-size: 0.75em;
+  vertical-align: 0.238em;
+  margin-left: -0.43em;
+  margin-right: -0.15em;
+  line-height: 1ex;
+}
+
 .b {
   font-weight: bolder;
+}
+
+/* E in TeX wordmark */
+.e {
+  text-transform: uppercase;
+  vertical-align: -0.173em;
+  margin-left: -0.167em;
+  margin-right: -0.125em;
+  line-height: 1ex;
 }
 
 .i {
@@ -25,26 +44,8 @@ ins {
   font-style: normal;
 }
 
-/* TeX wordmark */
-.t {
-  letter-spacing: -0.125em;
-}
-
-/* A in LaTeX wordmark */
-/* TODO: While `t` and `e` come from tug.org, I didn’t find an official source for this LaTeX wordmark. */
-.t .a {
-  text-transform: uppercase;
-  font-size: 0.75em;
-  vertical-align: 0.25em;
-  margin-left: -0.3em;
-}
-
-/* E in TeX wordmark */
-.t .e {
-  text-transform: uppercase;
-  position: relative;
-  top: 0.5ex;
-  left: -0.0417em;
+.s {
+  text-decoration: line-through;
 }
 
 .u {
