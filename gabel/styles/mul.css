@@ -5,6 +5,10 @@ abbr {
   text-decoration: none;
 }
 
+cite {
+  font-style: normal;
+}
+
 del {
   display: none;
 }
