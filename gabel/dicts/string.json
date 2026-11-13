@@ -375,10 +375,10 @@
   },
   "copyright_notice": {
     "en": {
-      "t": "<abbr title=Copyright>©</abbr>\u00a0"
+      "Hf": "<abbr title{attr('Copyright')}>©</abbr>\u00a0"
     },
     "fr": {
-      "t": "<abbr title=\"Droit d’auteur\">©</abbr>\u00a0"
+      "H": "<abbr title=\"Droit d’auteur\">©</abbr>\u00a0"
     }
   },
   "copyright_year_separator": {

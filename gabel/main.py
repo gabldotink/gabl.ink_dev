@@ -167,9 +167,9 @@ class Date:
             r.append(f"{d.y}")
         elif flang.l in ("ja", "ko", "zh"):
             r.append(
-                f"{d.y}{msg_l10n(flang=flang, string="say_date_cjk_year")}"
-                f"{d.m}{msg_l10n(flang=flang, string="say_date_cjk_month")}"
-                f"{d.d}{msg_l10n(flang=flang, string="say_date_cjk_day")}"
+                f"{d.y}{get_l(ddict["string"]["say_date_cjk_year"])}"
+                f"{d.m}{get_l(ddict["string"]["say_date_cjk_month"])}"
+                f"{d.d}{get_l(ddict["string"]["say_date_cjk_day"])}"
             )
 
         r.append("</time>")
@@ -445,7 +445,7 @@ def get_i(i_item_file: Path) -> str:
         return item_obj["id"]
 
 
-def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | None = None, flang: Lang | None = None) -> str:
+def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | None = None, flang: Lang | None = None, fargs: list[str] | None = None) -> str:
     if fformat is None:
         fformat = format
     if flang is None:
@@ -748,7 +748,7 @@ def make_nav_button(button: Literal["f", "p", "n", "l"], flang: None | Lang = No
         == data[data[i]["location"]["series"]].get(button_fl)
     ):
         r.append(
-            f"{attr(msg_l10n(msg_l10n(flang=flang, string=f"nav_button_{button_id}_inline"), flang=flang, string="this_is_x_page"))}"
+            f"{attr(msg_l10n(get_l(ddict["string"][f"nav_button_{button_id}_inline"]), flang=flang, string="this_is_x_page"))}"
             ">"
         )
     else:
@@ -763,7 +763,7 @@ def make_nav_button(button: Literal["f", "p", "n", "l"], flang: None | Lang = No
             r.append(f"{data[i]["location"][button_id]}")
         r.append(f"/{f"{flang}".lower()}/ hreflang={flang}>")
 
-    r.append(f"<span class{attr("A")} aria-hidden{attr("true")}>{button_arrow}</span><br>{msg_l10n(flang=flang, string=f"nav_button_{button_id}")}")
+    r.append(f"<span class{attr("A")} aria-hidden{attr("true")}>{button_arrow}</span><br>{get_l(ddict["string"][f"nav_button_{button_id}"])}")
 
     if (
         data[i]["location"]["page"]
@@ -1012,7 +1012,7 @@ if __name__ == "__main__":
                 if Path(INDEX/i/f"{lang}".lower()/"cc.vtt").is_file():
                     F.append(
                         f"<track src{attr("cc.vtt")} srclang{attr(f"{lang}")} kind{attr("captions")} "
-                        f"label{attr(f"{Lang.say(lang, "t")}{msg_l10n(string="cc")}")}{close()}"
+                        f"label{attr(f"{Lang.say(lang, "t")}{get_l(ddict["string"]["cc"])}")}{close()}"
                     )
                 F.append(
                     "<p>"
@@ -1025,7 +1025,7 @@ if __name__ == "__main__":
                     F.append(f" title{attr(get_l(data[i].get("tooltip", {}), "t"))}")
                 F.append(
                     ">"
-                    f"<img src{attr("image.png")} fetchpriority{attr("high")} alt{attr(msg_l10n(string="see_transcript"))}{close()}"
+                    f"<img src{attr("image.png")} fetchpriority{attr("high")} alt{attr(get_l(ddict["string"]["see_transcript"]))}{close()}"
                     "</picture>"
                 )
 
@@ -1058,7 +1058,7 @@ if __name__ == "__main__":
                 if not get_l(data[i]["title"]):
                     if data[i]["location"]["page"] == list_page:
                         F.append("<b>")
-                    F.append(msg_l10n(string="no_title"))
+                    F.append(get_l(ddict["string"]["no_title"]))
                     if data[i]["location"]["page"] == list_page:
                         F.append("</b>")
                 else:
@@ -1094,7 +1094,7 @@ if __name__ == "__main__":
             F.append(
                 "</ol></details></nav>"
                 "<details>"
-                f"<summary><h2>{msg_l10n(string="transcript_name")}</h2></summary>"
+                f"<summary><h2>{get_l(ddict["string"]["transcript_name"])}</h2></summary>"
                 f"<table id{attr("T")}>"
             )
 
@@ -1118,7 +1118,7 @@ if __name__ == "__main__":
                 )
             F.append(
                 "</table></details><hr>"
-                f"<h2>{msg_l10n(string="log")}</h2>"
+                f"<h2>{get_l(ddict["string"]["log"])}</h2>"
             )
 
             for entry in data[i]["log"]:
@@ -1142,27 +1142,27 @@ if __name__ == "__main__":
                 "</a>"
 
                 f"<details id{attr("share_links")}>"
-                f"<summary>{msg_l10n(string="share_this_page")}</summary>"
+                f"<summary>{get_l(ddict["string"]["share_this_page"])}</summary>"
                 "<ul></ul></details>"
 
                 f"<details id{attr("validate_links")}>"
-                f"<summary>{msg_l10n(string="validate_this_page")}</summary>"
+                f"<summary>{get_l(ddict["string"]["validate_this_page"])}</summary>"
                 "<ul></ul></details>"
 
                 f"<footer><p><span class{attr("w")}>"
-                f"{msg_l10n(string="copyright_notice")}"
+                f"{get_l(ddict["string"]["copyright_notice"])}"
                 f"{data[i]["copyright"]["year"]["first"]}"
             )
             if data[i]["copyright"]["year"].get("last"):
                 F.append(
-                    f"{msg_l10n(string="copyright_year_separator")}"
+                    f"{get_l(ddict["string"]["copyright_year_separator"])}"
                     f"{data[i]["copyright"]["year"]["last"]}"
                 )
             F.append(
                 "</span> "
                 f"<span translate{attr("no")}>gabl.ink</span>"
 
-                f"<p>{msg_l10n(string="license")}"
+                f"<p>{get_l(ddict["string"]["license"])}"
                 f"<a rel{attr('external license')} href"
                 f"{attr(get_l(ddict["license"][data[i]["copyright"]["license"][0]]["url"], "i"))}"
                 ">"
@@ -1176,12 +1176,12 @@ if __name__ == "__main__":
                 F.append("<p>")
                 if len(data[i]["disclaimer"]) == 1:
                     F.append(
-                        f"{msg_l10n(string="disclaimer")}"
+                        f"{get_l(ddict["string"]["disclaimer"])}"
                         f"{get_l(ddict["disclaim"][data[i]["disclaimer"][0]]["text"])}"
                     )
                 else:
                     F.append(
-                        f"{msg_l10n(string="disclaimer_plural")}"
+                        f"{get_l(ddict["string"]["disclaimer_plural"])}"
                         f"<ul class{attr("horizontal_list")}>"
                     )
                     for d in data[i]["disclaimer"]:
