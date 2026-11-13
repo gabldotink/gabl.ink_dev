@@ -120,7 +120,7 @@ class Date:
         if flang is None:
             flang = lang
 
-        r: list[str] = [f"<time datetime={d}>"]
+        r: list[str] = [f"<time datetime{attr(f"{d}")}>"]
 
         ad: bool
 
