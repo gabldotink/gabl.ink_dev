@@ -16,7 +16,7 @@ __version__ = "0"
 
 class Date:
     """Replacement for ``datetime.date`` and ``datetime.datetime``.
-    
+
     Supports arbitrary positive or negative years. ``datetime`` only
     supports 1–9999.
 
@@ -46,7 +46,7 @@ class Date:
             raise ValueError("Invalid fractional second")
         elif (z is not None) and (z < -720 or z > 840):
             raise ValueError("Invalid time offset")
-        
+
         self.y: int | None = y
         self.m: int | None = m
         self.d: int | None = d
@@ -69,7 +69,7 @@ class Date:
              z: int | None = None
     ) -> "d":
         return cls(y, m, d, h, n, s, f, z)
-    
+
 
     @staticmethod
     def get(dt: "dict[int] | Date") -> "Date":
@@ -105,7 +105,7 @@ class Date:
         #    if dtdata["m"] and len(dt.split("-")[2]) == 2:
         #        dtdata["d"] = int(dt.split("-")[2])
 
-        #if 
+        #if
 
         #if dstr:
         #    dtdata["y"] = int(dstr[:-6])
@@ -113,7 +113,7 @@ class Date:
         #    dtdata["d"] = int(dstr[-2:])
 
         #if tstr:
-    
+
 
     def say(d: "Date", flang: Lang | None = None) -> str:
         """Returns word form of date in HTML format."""
@@ -176,7 +176,7 @@ class Date:
 
         return "".join(r)
 
-    
+
     def __str__(self) -> str:
             """Returns a string suitable for a ``datetime`` attribute
             in HTML."""
@@ -185,12 +185,12 @@ class Date:
 
             if self.y <= 0:
                 return ""
-    
+
             r: list[str] = [f"{self.y:04d}"]
 
             if self.m:
                 r.append(f"-{self.m:02d}")
-    
+
             if self.d:
                 r.append(f"-{self.d:02d}")
 
@@ -218,7 +218,7 @@ class Date:
                     z_hours: str = f"{(abs(self.z) // 60):02d}"
                     z_minutes: str = f"{((abs(self.z)) - (abs(int(z_hours)) * 60)):02d}"
                     r.append(f"{z_symbol}{z_hours}{z_minutes}")
-    
+
             return "".join(r)
 
 
@@ -242,7 +242,7 @@ class Lang:
             raise ValueError("Invalid script subtag")
         elif (t is not None) and not re.fullmatch(r"^[A-Z]{2}$|^[0-9]{3}$", t):
             raise ValueError("Invalid territory subtag")
-        
+
         self.l: str = l
         self.s: str | None = s
         self.t: str | None = t
@@ -508,7 +508,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
                 return ""
 
             to_check: dict = key.get(o, {})
-            
+
             if "i" in to_check:
                 return to_check["i"]
             elif "if" in to_check:
@@ -522,7 +522,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
         for o in options:
             if o == "z":
                 return ""
-                    
+
             to_check: dict = key.get(o, {})
 
             if "L" in to_check:
@@ -556,7 +556,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
         for o in options:
             if o == "z":
                 return ""
-            
+
             to_check: dict = key.get(o, {})
 
             if "p" in to_check:
