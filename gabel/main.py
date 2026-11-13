@@ -674,13 +674,13 @@ def language_list_entry(l: Lang) -> str:
 
     if l.t is not None:
         r.append(
-            f''' style="list-style:'{to_regional_indicators(l.t)}\xa0'">'''
+            f" style{attr(f"list-style:{to_regional_indicators(l.t)}\xa0")}>"
         )
 
     if f"{l}" == f"{lang}":
         r.append("<b>")
     else:
-        r.append(f"<a lang={l} href=../{f"{l}".lower()}/ hreflang={l}>")
+        r.append(f"<a lang{attr(f"{l}")} href{attr(f"../{f"{l}".lower()}/")} hreflang{attr(f"{l}")}>")
 
     r.append(Lang.say(l, None, l))
 
@@ -703,7 +703,7 @@ def make_nav_button(button: Literal["f", "p", "n", "l"], flang: None | Lang = No
         "l": ("⇨", "last", "last"),
     }[button]
 
-    r: list[str] = ["<div class=B title"]
+    r: list[str] = [f"<div class{attr("B")} title"]
 
     if (
         data[i]["location"]["page"]
@@ -725,7 +725,7 @@ def make_nav_button(button: Literal["f", "p", "n", "l"], flang: None | Lang = No
             r.append(f"{data[i]["location"][button_id]}")
         r.append(f"/{f"{flang}".lower()}/ hreflang={flang}>")
 
-    r.append(f"<span class=A aria-hidden=true>{button_arrow}</span><br>{msg_l10n(flang=flang, string=f"nav_button_{button_id}")}")
+    r.append(f"<span class{attr("A")} aria-hidden{attr("true")}>{button_arrow}</span><br>{msg_l10n(flang=flang, string=f"nav_button_{button_id}")}")
 
     if (
         data[i]["location"]["page"]
@@ -901,47 +901,47 @@ if __name__ == "__main__":
                 styles: str = "/gabel/styles"
 
             F.append(
-                f"<html lang={lang} dir={lang_dir} itemscope itemtype=https://schema.org/WebPage>"
+                f"<html lang={lang} dir={lang_dir} itemscope itemtype{attr("https://schema.org/WebPage")}>"
 
-                f"<meta charset=utf-8{close()}"
-                f'<meta name=viewport content="width=device-width,initial-scale=1"{close()}'
+                f"<meta charset{attr("utf-8")}{close()}"
+                f'<meta name{attr("viewport")} content{attr("width=device-width,initial-scale=1")}{close()}'
 
                 f"<title>{msg_l10n(get_l(data[i]["title"], "t"), string="html_title")}</title>"
 
-                f"<meta name=description content{attr(get_l(data[i]["description"], "t"))}{close()}"
+                f"<meta name{attr("description")} content{attr(get_l(data[i]["description"], "t"))}{close()}"
 
-                f"<meta name=robots content=index,follow{close()}"
+                f"<meta name{attr("robots")} content{attr("index,follow")}{close()}"
 
-                f"<link rel=canonical href={canonical} hreflang={lang} type=text/html{close()}"
+                f"<link rel{attr("canonical")} href{attr(f"{canonical}")} hreflang{attr(f"{lang}")} type{attr("text/html")}{close()}"
 
                 # TODO: `if type != comic_page` (sh:349)
 
-                f"<link rel=stylesheet href={styles}/mul.css hreflang=zxx{close()}"
-                f"<link rel=stylesheet href={styles}/{lang.l}.css hreflang=zxx{close()}"
-                f"<link rel=stylesheet href={styles}/comic_page.css hreflang=zxx{close()}"
+                f"<link rel{attr("stylesheet")} href{attr(f"{styles}/mul.css")} hreflang{attr("zxx")}{close()}"
+                f"<link rel{attr("stylesheet")} href{attr(f"{styles}/{lang.l}.css")} hreflang{attr("zxx")}{close()}"
+                f"<link rel{attr("stylesheet")} href{attr(f"{styles}/comic_page.css")} hreflang{attr("zxx")}{close()}"
 
-                f"<link rel{attr('external license')} href{attr(get_l(ddict["license"][data[i]["copyright"]["license"][0]]["url"], "i"))}{close()}"
+                f"<link rel{attr("external license")} href{attr(get_l(ddict["license"][data[i]["copyright"]["license"][0]]["url"], "i"))}{close()}"
 
                 # TODO: Prefetches (starting at sh:420)
 
-                f"<meta property=og:type content=article{close()}"
-                f"<meta property=og:title content{attr(get_l(data[i]["title"], "t"))}{close()}"
-                f"<meta property=og:description content{attr(get_l(data[i]["description"], "t"))}{close()}"
-                f"<meta property=og:site_name content=gabl.ink{close()}"
-                f"<meta property=og:url content={canonical}{close()}"
-                f"<meta property=og:image content={canonical}image.png{close()}"
+                f"<meta property{attr("og:type")} content{attr("article")}{close()}"
+                f"<meta property{attr("og:title")} content{attr(get_l(data[i]["title"], "t"))}{close()}"
+                f"<meta property{attr("og:description")} content{attr(get_l(data[i]["description"], "t"))}{close()}"
+                f"<meta property{attr("og:site_name")} content{attr("gabl.ink")}{close()}"
+                f"<meta property{attr("og:url")} content{attr(f"{canonical}")}{close()}"
+                f"<meta property{attr("og:image")} content{attr(f"{canonical}image.png")}{close()}"
                 # TODO: video_exists (sh:322–332, sh:454)
-                f"<meta property=og:locale content={lang.l}_{lang.t}{close()}"
+                f"<meta property{attr("og:locale")} content{attr(f"{lang.l}_{lang.t}")}{close()}"
 
-                "<script type=application/ld+json>{"
+                f"<script type{attr("application/ld+json")}>{{"
                 '"@context":"https://schema.org",'
                 '"@type":"WebPage"'
                 "}</script>"
 
                 "<header>"
-                "<a href=https://gabl.ink/ id=gabldotink_logo>gabl.ink</a>"
+                f"<a href{attr("https://gabl.ink/")} id{attr("gabldotink_logo")}>gabl.ink</a>"
 
-                "<ul id=L>"
+                f"<ul id{attr("L")}>"
             )
             for l in sorted(data[i]["langs"]):
                 l: Lang = Lang.get(l)
@@ -951,7 +951,7 @@ if __name__ == "__main__":
 
                 f"<h1>{msg_l10n(get_l(data[i]["title"]), string="page_title_html")}</h1>"
 
-                "<nav class=N>"
+                f"<nav class{attr("N")}>"
 
                 f"{make_nav_button("f")}"
                 f"{make_nav_button("p")}"
@@ -963,17 +963,17 @@ if __name__ == "__main__":
 
             if Path(INDEX/i/f"{lang}".lower()/"video.webm").is_file():
                 F.append(
-                    "<video id=M controls poster=image.png preload=auto>"
-                    f"<source src=video.webm type=video/webm{close()}"
+                    f"<video id{attr("M")} controls{attr("")} poster{attr("image.png")} preload{attr("auto")}>"
+                    f"<source src{attr("video.webm")} type{attr("video/webm")}{close()}"
                 )
                 if Path(INDEX/i/f"{lang}".lower()/"subs.vtt").is_file():
                     F.append(
-                        f"<track default src=subs.vtt srclang={lang} kind=subtitles "
+                        f"<track default{attr("")} src{attr("subs.vtt")} srclang{attr(f"{lang}")} kind{attr("subtitles")} "
                         f"label{attr(Lang.say(lang, "t"))}{close()}"
                     )
                 if Path(INDEX/i/f"{lang}".lower()/"cc.vtt").is_file():
                     F.append(
-                        f"<track src=cc.vtt srclang={lang} kind=captions "
+                        f"<track src{attr("cc.vtt")} srclang{attr(f"{lang}")} kind{attr("captions")} "
                         f"label{attr(f"{Lang.say(lang, "t")}{msg_l10n(string="cc")}")}{close()}"
                     )
                 F.append(
@@ -982,17 +982,17 @@ if __name__ == "__main__":
                     "</p></video>"
                 )
             elif Path(INDEX/i/f"{lang}".lower()/"image.png").is_file():
-                F.append("<picture id=M")
+                F.append(f"<picture id{attr("M")}")
                 if get_l(data[i].get("tooltip", {})) is not None:
                     F.append(f" title{attr(get_l(data[i].get("tooltip", {}), "t"))}")
                 F.append(
                     ">"
-                    f"<img src=image.png fetchpriority=high alt{attr(msg_l10n(string="see_transcript"))}{close()}"
+                    f"<img src{attr("image.png")} fetchpriority{attr("high")} alt{attr(msg_l10n(string="see_transcript"))}{close()}"
                     "</picture>"
                 )
 
             F.append(
-                "<nav class=N>"
+                f"<nav class{attr("N")}>"
 
                 f"{make_nav_button("f")}"
                 f"{make_nav_button("p")}"
@@ -1057,7 +1057,7 @@ if __name__ == "__main__":
                 "</ol></details></nav>"
                 "<details>"
                 f"<summary><h2>{msg_l10n(string="transcript_name")}</h2></summary>"
-                "<table id=T>"
+                f"<table id{attr("T")}>"
             )
 
             for line in data[i]["transcript"]:
@@ -1065,7 +1065,7 @@ if __name__ == "__main__":
                 #line_h_type=data[f"encyclopedia/{line["H"]}"]["type"]
                 F.append(
                     "<tr>"
-                    "<th scope=row>"
+                    f"<th scope{attr("row")}>"
                 )
                 line_h_label: str = get_l(data[f"encyclopedia/{line["H"]}"].get("name", {}).get("label", {}))
                 F.append(
@@ -1085,7 +1085,7 @@ if __name__ == "__main__":
 
             for entry in data[i]["log"]:
                 F.append(
-                    f"<article id=log_{Date.make(**entry["date"])}><details>"
+                    f"<article id{attr(f"log_{Date.make(**entry["date"])}")}><details>"
                     f"<summary><h3>{Date.say(Date.make(**entry["date"]))}</h3></summary>"
                 )
                 for line in entry["content"]:
@@ -1097,21 +1097,21 @@ if __name__ == "__main__":
 
             F.append(
                 "<hr>"
-                "<p id=canonical_url>"
+                f"<p id{attr("canonical_url")}>"
                 f"{msg_l10n(canonical, string="canonical_url")}"
-                f"<a href={canonical} hreflang={lang} type=text/html>"
+                f"<a href{attr(f"{canonical}")} hreflang{attr(f"{lang}")} type{attr("text/html")}>"
                 f"{canonical}"
                 "</a>"
 
-                "<details id=share_links>"
+                f"<details id{attr("share_links")}>"
                 f"<summary>{msg_l10n(string="share_this_page")}</summary>"
                 "<ul></ul></details>"
 
-                "<details id=validate_links>"
+                f"<details id{attr("validate_links")}>"
                 f"<summary>{msg_l10n(string="validate_this_page")}</summary>"
                 "<ul></ul></details>"
 
-                "<footer><p><span class=w>"
+                f"<footer><p><span class{attr("w")}>"
                 f"{msg_l10n(string="copyright_notice")}"
                 f"{data[i]["copyright"]["year"]["first"]}"
             )
@@ -1144,7 +1144,7 @@ if __name__ == "__main__":
                 else:
                     F.append(
                         f"{msg_l10n(string="disclaimer_plural")}"
-                        "<ul class=horizontal_list>"
+                        f"<ul class{attr("horizontal_list")}>"
                     )
                     for d in data[i]["disclaimer"]:
                         F.append(

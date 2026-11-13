@@ -31,7 +31,7 @@
   "tooltip": {
     "en": {
       "t": "May\u00a027. I have spent every waking moment for the last four weeks only experiencing the Magna Carta. My soul is the Magna Carta. My mind is the Magna Carta. My dreams are the Magna Carta. This school project has dragged on so long I’ve forgotten what it was like\u00a0.\u00a0.\u00a0. before. But now it is done. With the click of a mouse, I have finally found inner peace.",
-      "H": "<time datetime=2021-05-27>May\u00a027</time>. I have spent every waking moment for the last four weeks only experiencing the <cite>Magna Carta</cite>. My soul is the <cite>Magna Carta</cite>. My mind is the <cite>Magna Carta</cite>. My dreams are the <cite>Magna Carta</cite>. This school project has dragged on so long I’ve forgotten what it was like\u00a0.\u00a0.\u00a0. before. But now it is done. With the click of a mouse, I have finally found inner peace."
+      "Hf": "<time datetime{attr('2021-05-27')}>May\u00a027</time>. I have spent every waking moment for the last four weeks only experiencing the <cite>Magna Carta</cite>. My soul is the <cite>Magna Carta</cite>. My mind is the <cite>Magna Carta</cite>. My dreams are the <cite>Magna Carta</cite>. This school project has dragged on so long I’ve forgotten what it was like\u00a0.\u00a0.\u00a0. before. But now it is done. With the click of a mouse, I have finally found inner peace."
     }
   },
   "transcript": [
@@ -121,7 +121,7 @@
       "H": "meta/tooltip",
       "d": {
         "en": {
-          "H": "<time datetime=2021-05-27>May\u00a027</time>. I have spent every waking moment for the last four weeks only experiencing the <cite>Magna Carta</cite>. My soul is the <cite>Magna Carta</cite>. My mind is the <cite>Magna Carta</cite>. My dreams are the <cite>Magna Carta</cite>. This school project has dragged on so long I’ve forgotten what it was like\u00a0.\u00a0.\u00a0. before. But now it is done. With the click of a mouse, I have finally found inner peace."
+          "Hf": "<time datetime{attr('2021-05-27')}>May\u00a027</time>. I have spent every waking moment for the last four weeks only experiencing the <cite>Magna Carta</cite>. My soul is the <cite>Magna Carta</cite>. My mind is the <cite>Magna Carta</cite>. My dreams are the <cite>Magna Carta</cite>. This school project has dragged on so long I’ve forgotten what it was like\u00a0.\u00a0.\u00a0. before. But now it is done. With the click of a mouse, I have finally found inner peace."
         }
       }
     }

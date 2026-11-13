@@ -132,17 +132,17 @@
           "p": {
             "en": {
               "t": "Hey there! Welcome to “JoeRunner\u00a0and\u00a0Co.”!",
-              "H": "Hey there! Welcome to <cite class=i>JoeRunner\u00a0and\u00a0Co.</cite>!",
+              "Hf": "Hey there! Welcome to <cite class{attr('i')}>JoeRunner\u00a0and\u00a0Co.</cite>!",
               "L": "Hey there! Welcome to \\textit{JoeRunner~and~Co.}!"
             },
             "fr": {
               "t": "Salut\u202f! Bienvenue dans «\u202fJoeRunner\u00a0et\u00a0cie\u202f»\u202f!",
-              "H": "Salut\u202f! Bienvenue dans <cite class=i>JoeRunner\u00a0et\u00a0cie</cite>\u202f!",
+              "Hf": "Salut\u202f! Bienvenue dans <cite class{attr('i')}>JoeRunner\u00a0et\u00a0cie</cite>\u202f!",
               "L": "Salut\\,! Bienvenue dans \\textit{JoeRunner~et~cie}\\,!"
             },
             "fr-CA": {
               "t": "Salut! Bienvenue dans «\u202fJoeRunner\u00a0et\u00a0cie\u202f»!",
-              "H": "Salut! Bienvenue dans <cite class=i>JoeRunner\u00a0et\u00a0cie</cite>!",
+              "Hf": "Salut! Bienvenue dans <cite class{attr('i')}>JoeRunner\u00a0et\u00a0cie</cite>!",
               "L": "Salut! Bienvenue dans \\textit{JoeRunner~et~cie}!"
             }
           }
@@ -150,10 +150,10 @@
         {
           "p": {
             "en": {
-              "H": "My name’s Gabriel, a.k.a. <span translate=no>gabl</span>, and I can’t wait to share my passion‐project comics with you. I’ve been drawing these characters for several years, and I’ve wanted to do a webcomic for\u00a0.\u00a0.\u00a0. less years, but still multiple. Years."
+              "Hf": "My name’s Gabriel, a.k.a. <span translate{attr('no')}>gabl</span>, and I can’t wait to share my passion‐project comics with you. I’ve been drawing these characters for several years, and I’ve wanted to do a webcomic for\u00a0.\u00a0.\u00a0. less years, but still multiple. Years."
             },
             "fr": {
-              "H": "Je m’appelle Gabriel, alias <span translate=no>gabl</span>, et j’ai hâte de partager mes bandes dessinées, mes projets de passion, avec vous. Je dessine ces personnages depuis plusieurs années, et je veux faire un webcomic depuis… moins longtemps, mais encore plusieurs années."
+              "Hf": "Je m’appelle Gabriel, alias <span translate{attr('no')}>gabl</span>, et j’ai hâte de partager mes bandes dessinées, mes projets de passion, avec vous. Je dessine ces personnages depuis plusieurs années, et je veux faire un webcomic depuis… moins longtemps, mais encore plusieurs années."
             }
           }
         },
@@ -180,7 +180,7 @@
         {
           "p": {
             "en": {
-              "H": "—\u2060<span translate=no>gabl</span>",
+              "Hf": "—\u2060<span translate{attr('no')}>gabl</span>",
               "t": "—\u2060gabl",
               "L": "\\mbox{---gabl}"
             },

@@ -122,7 +122,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "H": "A wall clock shows it’s <time datetime=2021-05-27T08:30-0600>8:30</time>."
+          "Hf": "A wall clock shows it’s <time datetime{attr('2021-05-27T08:30-0600')}>8:30</time>."
         }
       }
     },
@@ -200,7 +200,7 @@
         {
           "p": {
             "en": {
-              "H": "Of course, you can safely expect Patreon to be a pretty long ways away at this rate. If I can be real for a sec, one of the main reasons I started this comic was to feel like I was doing something with my life, and now it’s ended up as a huge source of anxiety for me because progress is so slow. I’m so excited to continue this, especially since I have a lot of other ideas to work on aside from <cite class=i>JoeRunner and co.</cite>\u2060—both apart from and on top of it. I’m so sorry that I’m not getting that out sooner."
+              "Hf": "Of course, you can safely expect <cite>Patreon</cite> to be a pretty long ways away at this rate. If I can be real for a sec, one of the main reasons I started this comic was to feel like I was doing something with my life, and now it’s ended up as a huge source of anxiety for me because progress is so slow. I’m so excited to continue this, especially since I have a lot of other ideas to work on aside from <cite class{attr('i')}>JoeRunner and co.</cite>\u2060—both apart from and on top of it. I’m so sorry that I’m not getting that out sooner."
             }
           }
         },
@@ -214,14 +214,14 @@
         {
           "p": {
             "en": {
-              "H": "On a dumb, overthinking‐related note (feel free to skip this), I’m trying to decide if I want to stick with <cite><abbr title=\"Creative Commons Attribution‐ShareAlike\u00a04.0\">CC\u00a0BY‑SA\u00a04.0</abbr></cite>, or if I want to move it to <cite><abbr title=\"Creative Commons Attribution\">CC\u00a0BY</abbr></cite>. At the start it was <cite><abbr title=Attribution‐NonCommercial‐ShareAlike>BY‑NC‑SA</abbr></cite>. Both times the <abbr title=ShareAlike>SA</abbr> was because I wanted to keep derivatives of actual, general utility free, like books and translations. I know that <a rel=external href=https://peppercarrot.com/ type=text/html><cite class=i>Pepper&amp;Carrot</cite></a> is thriving in those regards under CC\u00a0BY, but that may or may not be different, considering that <cite class=i>Pepper&amp;Carrot</cite> isn’t one of the most egregious abominations known to man."
+              "Hf": "On a dumb, overthinking‐related note (feel free to skip this), I’m trying to decide if I want to stick with <cite><abbr title=\"Creative Commons Attribution‐ShareAlike\u00a04.0\">CC\u00a0BY‑SA\u00a04.0</abbr></cite>, or if I want to move it to <cite><abbr title=\"Creative Commons Attribution\">CC\u00a0BY</abbr></cite>. At the start it was <cite><abbr title{attr('Attribution‐NonCommercial‐ShareAlike')}>BY‑NC‑SA</abbr></cite>. Both times the <abbr title{attr('ShareAlike')}>SA</abbr> was because I wanted to keep derivatives of actual, general utility free, like books and translations. I know that <a rel{attr('external')} href{attr('https://peppercarrot.com/')} type{attr('text/html')}><cite class{attr('i')}>Pepper&amp;Carrot</cite></a> is thriving in those regards under CC\u00a0BY, but that may or may not be different, considering that <cite class{attr('i')}>Pepper&amp;Carrot</cite> isn’t one of the most egregious abominations known to man."
             }
           }
         },
         {
           "p": {
             "en": {
-              "H": "And about those multiple image size problems, I want to make a <cite>Git</cite> repository to hold all of those (and the other stuff, of course) in order to have a sort of structured, static API, while also just having the files available in a human‐browsable and easily downloadable manner. I already tried that with <cite>files.gabl.ink</cite>\u00a0<small>[<i>link removed</i>]</small>, but I ended up not liking how it turned out."
+              "H": "And about those multiple image size problems, I want to make a <cite>Git</cite> repository to hold all of those (and the other stuff, of course) in order to have a sort of structured, static API, while also just having the files available in a human‐browsable and easily downloadable manner. I already tried that with <cite>files.gabl.ink</cite>,<ins>\u00a0<small>[<i>link removed</i>]</small></ins> but I ended up not liking how it turned out."
             }
           }
         }

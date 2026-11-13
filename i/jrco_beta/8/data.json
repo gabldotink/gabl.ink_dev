@@ -29,7 +29,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "H": "The boy with black hair watches as JoeRunner walks out of a minivan with a canoe strapped to the top. The boy wears a T‐shirt reading <i>77</i> and shorts, has constant dropped eyebrows, and speaks in an all‐lowercase sans‐serif font."
+          "t": "The boy with black hair watches as JoeRunner walks out of a minivan with a canoe strapped to the top. The boy wears a T‐shirt reading “77” and shorts, has constant dropped eyebrows, and speaks in an all‐lowercase sans‐serif font."
         }
       }
     },
@@ -100,10 +100,10 @@
       "H": "jrco_beta/t_t",
       "d": {
         "en": {
-          "H": "Yeah, yeah, excuses, excuses.<p>Come on! We’re only gonna have time for six games of <cite class=i>Hyper Galactic Battle Ducks\u00a0III</cite>! <em>Six!</em>"
+          "Hf": "Yeah, yeah, excuses, excuses.<p>Come on! We’re only gonna have time for six games of <cite class{attr('i')}>Hyper Galactic Battle Ducks\u00a0III</cite>! <em>Six!</em>"
         },
         "fr": {
-          "H": "Ouais, ouais, je veux pas tes excuses.<p>Allez\u00a0! Nous aurons seulement de temps pour six parties de <cite class=i>Hyper Galactic Battle Ducks\u00a0III</cite>\u00a0! Seulement six\u00a0!"
+          "Hf": "Ouais, ouais, je veux pas tes excuses.<p>Allez\u00a0! Nous aurons seulement de temps pour six parties de <cite class{attr('i')}>Hyper Galactic Battle Ducks\u00a0III</cite>\u00a0! Seulement six\u00a0!"
         }
       }
     }

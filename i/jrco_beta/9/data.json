@@ -32,7 +32,7 @@
       "H": "meta/none",
       "d": {
         "en": {
-          "H": "A computer screen shows a video game, <cite class=i>Hyper Galactic Battle Ducks\u00a0III</cite>. The player is <span class=m>tomatotoe07</span>, and the time is <time datetime=2021-05-27T07:57-0600>0757</time>. The player’s ship is shaped like a mouse cursor. They have a middling Physical bar, and a low Energy bar. There is a chat in the bottom left corner."
+          "Hf": "A computer screen shows a video game, <cite class{attr('i')}>Hyper Galactic Battle Ducks\u00a0III</cite>. The player is <span class{attr('m')}>tomatotoe07</span>, and the time is <time datetime{attr('2021-05-27T07:57-0600')}>0757</time>. The player’s ship is shaped like a mouse cursor. They have a middling Physical bar, and a low Energy bar. There is a chat in the bottom left corner."
         }
       }
     },
@@ -40,10 +40,12 @@
       "H": "meta/chat",
       "d": {
         "en": {
-          "H": "<span class=\"u m\">brightful</span> On the move!<br><span class=\"u m\">brightful</span> Uh-oh!<br><span class=\"u m\">sharkles5</span> stop spamming defaults<br><span class=\"u m\">brightful</span> I'm using tilt controls!"
+          "comment": "The straight apostrophe is intentional, to represent text in a video game.",
+          "Hf": "<span class=\"u m\">brightful</span> On the move!<br{close()}<span class=\"u m\">brightful</span> Uh-oh!<br{close()}<span class=\"u m\">sharkles5</span> stop spamming defaults<br{close()}<span class=\"u m\">brightful</span> I{\"'\"}m using tilt controls!"
         },
         "fr": {
-          "H": "<span class=\"u m\">plein_de_brillant</span> En mouvement\u00a0!<br><span class=\"u m\">plein_de_brillant</span> Oups\u00a0!<br><span class=\"u m\">sans_des_requin5</span> arrete de spammer ca<br><span class=\"u m\">plein_de_brillant</span> Je joue avec le gyroscope\u00a0!"
+          "comment": "The no-break spaces (instead of narrow no-break spaces) are intentional, to represent text in a video game. The omitted diacritics are how sans_des_requin5 types quickly.",
+          "Hf": "<span class=\"u m\">plein_de_brillant</span> En mouvement\u00a0!<br{close()}<span class=\"u m\">plein_de_brillant</span> Oups\u00a0!<br{close()}<span class=\"u m\">sans_des_requin5</span> arrete de spammer ca<br{close()}<span class=\"u m\">plein_de_brillant</span> Je joue avec le gyroscope\u00a0!"
         }
       }
     },
@@ -147,7 +149,11 @@
       "H": "jrco_beta/t_t",
       "d": {
         "en": {
-          "H": "Oh, heck, me too! <span class=m>ottohammr</span> again?"
+          "Hf": "Oh, heck, me too! <span class{attr('m')}>ottohammr</span> again?"
+        },
+        "fr": {
+          "comment": "_marteau_ is hammer. I don’t think _otto_ meant anything when I first wrote it",
+          "Hf": "Oh, mince, moi aussi\u202f! <span class{attr('m')}>ottomarto</span> encore\u202f?"
         }
       }
     },
@@ -195,7 +201,7 @@
       "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "H": "(<i>surprised</i>) Harry, <em class=\"r u\">you’ve</em> been <span class=m>ottohammr</span> this whole time?"
+          "Hf": "(<i>surprised</i>) Harry, <em class=\"r u\">you’ve</em> been <span class{attr('m')}>ottohammr</span> this whole time?"
         }
       }
     },
@@ -234,10 +240,10 @@
       "H": "jrco_beta/joerunner",
       "d": {
         "en": {
-          "H": "(<i>saluting</i>) Farewell, Captain <span class=m>tomatotoe07</span>. Farewell."
+          "Hf": "(<i>saluting</i>) Farewell, Captain <span class{attr('m')}>tomatotoe07</span>. Farewell."
         },
         "fr": {
-          "H": "(<i>salué</i>) Au revoir, capitaine <span class=m>tomate_taxidermiste_07</span>. Au revoir.",
+          "Hf": "(<i>salué</i>) Au revoir, capitaine <span class{attr('m')}>tomate_taxidermiste_07</span>. Au revoir.",
           "comment": "I don’t really know what to do here mdrrrrrr"
         }
       }
@@ -265,11 +271,11 @@
         {
           "p": {
             "en": {
-              "H": "Alas, poor <span class=m>tomatotoe07</span>.",
+              "Hf": "Alas, poor <span class{attr('m')}>tomatotoe07</span>.",
               "L": "Alas, poor \\texttt{tomatotoe07}."
             },
             "fr": {
-              "H": "Hélas\u202f! pauvre <span class=m>tomate_taxidermiste_07</span>.",
+              "Hf": "Hélas\u202f! pauvre <span class{attr('m')}>tomate_taxidermiste_07</span>.",
               "L": "Hélas\\,! pauvre \\texttt{tomate_taxidermiste_07}."
             }
           }
@@ -277,14 +283,14 @@
         {
           "p": {
             "en": {
-              "H": "This page only took a month to come out instead of, like, five. There’s so much that I want to get to, and it’s a bit upsetting to me that I’ve only gotten this far, with <cite class=i>JoeRunner and Co.</cite>’s first anniversary being in two days (<time datetime=2023-04-01>April\u00a01</time>). This page especially took a lot of effort\u2060—the most yet\u2060—due to its length."
+              "Hf": "This page only took a month to come out instead of, like, five. There’s so much that I want to get to, and it’s a bit upsetting to me that I’ve only gotten this far, with <cite class{attr('i')}>JoeRunner and Co.</cite>’s first anniversary being in two days (<time datetime{attr('2023-04-01')}>April\u00a01</time>). This page especially took a lot of effort\u2060—the most yet\u2060—due to its length."
             }
           }
         },
         {
           "p": {
             "en": {
-              "H": "Only about 60% of the draft I wrote back on\u00a0.\u00a0.\u00a0. <i>checks</i> <em><time datetime=2021-05-25>May\u00a025, 2021</time>?</em> I really <em>am</em> behind. <i>ahem</i> Only about 60% of the original draft is in this final version. None of these pages so far are super faithful to that draft\u2060—I wrote them when I was around 14\u00a0years old, and of course my dialogue has changed a lot in two years of my teenage life. It means the same thing, but it’s expanded and, dare I say, funnier. Assuming it’s funny at all."
+              "Hf": "Only about 60% of the draft I wrote back on\u00a0.\u00a0.\u00a0. <i>checks</i> <em><time datetime{attr('2021-05-25')}>May\u00a025, 2021</time>?</em> I really <em>am</em> behind. <i>ahem</i> Only about 60% of the original draft is in this final version. None of these pages so far are super faithful to that draft\u2060—I wrote them when I was around 14\u00a0years old, and of course my dialogue has changed a lot in two years of my teenage life. It means the same thing, but it’s expanded and, dare I say, funnier. Assuming it’s funny at all."
             }
           }
         },
@@ -305,7 +311,7 @@
         {
           "p": {
             "en": {
-              "H": "<b>—\u2060Gabriel\u00a0/ <span translate=no>gabl</span></b>",
+              "Hf": "<b>—\u2060Gabriel\u00a0/ <span translate{attr('no')}>gabl</span></b>",
               "t": "—\u2060Gabriel\u00a0/ gabl",
               "L": "\\textbf{\\mbox{---Gabriel}~/ gabl}}"
             },
