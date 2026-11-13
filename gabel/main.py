@@ -445,7 +445,7 @@ def get_i(i_item_file: Path) -> str:
         return item_obj["id"]
 
 
-def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | None = None, flang: L | None = None) -> str:
+def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | None = None, flang: Lang | None = None) -> str:
     if fformat is None:
         fformat = format
     if flang is None:
@@ -471,9 +471,23 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             return get_l(key, to_find[0], to_find[1])
 
     # ASCII
+    if fformat == "A":
+        for o in options:
+            if o == "z":
+                return ""
 
+            to_check: dict = key.get(o, {})
+
+            if "A" in to_check:
+                return text_to_html(to_check["A"])
+            elif "Af" in to_check:
+                return eval(f"f'{to_check["Af"]}'")
+            elif "Ae" in to_check:
+                return text_to_html(find_equals("A"))
+            elif "e" in to_check:
+                return get_l(key, "A", Lang.get(to_check["e"]))
     # HTML5
-    if fformat == "H":
+    elif fformat == "H":
         for o in options:
             if o == "z":
                 return ""
@@ -500,7 +514,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "Ae" in to_check:
                 return text_to_html(find_equals("A"))
             elif "e" in to_check:
-                return get_l(key, fformat, Lang.get(to_check["e"]))
+                return get_l(key, "H", Lang.get(to_check["e"]))
     # identifier
     elif fformat == "i":
         for o in options:
@@ -516,7 +530,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "ie" in to_check:
                 return find_equals("i")
             elif "e" in to_check:
-                return get_l(key, fformat, Lang.get(to_check["e"]))
+                return get_l(key, "i", Lang.get(to_check["e"]))
     # LaTeX
     elif fformat == "L":
         for o in options:
@@ -550,7 +564,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "Ae" in to_check:
                 return text_to_latex(find_equals("A"))
             elif "e" in to_check:
-                return get_l(key, fformat, Lang.get(to_check["e"]))
+                return get_l(key, "L", Lang.get(to_check["e"]))
     # print
     elif fformat == "p":
         for o in options:
@@ -576,9 +590,33 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "Ae" in to_check:
                 return find_equals("A")
             elif "e" in to_check:
-                return get_l(key, fformat, Lang.get(to_check["e"]))
+                return get_l(key, "p", Lang.get(to_check["e"]))
     # TeX
+    elif fformat == "T":
+        for o in options:
+            if o == "z":
+                return ""
 
+            to_check: dict = key.get(o, {})
+
+            if "Tf" in to_check:
+                return eval(f"f'{to_check["Tf"]}'")
+            elif "Te" in to_check:
+                return find_equals("T")
+            elif "t" in to_check:
+                return text_to_latex(to_check["t"])
+            elif "tf" in to_check:
+                return eval(f"{text_to_latex(f"{to_check["tf"]}")}")
+            elif "te" in to_check:
+                return text_to_latex(find_equals("t"))
+            elif "A" in to_check:
+                return text_to_latex(to_check["A"])
+            elif "Af" in to_check:
+                return eval(f"{text_to_latex(f"{to_check["Af"]}")}")
+            elif "Ae" in to_check:
+                return text_to_latex(find_equals("A"))
+            elif "e" in to_check:
+                return get_l(key, "T", Lang.get(to_check["e"]))
     # text
     elif fformat == "t":
         for o in options:
@@ -600,8 +638,8 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "Ae" in to_check:
                 return find_equals("A")
             elif "e" in to_check:
-                return get_l(key, fformat, Lang.get(to_check["e"]))
-    # XHTML5 (polyglot)
+                return get_l(key, "t", Lang.get(to_check["e"]))
+    # XML syntax for HTML
     elif fformat == "X":
         for o in options:
             if o == "z":
@@ -634,7 +672,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "Ae" in to_check:
                 return text_to_html(find_equals("A"))
             elif "e" in to_check:
-                return get_l(key, fformat, Lang.get(to_check["e"]))
+                return get_l(key, "X", Lang.get(to_check["e"]))
 
 
 def id_base(id_i: str) -> str:
