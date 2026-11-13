@@ -23,7 +23,7 @@
     "name": {
       "en": {
         "t": "TeX",
-        "Hf": "<span class{attr('t')}>T<span class{attr('e')}>e</span>X</span>",
+        "Hf": "T<span class{attr('e')}>e</span>X",
         "T": "\\TeX"
       },
       "mul": {
@@ -37,7 +37,7 @@
     "name": {
       "en": {
         "t": "LaTeX",
-        "Hf": "<span class{attr('t')}>L<span class{attr('a')}>a</span>T<span class{attr('e')}>e</span>X</span>",
+        "Hf": "L<span class{attr('a')}>a</span>T<span class{attr('e')}>e</span>X",
         "L": "\\LaTeX"
       },
       "mul": {
