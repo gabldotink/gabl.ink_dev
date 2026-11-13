@@ -82,7 +82,7 @@
       "H": "meta/letter",
       "d": {
         "en": {
-          "H": "Dear Mr.\u00a0Mahan, Thank you very much for having me for the last two weeks of school. I look forward to it. That is all I have to say.<p>—\u2060Ma"
+          "Hf": "<p>Dear Mr.\u00a0Mahan, Thank you very much for having me for the last two weeks of school. I look forward to it. That is all I have to say.{close('p')}<p>—\u2060Ma{close('p')}"
         }
       }
     },
