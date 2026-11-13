@@ -483,20 +483,20 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             if "H" in to_check:
                 return to_check["H"]
             elif "Hf" in to_check:
-                return eval(f'f"{to_check["Hf"]}"')
+                return eval(f"f'{to_check["Hf"]}'")
             elif "He" in to_check:
                 return find_equals("H")
             elif "t" in to_check:
                 return text_to_html(to_check["t"])
             elif "tf" in to_check:
                 # TODO: Not tested and maybe wrong
-                return eval(f'{text_to_html(f"{to_check["tf"]}")}')
+                return eval(f"{text_to_html(f"{to_check["tf"]}")}")
             elif "te" in to_check:
                 return text_to_html(find_equals("t"))
             elif "A" in to_check:
                 return text_to_html(to_check["A"])
             elif "Af" in to_check:
-                return eval(f'f"{to_check["Af"]}"')
+                return eval(f"f'{to_check["Af"]}'")
             elif "Ae" in to_check:
                 return text_to_html(find_equals("A"))
             elif "e" in to_check:
@@ -512,7 +512,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             if "i" in to_check:
                 return to_check["i"]
             elif "if" in to_check:
-                return eval(f'f"{to_check["if"]}"')
+                return eval(f"f'{to_check["if"]}'")
             elif "ie" in to_check:
                 return find_equals("i")
             elif "e" in to_check:
@@ -528,25 +528,25 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             if "L" in to_check:
                 return to_check["L"]
             elif "Lf" in to_check:
-                return eval(f'f"{to_check["Lf"]}"')
+                return eval(f"f'{to_check["Lf"]}'")
             elif "Le" in to_check:
                 return find_equals("L")
             elif "T" in to_check:
                 return to_check["T"]
             elif "Tf" in to_check:
-                return eval(f'f"{to_check["Tf"]}"')
+                return eval(f"f'{to_check["Tf"]}'")
             elif "Te" in to_check:
                 return find_equals("T")
             elif "t" in to_check:
                 return text_to_latex(to_check["t"])
             elif "tf" in to_check:
-                return eval(f'{text_to_latex(f"{to_check["tf"]}")}')
+                return eval(f"{text_to_latex(f"{to_check["tf"]}")}")
             elif "te" in to_check:
                 return text_to_latex(find_equals("t"))
             elif "A" in to_check:
                 return text_to_latex(to_check["A"])
             elif "Af" in to_check:
-                return eval(f'{text_to_latex(f"{to_check["Af"]}")}')
+                return eval(f"{text_to_latex(f"{to_check["Af"]}")}")
             elif "Ae" in to_check:
                 return text_to_latex(find_equals("A"))
             elif "e" in to_check:
@@ -562,13 +562,13 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             if "p" in to_check:
                 return to_check["p"]
             elif "pf" in to_check:
-                return eval(f'f"{to_check["pf"]}"')
+                return eval(f"f'{to_check["pf"]}'")
             elif "pe" in to_check:
                 return find_equals("p")
             elif "t" in to_check:
                 return to_check["t"]
             elif "tf" in to_check:
-                return eval(f'f"{to_check["tf"]}"')
+                return eval(f"f'{to_check["tf"]}'")
             elif "te" in to_check:
                 find_equals("t")
             elif "A" in to_check:
@@ -590,13 +590,13 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             if "t" in to_check:
                 return to_check["t"]
             elif "tf" in to_check:
-                return eval(f'f"{to_check["tf"]}"')
+                return eval(f"f'{to_check["tf"]}'")
             elif "te" in to_check:
                 return find_equals("t")
             elif "A" in to_check:
                 return to_check["A"]
             elif "Af" in to_check:
-                return eval(f'f"{to_check["Af"]}"')
+                return eval(f"f'{to_check["Af"]}'")
             elif "Ae" in to_check:
                 return find_equals("A")
             elif "e" in to_check:
@@ -612,25 +612,25 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             if "X" in to_check:
                 return to_check["X"]
             elif "Xf" in to_check:
-                return eval(f'f"{to_check["Xf"]}"')
+                return eval(f"f'{to_check["Xf"]}'")
             elif "Xe" in to_check:
                 return find_equals("X")
             elif "H" in to_check:
                 return to_check["H"]
             elif "Hf" in to_check:
-                return eval(f'f"{to_check["Hf"]}"')
+                return eval(f"f'{to_check["Hf"]}'")
             elif "He" in to_check:
                 return find_equals("H")
             elif "t" in to_check:
                 return text_to_html(to_check["t"])
             elif "tf" in to_check:
-                return eval(f'f"{to_check["tf"]}"')
+                return eval(f"f'{to_check["tf"]}'")
             elif "te" in to_check:
                 return text_to_html(find_equals("t"))
             elif "A" in to_check:
                 return text_to_html(to_check["A"])
             elif "Af" in to_check:
-                return eval(f'f"{to_check["Af"]}"')
+                return eval(f"f'{to_check["Af"]}'")
             elif "Ae" in to_check:
                 return text_to_html(find_equals("A"))
             elif "e" in to_check:
@@ -920,7 +920,7 @@ if __name__ == "__main__":
                 f"<link rel=stylesheet href={styles}/{lang.l}.css hreflang=zxx{close()}"
                 f"<link rel=stylesheet href={styles}/comic_page.css hreflang=zxx{close()}"
 
-                f'<link rel="external license" href{attr(get_l(ddict["license"][data[i]["copyright"]["license"][0]]["url"], "i"))}{close()}'
+                f"<link rel{attr('external license')} href{attr(get_l(ddict["license"][data[i]["copyright"]["license"][0]]["url"], "i"))}{close()}"
 
                 # TODO: Prefetches (starting at sh:420)
 
@@ -1125,7 +1125,7 @@ if __name__ == "__main__":
                 f"<span translate{attr("no")}>gabl.ink</span>"
 
                 f"<p>{msg_l10n(string="license")}"
-                '<a rel="external license" href'
+                f"<a rel{attr('external license')} href"
                 f"{attr(get_l(ddict["license"][data[i]["copyright"]["license"][0]]["url"], "i"))}"
                 ">"
                 f"{get_l(ddict["license"][data[i]["copyright"]["license"][0]]["title"])}"
