@@ -67,7 +67,7 @@ class Date:
              s: int | None = None,
              f: int | None = None,
              z: int | None = None
-    ) -> "d":
+    ) -> "Date":
         return cls(y, m, d, h, n, s, f, z)
 
 

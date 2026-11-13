@@ -2,10 +2,13 @@
   "t": {
     "name": {
       "en": {
-        "t": "text"
+        "t": "plain text"
       },
       "fr": {
-        "t": "texte"
+        "t": "texte brut"
+      },
+      "eo": {
+        "t": "plata teksto"
       }
     },
     "description": {
