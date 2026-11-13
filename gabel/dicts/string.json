@@ -47,12 +47,12 @@
       "e": "fr"
     }
   },
-  "page_title_html": {
+  "page_title": {
     "en": {
-      "p": "“<cite>{}</cite>”"
+      "Hf": "“<cite>{fargs[0]}</cite>”"
     },
     "fr": {
-      "p": "<cite class=i>{}</cite>"
+      "Hf": "<cite class{attr('i')}>{fargs[0]}</cite>"
     }
   },
   "no_title": {

@@ -987,7 +987,7 @@ if __name__ == "__main__":
             F.append(
                 "</ul></header>"
 
-                f"<h1>{msg_l10n(get_l(data[i]["title"]), string="page_title_html")}</h1>"
+                f"<h1>{get_l(ddict["string"]["page_title"], fargs=[get_l(data[i]["title"])])}</h1>"
 
                 f"<nav class{attr("N")}>"
 
@@ -1045,7 +1045,7 @@ if __name__ == "__main__":
             F.append(
                 f"{msg_l10n(get_l(data[data[i]["location"]["series"]]["title"]), string="series_title_html")}"
                 f"{msg_l10n(data[i]["location"]["page"], string="comma_page")}"
-                f"{msg_l10n(get_l(data[i]["title"]), string="page_title_html")}"
+                f"{get_l(ddict["string"]["page_title"], fargs=[get_l(data[i]["title"])])}"
                 "</summary>"
 
                 f"<ol id{attr("P")}>"
