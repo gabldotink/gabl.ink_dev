@@ -17,10 +17,10 @@
   },
   "video_not_supported": {
     "en": {
-      "Hf": "It looks like your web browser doesn’t support the <code>video</code> element. You can <a href=video.webm hreflang={fargs[0]} type=video/webm download=\"{fargs[1]} - {fargs[2]}.webm\">download the video</a> to watch with your preferred media player. You can also view the transcript for the video at “Transcript” below."
+      "Hf": "It looks like your web browser doesn’t support the <code>video</code> element. You can <a href{attr('video.webm')} hreflang{attr(f'{fargs[0]}')} type=video/webm download=\"{fargs[1]} - {fargs[2]}.webm\">download the video</a> to watch with your preferred media player. You can also view the transcript for the video at “Transcript” below."
     },
     "fr": {
-      "Hf": "On dirait que votre navigateur Web ne prenne pas en charge l’élément <code>video</code>. Vous pouvez <a href=video.webm hreflang={fargs[0]} type=video/webm download=\"{fargs[1]} - {fargs[2]}.webm\">télécharger le vidéo</a> pour regarder avec votre lecteur multimédia préferé. Vous pouvez aussi voir le transcription pour le vidéo à «\u202fTranscription\u202f» au‐dessous."
+      "Hf": "On dirait que votre navigateur Web ne prenne pas en charge l’élément <code>video</code>. Vous pouvez <a href{attr('video.webm')} hreflang{attr(f'{fargs[0]}')} type=video/webm download=\"{fargs[1]} - {fargs[2]}.webm\">télécharger le vidéo</a> pour regarder avec votre lecteur multimédia préferé. Vous pouvez aussi voir le transcription pour le vidéo à «\u202fTranscription\u202f» au‐dessous."
     }
   },
   "see_transcript": {
@@ -57,10 +57,10 @@
   },
   "no_title": {
     "en": {
-      "p": "<i>No title</i>"
+      "H": "<i>No title</i>"
     },
     "fr": {
-      "p": "<i>Sans titre</i>"
+      "H": "<i>Sans titre</i>"
     }
   },
   "transcript_name": {
@@ -354,10 +354,10 @@
   },
   "gabldotink_series_page": {
     "en": {
-      "p": "gabl.ink{0}: “{1}”: “{2}”"
+      "tf": "gabl.ink{fargs[0]}: “{fargs[1]}”: “{fargs[2]}”"
     },
     "fr": {
-      "p": "gabl.ink{0}\u202f: «\u202f{1}\u202f»\u202f: «\u202f{2}\u202f»"
+      "tf": "gabl.ink{fargs[0]}\u202f: «\u202f{fargs[1]}\u202f»\u202f: «\u202f{fargs[2]}\u202f»"
     }
   },
   "from_gabldotink": {

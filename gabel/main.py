@@ -756,12 +756,12 @@ def make_nav_button(button: Literal["f", "p", "n", "l"], flang: None | Lang = No
             r.append(attr(get_l(ddict["string"]["nav_button_page_title"], flang=flang, fargs=[get_l(data[f"{data[i]["location"]["series"]}/{data[data[i]["location"]["series"]][button_id]}"]["title"], "t")])))
         elif button in ("p", "n"):
             r.append(attr(get_l(ddict["string"]["nav_button_page_title"], fargs=[get_l(data[f"{data[i]["location"]["series"]}/{data[i]["location"][button_id]}"]["title"], "t")])))
-        r.append("><a href=../../")
+        r.append(f"><a href{attr("../../")}")
         if button in ("f", "l"):
             r.append(f"{data[data[i]["location"]["series"]][button_id]}")
         elif button in ("p", "n"):
             r.append(f"{data[i]["location"][button_id]}")
-        r.append(f"/{f"{flang}".lower()}/ hreflang={flang}>")
+        r.append(f"/{f"{flang}".lower()}/ hreflang{attr(f"{flang}")}>")
 
     r.append(f"<span class{attr("A")} aria-hidden{attr("true")}>{button_arrow}</span><br>{get_l(ddict["string"][f"nav_button_{button_id}"])}")
 
@@ -943,10 +943,10 @@ if __name__ == "__main__":
                 styles: str = "/gabel/styles"
 
             F.append(
-                f"<html lang={lang} dir={lang_dir} itemscope itemtype{attr("https://schema.org/WebPage")}>"
+                f"<html lang{attr(f"{lang}")} dir{attr(lang_dir)} itemscope{attr("")} itemtype{attr("https://schema.org/WebPage")}>"
 
                 f"<meta charset{attr("utf-8")}{close()}"
-                f'<meta name{attr("viewport")} content{attr("width=device-width,initial-scale=1")}{close()}'
+                f'<meta name{attr("viewport")} content=\"width=device-width,initial-scale=1\"{close()}'
 
                 f"<title>{get_l(ddict["string"]["html_title"], fargs=[get_l(data[i]["title"], "t")])}</title>"
 
