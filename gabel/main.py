@@ -445,7 +445,7 @@ def get_i(i_item_file: Path) -> str:
         return item_obj["id"]
 
 
-def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | None = None, flang: Lang | None = None, fargs: list[str] | None = None) -> str:
+def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | None = None, flang: Lang | None = None, fargs: list | None = None) -> str:
     if fformat is None:
         fformat = format
     if flang is None:
@@ -503,8 +503,8 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "t" in to_check:
                 return text_to_html(to_check["t"])
             elif "tf" in to_check:
-                # TODO: Not tested and maybe wrong
-                return eval(f"{text_to_html(f"{to_check["tf"]}")}")
+                # TODO: This is probably correct
+                return f"{text_to_html(eval(f"f'{to_check["tf"]}'"))}"
             elif "te" in to_check:
                 return text_to_html(find_equals("t"))
             elif "A" in to_check:
@@ -554,13 +554,13 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "t" in to_check:
                 return text_to_latex(to_check["t"])
             elif "tf" in to_check:
-                return eval(f"{text_to_latex(f"{to_check["tf"]}")}")
+                return f"{text_to_latex(eval(f"f'{to_check["tf"]}'"))}"
             elif "te" in to_check:
                 return text_to_latex(find_equals("t"))
             elif "A" in to_check:
                 return text_to_latex(to_check["A"])
             elif "Af" in to_check:
-                return eval(f"{text_to_latex(f"{to_check["Af"]}")}")
+                return f"{text_to_latex(eval(f"f'{to_check["tf"]}'"))}"
             elif "Ae" in to_check:
                 return text_to_latex(find_equals("A"))
             elif "e" in to_check:
@@ -748,14 +748,14 @@ def make_nav_button(button: Literal["f", "p", "n", "l"], flang: None | Lang = No
         == data[data[i]["location"]["series"]].get(button_fl)
     ):
         r.append(
-            f"{attr(msg_l10n(get_l(ddict["string"][f"nav_button_{button_id}_inline"]), flang=flang, string="this_is_x_page"))}"
+            f"{attr(get_l(ddict["string"]["this_is_x_page"], flang=flang, fargs=[get_l(ddict["string"][f"nav_button_{button_id}_inline"])]))}"
             ">"
         )
     else:
         if button in ("f", "l"):
-            r.append(attr(msg_l10n(get_l(data[f"{data[i]["location"]["series"]}/{data[data[i]["location"]["series"]][button_id]}"]["title"], "t"), flang=flang, string="nav_button_page_title")))
+            r.append(attr(get_l(ddict["string"]["nav_button_page_title"], flang=flang, fargs=[get_l(data[f"{data[i]["location"]["series"]}/{data[data[i]["location"]["series"]][button_id]}"]["title"], "t")])))
         elif button in ("p", "n"):
-            r.append(attr(msg_l10n(get_l(data[f"{data[i]["location"]["series"]}/{data[i]["location"][button_id]}"]["title"], "t"), string="nav_button_page_title")))
+            r.append(attr(get_l(ddict["string"]["nav_button_page_title"], fargs=[get_l(data[f"{data[i]["location"]["series"]}/{data[i]["location"][button_id]}"]["title"], "t")])))
         r.append("><a href=../../")
         if button in ("f", "l"):
             r.append(f"{data[data[i]["location"]["series"]][button_id]}")
@@ -817,6 +817,10 @@ def text_to_latex(string: str) -> str:
                  ("\u202f", "\\,"), ("−", "\\(-\\)")]:
         string = string.replace(q, w)
     return string
+
+
+def text_to_tex(string: str) -> str:
+    pass
 
 
 def to_regional_indicators(string: str) -> str:
@@ -944,7 +948,7 @@ if __name__ == "__main__":
                 f"<meta charset{attr("utf-8")}{close()}"
                 f'<meta name{attr("viewport")} content{attr("width=device-width,initial-scale=1")}{close()}'
 
-                f"<title>{msg_l10n(get_l(data[i]["title"], "t"), string="html_title")}</title>"
+                f"<title>{get_l(ddict["string"]["html_title"], fargs=[get_l(data[i]["title"], "t")])}</title>"
 
                 f"<meta name{attr("description")} content{attr(get_l(data[i]["description"], "t"))}{close()}"
 
@@ -1016,7 +1020,7 @@ if __name__ == "__main__":
                     )
                 F.append(
                     "<p>"
-                    f"{msg_l10n(lang, get_l(data[data[i]["location"]["series"]]["title"], "t"), get_l(data[i]["title"], "t"), get_l(data[i]["title"], "t"), string="video_not_supported")}"
+                    f"{get_l(ddict["string"]["video_not_supported"], fargs=[lang, get_l(data[data[i]["location"]["series"]]["title"], "t"), get_l(data[i]["title"], "t"), get_l(data[i]["title"], "t")])}"
                     "</p></video>"
                 )
             elif Path(INDEX/i/f"{lang}".lower()/"image.png").is_file():
@@ -1136,7 +1140,7 @@ if __name__ == "__main__":
             F.append(
                 "<hr>"
                 f"<p id{attr("canonical_url")}>"
-                f"{msg_l10n(canonical, string="canonical_url")}"
+                f"{get_l(ddict["string"]["canonical_url"], fargs=[canonical])}"
                 f"<a href{attr(f"{canonical}")} hreflang{attr(f"{lang}")} type{attr("text/html")}>"
                 f"{canonical}"
                 "</a>"

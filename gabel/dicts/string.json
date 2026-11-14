@@ -1,10 +1,10 @@
 {
   "html_title": {
     "en": {
-      "p": "gabl.ink: “{}”"
+      "tf": "gabl.ink: “{fargs[0]}”"
     },
     "fr": {
-      "p": "gabl.ink\u202f: «\u202f{}\u202f»"
+      "tf": "gabl.ink\u202f: «\u202f{fargs[0]}\u202f»"
     }
   },
   "gabldotink_logo": {
@@ -17,10 +17,10 @@
   },
   "video_not_supported": {
     "en": {
-      "p": "It looks like your web browser doesn’t support the <code>video</code> element. You can <a href=video.webm hreflang={0} type=video/webm download=\"{1} - {2}.webm\">download the video</a> to watch with your preferred media player. You can also view the transcript for the video at “Transcript” below."
+      "Hf": "It looks like your web browser doesn’t support the <code>video</code> element. You can <a href=video.webm hreflang={fargs[0]} type=video/webm download=\"{fargs[1]} - {fargs[2]}.webm\">download the video</a> to watch with your preferred media player. You can also view the transcript for the video at “Transcript” below."
     },
     "fr": {
-      "p": "On dirait que votre navigateur Web ne prenne pas en charge l’élément <code>video</code>. Vous pouvez <a href=video.webm hreflang={0} type=video/webm download=\"{1} - {2}.webm\">télécharger le vidéo</a> pour regarder avec votre lecteur multimédia préferé. Vous pouvez aussi voir le transcription pour le vidéo à «\u202fTranscription\u202f» au‐dessous."
+      "Hf": "On dirait que votre navigateur Web ne prenne pas en charge l’élément <code>video</code>. Vous pouvez <a href=video.webm hreflang={fargs[0]} type=video/webm download=\"{fargs[1]} - {fargs[2]}.webm\">télécharger le vidéo</a> pour regarder avec votre lecteur multimédia préferé. Vous pouvez aussi voir le transcription pour le vidéo à «\u202fTranscription\u202f» au‐dessous."
     }
   },
   "see_transcript": {
@@ -137,18 +137,21 @@
   },
   "this_is_x_page": {
     "en": {
-      "p": "This is the {} page!"
+      "tf": "This is the {fargs[0]} page!"
     },
-    "fr": {
-      "p": "C’est la {} page\u202f!"
+    "fr-FR": {
+      "tf": "C’est la {fargs[0]} page\u202f!"
+    },
+    "fr-CA": {
+      "tf": "C’est la {fargs[0]} page!"
     }
   },
   "nav_button_page_title": {
     "en": {
-      "p": "“{}”"
+      "tf": "“{fargs[0]}”"
     },
     "fr": {
-      "p": "«\u202f{}\u202f»"
+      "tf": "«\u202f{fargs[0]}\u202f»"
     }
   },
   "share_this_page": {
@@ -335,10 +338,10 @@
   },
   "canonical_url": {
     "en": {
-      "p": "Canonical URL: "
+      "t": "Canonical URL: "
     },
     "fr": {
-      "p": "URL canonique\u202f: "
+      "t": "URL canonique\u202f: "
     }
   },
   "log": {
