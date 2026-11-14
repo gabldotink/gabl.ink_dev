@@ -445,13 +445,13 @@ def get_i(i_item_file: Path) -> str:
         return item_obj["id"]
 
 
-def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | None = None, flang: Lang | None = None, fargs: list | None = None) -> str:
+def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "T", "t", "X"] | None = None, flang: Lang | None = None, fargs: list | None = None) -> str:
     if fformat is None:
         fformat = format
     if flang is None:
         flang = lang
 
-    formats: str = "AHiLpTtX"
+    formats: str = "AHiLTtX"
     options: list[str] = [f"{flang}", flang.l, "mul", "zxx", "z"]
 
     if fformat not in formats:
@@ -464,11 +464,11 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
         if to_find[0] and to_find[0] not in formats:
             raise ValueError("Equals does not contain a valid format")
         elif to_find[0] and not to_find[1]:
-            return get_l(key, to_find[0], flang)
+            return get_l(key, to_find[0], flang, fargs)
         elif to_find[1] and not to_find[0]:
-            return get_l(key, fformat, to_find[1])
+            return get_l(key, fformat, to_find[1], fargs)
         else:
-            return get_l(key, to_find[0], to_find[1])
+            return get_l(key, to_find[0], to_find[1], fargs)
 
     # ASCII
     if fformat == "A":
@@ -485,7 +485,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "Ae" in to_check:
                 return text_to_html(find_equals("A"))
             elif "e" in to_check:
-                return get_l(key, "A", Lang.get(to_check["e"]))
+                return get_l(key, "A", Lang.get(to_check["e"]), fargs)
     # HTML5
     elif fformat == "H":
         for o in options:
@@ -514,7 +514,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "Ae" in to_check:
                 return text_to_html(find_equals("A"))
             elif "e" in to_check:
-                return get_l(key, "H", Lang.get(to_check["e"]))
+                return get_l(key, "H", Lang.get(to_check["e"]), fargs)
     # identifier
     elif fformat == "i":
         for o in options:
@@ -530,7 +530,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "ie" in to_check:
                 return find_equals("i")
             elif "e" in to_check:
-                return get_l(key, "i", Lang.get(to_check["e"]))
+                return get_l(key, "i", Lang.get(to_check["e"]), fargs)
     # LaTeX
     elif fformat == "L":
         for o in options:
@@ -564,33 +564,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "Ae" in to_check:
                 return text_to_latex(find_equals("A"))
             elif "e" in to_check:
-                return get_l(key, "L", Lang.get(to_check["e"]))
-    # print
-    elif fformat == "p":
-        for o in options:
-            if o == "z":
-                return ""
-
-            to_check: dict = key.get(o, {})
-
-            if "p" in to_check:
-                return to_check["p"]
-            elif "pf" in to_check:
-                return eval(f"f'{to_check["pf"]}'")
-            elif "pe" in to_check:
-                return find_equals("p")
-            elif "t" in to_check:
-                return to_check["t"]
-            elif "tf" in to_check:
-                return eval(f"f'{to_check["tf"]}'")
-            elif "te" in to_check:
-                find_equals("t")
-            elif "A" in to_check:
-                return to_check["A"]
-            elif "Ae" in to_check:
-                return find_equals("A")
-            elif "e" in to_check:
-                return get_l(key, "p", Lang.get(to_check["e"]))
+                return get_l(key, "L", Lang.get(to_check["e"]), fargs)
     # TeX
     elif fformat == "T":
         for o in options:
@@ -616,7 +590,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "Ae" in to_check:
                 return text_to_latex(find_equals("A"))
             elif "e" in to_check:
-                return get_l(key, "T", Lang.get(to_check["e"]))
+                return get_l(key, "T", Lang.get(to_check["e"]), fargs)
     # text
     elif fformat == "t":
         for o in options:
@@ -638,7 +612,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "Ae" in to_check:
                 return find_equals("A")
             elif "e" in to_check:
-                return get_l(key, "t", Lang.get(to_check["e"]))
+                return get_l(key, "t", Lang.get(to_check["e"]), fargs)
     # XML syntax for HTML
     elif fformat == "X":
         for o in options:
@@ -672,7 +646,7 @@ def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "p", "T", "t", "X"] | 
             elif "Ae" in to_check:
                 return text_to_html(find_equals("A"))
             elif "e" in to_check:
-                return get_l(key, "X", Lang.get(to_check["e"]))
+                return get_l(key, "X", Lang.get(to_check["e"]), fargs)
 
 
 def id_base(id_i: str) -> str:
@@ -786,12 +760,6 @@ def make_nav_button(button: Literal["f", "p", "n", "l"], flang: None | Lang = No
 #            pass
 #
 #    r.append(ddict["share"][name]["base"])
-
-
-def msg_l10n(*args, string: str, flang: Lang | None = None) -> str:
-    if flang is None:
-        flang = lang
-    return get_l(ddict["string"][string], "p", flang).format(*args)
 
 
 def text_to_html(string: str) -> str:
@@ -1047,8 +1015,8 @@ if __name__ == "__main__":
             # TODO: Support multiple container depths
 
             F.append(
-                f"{msg_l10n(get_l(data[data[i]["location"]["series"]]["title"]), string="series_title_html")}"
-                f"{msg_l10n(data[i]["location"]["page"], string="comma_page")}"
+                f"{get_l(ddict["string"]["series_title"], fargs=[get_l(data[data[i]["location"]["series"]]["title"])])}"
+                f"{get_l(ddict["string"]["comma_page"], fargs=[data[i]["location"]["page"]])}"
                 f"{get_l(ddict["string"]["page_title"], fargs=[get_l(data[i]["title"])])}"
                 "</summary>"
 
@@ -1173,7 +1141,7 @@ if __name__ == "__main__":
                 f"{get_l(ddict["license"][data[i]["copyright"]["license"][0]]["title"])}"
             )
             if ddict["license"][data[i]["copyright"]["license"][0]].get("abbr"):
-                F.append(msg_l10n(get_l(ddict["license"][data[i]["copyright"]["license"][0]]["abbr"]), string="copyright_license_abbr"))
+                F.append(get_l(ddict["string"]["copyright_license_abbr"], fargs=[get_l(ddict["license"][data[i]["copyright"]["license"][0]]["abbr"])]))
             F.append("</a>")
 
             if data[i].get("disclaimer"):

@@ -31,9 +31,9 @@
       "t": "Voir «\u202fTranscription\u202f» au‐dessous"
     }
   },
-  "series_title_html": {
+  "series_title": {
     "en": {
-      "p": "<cite class=i>{}</cite>"
+      "Hf": "<cite class{attr('i')}>{fargs[0]}</cite>"
     },
     "fr": {
       "e": "en"
@@ -41,7 +41,7 @@
   },
   "comma_page": {
     "fr": {
-      "p": ", page\u00a0{} "
+      "tf": ", page\u00a0{fargs[0]} "
     },
     "en": {
       "e": "fr"
@@ -394,7 +394,7 @@
   },
   "copyright_license_abbr": {
     "en": {
-      "p": " (<cite>{}</cite>)"
+      "Hf": " (<cite>{fargs[0]}</cite>)"
     },
     "fr": {
       "e": "en"

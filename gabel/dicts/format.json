@@ -123,12 +123,5 @@
         "t": "A string which is not linguistic content, but which changes based on language."
       }
     }
-  },
-  "p": {
-    "name": {
-      "en": {
-        "p": "print (deprecate)"
-      }
-    }
   }
 }
