@@ -171,22 +171,16 @@
     }
   },
   "license": {
-    "en-US": {
-      "t": "License: "
-    },
-    "en-GB": {
-      "t": "Licence: "
+    "en": {
+      "tf": "Licen{spellvar('se')}: "
     },
     "fr": {
       "t": "Licence\u202f: "
     }
   },
   "license_plural": {
-    "en-US": {
-      "t": "Licenses: "
-    },
-    "en-GB": {
-      "t": "Licences: "
+    "en": {
+      "tf": "Licen{spellvar('se')}s: "
     },
     "fr": {
       "t": "Licences\u202f: "

@@ -67,7 +67,7 @@
     {
       "H": "meta/logo",
       "d": {
-        "en-US": {
+        "en": {
           "Hf": "<p><cite class{attr('i')}>JoeRunner and\u00a0Co.</cite>{close('p')}<p>by <span translate{attr('no')}>gabl</span>{close('p')}<p>episode\u00a01 <cite class{attr('i')}>Edulympiad</cite>{close('p')}<p>chapter\u00a01 “<cite>Thursday</cite>”{close('p')}"
         },
         "fr": {

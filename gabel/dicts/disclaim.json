@@ -7,14 +7,9 @@
         "L": "Not affiliated with, endorsed by, or sponsored by the International Olympic Committee, the United States Olympic~\\& Paralympic Committee, or any other Olympic organization. \\textit{OLYMPIC}, \\textit{OLYMPIAD}, and related marks are trademarks of their respective owners."
       },
       "en-GB": {
-        "t": "Not affiliated with, endorsed by, or sponsored by the International Olympic Committee, the British Olympic Association, or any other Olympic organisation. ‘OLYMPIC’, ‘OLYMPIAD’ and related marks are trade marks of their respective owners.",
-        "Hf": "Not affiliated with, endorsed by, or sponsored by the International Olympic Committee, the British Olympic Association, or any other Olympic organisation. <i translate{attr('no')}>OLYMPIC</i>, <i translate{attr('no')}>OLYMPIAD</i> and related marks are trade marks of their respective owners.",
-        "L": "Not affiliated with, endorsed by, or sponsored by the International Olympic Committee, the British Olympic Association, or any other Olympic organisation. \\textit{OLYMPIC}, \\textit{OLYMPIAD} and related marks are trade marks of their respective owners."
-      },
-      "en-GB-oxendict": {
-        "t": "Not affiliated with, endorsed by, or sponsored by the International Olympic Committee, the British Olympic Association, or any other Olympic organization. ‘OLYMPIC’, ‘OLYMPIAD’ and related marks are trade marks of their respective owners.",
-        "Hf": "Not affiliated with, endorsed by, or sponsored by the International Olympic Committee, the British Olympic Association, or any other Olympic organization. <i translate{attr('no')}>OLYMPIC</i>, <i translate{attr('no')}>OLYMPIAD</i> and related marks are trade marks of their respective owners.",
-        "L": "Not affiliated with, endorsed by, or sponsored by the International Olympic Committee, the British Olympic Association, or any other Olympic organization. \\textit{OLYMPIC}, \\textit{OLYMPIAD} and related marks are trade marks of their respective owners."
+        "tf": "Not affiliated with, endorsed by, or sponsored by the International Olympic Committee, the British Olympic Association, or any other Olympic organi{spellvar('s')}ation. ‘OLYMPIC’, ‘OLYMPIAD’ and related marks are trade marks of their respective owners.",
+        "Hf": "Not affiliated with, endorsed by, or sponsored by the International Olympic Committee, the British Olympic Association, or any other Olympic organi{spellvar('s')}ation. <i translate{attr('no')}>OLYMPIC</i>, <i translate{attr('no')}>OLYMPIAD</i> and related marks are trade marks of their respective owners.",
+        "Lf": "Not affiliated with, endorsed by, or sponsored by the International Olympic Committee, the British Olympic Association, or any other Olympic organi{spellvar('s')}ation. \\textit{OLYMPIC}, \\textit{OLYMPIAD} and related marks are trade marks of their respective owners."
       },
       "en-CA": { 
         "t": "Not affiliated with, endorsed by, or sponsored by the International Olympic Committee, the Canadian Olympic Committee, or any other Olympic organization. “OLYMPIC,” “OLYMPIAD,” and related marks are trademarks of their respective owners.",

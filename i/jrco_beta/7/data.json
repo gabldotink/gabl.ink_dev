@@ -36,8 +36,8 @@
     {
       "H": "meta/none",
       "d": {
-        "en-US": {
-          "t": "A one‐story building has a sign which reads “Schulz Elementary School.” The school and yard are surrounded by trees. Two girls talk in the yard, while another plays on a portable video game console. A boy with black hair stands by the door, looking a bit annoyed."
+        "en": {
+          "tf": "A one‐stor{'' if flang.t in ('US','PH') else 'e'}y building has a sign which reads “Schulz Elementary School.” The school and yard are surrounded by trees. Two girls talk in the yard, while another plays on a portable video game console. A boy with black hair stands by the door, looking a bit annoyed."
         }
       }
     },

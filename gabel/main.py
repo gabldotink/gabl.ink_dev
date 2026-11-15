@@ -762,6 +762,30 @@ def make_nav_button(button: Literal["f", "p", "n", "l"], flang: None | Lang = No
 #    r.append(ddict["share"][name]["base"])
 
 
+def spellvar(string: str, flang: Lang | None = None) -> str:
+    if flang is None:
+        flang = lang
+    if flang.l != "en":
+        raise ValueError("Should be used for English only")
+
+    if string.lower() in ("z", "s"):
+        if flang.t in ("US", "CA", "PH") or (flang.v is not None and "oxendict" in flang.v):
+            return string.translate(str.maketrans("Ss", "Zz"))
+        else:
+            return string.translate(str.maketrans("Zz", "Ss"))
+    # An exception to the above rule
+    elif string.lower() in ("yz", "ys"):
+        if flang.t in ("US", "CA", "PH"):
+            return string.translate(str.maketrans("Ss", "Zz"))
+        else:
+            return string.translate(str.maketrans("Zz", "Ss"))
+    elif string.lower() in ("se", "ce"):
+        if flang.t in ("US", "PH"):
+            return string.translate(str.maketrans("Cc", "Ss"))
+        else:
+            return string.translate(str.maketrans("Ss", "Cc"))
+
+
 def text_to_html(string: str) -> str:
     string = re.sub(r"&(?=[#A-Za-z])", "&amp;", string)  # &#38;
     string = string.replace("<", "&lt;")  # &#60;
