@@ -9,7 +9,7 @@
   },
   "gabldotink_logo": {
     "en": {
-      "t": "gabl.ink"
+      "A": "gabl.ink"
     },
     "mul": {
       "e": "en"
@@ -65,15 +65,15 @@
   },
   "transcript_name": {
     "en": {
-      "t": "Transcript"
+      "A": "Transcript"
     },
     "fr": {
-      "t": "Transcription"
+      "A": "Transcription"
     }
   },
   "nav_button_first": {
     "en": {
-      "t": "First"
+      "A": "First"
     },
     "fr": {
       "t": "Première"
@@ -81,7 +81,7 @@
   },
   "nav_button_prev": {
     "en": {
-      "t": "Previous"
+      "A": "Previous"
     },
     "fr": {
       "t": "Précédente"
@@ -89,15 +89,15 @@
   },
   "nav_button_next": {
     "en": {
-      "t": "Next"
+      "A": "Next"
     },
     "fr": {
-      "t": "Prochaine"
+      "A": "Prochaine"
     }
   },
   "nav_button_last": {
     "en": {
-      "t": "Last"
+      "A": "Last"
     },
     "fr": {
       "t": "Dernière"
@@ -105,7 +105,7 @@
   },
   "nav_button_first_inline": {
     "en": {
-      "t": "first"
+      "A": "first"
     },
     "fr": {
       "t": "première"
@@ -113,15 +113,15 @@
   },
   "nav_button_next_inline": {
     "en": {
-      "t": "next"
+      "A": "next"
     },
     "fr": {
-      "t": "prochaine"
+      "A": "prochaine"
     }
   },
   "nav_button_prev_inline": {
     "en": {
-      "t": "previous"
+      "A": "previous"
     },
     "fr": {
       "t": "précédente"
@@ -129,7 +129,7 @@
   },
   "nav_button_last_inline": {
     "en": {
-      "t": "last"
+      "A": "last"
     },
     "fr": {
       "t": "dernière"
@@ -156,23 +156,23 @@
   },
   "share_this_page": {
     "en": {
-      "t": "Share this page"
+      "A": "Share this page"
     },
     "fr": {
-      "t": "Partager ce page"
+      "A": "Partager ce page"
     }
   },
   "validate_this_page": {
     "en": {
-      "t": "Validate this page"
+      "A": "Validate this page"
     },
     "fr": {
-      "t": "Valider ce page"
+      "A": "Valider ce page"
     }
   },
   "license": {
     "en": {
-      "tf": "Licen{spellvar('se')}: "
+      "Af": "Licen{spellvar('se')}: "
     },
     "fr": {
       "t": "Licence\u202f: "
@@ -180,7 +180,7 @@
   },
   "license_plural": {
     "en": {
-      "tf": "Licen{spellvar('se')}s: "
+      "Af": "Licen{spellvar('se')}s: "
     },
     "fr": {
       "t": "Licences\u202f: "
@@ -188,7 +188,7 @@
   },
   "disclaimer": {
     "en": {
-      "t": "Disclaimer: "
+      "A": "Disclaimer: "
     },
     "fr": {
       "t": "Disclaimer\u202f: "
@@ -196,7 +196,7 @@
   },
   "disclaimer_plural": {
     "en": {
-      "t": "Disclaimers: "
+      "A": "Disclaimers: "
     },
     "fr": {
       "t": "Disclaimers\u202f: "
@@ -204,26 +204,26 @@
   },
   "share_with": {
     "en": {
-      "t": "Share with "
+      "A": "Share with "
     },
     "fr": {
-      "t": "Partagez avec "
+      "A": "Partagez avec "
     }
   },
   "validate_with": {
     "en": {
-      "t": "Validate with "
+      "A": "Validate with "
     },
     "fr": {
-      "t": "Validez avec "
+      "A": "Validez avec "
     }
   },
   "validate_as": {
     "en": {
-      "t": " as "
+      "A": " as "
     },
     "fr": {
-      "t": " en tant que "
+      "A": " en tant que "
     }
   },
   "say_date_cjk_year": {
@@ -332,7 +332,7 @@
   },
   "canonical_url": {
     "en": {
-      "t": "Canonical URL: "
+      "A": "Canonical URL: "
     },
     "fr": {
       "t": "URL canonique\u202f: "
@@ -340,10 +340,10 @@
   },
   "log": {
     "en": {
-      "t": "Log"
+      "A": "Log"
     },
     "fr": {
-      "t": "Journal"
+      "A": "Journal"
     }
   },
   "gabldotink_series_page": {
@@ -356,10 +356,10 @@
   },
   "from_gabldotink": {
     "en": {
-      "t": "From https://gabl.ink/ : "
+      "A": "From https://gabl.ink/ : "
     },
     "fr": {
-      "t": "De https://gabl.ink/ : "
+      "A": "De https://gabl.ink/ : "
     }
   },
   "cc": {
