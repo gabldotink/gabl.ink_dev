@@ -115,10 +115,12 @@ class Date:
         #if tstr:
 
 
-    def say(d: "Date", flang: Lang | None = None) -> str:
+    def say(d: "Date", flang: Lang | str | None = None) -> str:
         """Returns word form of date in HTML format."""
         if flang is None:
             flang = lang
+        else:
+            flang = Lang.get(flang)
 
         r: list[str] = [f"<time datetime{attr(f"{d}")}>"]
 
@@ -323,10 +325,12 @@ class Lang:
     @staticmethod
     def say(to_say: "Lang", fformat: str | None = None, flang: "Lang | None" = None) -> str:
         """Returns a formatted language name and region."""
-        if flang is None:
-            flang = lang
         if fformat is None:
             fformat = format
+        if flang is None:
+            flang = lang
+        else:
+            flang = Lang.get(flang)
         if flang.l in ("en", "fr"):
             return f"{to_sentence_case(get_l(ddict["lang"][to_say.l]["name"], fformat, flang), flang)} ({get_l(ddict["region"][f"{to_say.t}".lower()]["name"], fformat, flang)})"
 
@@ -445,11 +449,13 @@ def get_i(i_item_file: Path) -> str:
         return item_obj["id"]
 
 
-def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "T", "t", "X"] | None = None, flang: Lang | None = None, fargs: list | None = None) -> str:
+def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "T", "t", "X"] | None = None, flang: Lang | str | None = None, fargs: list | None = None) -> str:
     if fformat is None:
         fformat = format
     if flang is None:
         flang = lang
+    else:
+        flang = Lang.get(flang)
 
     formats: str = "AHiLTtX"
     options: list[str] = [f"{flang}", flang.l, "mul", "zxx", "z"]
@@ -681,9 +687,12 @@ def id_parent(id_i: str) -> str | None:
         return None
 
 
-def lang_attr(flang: Lang | None = None, fformat: Literal["H", "X"] | None = None) -> str:
+# TODO: This is the only time `flang` is before `fformat`, which is intentional for now.
+def lang_attr(flang: Lang | str | None = None, fformat: Literal["H", "X"] | None = None) -> str:
     if flang is None:
         flang = lang
+    else:
+        flang = Lang.get(flang)
     if fformat is None:
         fformat = format
 
@@ -722,6 +731,8 @@ def language_list_entry(l: Lang) -> str:
 def make_nav_button(button: Literal["f", "p", "n", "l"], flang: None | Lang = None) -> str:
     if flang is None:
         flang = lang
+    else:
+        flang = Lang.get(flang)
 
     button_arrow, button_id, button_fl = {
         "f": ("⇦", "first", "first"),
@@ -780,6 +791,8 @@ def make_nav_button(button: Literal["f", "p", "n", "l"], flang: None | Lang = No
 def spellvar(string: str, flang: Lang | None = None) -> str:
     if flang is None:
         flang = lang
+    else:
+        flang = Lang.get(flang)
     if flang.l != "en":
         raise ValueError("Should be used for English only")
 
@@ -855,6 +868,8 @@ def to_sentence_case(string: str, flang: Lang | None = None) -> str:
     """
     if flang is None:
         flang = lang
+    else:
+        flang = Lang.get(flang)
 
     if flang.l == "tok":
         return string

@@ -7,7 +7,7 @@
       },
       "fr": {
         "t": "le Nu Html Checker",
-        "H": "le <cite lang{attr('en')}><span lang{attr('fr')}>Nu Html</span> Checker</cite>"
+        "Hf": "le <cite{lang_attr('en')}><span{lang_attr('fr')}>Nu Html</span> Checker</cite>"
       }
     },
     "format": {
@@ -17,7 +17,7 @@
       },
       "mul": {
         "te": "en",
-				"Hf": "<abbr lang{attr('en')} title=\"Hypertext Markup Language\"><span lang{attr(f'{flang}')}>HTML</span></abbr>"
+				"Hf": "<abbr{lang_attr('en')} title=\"Hypertext Markup Language\"><span{lang_attr(f'{flang}')}>HTML</span></abbr>"
       }
     },
     "base": "https://validator.nu/?doc="

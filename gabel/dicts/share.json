@@ -62,7 +62,7 @@
       },
       "mul": {
         "Ae": "en",
-        "Hf": "<cite lang{attr('en')}>Reddit</cite>"
+        "Hf": "<cite{lang_attr('en')}>Reddit</cite>"
       }
     },
     "base": "https://www.reddit.com/submit?type=LINK&",
@@ -81,7 +81,7 @@
       },
       "mul": {
         "Ae": "en",
-        "Hf": "<cite lang{attr('en')}>Facebook</cite>"
+        "Hf": "<cite{lang_attr('en')}>Facebook</cite>"
       }
     },
     "base": "https://www.facebook.com/sharer/sharer.php?",
@@ -97,7 +97,7 @@
       },
       "mul": {
         "Ae": "en",
-        "Hf": "<cite lang{attr('en')}>Telegram</cite>"
+        "Hf": "<cite{lang_attr('en')}>Telegram</cite>"
       }
     },
     "base": "https://t.me/share?",
@@ -116,7 +116,7 @@
       },
       "mul": {
         "Ae": "en",
-        "Hf": "<cite lang{attr('en')}>Bluesky</cite>"
+        "Hf": "<cite{lang_attr('en')}>Bluesky</cite>"
       }
     },
     "base": "https://bsky.app/intent/compose?",
@@ -132,7 +132,7 @@
       },
       "mul": {
         "Ae": "en",
-        "Hf": "<cite lang{attr('en')}>WhatsApp</cite>"
+        "Hf": "<cite{lang_attr('en')}>WhatsApp</cite>"
       }
     },
     "base": "https://wa.me/?",
@@ -148,7 +148,7 @@
       },
       "mul": {
         "Ae": "en",
-        "Hf": "<cite lang{attr('en')}>Mastodon</cite>"
+        "Hf": "<cite{lang_attr('en')}>Mastodon</cite>"
       }
     },
     "base": "https://mastodonshare.com/?",
@@ -167,7 +167,7 @@
       },
       "mul": {
         "Ae": "en",
-        "Hf": "<cite lang{attr('en')}>Threads</cite>"
+        "Hf": "<cite{lang_attr('en')}>Threads</cite>"
       }
     },
     "base": "https://www.threads.com/intent/post?",
@@ -186,7 +186,7 @@
       },
       "mul": {
         "Ae": "en",
-        "Hf": "<cite lang{attr('en')}>Truth Social</cite>"
+        "Hf": "<cite{lang_attr('en')}>Truth Social</cite>"
       }
     },
     "base": "https://truthsocial.com/share?",
@@ -205,7 +205,7 @@
       },
       "mul": {
         "Ae": "en",
-        "Hf": "<cite lang{attr('en')}>Gab</cite>"
+        "Hf": "<cite{lang_attr('en')}>Gab</cite>"
       }
     },
     "base": "https://gab.com/compose?",
