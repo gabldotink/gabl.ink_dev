@@ -1,0 +1,58 @@
+{
+  "share_this_page": {
+    "en": {
+      "A": "Share this page"
+    },
+    "fr": {
+      "A": "Partager ce page"
+    }
+  },
+  "validate_this_page": {
+    "en": {
+      "A": "Validate this page"
+    },
+    "fr": {
+      "A": "Valider ce page"
+    }
+  },
+  "share_with": {
+    "en": {
+      "A": "Share with "
+    },
+    "fr": {
+      "A": "Partagez avec "
+    }
+  },
+  "validate_with": {
+    "en": {
+      "A": "Validate with "
+    },
+    "fr": {
+      "A": "Validez avec "
+    }
+  },
+  "validate_as": {
+    "en": {
+      "A": " as "
+    },
+    "fr": {
+      "A": " en tant que "
+    }
+  },
+  "gabldotink_series_page": {
+    "en": {
+      "tf": "gabl.ink{fargs[0]}: “{fargs[1]}”: “{fargs[2]}”"
+    },
+    "fr": {
+      "tf": "gabl.ink{fargs[0]}\u202f: «\u202f{fargs[1]}\u202f»\u202f: «\u202f{fargs[2]}\u202f»"
+    }
+  },
+  "from_gabldotink": {
+    "en": {
+      "A": "From https://gabl.ink/ : "
+    },
+    "fr": {
+      "A": "De https://gabl.ink/ : "
+    }
+  }
+}

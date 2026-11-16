@@ -903,7 +903,7 @@ item_files: list[Path] = [
 ddict: dict = {}
 
 for dictionary in ["disclaim", "format", "lang", "license", "month", "region",
-                   "script", "share", "string", "validate", "weekday"]:
+                   "script", "string", "weekday"]:
     with open(Path(DICTS)/f"{dictionary}.json", "r", encoding="utf-8") as f:
         ddict[dictionary] = json.load(f)
 
@@ -1166,14 +1166,6 @@ if __name__ == "__main__":
                 f"<a href{attr(f"{canonical}")} hreflang{attr(f"{lang}")} type{attr("text/html")}>"
                 f"{canonical}"
                 "</a>"
-
-                f"<details id{attr("share_links")}>"
-                f"<summary>{get_l(ddict["string"]["share_this_page"])}</summary>"
-                "<ul></ul></details>"
-
-                f"<details id{attr("validate_links")}>"
-                f"<summary>{get_l(ddict["string"]["validate_this_page"])}</summary>"
-                "<ul></ul></details>"
 
                 f"<footer><p><span class{attr("w")}>"
                 f"{get_l(ddict["string"]["copyright_notice"])}"
