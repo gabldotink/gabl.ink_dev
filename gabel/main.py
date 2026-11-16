@@ -331,7 +331,7 @@ class Lang:
             return f"{to_sentence_case(get_l(ddict["lang"][to_say.l]["name"], fformat, flang), flang)} ({get_l(ddict["region"][f"{to_say.t}".lower()]["name"], fformat, flang)})"
 
 
-def attr(string: str, fformat: str | None = None) -> str:
+def attr(string: str, fformat: Literal["H", "X"] | None = None) -> str:
     """Takes a plain text string as input and returns the HTML
     component that comes right after the attribute name. Returns an
     empty string if the input is empty. Returns the equals sign,
@@ -679,6 +679,21 @@ def id_parent(id_i: str) -> str | None:
         return id_i.rpartition("/")[0]
     else:
         return None
+
+
+def lang_attr(flang: Lang | None = None, fformat: Literal["H", "X"] | None = None) -> str:
+    if flang is None:
+        flang = lang
+    if fformat is None:
+        fformat = format
+
+    if fformat not in "HX":
+        raise ValueError("Format must be H or X")
+
+    if fformat == "H":
+        return f" lang={flang}"
+    elif fformat == "X":
+        return f' lang="{flang}" xml:lang="{flang}"'
 
 
 def language_list_entry(l: Lang) -> str:
