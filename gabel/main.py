@@ -710,7 +710,7 @@ def language_list_entry(l: Lang) -> str:
 
     if l.t is not None:
         r.append(
-            f" style{attr(f"list-style:{to_regional_indicators(l.t)}\xa0")}>"
+            f" style{attr(f"list-style:'{to_regional_indicators(l.t)}\xa0'")}>"
         )
 
     if f"{l}" == f"{lang}":
@@ -1109,7 +1109,7 @@ if __name__ == "__main__":
                             )
                         elif lang.l == "fr":
                             F.append(
-                                f"“<a href{attr(f"../../{data[i]["location"]["series"]}/{list_page}/{f"{lang}".lower()}/")} "
+                                f"<a href{attr(f"../../{data[i]["location"]["series"]}/{list_page}/{f"{lang}".lower()}/")} "
                                 f"hreflang{attr(f"{lang}")} "
                                 f"type{attr("text/html")}>"
                                 f"<cite class{attr("i")}>{get_l(data[f"{data[i]["location"]["series"]}/{list_page}"]["title"])}</cite>"

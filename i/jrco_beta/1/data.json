@@ -59,8 +59,8 @@
       "Hf": "pro tip for 5th\u00a0graders: <em class{attr('r')}>DO NOT</em> wake up at <time datetime{attr('06:30')}>6:30\u00a0a.m.</time>"
     },
     "fr": {
-      "t": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à 6h30",
-      "Hf": "Un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime{attr('06:30')}>6h30</time>"
+      "t": "un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à 6h30",
+      "Hf": "un conseil de pro pour les élèves de cinquième\u202f: ne vous réveillez pas à <time datetime{attr('06:30')}>6h30</time>"
     }
   },
   "transcript": [
