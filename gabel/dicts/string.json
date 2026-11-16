@@ -337,5 +337,13 @@
     "fr": {
       "e": "en"
     }
+  },
+  "language_list": {
+    "en": {
+      "t": "Language list"
+    },
+    "fr": {
+      "t": "Liste des langues"
+    }
   }
 }

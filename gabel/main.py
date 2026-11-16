@@ -710,7 +710,7 @@ def language_list_entry(l: Lang) -> str:
 
     if l.t is not None:
         r.append(
-            f" style{attr(f"list-style:'{to_regional_indicators(l.t)}\xa0'")}>"
+            f" style{attr(f"list-style:'{to_regional_indicators(l.t)}'")}>"
         )
 
     if f"{l}" == f"{lang}":
@@ -1005,13 +1005,15 @@ if __name__ == "__main__":
                 "<header>"
                 f"<a href{attr("https://gabl.ink/")} id{attr("gabldotink_logo")}>gabl.ink</a>"
 
+                f"<details id{attr("L")}>"
+                f"<summary>{get_l(ddict["string"]["language_list"])}</summary>"
                 f"<ul id{attr("L")}>"
             )
             for l in sorted(data[i]["langs"]):
                 l: Lang = Lang.get(l)
                 F.append(language_list_entry(l))
             F.append(
-                "</ul></header>"
+                "</ul></details></header>"
 
                 f"<h1>{get_l(ddict["string"]["page_title"], fargs=[get_l(data[i]["title"])])}</h1>"
 
