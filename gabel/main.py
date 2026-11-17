@@ -335,6 +335,18 @@ class Lang:
             return f"{to_sentence_case(get_l(ddict["lang"][to_say.l]["name"], fformat, flang), flang)} ({get_l(ddict["region"][f"{to_say.t}".lower()]["name"], fformat, flang)})"
 
 
+def amp(fformat: Literal["H", "X"] | None = None) -> str:
+    if fformat is None:
+        fformat = format
+
+    if fformat == "H":
+        return "&"
+    elif fformat == "X":
+        return "&amp;"
+    else:
+        return ValueError("H or X only")
+
+
 def attr(string: str, fformat: Literal["H", "X"] | None = None) -> str:
     """Takes a plain text string as input and returns the HTML
     component that comes right after the attribute name. Returns an
@@ -391,7 +403,10 @@ def attr(string: str, fformat: Literal["H", "X"] | None = None) -> str:
         else:
             quote_char = '"'
 
-    string = re.sub(r"&(?=[#A-Za-z])", "&amp;", string)  # &#38;
+    if fformat == "H":
+        string = re.sub(r"&(?=[#A-Za-z])", "&amp;", string)  # &#38;
+    elif fformat == "X":
+        string = string.replace("&", "&amp;")
 
     if quoted:
         if quote_char == '"':
@@ -725,6 +740,8 @@ def language_list_entry(l: Lang) -> str:
     else:
         r.append("</a>")
 
+    r.append(close("li"))
+
     return "".join(r)
 
 
@@ -756,14 +773,14 @@ def make_nav_button(button: Literal["f", "p", "n", "l"], flang: None | Lang = No
             r.append(attr(get_l(ddict["string"]["nav_button_page_title"], flang=flang, fargs=[get_l(data[f"{data[i]["location"]["series"]}/{data[data[i]["location"]["series"]][button_id]}"]["title"], "t")])))
         elif button in ("p", "n"):
             r.append(attr(get_l(ddict["string"]["nav_button_page_title"], fargs=[get_l(data[f"{data[i]["location"]["series"]}/{data[i]["location"][button_id]}"]["title"], "t")])))
-        r.append(f"><a href{attr("../../")}")
+        r.append(f"><a href")
         if button in ("f", "l"):
-            r.append(f"{data[data[i]["location"]["series"]][button_id]}")
+            r.append(attr(f"../../{data[data[i]["location"]["series"]][button_id]}/{f"{flang}".lower()}/"))
         elif button in ("p", "n"):
-            r.append(f"{data[i]["location"][button_id]}")
-        r.append(f"/{f"{flang}".lower()}/ hreflang{attr(f"{flang}")}>")
+            r.append(attr(f"../../{data[i]["location"][button_id]}/{f"{flang}".lower()}/"))
+        r.append(f" hreflang{attr(f"{flang}")}>")
 
-    r.append(f"<span class{attr("A")} aria-hidden{attr("true")}>{button_arrow}</span><br>{get_l(ddict["string"][f"nav_button_{button_id}"])}")
+    r.append(f"<span class{attr("A")} aria-hidden{attr("true")}>{button_arrow}</span><br{close()}{get_l(ddict["string"][f"nav_button_{button_id}"])}")
 
     if (
         data[i]["location"]["page"]
@@ -814,11 +831,17 @@ def spellvar(string: str, flang: Lang | None = None) -> str:
             return string.translate(str.maketrans("Ss", "Cc"))
 
 
-def text_to_html(string: str) -> str:
-    string = re.sub(r"&(?=[#A-Za-z])", "&amp;", string)  # &#38;
+def text_to_html(string: str, fformat: Literal["H", "X"] | None = None) -> str:
+    if fformat is None:
+        fformat = format
+
+    if fformat == "H":
+        string = re.sub(r"&(?=[#A-Za-z])", "&amp;", string)  # &#38;
+    elif fformat == "X":
+        string = string.replace("&", "&amp;")
     string = string.replace("<", "&lt;")  # &#60;
-    string = string.replace("\u200b", "<wbr>")
-    string = string.replace("\n", "<br>")
+    string = string.replace("\u200b", f"<wbr{close()}")
+    string = string.replace("\n", f"<br{close()}")
     return string
 
 
@@ -925,310 +948,328 @@ if __name__ == "__main__":
 
         for lang in data[i]["langs"]:
             lang: Lang = Lang.get(lang)
-            format: str = "H"
 
-            canonical: str = f"https://gabl.ink/i/{i}/{f"{lang}".lower()}/"
+            for format in "HX":
+                if format in "HX":
+                    canonical: str = f"https://gabl.ink/i/{i}/{f"{lang}".lower()}/"
 
-            F: list[str] = ["<!DOCTYPE html>\n"]
+                    F: list[str] = ["<!DOCTYPE html>\n"]
 
-            if data[i].get("copyright", {}).get("license"):
-                F.append("<!-- SPDX-License-Identifier: ")
-                spdx_license_count: int = len(data[i]["copyright"]["license"])
-                spdx_license_num: int = 1
-                for license in data[i]["copyright"]["license"]:
-                    F.append(ddict["license"][license]["spdx"])
-                    if spdx_license_num < spdx_license_count:
-                        F.append(" OR ")
-                        spdx_license_num += 1
-                F.append(" -->\n")
+                    if data[i].get("copyright", {}).get("license"):
+                        F.append("<!-- SPDX-License-Identifier: ")
+                        spdx_license_count: int = len(data[i]["copyright"]["license"])
+                        spdx_license_num: int = 1
+                        for license in data[i]["copyright"]["license"]:
+                            F.append(ddict["license"][license]["spdx"])
+                            if spdx_license_num < spdx_license_count:
+                                F.append(" OR ")
+                                spdx_license_num += 1
+                        F.append(" -->\n")
 
-            lang_dir: str
-            if lang.s:
-                lang_dir = ddict["script"][lang.s]["dir"]
-            elif ddict["lang"][lang.l].get("script"):
-                lang_dir = ddict["script"][ddict["lang"][lang.l]["script"]]["dir"]
-            else:
-                lang_dir = "auto"
-
-            # TODO: I don’t think this always works
-            if data.get("config",{}).get("config",{}).get("relative_paths") is True:
-                if i == "root":
-                    styles: str = "../gabel/styles"
-                else:
-                    depth: int = i.count("/") + 2
-                    styles: list[str] = ["../"]
-                    for d in range(depth):
-                        styles.append("../")
-                    styles.append("gabel/styles")
-                    styles: str = "".join(styles)
-            else:
-                styles: str = "/gabel/styles"
-
-            F.append(
-                f"<html lang{attr(f"{lang}")} dir{attr(lang_dir)} itemscope{attr("")} itemtype{attr("https://schema.org/WebPage")}>"
-
-                f"<meta charset{attr("utf-8")}{close()}"
-                f'<meta name{attr("viewport")} content=\"width=device-width,initial-scale=1\"{close()}'
-
-                f"<title>{get_l(ddict["string"]["html_title"], fargs=[get_l(data[i]["title"], "t")])}</title>"
-
-                f"<meta name{attr("description")} content{attr(get_l(data[i]["description"], "t"))}{close()}"
-
-                f"<meta name{attr("robots")} content{attr("index,follow")}{close()}"
-
-                f"<link rel{attr("canonical")} href{attr(f"{canonical}")} hreflang{attr(f"{lang}")} type{attr("text/html")}{close()}"
-
-                # TODO: `if type != comic_page` (sh:349)
-
-                f"<link rel{attr("stylesheet")} href{attr(f"{styles}/mul.css")} hreflang{attr("zxx")}{close()}"
-                f"<link rel{attr("stylesheet")} href{attr(f"{styles}/{lang.l}.css")} hreflang{attr("zxx")}{close()}"
-                f"<link rel{attr("stylesheet")} href{attr(f"{styles}/comic_page.css")} hreflang{attr("zxx")}{close()}"
-
-                f"<link rel{attr("external license")} href{attr(get_l(ddict["license"][data[i]["copyright"]["license"][0]]["url"], "i"))}{close()}"
-
-                # TODO: Prefetches (starting at sh:420)
-
-                f"<meta property{attr("og:type")} content{attr("article")}{close()}"
-                f"<meta property{attr("og:title")} content{attr(get_l(data[i]["title"], "t"))}{close()}"
-                f"<meta property{attr("og:description")} content{attr(get_l(data[i]["description"], "t"))}{close()}"
-                f"<meta property{attr("og:site_name")} content{attr("gabl.ink")}{close()}"
-                f"<meta property{attr("og:url")} content{attr(f"{canonical}")}{close()}"
-                f"<meta property{attr("og:image")} content{attr(f"{canonical}image.png")}{close()}"
-                # TODO: video_exists (sh:322–332, sh:454)
-                f"<meta property{attr("og:locale")} content{attr(f"{lang.l}_{lang.t}")}{close()}"
-
-                f"<script type{attr("application/ld+json")}>{{"
-                '"@context":"https://schema.org",'
-                '"@type":"WebPage"'
-                "}</script>"
-
-                "<header>"
-                f"<a href{attr("https://gabl.ink/")} id{attr("gabldotink_logo")}>gabl.ink</a>"
-
-                f"<details id{attr("L")}>"
-                f"<summary>{get_l(ddict["string"]["language_list"])}</summary>"
-                f"<ul id{attr("L")}>"
-            )
-            for l in sorted(data[i]["langs"]):
-                l: Lang = Lang.get(l)
-                F.append(language_list_entry(l))
-            F.append(
-                "</ul></details></header>"
-
-                f"<h1>{get_l(ddict["string"]["page_title"], fargs=[get_l(data[i]["title"])])}</h1>"
-
-                f"<nav class{attr("N")}>"
-
-                f"{make_nav_button("f")}"
-                f"{make_nav_button("p")}"
-                f"{make_nav_button("n")}"
-                f"{make_nav_button("l")}"
-
-                "</nav>"
-            )
-
-            if Path(INDEX/i/f"{lang}".lower()/"video.webm").is_file():
-                F.append(
-                    f"<video id{attr("M")} controls{attr("")} poster{attr("image.png")} preload{attr("auto")}>"
-                    f"<source src{attr("video.webm")} type{attr("video/webm")}{close()}"
-                )
-                if Path(INDEX/i/f"{lang}".lower()/"subs.vtt").is_file():
-                    F.append(
-                        f"<track default{attr("")} src{attr("subs.vtt")} srclang{attr(f"{lang}")} kind{attr("subtitles")} "
-                        f"label{attr(Lang.say(lang, "t"))}{close()}"
-                    )
-                if Path(INDEX/i/f"{lang}".lower()/"cc.vtt").is_file():
-                    F.append(
-                        f"<track src{attr("cc.vtt")} srclang{attr(f"{lang}")} kind{attr("captions")} "
-                        f"label{attr(f"{Lang.say(lang, "t")}{get_l(ddict["string"]["cc"])}")}{close()}"
-                    )
-                F.append(
-                    "<p>"
-                    f"{get_l(ddict["string"]["video_not_supported"], fargs=[lang, get_l(data[data[i]["location"]["series"]]["title"], "t"), get_l(data[i]["title"], "t"), get_l(data[i]["title"], "t")])}"
-                    "</p></video>"
-                )
-            elif Path(INDEX/i/f"{lang}".lower()/"image.png").is_file():
-                F.append(f"<picture id{attr("M")}")
-                if get_l(data[i].get("tooltip", {})) is not None:
-                    F.append(f" title{attr(get_l(data[i].get("tooltip", {}), "t"))}")
-                F.append(
-                    ">"
-                    f"<img src{attr("image.png")} fetchpriority{attr("high")} alt{attr(get_l(ddict["string"]["see_transcript"]))}{close()}"
-                    "</picture>"
-                )
-
-            F.append(
-                f"<nav class{attr("N")}>"
-
-                f"{make_nav_button("f")}"
-                f"{make_nav_button("p")}"
-                f"{make_nav_button("n")}"
-                f"{make_nav_button("l")}"
-
-                "</nav><nav><details><summary>"
-            )
-
-            # TODO: Support multiple container depths
-
-            F.append(
-                f"{get_l(ddict["string"]["series_title"], fargs=[get_l(data[data[i]["location"]["series"]]["title"])])}"
-                f"{get_l(ddict["string"]["comma_page"], fargs=[data[i]["location"]["page"]])}"
-                f"{get_l(ddict["string"]["page_title"], fargs=[get_l(data[i]["title"])])}"
-                "</summary>"
-
-                f"<ol id{attr("P")}>"
-            )
-
-            list_page_self: str = f"{data[i]["location"]["page"]}"
-
-            for list_page in expand_parts(data[data[i]["location"]["series"]]["parts"]):
-                F.append("<li>")
-                if not get_l(data[i]["title"]):
-                    if data[i]["location"]["page"] == list_page:
-                        F.append("<b>")
-                    F.append(get_l(ddict["string"]["no_title"]))
-                    if data[i]["location"]["page"] == list_page:
-                        F.append("</b>")
-                else:
-                    if data[i]["location"]["page"] == list_page:
-                        if lang.l == "en":
-                            F.append("“<b><cite>")
-                        elif lang.l == "fr":
-                            F.append(f"<b><cite class{attr("i")}>")
-                        F.append(get_l(data[f"{data[i]["location"]["series"]}/{list_page}"]["title"]))
-                        if lang.l == "en":
-                            F.append("</cite></b>”")
-                        elif lang.l == "fr":
-                            F.append("</cite></b>")
+                    lang_dir: str
+                    if lang.s:
+                        lang_dir = ddict["script"][lang.s]["dir"]
+                    elif ddict["lang"][lang.l].get("script"):
+                        lang_dir = ddict["script"][ddict["lang"][lang.l]["script"]]["dir"]
                     else:
-                        if lang.l == "en":
-                            F.append(
-                                f"“<a href{attr(f"../../{data[i]["location"]["series"]}/{list_page}/{f"{lang}".lower()}/")} "
-                                f"hreflang{attr(f"{lang}")} "
-                                f"type{attr("text/html")}>"
-                                f"<cite>{get_l(data[f"{data[i]["location"]["series"]}/{list_page}"]["title"])}</cite>"
-                                "</a>”"
-                            )
-                        elif lang.l == "fr":
-                            F.append(
-                                f"<a href{attr(f"../../{data[i]["location"]["series"]}/{list_page}/{f"{lang}".lower()}/")} "
-                                f"hreflang{attr(f"{lang}")} "
-                                f"type{attr("text/html")}>"
-                                f"<cite class{attr("i")}>{get_l(data[f"{data[i]["location"]["series"]}/{list_page}"]["title"])}</cite>"
-                                "</a>"
-                            )
-                F.append("</li>")
+                        lang_dir = "auto"
 
-            F.append(
-                "</ol></details></nav>"
-                "<details>"
-                f"<summary><h2>{get_l(ddict["string"]["transcript_name"])}</h2></summary>"
-                f"<table id{attr("T")}>"
-            )
+                    # TODO: I don’t think this always works
+                    if data.get("config",{}).get("config",{}).get("relative_paths") is True:
+                        if i == "root":
+                            styles: str = "../gabel/styles"
+                        else:
+                            depth: int = i.count("/") + 2
+                            styles: list[str] = ["../"]
+                            for d in range(depth):
+                                styles.append("../")
+                            styles.append("gabel/styles")
+                            styles: str = "".join(styles)
+                    else:
+                        styles: str = "/gabel/styles"
 
-            for line in data[i]["transcript"]:
-                # TODO: Check encyclopedia item type
-                #line_h_type=data[f"encyclopedia/{line["H"]}"]["type"]
-                F.append(
-                    "<tr>"
-                    f"<th scope{attr("row")}>"
-                )
-                line_h_label: str = get_l(data[f"encyclopedia/{line["H"]}"].get("name", {}).get("label", {}))
-                F.append(
-                    f"{line_h_label}"
-                    f"{close("th")}"
-                    "<td>"
-                )
-                F.append(get_l(line["d"]))
-                F.append(
-                    f"{close("td")}"
-                    f"{close("tr")}"
-                )
-            F.append(
-                "</table></details><hr>"
-                f"<h2>{get_l(ddict["string"]["log"])}</h2>"
-            )
-
-            for entry in data[i]["log"]:
-                F.append(
-                    f"<article id{attr(f"log_{Date.make(**entry["date"])}")}><details>"
-                    f"<summary><h3>{Date.say(Date.make(**entry["date"]))}</h3></summary>"
-                )
-                for line in entry["content"]:
-                    if get_l(line.get("p")):
-                        F.append(f"<p>{get_l(line["p"])}{close("p")}")
-                    elif get_l(line.get("x")):
-                        F.append(get_l(line["x"]))
-                F.append("</details></article>")
-
-            F.append(
-                "<hr>"
-                f"<p id{attr("canonical_url")}>"
-                f"{get_l(ddict["string"]["canonical_url"], fargs=[canonical])}"
-                f"<a href{attr(f"{canonical}")} hreflang{attr(f"{lang}")} type{attr("text/html")}>"
-                f"{canonical}"
-                "</a>"
-
-                f"<footer><p><span class{attr("w")}>"
-                f"{get_l(ddict["string"]["copyright_notice"])}"
-                f"{data[i]["copyright"]["year"]["first"]}"
-            )
-            if data[i]["copyright"]["year"].get("last"):
-                F.append(
-                    f"{get_l(ddict["string"]["copyright_year_separator"])}"
-                    f"{data[i]["copyright"]["year"]["last"]}"
-                )
-            F.append(
-                "</span> "
-                f"<span translate{attr("no")}>gabl.ink</span>"
-
-                f"<p>{get_l(ddict["string"]["license"])}"
-                f"<a rel{attr('external license')} href"
-                f"{attr(get_l(ddict["license"][data[i]["copyright"]["license"][0]]["url"], "i"))}"
-                ">"
-                f"{get_l(ddict["license"][data[i]["copyright"]["license"][0]]["title"])}"
-            )
-            if ddict["license"][data[i]["copyright"]["license"][0]].get("abbr"):
-                F.append(get_l(ddict["string"]["copyright_license_abbr"], fargs=[get_l(ddict["license"][data[i]["copyright"]["license"][0]]["abbr"])]))
-            F.append("</a>")
-
-            if data[i].get("disclaimer"):
-                F.append("<p>")
-                if len(data[i]["disclaimer"]) == 1:
                     F.append(
-                        f"{get_l(ddict["string"]["disclaimer"])}"
-                        f"{get_l(ddict["disclaim"][data[i]["disclaimer"][0]]["text"])}"
+                        f"<html{lang_attr(f"{lang}")} "
+                        f"dir{attr(lang_dir)} "
+                        f"{'xmlns="http://www.w3.org/1999/xhtml" ' if format == "X" else ""}"
+                        f"itemscope{attr("")} "
+                        f"itemtype{attr("https://schema.org/WebPage")}"
+                        ">"
+
+                        f"{"<head>" if format == "X" else ""}"
+
+                        f"<meta charset{attr("utf-8")}{close()}"
+                        f'<meta name{attr("viewport")} content=\"width=device-width,initial-scale=1\"{close()}'
+
+                        f"<title>{get_l(ddict["string"]["html_title"], fargs=[get_l(data[i]["title"], "t")])}</title>"
+
+                        f"<meta name{attr("description")} content{attr(get_l(data[i]["description"], "t"))}{close()}"
+
+                        f"<meta name{attr("robots")} content{attr("index,follow")}{close()}"
+
+                        f"<link rel{attr("canonical")} href{attr(f"{canonical}")} hreflang{attr(f"{lang}")} type{attr("text/html")}{close()}"
+
+                        # TODO: `if type != comic_page` (sh:349)
+
+                        f"<link rel{attr("stylesheet")} href{attr(f"{styles}/mul.css")} hreflang{attr("zxx")}{close()}"
+                        f"<link rel{attr("stylesheet")} href{attr(f"{styles}/{lang.l}.css")} hreflang{attr("zxx")}{close()}"
+                        f"<link rel{attr("stylesheet")} href{attr(f"{styles}/comic_page.css")} hreflang{attr("zxx")}{close()}"
+
+                        f"<link rel{attr("external license")} href{attr(get_l(ddict["license"][data[i]["copyright"]["license"][0]]["url"], "i"))}{close()}"
+
+                        # TODO: Prefetches (starting at sh:420)
+
+                        f"<meta property{attr("og:type")} content{attr("article")}{close()}"
+                        f"<meta property{attr("og:title")} content{attr(get_l(data[i]["title"], "t"))}{close()}"
+                        f"<meta property{attr("og:description")} content{attr(get_l(data[i]["description"], "t"))}{close()}"
+                        f"<meta property{attr("og:site_name")} content{attr("gabl.ink")}{close()}"
+                        f"<meta property{attr("og:url")} content{attr(f"{canonical}")}{close()}"
+                        f"<meta property{attr("og:image")} content{attr(f"{canonical}image.png")}{close()}"
+                        # TODO: video_exists (sh:322–332, sh:454)
+                        f"<meta property{attr("og:locale")} content{attr(f"{lang.l}_{lang.t}")}{close()}"
+
+                        f"<script type{attr("application/ld+json")}>{{"
+                        '"@context":"https://schema.org",'
+                        '"@type":"WebPage"'
+                        "}</script>"
+
+                        f"{"</head><body>" if format == "X" else ""}"
+
+                        "<header>"
+                        f"<a href{attr("https://gabl.ink/")} id{attr("gabldotink_logo")}>gabl.ink</a>"
+
+                        f"<details id{attr("L")}>"
+                        f"<summary>{get_l(ddict["string"]["language_list"])}</summary>"
+                        f"<ul>"
                     )
-                else:
+                    for l in sorted(data[i]["langs"]):
+                        l: Lang = Lang.get(l)
+                        F.append(language_list_entry(l))
                     F.append(
-                        f"{get_l(ddict["string"]["disclaimer_plural"])}"
-                        f"<ul class{attr("horizontal_list")}>"
+                        "</ul></details></header>"
+
+                        f"<h1>{get_l(ddict["string"]["page_title"], fargs=[get_l(data[i]["title"])])}</h1>"
+
+                        f"<nav class{attr("N")}>"
+
+                        f"{make_nav_button("f")}"
+                        f"{make_nav_button("p")}"
+                        f"{make_nav_button("n")}"
+                        f"{make_nav_button("l")}"
+
+                        "</nav>"
                     )
-                    for d in data[i]["disclaimer"]:
+
+                    if Path(INDEX/i/f"{lang}".lower()/"video.webm").is_file():
                         F.append(
-                            "<li><p>"
-                            f"{get_l(ddict["disclaim"][d]["text"])}"
+                            f"<video id{attr("M")} controls{attr("")} poster{attr("image.png")} preload{attr("auto")}>"
+                            f"<source src{attr("video.webm")} type{attr("video/webm")}{close()}"
                         )
-                    F.append("</ul>")
+                        if Path(INDEX/i/f"{lang}".lower()/"subs.vtt").is_file():
+                            F.append(
+                                f"<track default{attr("")} src{attr("subs.vtt")} srclang{attr(f"{lang}")} kind{attr("subtitles")} "
+                                f"label{attr(Lang.say(lang, "t"))}{close()}"
+                            )
+                        if Path(INDEX/i/f"{lang}".lower()/"cc.vtt").is_file():
+                            F.append(
+                                f"<track src{attr("cc.vtt")} srclang{attr(f"{lang}")} kind{attr("captions")} "
+                                f"label{attr(f"{Lang.say(lang, "t")}{get_l(ddict["string"]["cc"])}")}{close()}"
+                            )
+                        F.append(
+                            f"{get_l(ddict["string"]["video_not_supported"], fargs=[lang, get_l(data[data[i]["location"]["series"]]["title"], "t"), get_l(data[i]["title"], "t"), get_l(data[i]["title"], "t")])}"
+                            "</video>"
+                        )
+                    elif Path(INDEX/i/f"{lang}".lower()/"image.png").is_file():
+                        F.append(f"<picture id{attr("M")}")
+                        if get_l(data[i].get("tooltip", {})) is not None:
+                            F.append(f" title{attr(get_l(data[i].get("tooltip", {}), "t"))}")
+                        F.append(
+                            ">"
+                            f"<img src{attr("image.png")} "
+                            # Validator.nu is not up to date with `fetchpriority`(?)
+                            # fetchpriority{attr("high")}
+                            f" alt{attr(get_l(ddict["string"]["see_transcript"]))}{close()}"
+                            "</picture>"
+                        )
 
-            F.append(
-                "</footer>"
-                f"{close("body")}"
-                f"{close("html")}"
-                "\n"
-            )
+                    F.append(
+                        f"<nav class{attr("N")}>"
 
-            F: str = "".join(F)
+                        f"{make_nav_button("f")}"
+                        f"{make_nav_button("p")}"
+                        f"{make_nav_button("n")}"
+                        f"{make_nav_button("l")}"
 
-            output_file_path: Path = Path(INDEX)/i/f"{lang}".lower()/"index.html"
-            output_file_path.parent.mkdir(parents=True, exist_ok=True)
-            output_file_path.touch()
+                        "</nav><nav><details><summary>"
+                    )
 
-            with open(output_file_path, "r+", encoding="utf-8", newline="") as output_file:
-                # Only write if there is a change
-                if F != output_file.read():
-                    output_file.seek(0)
-                    output_file.truncate()
-                    output_file.write(F)
+                    # TODO: Support multiple container depths
+
+                    F.append(
+                        f"{get_l(ddict["string"]["series_title"], fargs=[get_l(data[data[i]["location"]["series"]]["title"])])}"
+                        f"{get_l(ddict["string"]["comma_page"], fargs=[data[i]["location"]["page"]])}"
+                        f"{get_l(ddict["string"]["page_title"], fargs=[get_l(data[i]["title"])])}"
+                        "</summary>"
+
+                        f"<ol id{attr("P")}>"
+                    )
+
+                    list_page_self: str = f"{data[i]["location"]["page"]}"
+
+                    for list_page in expand_parts(data[data[i]["location"]["series"]]["parts"]):
+                        F.append("<li>")
+                        if not get_l(data[i]["title"]):
+                            if data[i]["location"]["page"] == list_page:
+                                F.append("<b>")
+                            F.append(get_l(ddict["string"]["no_title"]))
+                            if data[i]["location"]["page"] == list_page:
+                                F.append("</b>")
+                        else:
+                            if data[i]["location"]["page"] == list_page:
+                                if lang.l == "en":
+                                    F.append("“<b><cite>")
+                                elif lang.l == "fr":
+                                    F.append(f"<b><cite class{attr("i")}>")
+                                F.append(get_l(data[f"{data[i]["location"]["series"]}/{list_page}"]["title"]))
+                                if lang.l == "en":
+                                    F.append("</cite></b>”")
+                                elif lang.l == "fr":
+                                    F.append("</cite></b>")
+                            else:
+                                if lang.l == "en":
+                                    F.append(
+                                        f"“<a href{attr(f"../../{data[i]["location"]["series"]}/{list_page}/{f"{lang}".lower()}/")} "
+                                        f"hreflang{attr(f"{lang}")} "
+                                        f"type{attr(ddict["format"][format]["type"])}>"
+                                        f"<cite>{get_l(data[f"{data[i]["location"]["series"]}/{list_page}"]["title"])}</cite>"
+                                        "</a>”"
+                                    )
+                                elif lang.l == "fr":
+                                    F.append(
+                                        f"<a href{attr(f"../../{data[i]["location"]["series"]}/{list_page}/{f"{lang}".lower()}/")} "
+                                        f"hreflang{attr(f"{lang}")} "
+                                        f"type{attr("text/html")}>"
+                                        f"<cite class{attr("i")}>{get_l(data[f"{data[i]["location"]["series"]}/{list_page}"]["title"])}</cite>"
+                                        "</a>"
+                                    )
+                        F.append("</li>")
+
+                    F.append(
+                        "</ol></details></nav>"
+                        "<details>"
+                        f"<summary><h2>{get_l(ddict["string"]["transcript_name"])}</h2></summary>"
+                        f"<table id{attr("T")}>"
+                    )
+
+                    for line in data[i]["transcript"]:
+                        # TODO: Check encyclopedia item type
+                        #line_h_type=data[f"encyclopedia/{line["H"]}"]["type"]
+                        F.append(
+                            "<tr>"
+                            f"<th scope{attr("row")}>"
+                        )
+                        line_h_label: str = get_l(data[f"encyclopedia/{line["H"]}"].get("name", {}).get("label", {}))
+                        F.append(
+                            f"{line_h_label}"
+                            f"{close("th")}"
+                            "<td>"
+                        )
+                        F.append(get_l(line["d"]))
+                        F.append(
+                            f"{close("td")}"
+                            f"{close("tr")}"
+                        )
+                    F.append(
+                        f"</table></details><hr{close()}"
+                        f"<h2>{get_l(ddict["string"]["log"])}</h2>"
+                    )
+
+                    for entry in data[i]["log"]:
+                        F.append(
+                            f"<article id{attr(f"log_{Date.make(**entry["date"])}")}><details>"
+                            f"<summary><h3>{Date.say(Date.make(**entry["date"]))}</h3></summary>"
+                        )
+                        for line in entry["content"]:
+                            if get_l(line.get("p")):
+                                F.append(f"<p>{get_l(line["p"])}{close("p")}")
+                            elif get_l(line.get("x")):
+                                F.append(get_l(line["x"]))
+                        F.append("</details></article>")
+
+                    F.append(
+                        f"<hr{close()}"
+                        f"<p id{attr("canonical_url")}>"
+                        f"{get_l(ddict["string"]["canonical_url"], fargs=[canonical])}"
+                        f"<a href{attr(f"{canonical}")} hreflang{attr(f"{lang}")} type{attr("text/html")}>"
+                        f"{canonical}"
+                        "</a>"
+                        f"{close("p")}"
+
+                        f"<footer><p><span class{attr("w")}>"
+                        f"{get_l(ddict["string"]["copyright_notice"])}"
+                        f"{data[i]["copyright"]["year"]["first"]}"
+                    )
+                    if data[i]["copyright"]["year"].get("last"):
+                        F.append(
+                            f"{get_l(ddict["string"]["copyright_year_separator"])}"
+                            f"{data[i]["copyright"]["year"]["last"]}"
+                        )
+                    F.append(
+                        "</span> "
+                        f"<span translate{attr("no")}>gabl.ink</span>"
+                        f"{close("p")}"
+
+                        f"<p>{get_l(ddict["string"]["license"])}"
+                        f"<a rel{attr('external license')} href"
+                        f"{attr(get_l(ddict["license"][data[i]["copyright"]["license"][0]]["url"], "i"))}"
+                        ">"
+                        f"{get_l(ddict["license"][data[i]["copyright"]["license"][0]]["title"])}"
+                    )
+                    if ddict["license"][data[i]["copyright"]["license"][0]].get("abbr"):
+                        F.append(get_l(ddict["string"]["copyright_license_abbr"], fargs=[get_l(ddict["license"][data[i]["copyright"]["license"][0]]["abbr"])]))
+                    F.append(
+                        "</a>"
+                        f"{close("p")}"
+                    )
+
+                    if data[i].get("disclaimer"):
+                        F.append("<p>")
+                        if len(data[i]["disclaimer"]) == 1:
+                            F.append(
+                                f"{get_l(ddict["string"]["disclaimer"])}"
+                                f"{get_l(ddict["disclaim"][data[i]["disclaimer"][0]]["text"])}"
+                            )
+                        else:
+                            F.append(
+                                f"{get_l(ddict["string"]["disclaimer_plural"])}"
+                                f"<ul class{attr("horizontal_list")}>"
+                            )
+                            for d in data[i]["disclaimer"]:
+                                F.append(
+                                    "<li><p>"
+                                    f"{get_l(ddict["disclaim"][d]["text"])}"
+                                )
+                            F.append("</ul>")
+                        F.append(close("p"))
+
+                    F.append(
+                        "</footer>"
+                        f"{close("body")}"
+                        f"{close("html")}"
+                        "\n"
+                    )
+
+                F: str = "".join(F)
+
+                output_file_path: Path = Path(INDEX)/i/f"{lang}".lower()/f"index.{ddict["format"][format]["extension"]}"
+                output_file_path.parent.mkdir(parents=True, exist_ok=True)
+                output_file_path.touch()
+
+                with open(output_file_path, "r+", encoding="utf-8", newline="") as output_file:
+                    # Only write if there is a change
+                    if F != output_file.read():
+                        output_file.seek(0)
+                        output_file.truncate()
+                        output_file.write(F)
 
     sys.stderr.write(" done\n")

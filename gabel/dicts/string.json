@@ -17,10 +17,10 @@
   },
   "video_not_supported": {
     "en": {
-      "Hf": "It looks like your web browser doesn’t support the <code>video</code> element. You can <a href{attr('video.webm')} hreflang{attr(f'{fargs[0]}')} type=video/webm download=\"{fargs[1]} - {fargs[2]}.webm\">download the video</a> to watch with your preferred media player. You can also view the transcript for the video at “Transcript” below."
+      "Hf": "It looks like your web browser doesn’t support the <code>video</code> element. You can <a href{attr('video.webm')} hreflang{attr(f'{fargs[0]}')} type{attr('video/webm')} download=\"{fargs[1]} - {fargs[2]}.webm\">download the video</a> to watch with your preferred media player. You can also view the transcript for the video at “Transcript” below."
     },
     "fr": {
-      "Hf": "On dirait que votre navigateur Web ne prenne pas en charge l’élément <code>video</code>. Vous pouvez <a href{attr('video.webm')} hreflang{attr(f'{fargs[0]}')} type=video/webm download=\"{fargs[1]} - {fargs[2]}.webm\">télécharger le vidéo</a> pour regarder avec votre lecteur multimédia préferé. Vous pouvez aussi voir le transcription pour le vidéo à «\u202fTranscription\u202f» au‐dessous."
+      "Hf": "On dirait que votre navigateur Web ne prenne pas en charge l’élément <code>video</code>. Vous pouvez <a href{attr('video.webm')} hreflang{attr(f'{fargs[0]}')} type{attr('video/webm')} download=\"{fargs[1]} - {fargs[2]}.webm\">télécharger le vidéo</a> pour regarder avec votre lecteur multimédia préferé. Vous pouvez aussi voir le transcription pour le vidéo à «\u202fTranscription\u202f» au‐dessous."
     }
   },
   "see_transcript": {

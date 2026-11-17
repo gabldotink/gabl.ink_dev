@@ -100,10 +100,10 @@
       "H": "jrco_beta/t_t",
       "d": {
         "en": {
-          "Hf": "Yeah, yeah, excuses, excuses.<p>Come on! We’re only gonna have time for six games of <cite class{attr('i')}>Hyper Galactic Battle Ducks\u00a0III</cite>! <em>Six!</em>"
+          "Hf": "<p>Yeah, yeah, excuses, excuses.{close('p')}<p>Come on! We’re only gonna have time for six games of <cite class{attr('i')}>Hyper Galactic Battle Ducks\u00a0III</cite>! <em>Six!</em>{close('p')}"
         },
         "fr": {
-          "Hf": "Ouais, ouais, je veux pas tes excuses.<p>Allez\u00a0! Nous aurons seulement de temps pour six parties de <cite class{attr('i')}>Hyper Galactic Battle Ducks\u00a0III</cite>\u00a0! Seulement six\u00a0!"
+          "Hf": "<p>Ouais, ouais, je veux pas tes excuses.{close('p')}<p>Allez\u00a0! Nous aurons seulement de temps pour six parties de <cite class{attr('i')}>Hyper Galactic Battle Ducks\u00a0III</cite>\u00a0! Seulement six\u00a0!{close('p')}"
         }
       }
     }
