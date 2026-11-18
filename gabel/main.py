@@ -115,7 +115,7 @@ class Date:
         #if tstr:
 
 
-    def say(d: "Date", flang: Lang | str | None = None) -> str:
+    def say(d: "Date", flang: "Lang | str | None" = None) -> str:
         """Returns word form of date in HTML format."""
         if flang is None:
             flang = lang
@@ -805,6 +805,14 @@ def make_nav_button(button: Literal["f", "p", "n", "l"], flang: None | Lang = No
 #    r.append(ddict["share"][name]["base"])
 
 
+def resolve_i(to_resolve: str) -> str:
+    t: Path = Path(to_resolve)
+    if re.fullmatch(r"^\.\.?(/?|/.*)$", to_resolve):
+        return t.resolve(strict=True).relative_to(INDEX).as_posix()
+    else:
+        return Path(INDEX/t).resolve(strict=True).as_posix()
+
+
 def spellvar(string: str, flang: Lang | None = None) -> str:
     if flang is None:
         flang = lang
@@ -910,10 +918,11 @@ def to_sentence_case(string: str, flang: Lang | None = None) -> str:
 #                raise SystemExit("String not normalized in NFC")
 
 
-SCRIPT: Path = Path(__file__).resolve()
-GABEL: Path = SCRIPT.parent
-DICTS: Path = Path(GABEL)/"dicts"
-INDEX: Path = Path(GABEL)/".."/"i"
+SCRIPT: Path = Path(__file__).resolve(strict=True)
+GABEL: Path = SCRIPT.parent.resolve(strict=True)
+ROOT: Path = GABEL.parent.resolve(strict=True)
+DICTS: Path = Path(GABEL/"dicts").resolve(strict=True)
+INDEX: Path = Path(GABEL/".."/"i").resolve(strict=True)
 
 data: dict = {}
 
