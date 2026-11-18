@@ -72,7 +72,7 @@ class Date:
 
 
     @staticmethod
-    def get(dt: "dict[int] | Date") -> "Date":
+    def get(dt: "dict | Date") -> "Date":
         if isinstance(dt, Date):
             return dt
         elif not isinstance(dt, dict) or not dt:
