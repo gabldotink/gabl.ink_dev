@@ -703,11 +703,8 @@ def id_parent(id_i: str) -> str | None:
 
 
 # TODO: This is the only time `flang` is before `fformat`, which is intentional for now.
-def lang_attr(flang: Lang | str | None = None, fformat: Literal["H", "X"] | None = None) -> str:
-    if flang is None:
-        flang = lang
-    else:
-        flang = Lang.get(flang)
+def lang_attr(flang: Lang | str, fformat: Literal["H", "X"] | None = None) -> str:
+    flang = Lang.get(flang)
     if fformat is None:
         fformat = format
 
