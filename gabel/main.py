@@ -999,7 +999,8 @@ if __name__ == "__main__":
                         f"dir{attr(lang_dir)} "
                         f"{'xmlns="http://www.w3.org/1999/xhtml" ' if format == "X" else ""}"
                         f"itemscope{attr("")} "
-                        f"itemtype{attr("https://schema.org/WebPage")}"
+                        f"itemtype{attr("https://schema.org/WebPage")} "
+                        f"prefix=\"og: https://ogp.me\""
                         ">"
 
                         f"{"<head>" if format == "X" else ""}"
