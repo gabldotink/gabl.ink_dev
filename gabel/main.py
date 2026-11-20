@@ -317,6 +317,14 @@ class Lang:
 
         return Lang.make(**langdata)
 
+
+    def dir(tag: "Lang") -> Literal["ltr", "rtl", "auto"]:
+        if ddict["script"].get(tag.s.lower(), {}).get("dir"):
+            return ddict["script"][tag.s.lower()]["dir"]
+        else:
+            return "auto"
+
+
     def __str__(self) -> str:
         if not isinstance(self.l, str) or not self.l:
             raise ValueError("Invalid language code")
@@ -719,19 +727,21 @@ def id_parent(id_i: str) -> str | None:
         return None
 
 
-# TODO: This is the only time `flang` is before `fformat`, which is intentional for now.
-def lang_attr(flang: Lang | str, fformat: Literal["H", "X"] | None = None) -> str:
-    flang = Lang.get(flang)
+def lang_attr(tag: str | Lang, fformat: Literal["H", "X"] | None = None, flang: Lang = None) -> str:
+    if flang is None:
+        flang = lang
     if fformat is None:
         fformat = format
+
+    tag = Lang.get(tag)
 
     if fformat not in "HX":
         raise ValueError("Format must be H or X")
 
     if fformat == "H":
-        return f" lang={flang}"
+        return f" lang={tag}{f" dir{attr(tag.dir())}" if tag.dir() != lang.dir() else ""}"
     elif fformat == "X":
-        return f' lang="{flang}" xml:lang="{flang}"'
+        return f' lang="{tag}" xml:lang="{tag}"{f' dir="{tag.dir()}"' if tag.dir() != lang.dir() else ""}'
 
 
 def language_list_entry(l: Lang) -> str:
@@ -1009,7 +1019,7 @@ if __name__ == "__main__":
 
                     F.append(
                         f"<html{lang_attr(f"{lang}")} "
-                        f"dir{attr(ddict["script"][lang.s.lower()]["dir"])} "
+                        f"dir{attr(lang.dir())} "
                         f"{'xmlns="http://www.w3.org/1999/xhtml" ' if format == "X" else ""}"
                         f"itemscope{attr("")} "
                         f"itemtype{attr("https://schema.org/WebPage")} "
