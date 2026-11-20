@@ -7,6 +7,7 @@
 import json
 import re
 import sys
+from decimal import Decimal
 from pathlib import Path
 from typing import Literal
 
@@ -464,7 +465,7 @@ def get_i(i_item_file: Path) -> str:
         return item_obj["id"]
 
 
-def get_l(key: dict, fformat: Literal["A", "H", "i", "L", "T", "t", "X"] | None = None, flang: Lang | str | None = None, fargs: list | None = None) -> str:
+def get_l(key, fformat: Literal["A", "H", "i", "L", "T", "t", "X"] | None = None, flang: Lang | str | None = None, fargs: list | None = None) -> str:
     if fformat is None:
         fformat = format
     if flang is None:
@@ -836,7 +837,7 @@ def spellvar(string: str, flang: Lang | None = None) -> str:
             return string.translate(str.maketrans("Ss", "Cc"))
 
 
-def text_to_html(string: str, fformat: Literal["H", "X"] | None = None) -> str:
+def text_to_html(string: str, fformat: Literal["H", "X"] | None = None, json: bool = False) -> str:
     if fformat is None:
         fformat = format
 
@@ -845,8 +846,12 @@ def text_to_html(string: str, fformat: Literal["H", "X"] | None = None) -> str:
     elif fformat == "X":
         string = string.replace("&", "&amp;")
     string = string.replace("<", "&lt;")  # &#60;
-    string = string.replace("\u200b", f"<wbr{close()}")
-    string = string.replace("\n", f"<br{close()}")
+    if json:
+        string = string.replace("\\", "\\\\")
+        string = string.replace('"', '\\"')
+    else:
+        string = string.replace("\u200b", f"<wbr{close()}")
+        string = string.replace("\n", f"<br{close()}")
     return string
 
 
@@ -934,11 +939,11 @@ ddict: dict = {}
 for dictionary in ["disclaim", "format", "lang", "license", "month", "region",
                    "script", "string", "weekday"]:
     with open(Path(DICTS)/f"{dictionary}.json", "r", encoding="utf-8") as f:
-        ddict[dictionary] = json.load(f)
+        ddict[dictionary] = json.load(f, parse_float=Decimal)
 
 for item_file in item_files:
     with open(item_file, "r", encoding="utf-8") as f:
-        obj = json.load(f)
+        obj = json.load(f, parse_float=Decimal)
         obj_id = obj.get("id")
         data[obj_id] = obj
 
@@ -1037,7 +1042,12 @@ if __name__ == "__main__":
 
                         f"<script type{attr("application/ld+json")}>{{"
                         '"@context":"https://schema.org",'
-                        '"@type":"WebPage"'
+                        '"@type":"WebPage",'
+                        f'"@id":"{text_to_html(canonical, json=True)}",'
+                        f'"abstract":"{text_to_html(get_l(data[i]["description"], fformat="t"), json=True)}",'
+                        f'"headline":"{text_to_html(f"{get_l(data[i].get("title_unnested", {}), fformat="t") if get_l(data[i].get("title_unnested", {}), fformat="t") else get_l(data[i]["title"])}", json=True)}",'
+                        '"isAccessibleForFree":true,'
+                        '"isFamilyFriendly":true'
                         "}</script>"
 
                         f"{"</head><body>" if format == "X" else ""}"
