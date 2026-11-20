@@ -234,6 +234,7 @@ class Lang:
     """
     def __init__(
         self, l: str,
+              i: bool = True,
               s: str | None = None,
               t: str | None = None,
               v: list[str] | None = None,
@@ -246,21 +247,35 @@ class Lang:
         elif (t is not None) and not re.fullmatch(r"^[A-Z]{2}$|^[0-9]{3}$", t):
             raise ValueError("Invalid territory subtag")
 
+        # language
         self.l: str = l
+        # implicit script used
+        self.i: bool = True
+        # script
         self.s: str | None = s
+        # territory
         self.t: str | None = t
+        # variant
         self.v: list[str] | None = v
+        # private
         self.x: str | None = x
 
     @classmethod
     def make(
         cls, l: str,
+             i: bool = True,
              s: str | None = None,
              t: str | None = None,
              v: list[str] | None = None,
              x: str | None = None
     ) -> "Lang":
-        return cls(l, s, t, v, x)
+        i: bool
+        if s:
+            i = False
+        else:
+            s = ddict["lang"][l]["script"].capitalize()
+        
+        return cls(l, i, s, t, v, x)
 
     @staticmethod
     def get(tag: "str | Lang") -> "Lang":
@@ -308,7 +323,8 @@ class Lang:
 
         r: list[str] = [self.l]
 
-        if self.s:
+        # TODO: Redundant?
+        if self.s and not self.i:
             r.append(f"-{self.s}")
 
         if self.t:
@@ -977,14 +993,6 @@ if __name__ == "__main__":
                                 spdx_license_num += 1
                         F.append(" -->\n")
 
-                    lang_dir: str
-                    if lang.s:
-                        lang_dir = ddict["script"][lang.s]["dir"]
-                    elif ddict["lang"][lang.l].get("script"):
-                        lang_dir = ddict["script"][ddict["lang"][lang.l]["script"]]["dir"]
-                    else:
-                        lang_dir = "auto"
-
                     # TODO: I don’t think this always works
                     if data.get("config",{}).get("config",{}).get("relative_paths") is True:
                         if i == "root":
@@ -1001,7 +1009,7 @@ if __name__ == "__main__":
 
                     F.append(
                         f"<html{lang_attr(f"{lang}")} "
-                        f"dir{attr(lang_dir)} "
+                        f"dir{attr(ddict["script"][lang.s.lower()]["dir"])} "
                         f"{'xmlns="http://www.w3.org/1999/xhtml" ' if format == "X" else ""}"
                         f"itemscope{attr("")} "
                         f"itemtype{attr("https://schema.org/WebPage")} "
