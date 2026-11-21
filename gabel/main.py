@@ -348,31 +348,31 @@ class Lang:
         return "".join(r)
 
     @staticmethod
-    def say(to_say: "Lang", fformat: str | None = None, flang: "Lang | None" = None) -> str:
+    def say(to_say: "Lang", fform: str | None = None, flang: "Lang | None" = None) -> str:
         """Returns a formatted language name and region."""
-        if fformat is None:
-            fformat = format
+        if fform is None:
+            fform = form
         if flang is None:
             flang = lang
         else:
             flang = Lang.get(flang)
         if flang.l in ("en", "fr"):
-            return f"{to_sentence_case(get_l(ddict["lang"][to_say.l]["name"], fformat, flang), flang)} ({get_l(ddict["region"][f"{to_say.t}".lower()]["name"], fformat, flang)})"
+            return f"{to_sentence_case(get_l(ddict["lang"][to_say.l]["name"], fform, flang), flang)} ({get_l(ddict["region"][f"{to_say.t}".lower()]["name"], fform, flang)})"
 
 
-def amp(fformat: Literal["H", "X"] | None = None) -> str:
-    if fformat is None:
-        fformat = format
+def amp(fform: Literal["H", "X"] | None = None) -> str:
+    if fform is None:
+        fform = form
 
-    if fformat == "H":
+    if fform == "H":
         return "&"
-    elif fformat == "X":
+    elif fform == "X":
         return "&amp;"
     else:
         return ValueError("H or X only")
 
 
-def attr(string: str, fformat: Literal["H", "X"] | None = None) -> str:
+def attr(string: str, fform: Literal["H", "X"] | None = None) -> str:
     """Takes a plain text string as input and returns the HTML
     component that comes right after the attribute name. Returns an
     empty string if the input is empty. Returns the equals sign,
@@ -394,11 +394,11 @@ def attr(string: str, fformat: Literal["H", "X"] | None = None) -> str:
     """
     if not isinstance(string, str):
         raise TypeError("Not a string")
-    if fformat is None:
-        fformat = format
+    if fform is None:
+        fform = form
 
     if not string:
-        if fformat == "X":
+        if fform == "X":
             return '=""'
         else:
             # In HTML5, `attribute` is equivalent to `attribute=""`
@@ -406,7 +406,7 @@ def attr(string: str, fformat: Literal["H", "X"] | None = None) -> str:
 
     quoted: bool
 
-    if fformat == "X":
+    if fform == "X":
         quoted = True
     elif any(c in string for c in " \"'=<>`\n\r\t\v\f"):
         quoted = True
@@ -428,9 +428,9 @@ def attr(string: str, fformat: Literal["H", "X"] | None = None) -> str:
         else:
             quote_char = '"'
 
-    if fformat == "H":
+    if fform == "H":
         string = re.sub(r"&(?=[#A-Za-z])", "&amp;", string)  # &#38;
-    elif fformat == "X":
+    elif fform == "X":
         string = string.replace("&", "&amp;")
 
     if quoted:
@@ -443,19 +443,19 @@ def attr(string: str, fformat: Literal["H", "X"] | None = None) -> str:
         return f"={string}"
 
 
-def close(tag: str | None = None, fformat: Literal["H", "X"] | None = None):
-    if fformat is None:
-        fformat = format
+def close(tag: str | None = None, fform: Literal["H", "X"] | None = None):
+    if fform is None:
+        fform = form
     if tag is None:
-        if fformat == "X":
+        if fform == "X":
             return "/>"
-        elif fformat == "H":
+        elif fform == "H":
             return ">"
         else:
             raise ValueError("format must be H or X")
-    elif fformat == "X":
+    elif fform == "X":
         return f"</{tag}>"
-    elif fformat == "H":
+    elif fform == "H":
         return ""
     else:
         raise ValueError("format must be H or X")
@@ -489,9 +489,9 @@ def get_i(i_item_file: Path) -> str:
         return item_obj["id"]
 
 
-def get_l(key, fformat: Literal["A", "H", "i", "L", "T", "t", "X"] | None = None, flang: Lang | str | None = None, fargs: list | None = None) -> str:
-    if fformat is None:
-        fformat = format
+def get_l(key, fform: Literal["A", "H", "i", "L", "T", "t", "X"] | None = None, flang: Lang | str | None = None, fargs: list | None = None) -> str:
+    if fform is None:
+        fform = form
     if flang is None:
         flang = lang
     else:
@@ -500,7 +500,7 @@ def get_l(key, fformat: Literal["A", "H", "i", "L", "T", "t", "X"] | None = None
     formats: str = "AHiLTtX"
     options: list[str] = [f"{flang}", flang.l, "mul", "zxx", "z"]
 
-    if fformat not in formats:
+    if fform not in formats:
         raise ValueError("Invalid format given")
 
     def find_equals(pointer: str) -> str:
@@ -512,12 +512,12 @@ def get_l(key, fformat: Literal["A", "H", "i", "L", "T", "t", "X"] | None = None
         elif to_find[0] and not to_find[1]:
             return get_l(key, to_find[0], flang, fargs)
         elif to_find[1] and not to_find[0]:
-            return get_l(key, fformat, to_find[1], fargs)
+            return get_l(key, fform, to_find[1], fargs)
         else:
             return get_l(key, to_find[0], to_find[1], fargs)
 
     # ASCII
-    if fformat == "A":
+    if fform == "A":
         for o in options:
             if o == "z":
                 return ""
@@ -533,7 +533,7 @@ def get_l(key, fformat: Literal["A", "H", "i", "L", "T", "t", "X"] | None = None
             elif "e" in to_check:
                 return get_l(key, "A", Lang.get(to_check["e"]), fargs)
     # HTML5
-    elif fformat == "H":
+    elif fform == "H":
         for o in options:
             if o == "z":
                 return ""
@@ -562,7 +562,7 @@ def get_l(key, fformat: Literal["A", "H", "i", "L", "T", "t", "X"] | None = None
             elif "e" in to_check:
                 return get_l(key, "H", Lang.get(to_check["e"]), fargs)
     # identifier
-    elif fformat == "i":
+    elif fform == "i":
         for o in options:
             if o == "z":
                 return ""
@@ -578,7 +578,7 @@ def get_l(key, fformat: Literal["A", "H", "i", "L", "T", "t", "X"] | None = None
             elif "e" in to_check:
                 return get_l(key, "i", Lang.get(to_check["e"]), fargs)
     # LaTeX
-    elif fformat == "L":
+    elif fform == "L":
         for o in options:
             if o == "z":
                 return ""
@@ -612,7 +612,7 @@ def get_l(key, fformat: Literal["A", "H", "i", "L", "T", "t", "X"] | None = None
             elif "e" in to_check:
                 return get_l(key, "L", Lang.get(to_check["e"]), fargs)
     # TeX
-    elif fformat == "T":
+    elif fform == "T":
         for o in options:
             if o == "z":
                 return ""
@@ -638,7 +638,7 @@ def get_l(key, fformat: Literal["A", "H", "i", "L", "T", "t", "X"] | None = None
             elif "e" in to_check:
                 return get_l(key, "T", Lang.get(to_check["e"]), fargs)
     # text
-    elif fformat == "t":
+    elif fform == "t":
         for o in options:
             if o == "z":
                 return ""
@@ -660,7 +660,7 @@ def get_l(key, fformat: Literal["A", "H", "i", "L", "T", "t", "X"] | None = None
             elif "e" in to_check:
                 return get_l(key, "t", Lang.get(to_check["e"]), fargs)
     # XML syntax for HTML
-    elif fformat == "X":
+    elif fform == "X":
         for o in options:
             if o == "z":
                 return ""
@@ -727,20 +727,20 @@ def id_parent(id_i: str) -> str | None:
         return None
 
 
-def lang_attr(tag: str | Lang, fformat: Literal["H", "X"] | None = None, flang: Lang = None) -> str:
+def lang_attr(tag: str | Lang, fform: Literal["H", "X"] | None = None, flang: Lang = None) -> str:
     if flang is None:
         flang = lang
-    if fformat is None:
-        fformat = format
+    if fform is None:
+        fform = form
 
     tag = Lang.get(tag)
 
-    if fformat not in "HX":
+    if fform not in "HX":
         raise ValueError("Format must be H or X")
 
-    if fformat == "H":
+    if fform == "H":
         return f" lang={tag}{f" dir{attr(tag.dir())}" if tag.dir() != lang.dir() else ""}"
-    elif fformat == "X":
+    elif fform == "X":
         return f' lang="{tag}" xml:lang="{tag}"{f' dir="{tag.dir()}"' if tag.dir() != lang.dir() else ""}'
 
 
@@ -863,13 +863,13 @@ def spellvar(string: str, flang: Lang | None = None) -> str:
             return string.translate(str.maketrans("Ss", "Cc"))
 
 
-def text_to_html(string: str, fformat: Literal["H", "X"] | None = None, json: bool = False) -> str:
-    if fformat is None:
-        fformat = format
+def text_to_html(string: str, fform: Literal["H", "X"] | None = None, json: bool = False) -> str:
+    if fform is None:
+        fform = form
 
-    if fformat == "H":
+    if fform == "H":
         string = re.sub(r"&(?=[#A-Za-z])", "&amp;", string)  # &#38;
-    elif fformat == "X":
+    elif fform == "X":
         string = string.replace("&", "&amp;")
     string = string.replace("<", "&lt;")  # &#60;
     if json:
@@ -986,8 +986,8 @@ if __name__ == "__main__":
         for lang in data[i]["langs"]:
             lang: Lang = Lang.get(lang)
 
-            for format in "HX":
-                if format in "HX":
+            for form in "HX":
+                if form in "HX":
                     canonical: str = f"https://gabl.ink/i/{i}/{f"{lang}".lower()}/"
 
                     F: list[str] = ["<!DOCTYPE html>\n"]
@@ -1020,13 +1020,13 @@ if __name__ == "__main__":
                     F.append(
                         f"<html{lang_attr(f"{lang}")} "
                         f"dir{attr(lang.dir())} "
-                        f"{'xmlns="http://www.w3.org/1999/xhtml" ' if format == "X" else ""}"
+                        f"{'xmlns="http://www.w3.org/1999/xhtml" ' if form == "X" else ""}"
                         f"itemscope{attr("")} "
                         f"itemtype{attr("https://schema.org/WebPage")} "
                         f"prefix=\"og: https://ogp.me\""
                         ">"
 
-                        f"{"<head>" if format == "X" else ""}"
+                        f"{"<head>" if form == "X" else ""}"
 
                         f"<meta charset{attr("utf-8")}{close()}"
                         f'<meta name{attr("viewport")} content=\"width=device-width,initial-scale=1\"{close()}'
@@ -1062,13 +1062,13 @@ if __name__ == "__main__":
                         '"@context":"https://schema.org",'
                         '"@type":"WebPage",'
                         f'"@id":"{text_to_html(canonical, json=True)}",'
-                        f'"abstract":"{text_to_html(get_l(data[i]["description"], fformat="t"), json=True)}",'
-                        f'"headline":"{text_to_html(f"{get_l(data[i].get("title_unnested", {}), fformat="t") if get_l(data[i].get("title_unnested", {}), fformat="t") else get_l(data[i]["title"])}", json=True)}",'
+                        f'"abstract":"{text_to_html(get_l(data[i]["description"], fform="t"), json=True)}",'
+                        f'"headline":"{text_to_html(f"{get_l(data[i].get("title_unnested", {}), fform="t") if get_l(data[i].get("title_unnested", {}), fform="t") else get_l(data[i]["title"])}", json=True)}",'
                         '"isAccessibleForFree":true,'
                         '"isFamilyFriendly":true'
                         "}</script>"
 
-                        f"{"</head><body>" if format == "X" else ""}"
+                        f"{"</head><body>" if form == "X" else ""}"
 
                         "<header>"
                         f"<a href{attr("https://gabl.ink/")} id{attr("gabldotink_logo")}>gabl.ink</a>"
@@ -1175,7 +1175,7 @@ if __name__ == "__main__":
                                     F.append(
                                         f"“<a href{attr(f"../../{data[i]["location"]["series"]}/{list_page}/{f"{lang}".lower()}/")} "
                                         f"hreflang{attr(f"{lang}")} "
-                                        f"type{attr(ddict["format"][format]["type"])}>"
+                                        f"type{attr(ddict["format"][form]["type"])}>"
                                         f"<cite>{get_l(data[f"{data[i]["location"]["series"]}/{list_page}"]["title"])}</cite>"
                                         "</a>”"
                                     )
@@ -1296,7 +1296,7 @@ if __name__ == "__main__":
 
                 F: str = "".join(F)
 
-                output_file_path: Path = Path(INDEX)/i/f"{lang}".lower()/f"index.{ddict["format"][format]["extension"]}"
+                output_file_path: Path = Path(INDEX)/i/f"{lang}".lower()/f"index.{ddict["format"][form]["extension"]}"
                 output_file_path.parent.mkdir(parents=True, exist_ok=True)
                 output_file_path.touch()
 
