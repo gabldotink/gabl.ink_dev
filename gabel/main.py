@@ -863,7 +863,7 @@ def spellvar(string: str, flang: Lang | None = None) -> str:
             return string.translate(str.maketrans("Ss", "Cc"))
 
 
-def text_to_html(string: str, fform: Literal["H", "X"] | None = None, json: bool = False) -> str:
+def text_to_html(string: str, fform: Literal["H", "X"] | None = None, is_json: bool = False) -> str:
     if fform is None:
         fform = form
 
@@ -872,12 +872,17 @@ def text_to_html(string: str, fform: Literal["H", "X"] | None = None, json: bool
     elif fform == "X":
         string = string.replace("&", "&amp;")
     string = string.replace("<", "&lt;")  # &#60;
-    if json:
-        string = string.replace("\\", "\\\\")
-        string = string.replace('"', '\\"')
+    if is_json:
+        string = text_to_json(string)
     else:
         string = string.replace("\u200b", f"<wbr{close()}")
         string = string.replace("\n", f"<br{close()}")
+    return string
+
+
+def text_to_json(string: str) -> str:
+    string = string.replace("\\", "\\\\")
+    string = string.replace('"', '\\"')
     return string
 
 
@@ -1061,9 +1066,9 @@ if __name__ == "__main__":
                         f"<script type{attr("application/ld+json")}>{{"
                         '"@context":"https://schema.org",'
                         '"@type":"WebPage",'
-                        f'"@id":"{text_to_html(canonical, json=True)}",'
-                        f'"abstract":"{text_to_html(get_l(data[i]["description"], fform="t"), json=True)}",'
-                        f'"headline":"{text_to_html(f"{get_l(data[i].get("title_unnested", {}), fform="t") if get_l(data[i].get("title_unnested", {}), fform="t") else get_l(data[i]["title"])}", json=True)}",'
+                        f'"@id":"{text_to_html(canonical, is_json=True)}",'
+                        f'"abstract":"{text_to_html(get_l(data[i]["description"], fform="t"), is_json=True)}",'
+                        f'"headline":"{text_to_html(f"{get_l(data[i].get("title_unnested", {}), fform="t") if get_l(data[i].get("title_unnested", {}), fform="t") else get_l(data[i]["title"])}", is_json=True)}",'
                         '"isAccessibleForFree":true,'
                         '"isFamilyFriendly":true'
                         "}</script>"
