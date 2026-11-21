@@ -769,7 +769,38 @@ def language_list_entry(l: Lang) -> str:
     return "".join(r)
 
 
-def make_nav_button(button: Literal["f", "p", "n", "l"], flang: None | Lang = None) -> str:
+def make_jsonld(from_i: dict, flang: Lang | None = None) -> None:
+    # TODO: Should we also make a top-level file?
+    if flang is None:
+        flang = lang
+
+    j: dict = {}
+
+    for k, c in (
+        ("@context", "https://schema.org"),
+        ("@type", "WebPage"),
+        ("@id", text_to_json(canonical)),
+        ("abstract", text_to_json(get_l(data[i]["description"], fform="t"))),
+        ("headline", text_to_json(f"{get_l(data[i].get("title_unnested", {}), fform="t") if get_l(data[i].get("title_unnested", {}), fform="t") else get_l(data[i]["title"], fform="t")}")),
+        ("isAccessibleForFree", not bool(from_i.get("price", {}).get("n"))),
+        ("isFamilyFriendly", True)
+    ):
+        j[k] = c
+
+    output_file_path: Path = Path(INDEX)/i/f"{lang}".lower()/"index.jsonld"
+    output_file_path.touch()
+
+    # TODO: Merge with main loop?
+    with open(output_file_path, "r+", encoding="utf-8", newline="") as output_file:
+        # Only write if there is a change
+        if j != output_file.read():
+            output_file.seek(0)
+            output_file.truncate()
+            json.dump(j, output_file, ensure_ascii=False, separators=(",", ":"))
+            output_file.write("\n")
+
+
+def make_nav_button(button: Literal["f", "p", "n", "l"], flang: Lang | None = None) -> str:
     if flang is None:
         flang = lang
     else:
@@ -863,7 +894,7 @@ def spellvar(string: str, flang: Lang | None = None) -> str:
             return string.translate(str.maketrans("Ss", "Cc"))
 
 
-def text_to_html(string: str, fform: Literal["H", "X"] | None = None, is_json: bool = False) -> str:
+def text_to_html(string: str, fform: Literal["H", "X"] | None = None) -> str:
     if fform is None:
         fform = form
 
@@ -872,11 +903,7 @@ def text_to_html(string: str, fform: Literal["H", "X"] | None = None, is_json: b
     elif fform == "X":
         string = string.replace("&", "&amp;")
     string = string.replace("<", "&lt;")  # &#60;
-    if is_json:
-        string = text_to_json(string)
-    else:
-        string = string.replace("\u200b", f"<wbr{close()}")
-        string = string.replace("\n", f"<br{close()}")
+    string = string.replace("\n", f"<br{close()}")
     return string
 
 
@@ -991,10 +1018,12 @@ if __name__ == "__main__":
         for lang in data[i]["langs"]:
             lang: Lang = Lang.get(lang)
 
+            canonical: str = f"https://gabl.ink/i/{i}/{f"{lang}".lower()}/"
+
+            make_jsonld(data[i])
+
             for form in "HX":
                 if form in "HX":
-                    canonical: str = f"https://gabl.ink/i/{i}/{f"{lang}".lower()}/"
-
                     F: list[str] = ["<!DOCTYPE html>\n"]
 
                     if data[i].get("copyright", {}).get("license"):
@@ -1028,7 +1057,7 @@ if __name__ == "__main__":
                         f"{'xmlns="http://www.w3.org/1999/xhtml" ' if form == "X" else ""}"
                         f"itemscope{attr("")} "
                         f"itemtype{attr("https://schema.org/WebPage")} "
-                        f"prefix=\"og: https://ogp.me\""
+                        f"prefix=\"og: https://ogp.me/ns#\""
                         ">"
 
                         f"{"<head>" if form == "X" else ""}"
@@ -1063,15 +1092,9 @@ if __name__ == "__main__":
                         # TODO: video_exists (sh:322–332, sh:454)
                         f"<meta property{attr("og:locale")} content{attr(f"{lang.l}_{lang.t}")}{close()}"
 
-                        f"<script type{attr("application/ld+json")}>{{"
-                        '"@context":"https://schema.org",'
-                        '"@type":"WebPage",'
-                        f'"@id":"{text_to_html(canonical, is_json=True)}",'
-                        f'"abstract":"{text_to_html(get_l(data[i]["description"], fform="t"), is_json=True)}",'
-                        f'"headline":"{text_to_html(f"{get_l(data[i].get("title_unnested", {}), fform="t") if get_l(data[i].get("title_unnested", {}), fform="t") else get_l(data[i]["title"])}", is_json=True)}",'
-                        '"isAccessibleForFree":true,'
-                        '"isFamilyFriendly":true'
-                        "}</script>"
+                        f"<script type{attr("application/ld+json")}>"
+                        f"{text_to_html(Path(INDEX/i/f"{lang}".lower()/"index.jsonld").read_text(encoding="utf-8", newline="").removesuffix("\n"))}"
+                        "</script>"
 
                         f"{"</head><body>" if form == "X" else ""}"
 
