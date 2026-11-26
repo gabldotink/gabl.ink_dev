@@ -9,7 +9,7 @@ import re
 import sys
 from decimal import Decimal
 from pathlib import Path
-from typing import Literal
+from typing import Literal, LiteralString
 
 __author__ = "gabl.ink"
 __version__ = "0"
@@ -213,7 +213,7 @@ class Date:
                 if self.z == 0:
                     r.append("Z")
                 else:
-                    z_symbol: str
+                    z_symbol: LiteralString
                     if self.z < 0:
                         z_symbol = "-"
                     else:
@@ -274,7 +274,7 @@ class Lang:
             i = False
         else:
             s = ddict["lang"][l]["script"].capitalize()
-        
+
         return cls(l, i, s, t, v, x)
 
     @staticmethod
@@ -413,7 +413,7 @@ def attr(string: str, fform: Literal["H", "X"] | None = None) -> str:
     else:
         quoted = False
 
-    quote_char: str
+    quote_char: LiteralString
 
     if quoted:
         if '"' in string and "'" not in string:
@@ -497,7 +497,7 @@ def get_l(key, fform: Literal["A", "H", "i", "L", "T", "t", "X"] | None = None, 
     else:
         flang = Lang.get(flang)
 
-    formats: str = "AHiLTtX"
+    formats: LiteralString = "AHiLTtX"
     options: list[str] = [f"{flang}", flang.l, "mul", "zxx", "z"]
 
     if fform not in formats:
