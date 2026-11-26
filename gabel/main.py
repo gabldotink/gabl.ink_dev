@@ -778,8 +778,8 @@ def make_jsonld(from_i: dict, flang: Lang | None = None) -> None:
 
     for k, c in (
         ("@context", "https://schema.org"),
-        ("@type", "WebPage"),
         ("@id", text_to_json(canonical)),
+        ("@type", "WebPage"),
         ("abstract", text_to_json(get_l(data[i]["description"], fform="t"))),
         ("headline", text_to_json(f"{get_l(data[i].get("title_unnested", {}), fform="t") if get_l(data[i].get("title_unnested", {}), fform="t") else get_l(data[i]["title"], fform="t")}")),
         ("isAccessibleForFree", not bool(from_i.get("price", {}).get("n"))),
